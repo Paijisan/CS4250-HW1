@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="ROBOTS" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@nhk_world">
+    <meta name="keywords" content="NHK, Japanese, language, learn, lesson, online, download, free, easy, basic, JLPT">
+    <meta name="description" content="Japan's only public broadcaster NHK provides this reliable Japanese language course.">
+    <meta property="fb:app_id" content="1717775218444936">
+    <meta property="og:type" content="music.radio_station">
+    <meta property="og:site_name" content="NHK WORLD">
+    <meta property="og:title" content="Easy Japanese 2015 - free lessons with audio drama | NHK WORLD RADIO JAPAN">
+    <meta property="og:description" content="Japan's only public broadcaster NHK provides this reliable Japanese language course. You can easily start learning basic grammar and vocabulary.">
+    <meta property="og:image" content="https://www.nhk.or.jp/lesson/common/images/lp_overview.jpg">
+    <meta property="og:url" content="https://www.nhk.or.jp/lesson/english/">
+    <title>Easy Japanese 2015, free audio &amp; text lessons | NHK WORLD RADIO JAPAN</title>
+    <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
+    <link rel="canonical" href="https://www.nhk.or.jp/lesson/english/">
+    <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css">
+    <link rel="stylesheet" href="/lesson/common/css/base.css">
+    <link rel="stylesheet" href="/lesson/common/css/langtop.css">
+    <link rel="stylesheet" href="/lesson/common/css/banner.css">
+    <link rel="stylesheet" href="/lesson/common/css/48_btn.css">
+    <link rel="stylesheet" href="/lesson/english/css/en.css">
+    <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
+    <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
+    <script src="/nhkworld/common/js/lib/jquery-3.min.js"></script>
+    <script src="/nhkworld/common/js/lib/jquery.matchHeight-min.js" charset="utf-8"></script>
+    <script src="/nhkworld/common/js/lib/slick.min.js"></script>
+    <script src="/lesson/common/js/share.js" charset="utf-8"></script>
+    <script src="/lesson/english/index.js" charset="utf-8"></script>
+    <script src="/lesson/common/js/le_menu_en.js" charset="utf-8"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Easy Japanese: Grammar Lessons",
+            "description": "Master basic grammar! Also - words that sound like what they describe. (48 lessons)",
+            "provider": {
+                "@type": "Organization",
+                "name": "NHK WORLD",
+                "sameAs": "https://www3.nhk.or.jp/nhkworld/"
+            }
+        }
+    </script>
+<script>
+var last_number_of_published_lesson = 1;
+$( function() {
+    $.ajax({
+        url: '/lesson/update/lesson/en/lno.xml',
+        type: 'GET',
+        dataType: 'xml',
+        async: false,
+        success: function(xml){
+            var elm = $(xml).find('last_number_of_published_lesson');
+            if( elm != null ){
+                if( elm.length > 0 ){
+                    last_number_of_published_lesson = parseInt( elm.text(), 10 );
+                }
+            }
+        }
+    });
+
+    var ih = "";
+    for( var i = 1; i <= last_number_of_published_lesson; i++ ){
+        var itNN = "00" + i.toString();
+        itNN = itNN.substring( itNN.length - 2 );
+        var itN = i.toString();
+        ih += "<li id=\"b" + itNN + "\"><a href=\"/lesson/english/learn/list/" + itN + ".html\">" + itN + "</a></li>";
+    }
+    $('#lesson-btn .clearfix').html( ih );
+
+    $.ajax({
+        url: '/lesson/english/learn/list/2.fragment.html',
+        type: 'GET',
+        dataType: 'text',
+        async: true,
+        success: function(d){
+            $("#le-page-link ul").append(d);
+        }
+    });
+});
+</script>
+</head>
+<body id="lesson-top">
+<div id="nw-global-header"></div>
+<!--  mainBox  -->
+<div id="mainBox">
+
+<!-- *************************************************  -->
+<!-- ***************** LESSON START ******************  -->
+<!-- topic path  -->
+<p id="topic-path"><a href="https://www3.nhk.or.jp/nhkworld/">Home</a> &gt; <a href="/lesson/">Easy Japanese</a> &gt; <em>2015 English Top</em></p>
+
+<div id="lesson-box">
+<!--  EJ head  -->
+<script>
+  le_showHeader_en({});
+</script>
+<!-- /EJ head  -->
+
+  <!--  EJ body  -->
+  <div id="ej-body">
+
+    <!--  BANNER  -->
+    <div class="banner skit">
+      <a href="/lesson/english/skitcompe/">
+        <img class="spDisplay" src="/lesson/english/skitcompe/images/banner_en_sp.png" alt="Skit-writing Contest &sim;Visit Japan with your original skit&sim;">
+        <img class="spNoDisplay" src="/lesson/english/skitcompe/images/banner_en.png" alt="Skit-writing Contest &sim;Visit Japan with your original skit&sim;">
+      </a>
+    </div>
+
+    <div class="ej-wrapper">
+      <!-- TOP content -->
+      <div id="top-content">
+        <div id="top-content-l">
+
+            <div id="slide-pickup">
+                <h1>PICK UP</h1>
+                <div class="slide-pickup-box">
+                    <div class="slider-for">
+                        <div class="slider-for-item">
+                            <a href=""><img alt="" class="pu-img" src="">
+                            <h3 class="title"></h3>
+                            <p></p></a>
+                        </div>
+                    </div><!-- /.slider-for -->
+                    <div class="slider-nav">
+                        <div class="slider-nav-item">
+                            <a href="">
+                            <h3 class="title"></h3>
+                            <p></p></a>
+                        </div>
+                    </div><!-- /.slider-nav -->
+                </div><!-- /.slide-picture-box -->
+            </div><!-- /PICK UP -->
+
+          <!--  BANNER  -->
+          <div class="banner myc">
+            <a href="/lesson/english/special/challenge/1.html">
+              <div class="myc-ttl">
+                <h2>Review: <span>Make Your Choice!</span></h2>
+              </div>
+              <div class="myc-quiz">
+                  <div class="myc-quiz-inner">
+                    <p>We'll give you questions from what we have studied so far. You have two answer choices for each question. Let's check with Anna and Rodrigo if you have learned Japanese expressions and grammar correctly.</p>
+                  </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- japanese letters -->
+          <div id="japanese-letters">
+            <a href="https://www.nhk.or.jp/lesson/en/letters/hiragana.html">Japanese Letters</a>
+          </div>
+
+          <!--  Information  -->
+          <div id="information">
+            <div class="info-inner">
+              <h2>Information</h2>
+              <ul id="info-list">
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna</a> aliqua.</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <a href="#">labore et dolore magna</a> aliqua.</li>
+              </ul>
+            </div>
+          </div>
+          <!--  /Information  -->
+
+
+          <ul class="content-menu">
+            <li><a href="/lesson/english/learn/list/">
+              <img src="/lesson/common/images/toplist_p1.jpg" alt="List of Lessons">
+              <h2 class="cbox">List of Lessons</h2>
+            </a></li>
+            <li><a href="/lesson/english/teacher/">
+              <img src="/lesson/common/images/toplist_p3.jpg" alt="Teach Us, Teacher">
+              <h2 class="cbox">Teach Us, Teacher</h2>
+            </a></li>
+            <li><a href="/lesson/english/vocabulary/">
+              <img src="/lesson/common/images/toplist_p4.jpg" alt="Vocabulary List &amp; Quiz">
+              <h2 class="cbox">Vocabulary List &amp; Quiz</h2>
+            </a></li>
+            <li><a href="/lesson/english/soundwords/">
+              <img src="/lesson/common/images/toplist_p5.jpg" alt="Sound Words">
+              <h2 class="cbox">Sound Words</h2>
+            </a></li>
+            <li><a href="/lesson/english/learn/story/overview.html">
+              <img src="/lesson/common/images/toplist_p6.jpg" alt="What is Easy Japanese">
+              <h2 class="cbox">What is <span>"Easy Japanese"</span></h2>
+            </a></li>
+            <li><a href="/lesson/english/special/photo/">
+              <img src="/lesson/common/images/toplist_p7.jpg" alt="We're studying with Anna!">
+              <h2 class="cbox">We're studying with Anna!</h2>
+            </a></li>
+          </ul>
+        </div>
+        <div id="top-content-r">
+
+            <div id="lesson-btn-box">
+                <h3>List of Lessons</h3>
+                <div id="lesson-btn">
+                    <ul class="clearfix">
+                    </ul>
+                </div>
+            </div>
+
+          <div id="btn-dl"><a href="/lesson/english/download/"><span class="free">FREE </span>Download Lessons <span class="subtext">( Textbook )</span></a></div>
+
+        <!--  side banner  -->
+        <!-- ul id="side-bnr">
+            <li><a href="/lesson/english/special/photo/"><figure><img src="/lesson/update/bnr/side_bnr_photo.png" alt="We are Studying with Anna!"></figure><span>We are Studying with Anna!</span></a></li>
+            <li><a href="/lesson/english/easytravel_j/"><figure><img src="/lesson/update/bnr/side_bnr_easytravel_j.png" alt="Easy Travel Japanese"></figure><span>Easy Travel Japanese</span></a></li>
+        </ul -->
+          <!--  /side banner  -->
+
+          <ul class="sub-nav">
+            <li class="sn11"><a href="/lesson/english/learn/story/overview.html">What is "Easy Japanese"</a></li>
+            <!-- <li class="sn07"><a href="/lesson/english/learn/howtouse/">How to use "Easy Japanese"</a></li> -->
+            <li class="sn08"><a href="/lesson/english/faq.html">FAQ</a></li>
+            <li class="sn06 spNoDisplay"><a href="/lesson/english/learn/tools/">Learning Tools</a></li>
+            <li class="sn10"><a href="https://www3.nhk.or.jp/nhkworld/en/contact/"><span class="icon">Please send your message</span></a></li>
+          </ul>
+          <div id="select-lang">
+            <div id="select-tgl">
+            <h3>Select your language<span class="arw"></span></h3>
+              <ul class="clearfix">
+                <li class="sl01"><a href="/lesson/arabic/">Ø¹Ø±Ø¨Ù</a></li>
+                <li class="sl02"><a href="/lesson/bengali/">à¦¬à¦¾à¦à¦²à¦¾</a></li>
+                <li class="sl03"><a href="/lesson/burmese/">áá¼ááºáá¬ááá¬á¸</a></li>
+                <li class="sl04"><a href="/lesson/chinese/">åè¯­</a></li>
+                <li class="sl05 on"><a href="/lesson/english/">English</a></li>
+                <li class="sl06"><a href="/lesson/french/">FranÃ§ais</a></li>
+                <li class="sl07"><a href="/lesson/hindi/">à¤¹à¤¿à¤¨à¥à¤¦à¥</a></li>
+                <li class="sl08"><a href="/lesson/indonesian/">Bahasa Indonesia</a></li>
+                <li class="sl09"><a href="/lesson/korean/">ì½ë¦¬ì¸</a></li>
+                <li class="sl10"><a href="/lesson/persian/">ÙØ§Ø±Ø³Û</a></li>
+                <li class="sl11"><a href="/lesson/portuguese/">PortuguÃªs</a></li>
+                <li class="sl12"><a href="/lesson/russian/">Ð ÑÑÑÐºÐ¸Ð¹</a></li>
+                <li class="sl13"><a href="/lesson/spanish/">EspaÃ±ol</a></li>
+                <li class="sl14"><a href="/lesson/swahili/">Kiswahili</a></li>
+                <li class="sl15"><a href="/lesson/thai/">à¸ à¸²à¸©à¸²à¹à¸à¸¢</a></li>
+                <li class="sl16"><a href="/lesson/urdu/">Ø§Ø±Ø¯Ù</a></li>
+                <li class="sl17"><a href="/lesson/vietnamese/">Tiáº¿ng Viá»t</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div id="app-link" class="clearfix">
+            <a href="https://www3.nhk.or.jp/nhkworld/en/radio/howto/"><img src="/lesson/common/images/icon_radio.png" alt="On-air schedule"></a>
+            <a href="https://www3.nhk.or.jp/nhkworld/en/app/"><img src="/nhkworld/common/site_images/app_rj_104x104.png" alt="NHK WORLD RADIO JAPAN App"></a>
+            <p>You can listen to "Easy Japanese" on the radio broadcast and the free app.</p>
+          </div> -->
+          <div class="ej-sns"><div id="snsbtn"></div> <span>*You will leave the NHK website.</span></div>
+        </div>
+      </div><!-- /TOP content -->
+    </div>
+  </div>
+  <!-- /EJ body  -->
+
+
+<!--  EJ foot  -->
+<script>
+  le_showFooter_en({});
+</script>
+<!-- /EJ foot  -->
+
+</div><!-- /lesson box  -->
+<!-- ****************** LESSON END *******************  -->
+<!-- *************************************************  -->
+
+</div><!-- /mainBox  -->
+<div id="nw-global-footer"></div>
+<script>
+  NWTool('NWHeader', { "lang": "en", "pathAbsolute": true, "current": "learn" });
+  NWTool('NWFooter', { "lang": "en", "pathAbsolute": true });
+  var sns = nw_showSNS.en();
+  document.getElementById('snsbtn').appendChild(sns);
+</script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- <html lang="en-US"> -->
+<!-- <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="cI3fBDNM-T7_-f7WfArpRRBIr_mWxTym66MQuKRxijo65JRdaXqbX4qhm74oQKN0QAzflN68Vezby3nyyEK8Dw==">
+  <title>新京报</title>
+    
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/yii.js"></script>
+  
+</head> -->
+<!-- <body> -->
+
+<!-- <div class="wrap"> -->
+    
+    <!-- <div class="container"> -->
+                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta property="og:type" content="article" />
+    <title>新京报北交所频道</title>
+    <script src="https://static.bjnews.com.cn/wap/js/flexible.min.js"></script>
+    <script src="https://static.bjnews.com.cn/common/js/jquery.js"></script>
+    <script src="https://static.bjnews.com.cn/wap/js/swiper.js"></script>
+    <link rel="stylesheet" href="https://static.bjnews.com.cn/wap/css/swiper.css?v=13">
+    <link rel="stylesheet" href="https://static.bjnews.com.cn/wap/css/base.css?v=13">
+    <link rel="stylesheet" href="https://static.bjnews.com.cn/wap/css/bjsIndex.css?v=26">
+</head>
+<body>
+    <div class="box">
+        <div class="Carousel">
+            <div class="swiper">
+            </div>
+        </div>
+        <!-- 栏目 -->
+        <div class="column">
+            <div class="column-img">
+                <a href="https://m.bjnews.com.cn/detail/163693840714977.html?show_type=newSpecial&show_uuid=163693840714977">
+                    <img src="https://static.bjnews.com.cn/wap/img/hb1.png">
+                </a>
+            </div>
+            <div class="column-li">
+                <div class="column-list">
+                    <a href="https://m.bjnews.com.cn/beijiaosuo/columnpage?column_id=9351">
+                        <img src="https://static.bjnews.com.cn/wap/img/bzsx2x.png" alt="">
+                        <h3>北证时讯</h3>
+                    </a>
+                </div>
+                <div class="column-list">
+                    <a href="https://m.bjnews.com.cn/beijiaosuo/columnpage?column_id=9352">
+                        <img src="https://static.bjnews.com.cn/wap/img/tjtd2x.png" alt="">
+                        <h3>投教天地</h3>
+                    </a>
+                </div>
+                <div class="column-list">
+                    <a href="https://m.bjnews.com.cn/beijiaosuo/columnpage?column_id=9353">
+                        <img src="https://static.bjnews.com.cn/wap/img/bzsd2x.png" alt="">
+                        <h3>北证深度</h3>
+                    </a>
+                </div>
+                <div class="column-list">
+                    <a href="https://m.bjnews.com.cn/beijiaosuo/columnpage?column_id=9354">
+                        <img src="https://static.bjnews.com.cn/wap/img/gsmdm2x.png" alt="">
+                        <h3>公司面对面</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 列表 -->
+        <div class="boxLi">
+            <div class="list">
+            </div>
+            <div class="load" style="padding: 0.3rem 0; text-align:center; display:none; font-size: 0.28rem;">已经到底了</div>
+        </div>
+    </div>
+</body>
+<script>
+    var web_root_url = "https://m.bjnews.com.cn"
+    var api_root_url = "https://api.bjnews.com.cn/api/v101/"
+    var channel_id = 10023;
+    var page = 1;
+    var typeTrue = true;
+    // 开始处理时间戳
+    function format(times) {
+        if (times) {
+            //timestamp是整数，否则要parseInt转换,不会出现少个0的情况
+            //计算多久前发布
+            var time = new Date(times * 1000);
+            // console.log(time)
+            var dqtime = new Date();
+            var date = dqtime.getTime() - time.getTime()
+            date = Math.floor(date / 1000)
+            if (date <= 59) {
+                return date+ '秒前'
+                // datetime.push(date + '秒前')
+            } else if (date <= 3599) {
+                date = Math.floor(date / 60)
+                return date + '分钟前'
+                // datetime.push(date + '分钟前')
+            } else if (date <= 86399) {
+                date = Math.floor(date / 60 / 60)
+                return date + '小时前'
+                // datetime.push(date + '小时前')
+            } else {
+                date = Math.floor(date / 60 / 60 / 24)
+                if (date < 2) {
+                    return '1天前'
+                    // datetime.push('1天前')
+                } else {
+                    y = time.getFullYear(); //getFullYear方法以四位数字返回年份
+                    M = time.getMonth() + 1; // getMonth方法从 Date 对象返回月份 (0 ~ 11)，返回结果需要手动加一
+                    d = time.getDate(); // getDate方法从 Date 对象返回一个月中的某一天 (1 ~ 31)
+                    h = time.getHours(); // getHours方法返回 Date 对象的小时 (0 ~ 23)
+                    m = time.getMinutes(); // getMinutes方法返回 Date 对象的分钟 (0 ~ 59)
+                    s = time.getSeconds(); // getSeconds方法返回 Date 对象的秒数 (0 ~ 59)    
+                    if( y == dqtime.getFullYear() ){
+                        return M + '月' + d + '日'
+                    }else{
+                        return y + '年' + M + '月' + d + '日'
+                    }
+                    // datetime.push(y + '-' + M + '-' + d)
+                    // datetime.push(date + '天前')
+                }
+            }
+        } else {
+            return '';
+        }
+    }
+    function getTouchCoordinates(event) {
+        const firstTouch = event.touches[0]; // 获取第一个触点
+        const x = firstTouch.pageX; // 触点的X坐标
+        const y = firstTouch.pageY; // 触点的Y坐标
+        return { x, y };
+    }
+    
+    // 绑定事件监听器
+    document.addEventListener('touchstart', (event) => {
+        var domhei = $('.Carousel').height();
+        const { x, y } = getTouchCoordinates(event);
+        if(y>domhei && window.navigator.userAgent.includes('bjnewapp') && isAndroid()){
+            isBeingDrag = false;
+            window.bjnewapp.requestEvent(isBeingDrag);
+        }
+    });
+    function isAndroid() {
+        return /Android/.test(navigator.userAgent);
+    }
+    function list(){
+        $.ajax({
+            url:api_root_url + 'channel_news/channel_news_list.php',
+            type: 'get',
+            data: {
+                channel_id: channel_id,
+                page: page
+            },
+            dataType: 'json',
+        }).done((res) => {
+            var txt = '';
+            var text = '';
+            var type = '';
+            if(res.code == 0){
+                if(res.data && res.data.length > 0){
+                    for(let i = 0; i < res.data.length; i++){
+                        if(page === 1 && i < 5){
+                            txt += `<div class="swiper-slide">
+                                <a href="${res.data[i].row.share_url}">
+                                    <div class="Carousel-slide" style="background:linear-gradient( 180deg, rgba(6,6,6,0) 0%, rgba(5,5,5,0) 47%, rgba(5,5,5,0.5) 68%, rgba(3,3,3,0.8) 99%, rgba(3,3,3,0.98) 100%), url(${res.data[i].row.cover}) center no-repeat; background-size: cover;">
+                                        <h3>${res.data[i].row.title}</h3>
+                                    </div>
+                                </a>
+                            </div>`;
+                        }else {
+                            text += `<div class="list-box">
+                                <a class="list-box-b" href="${res.data[i].row.share_url}">
+                                    <div class="list-box-left">
+                                        <h3>${res.data[i].row.title}</h3>
+                                        <div class="list-box-left-label">
+                                            ${res.data[i].row.column_info.length > 0 && res.data[i].row.column_info[0].column_name? `<span class="list-box-left-label-column">${res.data[i].row.column_info[0].column_name}</span>` : ''}
+                                            <span class="list-box-left-label-time">${format(res.data[i].row.publish_timestamp)}</span>
+                                        </div>
+                                    </div>
+                                    <div class="list-box-right" style="background:url(${res.data[i].row.cover}) no-repeat center; background-size: cover;"></div>
+                                </a>
+                            </div>`;
+                        }
+                    }
+                    if(page === 1){
+                        txttext =  `<div class="swiper-wrapper">${txt}</div><div class="swiper-pagination"></div>`
+                        $('.swiper').append(txttext)
+                        var mySwiper = new Swiper ('.swiper', {
+                            direction: 'horizontal', // 水平切换选项
+                            loop: true, // 循环模式选项
+                            autoplay: {
+                                delay: 3000,
+                                disableOnInteraction: false
+                            },
+                            // 如果需要分页器
+                            pagination: {
+                                el: '.swiper-pagination',
+                            },
+                            resizeObserver: true,
+                            on: {
+                                resize: function(){
+                                    setTimeout(()=>{
+                                        this.update(); //窗口变化时，更新Swiper的一些属性，如宽高等
+                                    },300)
+                                
+                                },
+                                touchStart:function(swiper) {
+                                    //如果光用此方法来申请app原生控件不拦截事件,在快速滑动的时候可能抢不到事件
+                                    //还要配合下面的touch事件来获取
+                                    if(window.navigator.userAgent.includes('bjnewapp') && isAndroid()){ // 只在安卓使用解决滑动问题
+                                        isBeingDrag = true;
+                                        window.bjnewapp.requestEvent(isBeingDrag);
+                                    }
+                                    
+                                },
+                                // sliderMove:function(swiper) {
+                                    //如果光用此方法来申请app原生控件不拦截事件,在快速滑动的时候可能抢不到事件
+                                    //还要配合下面的touch事件来获取
+                                    // if(window.navigator.userAgent.includes('bjnewapp') && isAndroid()){  // 只在安卓使用解决滑动问题
+                                        // isBeingDrag = true;
+                                        // window.bjnewapp.requestEvent(isBeingDrag);
+                                    // }
+                                    
+                                // },
+                                touchEnd: function(swiper,event){
+                                    // if(window.navigator.userAgent.includes('bjnewapp') && isAndroid()){ // 只在安卓使用解决滑动问题
+                                    //     isBeingDrag = false;
+                                    //     window.bjnewapp.requestEvent(isBeingDrag);
+                                    // }
+                                    
+                                }
+                            },
+                        })
+                    }
+                    $('.list').append(text)
+                    page += 1;
+                    typeTrue = true;
+                }
+                if( res.data === null || res.data.length < 20 ){      
+                    $(".load").text("已经到底了").show()
+                }
+            }
+        }).fail((err) => {
+            console.log(err)
+        })
+    }
+    function columnListHref(){
+        var len =  $('.column-list');
+        for(let i = 0; i<len.length; i++){
+            if(i == 0){
+                len.eq(i).find('a').attr('href', web_root_url + '/beijiaosuo/columnpage?column_id=9351')
+                continue;
+            }
+            if(i == 1){
+                len.eq(i).find('a').attr('href', web_root_url + '/beijiaosuo/columnpage?column_id=9352')
+                continue;
+            }
+            if(i == 2){
+                len.eq(i).find('a').attr('href', web_root_url + '/beijiaosuo/columnpage?column_id=9353')
+                continue;
+            }
+            if(i == 3){
+                len.eq(i).find('a').attr('href', web_root_url + '/beijiaosuo/columnpage?column_id=9354')
+                continue;
+            }
+        }
+    }
+    columnListHref()
+    list()
+    //下拉更新数据
+    $(window,document,"body").scroll(function(e){
+        var scrollHeight = $(document).height();   //当前页面的总高度
+        var scrollTop = $(document).scrollTop();    //滚动条距离顶部的高度
+        var clientHeight = $(window).height();    //当前可视的页面高度
+        if(scrollTop + clientHeight >= scrollHeight*0.98){   //距离顶部+当前高度 >=文档总高度 即代表滑动到底部 count++;         //每次滑动count加1
+            if(typeTrue === true){
+                typeTrue = false;
+                list()
+            }
+            console.log('到底了')
+        }else if(scrollTop<=0){ 
+        //滚动条距离顶部的高度小于等于0 TODO
+        }
+    });
+</script>
+</html>    <!-- </div> -->
+<!-- </div> -->
+
+<!--<footer class="footer">
+    <div class="container">
+        <p class="pull-left">&copy; My Company 2025</p>
+
+        <p class="pull-right">Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></p>
+    </div>
+</footer>-->
+
+<!-- </body> -->
+<!-- </html> -->

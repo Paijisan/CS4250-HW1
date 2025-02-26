@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="shortcut icon" href="/favicon.ico">
+<head>
+    <style type="text/css" class="AMap.style"></style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no">
+    <meta name="theme-color" content="#000000">
+    <!-- <link rel="manifest" href="./manifest.json">-->
+    <!-- <link rel="shortcut icon" href="./favicon.ico">  -->
+    <!-- <script type="text/javascript" async="" charset="utf-8" src="https://c.cnzz.com/core.php?web_id=1275168103&amp;t=z">
+    </script>
+    <script src="./screeninit.js"></script>
+    <script src="./vconsole.min.js"></script> -->
+    <link rel="stylesheet" href="/wap/css/swiper.css">
+    <link rel="stylesheet" href="/wap/css/index_newsubject.css?v=14">
+    <style>
+        /* .vjs-poster{border-radius: 0.16rem;height: 3.6rem;width: 6.4rem;position: relative;left: -0.02rem;}
+        .subject-live-box .vjs-poster{width: auto;height:100%;}
+        .video-js .vjs-big-play-button{background-color: rgba(43,51,63,.01);border:0;font-size: 6em;} */
+        .my-video0-dimensions{width:7.5rem;height:4.22rem;}
+        .line_2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4
+        }
+    </style>
+    <script>
+        //引入该flexible.min.js
+        ! function(e, t) {
+            function n() {
+                var n = l.getBoundingClientRect().width;
+                t = t || 540, n > t && (n = t);
+                var i = 100 * n / e;
+                r.innerHTML = "html{font-size:" + i + "px;}"
+            }
+            var i, d = document,
+                o = window,
+                l = d.documentElement,
+                r = document.createElement("style");
+            if (l.firstElementChild) l.firstElementChild.appendChild(r);
+            else {
+                var a = d.createElement("div");
+                a.appendChild(r), d.write(a.innerHTML), a = null
+            }
+            n(), o.addEventListener("resize", function() {
+                clearTimeout(i), i = setTimeout(n, 300)
+            }, !1), o.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(i), i = setTimeout(n, 300))
+            }, !1), "complete" === d.readyState ? d.body.style.fontSize = "16px" : d.addEventListener(
+                "DOMContentLoaded",
+                function(e) {
+                    d.body.style.fontSize = "16px"
+                }, !1)
+        }(750, 750);
+    </script>
+    <script src="/wap/js/swiper.js"></script>
+    <!-- <script src="./jquery.js"></script>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&amp;key=您申请的key值"></script>
+    <style type="text/css">
+        .amap-container {
+            cursor: url(https://webapi.amap.com/theme/v1.3/openhand.cur), default;
+        }
+
+        .amap-drag {
+            cursor: url(https://webapi.amap.com/theme/v1.3/closedhand.cur), default;
+        }
+    </style>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="./wx_config.js"></script> -->
+    <!-- <script src="/js/jquery-3.3.1.min.js"></script> -->
+    <title></title>
+    <script src="https://static.bjnews.com.cn/common/js/jquery.js"></script>
+    <script src="https://m.bjnews.com.cn/js/video.min.js"></script>
+    <link rel="stylesheet" href="https://m.bjnews.com.cn/css/video-js.min.css">
+    <!-- <link href="./static/css/main.1e5fa47e.css" rel="stylesheet"> -->
+</head>
+
+<body style="background-color: rgb(244, 244, 244);width:7.5rem;margin:0 auto;">
+    <input type="hidden" id="uuid" value="1740385284129039">
+    <div id="root" style="width:7.5rem;margin:0 auto;">
+        <div class="top-btn"></div>
+        <div class="newsubject-box">
+            <div class="header-box">
+                <div class="left">
+                    <div class="logo1"></div>
+                    <!-- <div class="logo2"></div> -->
+                    <div class="text">
+                        <p>新京报</p>
+                        <p>好新闻 无止境</p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="header-open-app dakai" style="display:none;">立即打开</div>
+                    <wx-open-launch-app
+                    id="laun-btn"
+                    style="display:none;"
+                    appid="wx28709be0cee37865"
+                    extinfo="newSpecial/1740385284129039"
+                    >
+                        <template>
+                            <style>
+                            .btn {
+                                width: 100%;
+                                height: 30px;
+                                line-height: 1;
+                                text-align: center;
+                                font-size: 12px;
+                                border: none;
+                                border-radius: 4px;
+                                color: #000;
+                                background: #D02D2D;
+                                color: #FFFFFF;
+                                }
+                            </style>
+                            <button class="btn">立即打开</button>
+                        </template>
+                    </wx-open-launch-app>
+                    <div class="close" style="display:none"></div>
+                </div>
+            </div>
+            <div class="newheader">
+            </div>
+
+            <div class="newsubject-desc newsubject-desc1"></div>
+            <div class="newsubject-desc newsubject-desc2"></div>
+            <ul class="newsubject-menu">
+            </ul>
+
+            <div class="new-subject-box">
+                <div class="newsubject-list">
+                    
+                </div>
+                <wx-open-launch-app
+                id="launch-btn"
+                appid="wx28709be0cee37865"
+                style="display:none"
+                extinfo="newSpecial/1740385284129039"
+                >
+                    <template>
+                        <style>
+                        .btn {
+                            width: 100%;
+                            height: 45px;
+                            line-height: 45px;
+                            text-align: center;
+                            font-size: 16px;
+                            border: none;
+                            border-radius: 4px;
+                            color: #000;
+                            background: #D02D2D;
+                            color: #FFFFFF;
+                            }
+                        </style>
+                        <button class="btn">打开新京报APP 阅读更多精彩资讯</button>
+                    </template>
+                </wx-open-launch-app>
+                <div class="open-app dakai" style="margin-top: 0.78rem;display:none;">打开新京报App，阅读体验更佳</div>
+            </div>
+        </div>
+        <!-- <script type="text/javascript" src="./static/js/main.85f89a6c.js"></script>
+    <script src="https://s22.cnzz.com/z_stat.php?id=1275168103&amp;web_id=1275168103"></script>
+     -->
+    <div style="display:none">
+        <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1276106384Tengine'%3E%3C/span%3E%3Cscript src='https://s23.cnzz.com/z_stat.php%3Fid%3D1276106384Tengine%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        <script charset="utf-8" language="javascript" src="/wap/js/bktj.js"></script>
+    </div>
+
+<!-- 保利威直播视频组件依赖 -->
+<script src="//player.polyv.net/resp/live-h5-player/latest/liveplayer.min.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=您申请的key值"></script>
+
+
+<script>
+    // "use strict";
+
+var web_root_url = "https://m.bjnews.com.cn";
+let POLYV_UID = "1e7d48173c";
+window.onload = function () {
+    var uuid = $("#uuid").val();
+     $.ajax({
+            type:'GET',
+            url:   '/api/addpv?uuid='+uuid,
+            dataType:'JSON',
+            success:function(st){
+                if(st.suc == 1 && st.info=='ok'){
+
+                }
+            },
+            error:function(){}
+        });
+    function is_weixn() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var is_weixn = is_weixn();
+    if (is_weixn) {
+        $('.header-open-app').hide();
+        $('#laun-btn').show();
+        $('.open-app').hide();
+        $('#launch-btn').show();
+    } else {
+        $('.header-open-app').show();
+        $('#laun-btn').hide();
+        $('.open-app').css({
+            'display': 'block'
+        });
+        $('#launch-btn').hide();
+    }
+    // var url = "https://apitest.bkeconomy.com/api/v101/news/special_detail.php?uuid=" + uuid
+    var url = "https://api.bjnews.com.cn/api/v101/news/special_detail.php?uuid=" + uuid;
+    $.ajax({
+        type: "GET",
+        url: url,
+        dataType: 'json',
+        headers: {
+            // version: 'v207'
+            // version: 'v214'
+            version: 'v217'
+            // version: 'v201'
+            // version: 'v104'
+        },
+        success: function success(res) {
+            if (res.code == 0) {
+                //判断颜色
+                setTimeout(function() {
+                    if(res.data.ext_data.special_color / 1 === 1){
+                        $(".time_title").css("background","#d12d2b");
+                        $(".time_title i").css("borderRightColor","#d12d2b");;
+                        $(".red_line").addClass("red_line");
+                        $(".descBtn").css("color","#d12d2b");
+                        $(".descBtn_over").css("color","#d12d2b")
+                        $(".viewMoreNormal").css("color","#d12d2b")
+                        document.documentElement.style.setProperty('--border-color', '#d12d2b');
+                    }else if(res.data.ext_data.special_color / 1 === 2){
+                        $(".time_title").css("background","#146AEA");
+                        $(".time_title i").css("borderRightColor","#146AEA");
+                        $(".red_line").addClass("blue_line");
+                        $(".descBtn").css("color","#146AEA");
+                        $(".descBtn_over").css("color","#146AEA")
+                        $(".viewMoreNormal").css("color","#146AEA")
+                        document.documentElement.style.setProperty('--border-color', '#146AEA');
+                    }else if(res.data.ext_data.special_color / 1 === 3){
+                        $(".time_title").css("background","#ccc");
+                        $(".time_title i").css("borderRightColor","#ccc");
+                        $(".red_line").addClass("grey_line");
+                        $(".descBtn").css("color","#ccc");
+                        $(".descBtn_over").css("color","#ccc")
+                        $(".viewMoreNormal").css("color","#ccc")
+                        document.documentElement.style.setProperty('--border-color', '#ccc');
+                    }
+                }, 100);
+                var list = res.data.list;
+                var data = res.data;
+                var live = 0;
+                var title = res.data.title;
+                document.getElementsByTagName("title")[0].innerText = title;
+                var desc = res.data.desc;
+                var d_desc = desc.split('');
+                var z_desc = '';
+                var newdesc = [];
+                for (var s = 0; s < 42; s++) {
+                    newdesc.push(d_desc[s]);
+                }
+                z_desc = newdesc.join('');
+                z_desc = z_desc + '<span class="descBtn descBtn1"><span class="descIcon"></span>展开</span>';
+                $(".newsubject-desc1").append(z_desc);
+                $(".newsubject-desc2").append(desc);
+                if (desc.length > 42) {
+                    $(".newsubject-desc1").show();
+                    $(".newsubject-desc2").append('<p class="descBtn  descBtn2">收起</p>');
+                } else {
+                    $(".newsubject-desc2").show();
+                }
+                $(".descBtn1").on("click", function () {
+                    $(".newsubject-desc1").hide();
+
+                    $(".newsubject-desc2").show();
+                });
+                $(".descBtn2").on("click", function () {
+                    $(".newsubject-desc1").show();
+                    $(".newsubject-desc2").hide();
+                });
+                // 头部轮播图
+                if(res.data.focus_list.length > 0){
+                    var demo = '';
+                    demo += '<div class="swiper-wrapper" style="height:4.22rem;">'
+                    for (var i = 0; i < res.data.focus_list.length; i++) {
+                        demo += '<div class="swiper-slide">'
+                            demo += '<div class="swiper-zoom-container">'
+                                demo += '<a href="' + res.data.focus_list[i].special_focus_url + '">'
+                                    demo += '<img class="newsubject-head-box" alt="" src="' + res.data.focus_list[i].special_focus_cover + '">'
+                                    demo += '<h3><span>' + res.data.focus_list[i].special_focus_title + '</span></h3>'
+                                demo += '</a>'
+                            demo += '</div>'
+                        demo += '</div>'
+                    }
+                    demo += '</div>'
+                    demo += '<div class="swiper-pagination swiper-pagination-white"></div>'
+                    $('.newheader').append(demo)
+                    var swiper = new Swiper('.newheader', {  // 轮播图
+                        // zoom: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable :true,
+                        },
+                        autoplay: true,
+                        resizeObserver: true,
+                        on: {
+                            resize: function(){
+                                setTimeout(()=>{
+                                    this.update(); //窗口变化时，更新Swiper的一些属性，如宽高等
+                                },300)
+                            
+                            }, 
+                        },
+                    })
+                }
+
+                for (var i in list) {
+                    var manuscript_list = list[i].manuscript_list;
+                    var k = 0;
+                    //直播
+                    if (res.data.focus_list.length === 0 && list[i].module_type == 4) {
+                        var live_demo = '';
+                        live_demo += '<div class="subject-live-box">';
+                        // if(list[i].manuscript_list[0].row.live_status/1===3){
+                        //     live_demo += "<video id=\"video\" class=\"video-js vjs-big-play-centered\" x-webkit-airplay=\"allow\" poster=\"" + list[i].manuscript_list[0].row.cover + ("\" webkit-playsinline playsinline x5-video-player-type=\"h5\" x5-video-player-fullscreen=\"true\" preload=\"auto\" src=\"" + list[i].manuscript_list[0].row.ext_data.video_url + "\" style=\"width:100%; height: 4.22rem;\" controls=\"controls\">");
+                        //     live_demo += "<source src=\"" + list[i].manuscript_list[0].row.ext_data.video_url + "\"  type=\"" + (list[i].manuscript_list[0].row.ext_data.video_url.toLowerCase().indexOf('.m3u8') != -1 ? 'application/x-mpegURL' : 'video/mp4') + "\">";
+                        //     // live_demo += ' <video id="live" playsinline="" webkit-playsinline="true"  x5-playsinline="true" controls preload="auto" src="' + list[i].manuscript_list[0].row.ext_data.video_url + '" poster="' + list[i].manuscript_list[0].row.cover + '" loop="">'
+                        //     // live_demo += '<source id="liveSource" type="video/mp4" src="' + list[i].manuscript_list[0].row.ext_data.video_url + '">'
+                        //     live_demo += ' </video>';
+                        // }else 
+                        let polyv_channel_id = ""
+                        console.log('polyv_channel_id',polyv_channel_id)
+                        // console.log('list[i].manuscript_list[0].row.live_status/1',list[i].manuscript_list[0].row.live_status/1)
+                        if(list[i].manuscript_list.length>0 
+                                && (list[i].manuscript_list[0].row.live_status/1 === 1 
+                                || list[i].manuscript_list[0].row.live_status/1 === 2) ) {
+
+                            polyv_channel_id = list[i].manuscript_list[0].row
+                                &&list[i].manuscript_list[0].row.polyv_channel_id 
+                                ? list[i].manuscript_list[0].row.polyv_channel_id
+                                :"";
+                            // 直播中/回放
+                            if(polyv_channel_id){
+                                live_demo += `
+                                <!-- 移动端 -->
+                                <div >
+                                    <div id="player"></div>
+                                    <div class="plv-watch-mobile" style="display: none;">
+                                        <div class="plv-watch-mobile__top">
+                                            <div class="plv-watch-mobile-player" 
+                                                id="plv-mobile-player"></div>
+                                        </div>
+                                        <div class="plv-watch-mobile-chatroom plv-skin--dark" 
+                                            id="plv-mobile-chat"></div>
+                                    </div>
+                                </div>
+                                `
+                            }else{
+                                live_demo += "<video id=\"video\" class=\"video-js vjs-big-play-centered\" x-webkit-airplay=\"allow\" poster=\"" + list[i].manuscript_list[0].row.cover + ("\" webkit-playsinline playsinline x5-video-player-type=\"h5\" x5-video-player-fullscreen=\"true\" preload=\"auto\" src=\"" + list[i].manuscript_list[0].row.ext_data.video_url + "\" style=\"width:100%; height: 4.22rem;\" controls=\"controls\">");
+                                live_demo += "<source src=\"" + list[i].manuscript_list[0].row.ext_data.video_url + "\"  type=\"" + (list[i].manuscript_list[0].row.ext_data.video_url.toLowerCase().indexOf('.m3u8') != -1 ? 'application/x-mpegURL' : 'video/mp4') + "\">";
+                                // live_demo += ' <video id="live" playsinline="" webkit-playsinline="true"  x5-playsinline="true" controls preload="auto" src="' + list[i].manuscript_list[0].row.ext_data.video_url + '" poster="' + list[i].manuscript_list[0].row.cover + '" loop="">'
+                                // live_demo += '<source id="liveSource" type="video/mp4" src="' + list[i].manuscript_list[0].row.ext_data.video_url + '">'
+                                live_demo += ' </video>';
+                            }                         
+                        } 
+                         else if(list[i].manuscript_list.length>0 &&list[i].manuscript_list[0].row.live_status/1 === 4) {
+                            //  结束
+                                live_demo+=  '<div class="yuyueBox"><img src="' +
+                                list[i].manuscript_list[0].row.cover +
+                                ('" alt="封面"/>'
+                                        +'<div class="yugao">'
+                                            + "<div>"
+                                                + '直播已结束'
+                                            + "</div>"
+                                        +"</div>"
+                                    // +'<p class="yuyueTitle" style="color:white;top:50%">'
+                                    //     +"直播已结束" +
+                                    // "</p>"
+                                +"</div>");
+                        }else if (list[i].manuscript_list.length > 0 && list[i].manuscript_list[0].row.live_status / 1 === 3) {
+                            // 预告
+                            live_demo += 
+                                '<div class="yuyueBox">'
+                                    +'<img src="' +
+                                    list[i].manuscript_list[0].row.cover +
+                                    ('" alt="封面"/>'
+                                        +'<div class="yugao">'
+                                            + "<div>"
+                                                + list[i].manuscript_list[0].row.ext_data.live_start_time
+                                                + "<span>开始</span>"
+                                            + "</div>"
+                                        +"</div>"
+                                        // + '<p class="yuyueTitle" style="color:white;top:50%">' +
+                                        // "直播预告" 
+                                        // + "</p>"
+                                +"</div>");
+                        }else {
+                            live_demo+=  '<div class="yuyueBox"><img class="_cover" src="' +
+                                data.ext_data.inner_cover + 
+                                ('" alt="封面" /></div>');
+                        }                    
+                       
+                        live_demo += '</div>';
+                        $(".newheader").append(live_demo);
+                        live = 1;
+                        if(list[i].manuscript_list.length > 0 
+                                && (list[i].manuscript_list[0].row.live_status / 1 === 1 
+                                        || list[i].manuscript_list[0].row.live_status / 1 === 2) 
+                                &&polyv_channel_id){
+                            polyvLoading(polyv_channel_id);
+                        }else{
+                            // videojsnn('video');
+                        }
+                    } else if (list[i].module_type == 5) {
+                        // 图文
+                        if(manuscript_list.length > 0){
+                            k = 0;
+                            var tips = '<li class="menuBox" data-id="' + list[i].module_id + '">' + list[i].module_name + '</li>';
+                            $(".newsubject-menu").append(tips);
+                            var article_list = '';
+                            var id = list[i].module_id;
+                            var swiperBoo = false;
+                            article_list += '<div class="newsubject-normal-box" id="module_' + list[i].module_id + '">';
+                            article_list += '<div class="normal-text flex_aline_center"><span class="red_line"></span>' + list[i].module_name + '</div>';
+                            article_list += '<div class="normal-list" class="list' + list[i].module_id + '">';
+    
+                            var _loop = function _loop() {
+                                article_demo = '';
+    
+                                if (j > 5) {
+                                    article_demo += '<div class="newsubject-normal-item" style="display:none;">';
+                                    // article_demo += '<div class="newsubject-normal-item" style="display:none;" data-uuid="' + manuscript_list[j].uuid + '">'
+                                } else {
+                                    article_demo += '<div class="newsubject-normal-item">';
+                                    // article_demo += '<div class="newsubject-normal-item" data-uuid="' + manuscript_list[j].uuid + '">'
+                                }
+    
+                                // article_demo += '<div class="detailBtn"><a class="detailBtnA" data-uuid="' + manuscript_list[j].uuid + '" href="https://m.hsrb.com.cn/detail/' + manuscript_list[j].uuid + '.html">'
+                                article_demo += '<div class="detailBtn"><span class="detailBtnA" style="display:block;" data-uuid="' + manuscript_list[j].uuid + '" data-specialtype="' + manuscript_list[j].row.special_type + '" data-type="' + manuscript_list[j].row.type + '" data-articleUrl="' + (manuscript_list[j].row.type === '50' ? manuscript_list[j].row.ext_data && manuscript_list[j].row.ext_data.article_url : "") + '">';
+    
+                                // article_demo += '<div>'
+                                // article_demo += '<div class="smallCover">'
+                                // article_demo += '<img src="' + (manuscript_list[j].row.type !== '50' ? manuscript_list[j].row.cover : manuscript_list[j].row.cover_list[0].url) + '" alt="封面图">'
+                                // if (manuscript_list[j].row.type == 2) {
+                                //     manuscript_list[j].row.ext_data.duration = getvideotime(manuscript_list[j].row.ext_data.duration)
+                                //     article_demo += '<div class="manuTimeBox"><span class="play-icon"></span><span>' + manuscript_list[j].row.ext_data.duration + '</span></div>'
+                                // }
+                                // article_demo += '</div>'
+                                // article_demo += '<div class="smallCoverTitle">'
+                                // article_demo += '<div class="right_title line_2">' + manuscript_list[j].row.title + '</div>'
+                                // article_demo += (manuscript_list[j].row.column_info.lenght > 0 && manuscript_list[j].row.column_info[0].column_name ? '<span class="right_tag">' +  manuscript_list[j].row.column_info[0].column_name + '</span>' : '')
+                                // article_demo += '<span class="right_time">' + (manuscript_list[j].row.publish_time.length === 19?manuscript_list[j].row.publish_time.substring(0,manuscript_list[j].row.publish_time.lastIndexOf(":")):"") + '</span>'
+                                // article_demo += '</div></div></span></div></div>'
+                                // 新方法，增加了其他显示方式
+                                var normal_item = manuscript_list[j];
+                                if (normal_item.show_type / 1 === 1 && normal_item.type / 1 !== 3 && normal_item.type / 1 !== 20) {
+                                    //小图
+                                    article_demo += '<div>';
+                                    article_demo += '<div class="smallCover">';
+                                    article_demo += '<img src="' + (normal_item.row.type !== '50' ? normal_item.row.cover : normal_item.row.cover_list[0].url) + '" alt="封面图">';
+                                    if (normal_item.row.type == 2) {
+                                        normal_item.row.ext_data.duration = getvideotime(normal_item.row.ext_data.duration);
+                                        article_demo += '<div class="manuTimeBox"><span class="play-icon"></span><span>' + normal_item.row.ext_data.duration + '</span></div>';
+                                    }
+                                    article_demo += '</div>';
+                                    article_demo += '<div class="smallCoverTitle">';
+                                    article_demo += '<div class="right_title line_2">' + manuscript_list[j].row.title + '</div>';
+                                    article_demo += normal_item.row.column_info.length > 0 && normal_item.row.column_info[0].column_name ? '<span class="right_tag">' + normal_item.row.column_info[0].column_name + '</span>' : '';
+                                    article_demo += normal_item.row.type / 1 === 50 && normal_item.row.ext_data.is_show_marker / 1 === 1 ? '<span class="right_tag">广告</span>' : '';
+                                    article_demo += '<span class="right_time">' + (normal_item.row.publish_time.length === 19 ? normal_item.row.publish_time.substring(0, normal_item.row.publish_time.lastIndexOf(":")) : "") + '</span>';
+                                    article_demo += '</div>';
+                                    article_demo += '</div>';
+                                } else if (normal_item.show_type / 1 === 2) {
+                                    //大图
+                                    article_demo += '<div>';
+                                    if (normal_item.type / 1 === 50) {
+                                        article_demo += "<div class=\"advBigCover\">                                            <img src=" + normal_item.row.cover_list[0].url + " alt=\"外链大图\"/>                                        </div>                                        <div class=\"advBigCoverTitle\">                                            <div class=\"advTitle line_2\">" + normal_item.row.title + "</div>";
+                                        article_demo += normal_item.row.type / 1 === 50 && normal_item.row.ext_data.is_show_marker / 1 === 1 ? '<div class="advBottomIcon"><span class="advTag">广告</span></div>' : '';
+                                        article_demo += '</div>';
+                                    } else if (normal_item.type / 1 === 20) {
+                                        //轮播图
+                                        swiperBoo = true;
+                                        var group = normal_item.group;
+                                        article_demo += "                                           <div class=\"swiper-container\">                                                <div class=\"swiper-wrapper\">";
+                                        group.forEach(function (item, index) {
+                                            article_demo += "<div class=\"swiper-slide\"" + "onClick='goDetail(" + JSON.stringify(item) + ")'" + ("key=" + index + ">                                                    <div class=\"video_cover\">                                                        <img                                                             data-type=\"" + item.type + "\"                                                             data-specialType=\"" + item.special_type + "\"                                                            data-uuid=\"" + item.uuid + "\"                                                             data-articleUrl=\"" + (item.type === '50' ? item.ext_data && item.ext_data.article_url : '') + "\"                                                            src=" + item.cover_list[0].url + " alt=\"封面图\"/>                                                        <div class=\"video_play\">                                                            <!--<div class=\"video_playIcon\"></div>-->                                                            <img class=\"video_playIcon\" src=\"/wap/img/icon_vedio_big.png\" alt=\"\" srcset=\"\">                                                        </div>                                                        <div class=\"swiperTimeBox\">                                                        <span class=\"play-icon\"></span>                                                        <span>" + getvideotime(item.ext_data.duration) + "</span>                                                        </div>                                                    </div>                                                    <div class=\"video_title\">" + item.title + "</div>                                                </div>");
+                                        });
+                                        article_demo += "</div>                                        </div>";
+                                    } else {
+                                        article_demo += "<div>                                            <div class=\"bigCover\">                                                <img src=" + normal_item.row.cover_list[0].url + " alt=\"封面大图\"/>                                                " + (normal_item.type / 1 === 3 ?
+                                        // <span class="specialIcon"></span> 
+                                        '' : normal_item.type / 1 === 2 ? "                                                    <div class=\"video_play\">                                                    <!--<div class=\"video_playIcon\"></div>-->                                                        <img class=\"video_playIcon\" src=\"/wap/img/icon_vedio_big.png\" alt=\"\" srcset=\"\">                                                    </div>                                                    <div class=\"videoTimeBox\">                                                        <span class=\"play-icon\"></span>                                                        <span>" + getvideotime(normal_item.row.ext_data.duration) + "</span>                                                    </div>" : '') + "                                            </div>                                            <div class=\"bigCoverTitle line_2\">" + normal_item.row.title + "</div>                                        </div>";
+                                    }
+                                    article_demo += '</div>';
+                                } else if (normal_item.show_type / 1 === 3 && normal_item.type / 1 !== 3 && normal_item.type / 1 !== 20) {
+                                    //无图
+                                    article_demo += "<div>                                        <div class=\"noCoverTitle line_2\">" + normal_item.row.title + "</div>                                        <div class=\"noCoverBottom\">                                        " + (normal_item.row.column_info.length > 0 ? "<div class=\"bottomTag\">" + normal_item.row.column_info[0].column_name + "</div>" : '') + "                                        <div                                            class=\"bottomTime\">" + changeBeforeTime(normal_item.row.publish_timestamp, normal_item.row.publish_time) + "</div>                                        </div>                                    </div>";
+                                } else if (normal_item.show_type / 1 === 4 && normal_item.type / 1 !== 3 && normal_item.type / 1 !== 20) {
+                                    //三图
+                                    article_demo += "<div>                                        <div class=\"threeCoverTitle line_2\">" + normal_item.row.title + "</div>                                        <ul class=\"threeCoverBox\">";
+                                    normal_item.row.cover_list.forEach(function (item, index) {
+                                        article_demo += "<li class=\"threeCover\" key={index}>                                                <img src=" + item.url + " alt=\"封面图\"/>                                                " + (index === 0 && normal_item.type / 1 === 50 ? '' : index === 0 && normal_item.type / 1 === 2 ? "<div class=\"videoTimeBox\">                                                    <span class=\"play-icon\"></span>                                                    <span>" + getvideotime(normal_item.row.ext_data.duration) + "</span>                                                    </div>" : '') + "                                            </li>";
+                                    });
+                                    article_demo += "</ul>";
+                                    article_demo += normal_item.type / 1 === 50 && normal_item.row.ext_data.is_show_marker / 1 === 1 ? "<div class=\"threeCoverBottomIcon\">                                                <span class=\"threeCoverTag\">广告</span>                                            </div>" : "";
+                                    article_demo += "</div>";
+                                } else if (normal_item.show_type / 1 === 0) {
+                                    //专题三
+                                    article_demo += "<div>                                        <div class=\"bigCover special\">                                            <img src=" + normal_item.row.cover_list[0].url + " alt=\"封面大图\"/>                                            " + (normal_item.type / 1 === 3 ?
+                                    // <span class="specialIcon"></span> 
+                                    '' : normal_item.type / 1 === 2 ? "<div class=\"videoTimeBox\">                                                    <span class=\"play-icon\"></span>                                                    <span>" + getvideotime(normal_item.row.ext_data.duration) + "</span>                                                </div>" : '') + "                                        </div>                                        <div class=\"bigCoverTitle line_2\">" + normal_item.row.title + "</div>                                    </div>";
+                                }
+    
+                                article_demo += '</span></div></div>';
+    
+                                article_list += article_demo;
+                                k++;
+                            };
+    
+                            for (var j in manuscript_list) {
+                                var article_demo;
+    
+                                _loop();
+                            }
+                            article_list += '</div>';
+                            if (k > 5) {
+    
+                                article_list += '<div class="viewMoreNormal" data-id="' + list[i].module_id + '">查看更多 &gt;</div>';
+                                $('.newsubject-list').on("click", '.viewMoreNormal', function () {
+                                    $(this).parent().children('.normal-list').children().show();
+                                    $(this).hide();
+                                });
+                            }
+                            article_list += '</div>';
+                            $(".newsubject-list").append(article_list);
+                            if (swiperBoo) {
+                                initSwiper();
+                            }
+                        }
+                    } else if (list[i].module_type == 6) {
+                        //视频
+                        if(manuscript_list.length > 0){
+                            var tips = '<li class="menuBox" data-id="' + list[i].module_id + '">' + list[i].module_name + '</li>';
+                            $(".newsubject-menu").append(tips);
+                            var video_list = '';
+                            k = 0;
+                            video_list += '<div class="newsubject-video-box" id="module_' + list[i].module_id + '">';
+                            video_list += '<div class="video-text flex_aline_center"><span class="red_line"></span>' + list[i].module_name + '</div>';
+                            video_list += '<div class="video-list">';
+                            for (var m in manuscript_list) {
+                                manuscript_list[m].row.ext_data.duration = getvideotime(manuscript_list[m].row.ext_data.duration);
+                                var video_demo = '';
+                                if (k > 11) {
+                                    video_demo += '<div class="manuItem" style="display:none;">';
+                                } else {
+                                    video_demo += '<div class="manuItem">';
+                                }
+                                // video_demo += '<a class="manuItemA" data-uuid="' + manuscript_list[m].uuid + '" href="https://m.hsrb.com.cn/detail/' + manuscript_list[m].uuid + '.html">'
+                                video_demo += '<span class="manuItemA" data-uuid="' + manuscript_list[m].uuid + '">';
+                                video_demo += '<div class="manuCover">';
+                                video_demo += '<img alt="封面图" src="' + manuscript_list[m].row.cover + '">';
+                                video_demo += '<div class="manuTimeBox">';
+                                video_demo += '<span class="play-icon"></span>';
+                                video_demo += '<span>' + manuscript_list[m].row.ext_data.duration + '</span>';
+                                video_demo += '</div></div>';
+                                video_demo += '<div class="manuTitle line_2">' + manuscript_list[m].row.title + '</div>';
+                                video_demo += '</div>';
+                                video_list += video_demo;
+                                k++;
+                            }
+                            // video_list += '</a></div>'
+                            video_list += '</span></div>';
+                            if (k > 11) {
+                                video_list += '<div class="viewMoreVideo" data-id="' + list[i].module_id + '">查看更多 &gt;</div>';
+                                // video_list += '<div class="viewMoreNormal" data-id="' + list[i].module_id + '">查看更多 &gt;</div>'
+                            }
+                            video_list += '</div>';
+    
+                            $(".newsubject-list").append(video_list);
+                            $('.newsubject-list').on("click", '.viewMoreVideo', function () {
+                                $(this).parent().children('.video-list').children().show();
+                                $(this).hide();
+                            });
+                        }
+                    } else if (list[i].module_type == 3) {
+                        // 人物
+                        if(list[i].person_list.length > 0){
+                            var person_list = list[i].person_list;
+                            var tips = '<li class="menuBox" data-id="' + list[i].module_id + '">' + list[i].module_name + '</li>';
+                            $(".newsubject-menu").append(tips);
+                            var head_list = '';
+                            // k = 0;
+                            head_list += '<div class="newsubject-person-box" id="module_' + list[i].module_id + '">';
+                            head_list += '<div class="person-text flex_aline_center"><span class="red_line"></span>' + list[i].module_name + '</div>';
+                            head_list += '<div class="person-list">';
+                            for (var n in person_list) {
+                                var head_demo = '';
+                                head_demo += '<div class="personItem" data-url="' + person_list[n].relate_url + '">';
+                                head_demo += '<div class="left" style="background-image: url(&quot;' + person_list[n].head_image + '&quot;);"></div>';
+                                head_demo += '<div class="right">';
+                                head_demo += '<div class="name">' + person_list[n].user_name + '</div>';
+                                head_demo += '<div class="text" style="overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;">';
+                                head_demo += person_list[n].keyword;
+                                head_demo += '</div></div></div>';
+                                head_list += head_demo;
+                            }
+                            head_list += '</div>';
+                            head_list += '</div>';
+                            $(".newsubject-list").append(head_list);
+                            $('.personItem').on("click", function (e) {
+                                var url = $(this).attr("data-url");
+                                window.open(url, "_self");
+                            });
+                        }
+                    } else if (list[i].module_type == 7) {
+                        //旧时间线
+                        var event_list = list[i].event_list;
+                        if(event_list.length > 0){
+                            var tips = '<li class="menuBox" data-id="' + list[i].module_id + '">' + list[i].module_name + '</li>';
+                            $(".newsubject-menu").append(tips);
+                            var time_list = '';
+                            time_list += '<div class="newsubject-day-box" id="module_' + list[i].module_id + '">';
+                            time_list += '<div class="newsubject-day-title flex_aline_center"><span class="red_line"></span>' + list[i].module_name + '</div>';
+                            for (var o in event_list) {
+                                var time_demo = '';
+                                time_demo += '<div class="time_box">';
+                                time_demo += '<p class="time_title">' + event_list[o].time + '</p>';
+                                time_demo += '<p class="time_content">' + event_list[o].content + '</p>';
+                                time_demo += '</div>';
+                                time_list += time_demo;
+                            }
+                            time_list += '</div>';
+                            $(".newsubject-list").append(time_list);
+                        }
+                    } else if (list[i].module_type == 8) {
+                        //新时间线修改2023/09/22
+                        var event_list = list[i].event_list;
+                        if(event_list.length > 0){
+                            var tips = '<div class="menuBox" data-id="' + list[i].module_id + '">' + list[i].module_name + '</li>';
+                            $(".newsubject-menu").append(tips);
+                            var time_list = '';
+                            time_list += '<div class="newsubject-day-box" id="module_' + list[i].module_id + '">';
+
+                            if( !event_list[0].node_desc){
+                                time_list += '';
+                            }else{
+                                time_list += '<div class="overlay"></div>';
+                                time_list += '<div class="paixu_right"></div>';
+                                time_list += '<div class="paixu_right_nav">';
+                                    time_list += '<p class="zhongyao" data-id="'+ list[i].module_id +'">只看重要</p>';
+                                    time_list += '<p class="daoxu" data-id="'+ list[i].module_id +'">倒序</p>';
+                                    time_list += '<p class="zhengxu" data-id="'+ list[i].module_id +'">正序</p>';
+                                time_list += '</div>';
+                            }
+                            
+
+
+                            //模块大标题
+                            time_list += '<div class="newsubject-day-title flex_aline_center"><span class="red_line"></span>' + list[i].module_name + '</div>'; 
+                                time_list += '<div class="time_box_paixu">';
+                                for (var o in event_list) {
+                                    var time_demo = '';
+                                    
+                                        time_demo += '<div class="time_box">';
+
+                                            if( !event_list[o].node_desc){
+                                                time_demo += '<p class="time_title">' + newChangeBeforeTime(event_list[o].timestamp, event_list[o].time) + '</p>';
+                                            }else{
+                                                //这个改成时间节点描述(后台输入)
+                                                if(event_list[o].node_desc != null){
+                                                    if(event_list[o].outside_url != ""){//外链
+                                                        time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                            time_demo += '<p class="time_title" style="cursor: pointer"><i></i>' + event_list[o].node_desc + '</p>';
+                                                        time_demo += '</a>'
+                                                    }else{//uuid
+                                                        time_demo += `<p class="time_title" style="cursor: pointer" onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')"><i></i>${event_list[o].node_desc}</p>`;
+                                                    }
+                                                }else{
+                                                    time_demo += '';
+                                                }  
+                                            }
+
+                                        
+                                            if( !event_list[o].node_desc){
+                                                time_demo += `<p style="cursor: pointer" onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">${event_list[o].content}</p>`;
+                                            }else{
+                                                // 新增时间事件标题
+                                                if(event_list[o].outside_url != ""){//外链
+                                                    time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                        if( event_list[o].event_title != ''){
+                                                            time_demo += '<p class="time_big_title">'+ event_list[o].event_title +'</p>';
+                                                        }else{
+                                                            time_demo += '';
+                                                        }
+                                                        time_demo += '<p class="time_miaosu_title">'+event_list[o].content+'</p>'; 
+                                                    time_demo += '</a>'
+                                                }else{//uuid
+                                                    time_demo += `<p class="time_big_title" style="cursor: pointer" onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">${(event_list[o].event_title ? event_list[o].event_title : '')}</p>`;
+                                                    time_demo += `<p class="time_miaosu_title" style="cursor: pointer" onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">${event_list[o].content}</p>`; 
+                                                }
+                                            }
+                                            
+
+                                            //下面判断图片的情况
+                                            if( event_list[o].img_data.length != '' && event_list[o].img_data.length > 1 ){//多张图
+                                                time_demo += '<div class="time_images">';
+                                                    time_demo += '<div class="swiper-container hotspot-swiper">';
+                                                        time_demo += '<div class="swiper-wrapper">';
+                                                            for( let y = 0; y < event_list[o].img_data.length; y++ ){
+                                                                time_demo += '<div class="swiper-slide swiper-slide-duplicate">';
+                                                                    if(event_list[o].outside_url != ""){//外链
+                                                                        time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                                            time_demo += '<div class="hotspot-swiper-href" style="background: url(' + event_list[o].img_data[y].image_url + ') no-repeat center;background-size:cover;">';
+                                                                            time_demo += '</div>';
+                                                                            time_demo += '<p class="moreimg_desc">'+ event_list[o].img_data[y].desc +'</p>'
+                                                                        time_demo += '</a>'
+                                                                    }else{//uuid
+                                                                        time_demo += `<a onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">`
+                                                                            time_demo += '<div class="hotspot-swiper-href" style="background: url(' + event_list[o].img_data[y].image_url + ') no-repeat center;background-size:cover;">';
+                                                                            time_demo += '</div>';
+                                                                            time_demo += '<p class="moreimg_desc">'+ event_list[o].img_data[y].desc +'</p>'
+                                                                        time_demo += '</a>'
+                                                                    }
+                                                                time_demo += '</div>';
+                                                            }                                                   
+                                                        time_demo += '</div>';
+                                                    time_demo += '</div>';
+                                                time_demo += '</div>';
+
+                                                //时间线轮播图
+                                                setTimeout(function() {
+                                                    var mySwiper = new Swiper('.hotspot-swiper', {
+                                                        direction: 'horizontal', //横向切换选项
+                                                        loop: false, //循环模式选项
+                                                        slidesPerView: 'auto'
+                                                    });
+                                                }, 2000);
+
+                                            }else if( event_list[o].img_data.length != '' ){//一张图
+                                                time_demo += '<div class="one_image">';
+                                                    if(event_list[o].outside_url != ""){//外链
+                                                        time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                            time_demo += '<img src="' + event_list[o].img_data[0].image_url +'">';
+                                                            time_demo += '<p class="image_miaoshu">'+ event_list[o].img_data[0].desc +'</p>';
+                                                        time_demo += '</a>'
+                                                    }else{//uuid
+                                                        time_demo += `<a onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">`
+                                                            time_demo += '<img src="' + event_list[o].img_data[0].image_url +'">';
+                                                            time_demo += '<p class="image_miaoshu">'+ event_list[o].img_data[0].desc +'</p>';
+                                                        time_demo += '</a>'
+                                                    }
+                                                time_demo += '</div>';
+                                            }
+                                            //下面判断视频的情况
+                                            if(event_list[o].video_data.length != ''){
+                                                for( let z = 0; z < event_list[o].video_data.length; z++ ){
+                                                    time_demo += '<div class="video_lists">';
+                                                        time_demo += "<video id=\"video\" class=\"video-js pc_video vjs-big-play-centered\" x-webkit-airplay=\"allow\" poster=\"" + event_list[o].video_data[z].video_cover + ("\" webkit-playsinline playsinline x5-video-player-type=\"h5\" x5-video-player-fullscreen=\"true\" preload=\"auto\" src=\"" + event_list[o].video_data[z].video_url + "\" style=\"width:100%; height: 4.22rem; border-radius:.16rem\" controls=\"controls\">");
+                                                            time_demo += "<source src=\"" + event_list[o].video_data[z].video_url + "\"  type=\"" + (event_list[o].video_data[z].video_url.toLowerCase().indexOf('.m3u8') != -1 ? 'application/x-mpegURL' : 'video/mp4') + "\">";
+                                                        time_demo += ' </video>';
+                                                        time_demo += '<p class="image_miaoshu">'+event_list[o].video_data[z].desc+'</p>';
+                                                        // time_demo += '<div class="video_icon"></div>';
+                                                    time_demo += '</div>';
+                                                }
+                                            }
+                                            //下面判断如果是音频
+                                            if(event_list[o].audio_data.length != ''){
+                                                for( let k = 0; k < event_list[o].audio_data.length; k++ ){
+                                                    time_demo += '<div class="audio_list">';
+                                                        time_demo += '<div class="audio">';
+                                                            time_demo += '<audio controls>';
+                                                                time_demo += '<source src="'+event_list[o].audio_data[k].audio_url+'" type="audio/mpeg">';
+                                                                time_demo += '<source src="'+event_list[o].audio_data[k].audio_url+'" type="audio/ogg">';
+                                                            time_demo += '</audio>';
+                                                            time_demo += '<p class="image_miaoshu">'+event_list[o].audio_data[k].desc+'</p>';
+                                                        time_demo += '</div>';
+                                                    time_demo += '</div>';
+                                                }
+                                            }
+
+
+                                            
+
+
+                                        time_demo += '</div>';
+                                    
+                                    time_list += time_demo;
+                                }
+                                time_list += '</div>';
+                            time_list += '</div>';
+                            $(".newsubject-list").append(time_list);
+
+
+                            
+                            // setTimeout(function() {
+                            //     //处理音频视频只播放一个
+                            //     var audios = document.getElementsByTagName("audio");
+                            //     var videos = document.getElementsByTagName("video");
+                            //     // 停止所有音频播放的函数
+                            //     function pauseAllAudio() {
+                            //         [].forEach.call(audios, function (audio) {
+                            //             audio.pause();
+                            //         });
+                            //     }
+                            //     // 停止所有视频播放的函数
+                            //     function pauseAllVideo() {
+                            //         [].forEach.call(videos, function (video) {
+                            //             video.pause();
+                            //         });
+                            //     }
+                            //     // 为每个音频元素添加播放按钮，点击时播放当前音频并停止所有其他音频和视频
+                            //     [].forEach.call(audios, function (audio) {
+                            //         var playButton = document.createElement("button");
+                            //         playButton.textContent = "Play";
+                            //         playButton.addEventListener("click", function () {
+                            //             pauseAllAudio();  // 停止所有音频
+                            //             pauseAllVideo();  // 停止所有视频
+                            //             audio.play();  // 播放当前音频
+                            //         });
+                            //         audio.parentNode.insertBefore(playButton, audio);  // 在音频元素前插入播放按钮
+                            //     });
+                            //     // 为每个视频元素添加播放按钮，点击时播放当前视频并停止所有其他视频和音频
+                            //     [].forEach.call(videos, function (video) {
+                            //         var playButton = document.createElement("button");
+                            //         playButton.textContent = "Play";
+                            //         playButton.addEventListener("click", function () {
+                            //             pauseAllAudio();  // 停止所有音频
+                            //             pauseAllVideo();  // 停止所有视频
+                            //             video.play();  // 播放当前视频
+                            //         });
+                            //         video.parentNode.insertBefore(playButton, video);  // 在视频元素前插入播放按钮
+                            //     });
+                            // }, 100);
+
+
+
+                        }
+                    } else if (list[i].module_type == 9){
+                        var carousel_list = list[i].carousel_list;
+                        if(carousel_list.length > 0){
+                            var tips = '<li class="menuBox" data-id="' + list[i].module_id + '">' + list[i].module_name + '</li>';
+                            $(".newsubject-menu").append(tips);
+                            var time_list = '';
+                            time_list += '<div class="new-Carousel" id="module_' + list[i].module_id + '">'
+                                time_list += '<div class="Carousel-text flex_aline_center"><span class="red_line"></span>'+list[i].module_name+'</div>'
+                                time_list += '<div class="newCarousel-list">'
+                                    time_list += '<div class="newCarousel-list-wrapper" style="width: 100%; height: 3.6rem;">'
+                                    for (let k = 0; k < carousel_list.length; k++) {
+                                        time_list += '<div class="newCarousel-list-slide">'
+                                            time_list += '<div class="newCarousel-list-container detailBtn" style="padding:0;">'
+                                                time_list += '<div style="width:100%; height:100%;" class="detailBtnA" data-uuid="'+carousel_list[k].uuid+'" data-specialtype="'+carousel_list[k].row.special_type+'" data-type="'+carousel_list[k].type+'" data-articleurl="'+ (carousel_list[k].type === "50" ? carousel_list[k].row.ext_data.article_url : "") + '">'
+                                                    time_list += '<img class="newsubject-head-box" alt="" src="' + carousel_list[k].row.cover + '">'
+                                                    // time_list += '<div class="new-Carousel-title-text">'
+                                                    time_list += carousel_list[k].row.title && carousel_list[k].row.title.length>0 ? '<h3><span>' + carousel_list[k].row.title + '</span></h3>' : ''
+                                                    // time_list += '</div>'
+                                                time_list += '</div>'
+                                            time_list += '</div>'
+                                        time_list += '</div>'
+                                    }
+                                    time_list += '</div>'
+                                    // time_list += '<div class="swiper-pagination swiper-pagination-white"></div>'
+                                time_list += '</div>'
+                            time_list += '</div>'
+                            $(".newsubject-list").append(time_list);
+                            //轮播图
+                            // setTimeout(function() {
+                            //     var mySwiper = new Swiper('.newCarousel-list', {
+                            //         direction: 'horizontal', //横向切换选项
+                            //         loop: false, //循环模式选项
+                            //         slidesPerView: 'auto'
+                            //     });
+                            // }, 2000);
+                        }
+                    } else if (list[i].module_type == 2) {
+                        // GPS模块
+                        let domID = "container" + list[i].module_id
+                        var module_data = list[i].module_data;
+                        var tips = '<li class="menuBox" data-id="' + list[i].module_id + '">' + list[i].module_name + '</li>';
+                        $(".newsubject-menu").append(tips);
+                        var mapHtm = '';
+                        mapHtm += "<div class=\"newsubject-position-box\" id='module_" + list[i].module_id + "' key=" + i + "><div class=\"position-text flex_aline_center\">                                        <span class=\"red_line\"></span>" + list[i].module_name + (data.ext_data.tow_session && data.ext_data.tow_session / 1 === 1 ?
+                        // +(data.ext_data.tow_session&&data.ext_data.tow_session/1 === 1 ?
+                        '<div class="right_icon"></div>' : '') + "</div><div class=\"positionItem\"><div class=\"map\"><div id='"+domID+"' class='container'></div></div></div></div>";
+                        $(".newsubject-list").append(mapHtm);
+
+                        initMap(data,module_data,domID);
+                    }
+
+
+
+                }
+
+                if (res.data.focus_list.length === 0 && live == 0) {
+                    var img = '<img class="newsubject-head-box" alt="头部图片" src="' + (res.data.ext_data.inner_cover || res.data.big_cover) + '">';
+                    $(".newheader").append(img);
+                }
+                $('.menuBox').on('click', function () {
+                    var id = $(this).attr("data-id");
+                    // var url=window.location.href+'#module_'+id
+                    id = '#module_' + id;
+                    $('html,body').animate({
+                        scrollTop: $(id).offset().top
+                    }, 1000);
+                });
+                // $("#root").show()
+
+
+                //上面  处理视频音频只播放一个的问题
+                setTimeout(() => {
+                    $(".video-js").each(function (index, element) {
+                        var videoUrl = $(this).attr("src");
+                        var videoCover = $(this).attr("poster");
+                        if (videoUrl) {
+                            if (videoUrl.split(".").pop() === 'm3u8') {
+                                var video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                    + 'data-setup="{}" src="' + videoUrl + '">'
+                                    + '<source src="' + videoUrl + '" type="application/x-mpegURL" />'
+                                    + '</video>';
+                                $(this).replaceWith(video);
+                            } else {
+                                var video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                    + 'data-setup="{}" src="' + videoUrl + '">'
+                                    + '<source src="' + videoUrl + '" type="video/mp4" />'
+                                    + '<source src="'+ videoUrl +'" type="video/webm" />'
+                                    + '<source src="'+ videoUrl +'" type="video/ogg" />'
+                                    + '</video>';
+                                $(this).replaceWith(video);
+                            }
+                            var my = 'my-video' + index
+                            my = videojs(my);
+                            my.on("play", function () {
+                                console.log(123)
+                                nameAllPause(this.id_)
+                                pauseAll()
+                            })
+                        }
+                    });
+
+                    var audios = document.getElementsByTagName("audio");
+                    function pauseAll() {
+                        var self = this;
+                        console.log(self);
+                        [].forEach.call(audios, function (i) {
+                            i !== self && i.pause();
+                            console.log(i !== self && i.pause())
+                        })
+                    }
+                    [].forEach.call(audios, function (i) {
+                        i.addEventListener("play",function(){
+                            console.log(i)
+                            pauseAll.bind(i)()
+                            nameAllPause()
+                        }.bind(i));
+                    })
+                    function nameAllPause(params) {
+                        $('.video-js').each(function(index, element) {
+                            if($(this).attr('id') !== params || params=== undefined){
+                                // console.log(params)
+                                my = $(this).attr('id')
+                                videojs(my).pause();
+                                console.log(my)
+                                // pauseAll()
+                            }
+                        })
+                    }
+                }, 200);
+
+
+
+
+            }
+        },
+        error: function error(err) {
+            console.log(err);
+        }
+
+    });
+
+
+    
+    //新时间线排序
+    $(document).on('click', '.paixu_right', function(){
+        $(this).next().toggle();
+        $(this).prev().toggle();
+    });
+    // 定义一个变量来存储当前的排序方式
+    var currentOrder = "importan";
+    // 给每个p标签添加点击事件
+    $(document).on('click', '.paixu_right_nav p', function(){
+        var _this = this
+        $(".paixu_right_nav").hide();
+        $(".overlay").hide();
+        console.log("点击排序")
+        // 移除其他p标签的选中状态
+        $(".paixu_right_nav p").removeClass("selected");
+        // 添加当前点击的p标签的选中状态
+        $(this).addClass("selected");
+        // 根据点击的p标签设置当前的排序方式
+        if ($(this).hasClass("zhongyao")) {
+            currentOrder = "importan";
+        } else if ($(this).hasClass("daoxu")) {
+            currentOrder = "desc";
+        } else if ($(this).hasClass("zhengxu")) {
+            currentOrder = "asc";
+        }
+        $.ajax({
+            type: "GET",
+            url: url,
+            dataType: 'json',
+            headers: {
+                version: 'v214',
+            },
+            data: {
+                uuid: uuid,
+                order: currentOrder,
+            },
+            success: function success(res) {
+                if (res.code == 0) {
+                    //判断颜色
+                    setTimeout(function() {
+                        console.log(res.data.ext_data.special_color)
+                        if(res.data.ext_data.special_color / 1 === 1){
+                            $(".time_title").css("background","#d12d2b");
+                            $(".time_title i").css("borderRightColor","#d12d2b");;
+                            $(".red_line").addClass("red_line");
+                            $(".descBtn").css("color","#d12d2b");
+                            $(".descBtn_over").css("color","#d12d2b")
+                            $(".viewMoreNormal").css("color","#d12d2b")
+                            document.documentElement.style.setProperty('--border-color', '#d12d2b');
+                        }else if(res.data.ext_data.special_color / 1 === 2){
+                            $(".time_title").css("background","#146AEA");
+                            $(".time_title i").css("borderRightColor","#146AEA");
+                            $(".red_line").addClass("blue_line");
+                            $(".descBtn").css("color","#146AEA");
+                            $(".descBtn_over").css("color","#146AEA")
+                            $(".viewMoreNormal").css("color","#146AEA")
+                            document.documentElement.style.setProperty('--border-color', '#146AEA');
+                        }else if(res.data.ext_data.special_color / 1 === 3){
+                            $(".time_title").css("background","#ccc");
+                            $(".time_title i").css("borderRightColor","#ccc");
+                            $(".red_line").addClass("grey_line");
+                            $(".descBtn").css("color","#ccc");
+                            $(".descBtn_over").css("color","#ccc")
+                            $(".viewMoreNormal").css("color","#ccc")
+                            document.documentElement.style.setProperty('--border-color', '#ccc');
+                        }
+                    }, 50);
+                    
+                    
+
+                    //首先清空time_box_paixu里的内容
+                    var currentId = $(_this).attr('data-id');  
+                    var ten = "#module_" + currentId + " .time_box_paixu";  
+                    const timeBoxElements = $(ten);
+                    timeBoxElements.html('')
+                    
+
+                    var list = res.data.list;
+                    var time_demo = '';
+                    for (var i in list) {
+                        if (list[i].module_type == 8) {     
+                            var event_list = list[i].event_list;
+                            // time_demo += '<div class="time_box_paixu">';
+                            if(event_list.length > 0){  
+                                for (var o in event_list) {                                    
+
+                                    var currentId = $(_this).data('id');
+                                    if( currentId == res.data.list[i].module_id ){ //比对
+
+
+                                        time_demo += '<div class="time_box">';
+                                            //这个改成时间节点描述(后台输入)
+                                            if(event_list[o].node_desc != null){
+                                                if(event_list[o].outside_url != ""){//外链
+                                                    time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                        time_demo += '<p class="time_title" style="cursor: pointer"><i></i>' + event_list[o].node_desc + '</p>';
+                                                    time_demo += '</a>'
+                                                }else{//uuid
+                                                    time_demo += `<p class="time_title" style="cursor: pointer" onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')"><i></i>${event_list[o].node_desc}</p>`;
+                                                }
+                                            }else{
+                                                time_demo += '';
+                                            }  
+                                            // 新增时间事件标题
+                                            if(event_list[o].outside_url != ""){//外链
+                                                time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                    time_demo += '<p class="time_big_title">'+(event_list[o].event_title ? event_list[o].event_title : '')+'</p>';
+                                                    time_demo += '<p class="time_miaosu_title">'+event_list[o].content+'</p>'; 
+                                                time_demo += '</a>'
+                                            }else{//uuid
+                                                time_demo += `<p class="time_big_title" style="cursor: pointer" onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">${(event_list[o].event_title ? event_list[o].event_title : '')}</p>`;
+                                                time_demo += `<p class="time_miaosu_title" style="cursor: pointer" onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">${event_list[o].content}</p>`; 
+                                            }
+                                            //下面判断图片的情况
+                                            if( event_list[o].img_data.length != '' && event_list[o].img_data.length > 1 ){//多张图
+                                                time_demo += '<div class="time_images">';
+                                                    time_demo += '<div class="swiper-container hotspot-swiper">';
+                                                        time_demo += '<div class="swiper-wrapper">';
+                                                            for( let y = 0; y < event_list[o].img_data.length; y++ ){
+                                                                time_demo += '<div class="swiper-slide swiper-slide-duplicate">';
+                                                                    if(event_list[o].outside_url != ""){//外链
+                                                                        time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                                            time_demo += '<div class="hotspot-swiper-href" style="background: url(' + event_list[o].img_data[y].image_url + ') no-repeat center;background-size:cover;">';
+                                                                            time_demo += '</div>';
+                                                                            time_demo += '<p class="moreimg_desc">'+ event_list[o].img_data[y].desc +'</p>'
+                                                                        time_demo += '</a>'
+                                                                    }else{//uuid
+                                                                        time_demo += `<a onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">`
+                                                                            time_demo += '<div class="hotspot-swiper-href" style="background: url(' + event_list[o].img_data[y].image_url + ') no-repeat center;background-size:cover;">';
+                                                                            time_demo += '</div>';
+                                                                            time_demo += '<p class="moreimg_desc">'+ event_list[o].img_data[y].desc +'</p>'
+                                                                        time_demo += '</a>'
+                                                                    }
+                                                                time_demo += '</div>';
+                                                            }                                                   
+                                                        time_demo += '</div>';
+                                                    time_demo += '</div>';
+                                                time_demo += '</div>';
+
+                                                //时间线轮播图
+                                                setTimeout(function() {
+                                                    var mySwiper = new Swiper('.hotspot-swiper', {
+                                                        direction: 'horizontal', //横向切换选项
+                                                        loop: false, //循环模式选项
+                                                        slidesPerView: 'auto'
+                                                    });
+                                                }, 2000);
+
+                                            }else if( event_list[o].img_data.length != '' ){//一张图
+                                                time_demo += '<div class="one_image">';
+                                                    if(event_list[o].outside_url != ""){//外链
+                                                        time_demo += '<a href="'+ event_list[o].outside_url +'">'
+                                                            time_demo += '<img src="' + event_list[o].img_data[0].image_url +'">';
+                                                            time_demo += '<p class="image_miaoshu">'+ event_list[o].img_data[0].desc +'</p>';
+                                                        time_demo += '</a>'
+                                                    }else{//uuid
+                                                        time_demo += `<a onclick="goHTML('${event_list[o].article_type||""}','${event_list[o].article_uuid||""}')">`
+                                                            time_demo += '<img src="' + event_list[o].img_data[0].image_url +'">';
+                                                            time_demo += '<p class="image_miaoshu">'+ event_list[o].img_data[0].desc +'</p>';
+                                                        time_demo += '</a>'
+                                                    }
+                                                time_demo += '</div>';
+                                            }
+                                            //下面判断视频的情况
+                                            if(event_list[o].video_data.length != ''){
+                                                for( let z = 0; z < event_list[o].video_data.length; z++ ){
+                                                    time_demo += '<div class="video_lists">';
+                                                        time_demo += "<video id=\"video\" class=\"video-js pc_video vjs-big-play-centered\" x-webkit-airplay=\"allow\" poster=\"" + event_list[o].video_data[z].video_cover + ("\" webkit-playsinline playsinline x5-video-player-type=\"h5\" x5-video-player-fullscreen=\"true\" preload=\"auto\" src=\"" + event_list[o].video_data[z].video_url + "\" style=\"width:100%; height: 4.22rem; border-radius:.16rem\" controls=\"controls\">");
+                                                            time_demo += "<source src=\"" + event_list[o].video_data[z].video_url + "\"  type=\"" + (event_list[o].video_data[z].video_url.toLowerCase().indexOf('.m3u8') != -1 ? 'application/x-mpegURL' : 'video/mp4') + "\">";
+                                                        time_demo += ' </video>';
+                                                        time_demo += '<p class="image_miaoshu">'+event_list[o].video_data[z].desc+'</p>';
+                                                        // time_demo += '<div class="video_icon"></div>';
+                                                    time_demo += '</div>';
+                                                }
+                                            }
+
+                                            //下面判断如果是音频
+                                            if(event_list[o].audio_data.length != ''){
+                                                for( let k = 0; k < event_list[o].audio_data.length; k++ ){
+                                                    time_demo += '<div class="audio_list">';
+                                                        time_demo += '<div class="audio">';
+                                                            time_demo += '<audio controls>';
+                                                                time_demo += '<source src="'+event_list[o].audio_data[k].audio_url+'" type="audio/mpeg">';
+                                                                time_demo += '<source src="'+event_list[o].audio_data[k].audio_url+'" type="audio/ogg">';
+                                                            time_demo += '</audio>';
+                                                            time_demo += '<p class="image_miaoshu">'+event_list[o].audio_data[k].desc+'</p>';
+                                                        time_demo += '</div>';
+                                                    time_demo += '</div>';
+                                                }
+                                            }
+                                        time_demo += '</div>';
+                               
+                                    }
+                               
+                               
+                                } 
+                            }               
+                        }
+                    }                 
+                    timeBoxElements.html(time_demo)
+
+
+                    // 筛选里面的音频视频处理
+                    setTimeout(() => {
+                        var r = Math.floor(Math.random() * 100)
+                        $(".video-js").each(function (index, element) {
+                            var videoUrl = $(this).attr("src");
+                            var videoCover = $(this).attr("poster");
+                            if (videoUrl) {
+                                if (videoUrl.split(".").pop() === 'm3u8') {
+                                    var video = '<video id="my-video' + index + r +'" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                        + 'data-setup="{}" src="' + videoUrl + '">'
+                                        + '<source src="' + videoUrl + '" type="application/x-mpegURL" />'
+                                        + '</video>';
+                                    $(this).replaceWith(video);
+                                } else {
+                                    var video = '<video id="my-video' + index + r +'" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                        + 'data-setup="{}" src="' + videoUrl + '">'
+                                        + '<source src="' + videoUrl + '" type="video/mp4" />'
+                                        + '<source src="'+ videoUrl +'" type="video/webm" />'
+                                        + '<source src="'+ videoUrl +'" type="video/ogg" />'
+                                        + '</video>';
+                                    $(this).replaceWithl(video);
+                                }
+                                var my = 'my-video' + index + r
+                                my = videojs(my);
+                                my.on("play", function () {
+                                    console.log('+++++++', this.id_)
+                                    nameAllPause(this.id_)
+                                    pauseAll()
+                                })
+                            }
+                        });
+
+                        var audios = document.getElementsByTagName("audio");
+                        function pauseAll() {
+                            var self = this;
+                            console.log(self);
+                            [].forEach.call(audios, function (i) {
+                                i !== self && i.pause();
+                                console.log(i !== self && i.pause())
+                            })
+                        }
+                        [].forEach.call(audios, function (i) {
+                            i.addEventListener("play",function(){
+                                console.log(i)
+                                pauseAll.bind(i)()
+                                nameAllPause()
+                            }.bind(i));
+                        })
+                        function nameAllPause(params) {
+                            $('.video-js').each(function(index, element) {
+                                if($(this).attr('id') !== params || params=== undefined){
+                                    // console.log(params)
+                                    my = $(this).attr('id')
+                                    videojs(my).pause();
+                                    console.log(my)
+                                    // pauseAll()
+                                }
+                            })
+                        }
+                    }, 200);
+
+
+
+                }
+            },
+            error: function() {}
+        });
+    });
+
+
+
+
+
+
+
+    // $(document).scroll(function() {
+    //     var scroH = $(document).scrollTop(); //滚动高度
+    //     var viewH = $(window).height(); //可见高度 
+    //     var contentH = $(document).height(); //内容高度
+    //     // 滚动到一定地方 显示 箭头
+    //     // if (scroH > 500) {
+    //     //     $('.top-btn').show()
+    //     // } else {
+    //     //     $('.top-btn').hide()
+    //     // }
+    // });
+    $('.dakai').click(function () {
+        // window.location.href = "https://m.bjnews.com.cn/guide/downv2?uuid=1740385284129039&show_type=newSpecial&show_uuid=1740385284129039";
+        jumpToHtml("https://m.bjnews.com.cn/guide/downv2?uuid=1740385284129039&show_type=newSpecial&show_uuid=1740385284129039");
+    });
+    $('.close').click(function () {
+        $('.header-box').hide();
+    });
+    $('.top-btn').click(function () {
+        $("html,body").animate({
+            scrollTop: 0
+        }, 500);
+    });
+    //计算视频时间
+    function getvideotime(value) {
+        console.log('getvideotime 计算视频时间');
+        var m = '';
+        var s = '';
+        value = parseInt(value);
+        if (value > 60) {
+            m = parseInt(value / 60);
+            if (m < 10) {
+                m = '0' + m;
+            }
+            s = parseInt(value % 60);
+            if (s < 10) {
+                s = '0' + s;
+            }
+
+            return m + ':' + s;
+        } else {
+            if (value < 10) {
+                value = '0' + value;
+            }
+            return '00:' + value;
+        }
+    }
+    //旧时间线-换算分钟前
+    function changeBeforeTime(beforetime, time) {
+        var date = new Date().getTime();
+        var diffTime = date / 1000 - beforetime; //毫秒
+        var h = 0;
+        var m = 0;
+        var s = parseInt(diffTime, 0);
+        m = parseInt(s / 60, 0);
+        h = parseInt(m / 60, 0);
+        if (h >= 1) {
+            if (h >= 48) {
+                return time.length === 19 ? time.substring(0, time.lastIndexOf(':')) : time;
+            } else if (h >= 24 && h < 48) {
+                return '1天前';
+            } else {
+                return h + '小时前';
+            }
+        } else {
+            return m + '分钟前';
+        }
+    }
+    
+    //新时间线-换算分钟前
+    function newChangeBeforeTime(beforetime,time) {
+        var beforeFulltime = new Date(beforetime)
+        beforetime = beforeFulltime.getTime();
+        
+        var date = new Date().getTime();
+        var dateYear = new Date;
+        var dateYear = dateYear.getFullYear();
+        var diffTime = date / 1000 - beforetime; //毫秒
+        var h = 0;
+        var m = 0;
+        var s = parseInt(diffTime, 0);
+        m = parseInt(s / 60, 0);
+        h = parseInt(m / 60, 0);
+        if (h >= 1) {
+            if (h >= 48) {
+                let fullTime = new Date(beforetime*1000);
+                var beforeYear = fullTime.getFullYear()
+                var month = fullTime.getMonth() + 1; // 获取月份
+                var day = fullTime.getDate(); // 获取具体日
+
+                if(dateYear === beforeYear ){
+                    return month + "月" + day + "日";
+                }else{
+                    return beforeYear + '年' + month + '月' + day + '日';
+                }
+            } else if (h >= 24 && h < 48) {
+                return '1天前';
+            } else {
+                return h + '小时前';
+            }
+        } else {
+            return m + '分钟前';
+        }
+    }
+
+    var win_width = $(window).width();
+
+    $('.newsubject-list').on("click", ".detailBtn .detailBtnA", function (e) {
+        var uuid = $(this).attr('data-uuid'),
+            specialtype = $(this).attr('data-specialtype'),
+            type = $(this).attr('data-type');
+        articleUrl = $(this).attr('data-articleUrl');
+
+        if (type === 'undefined') {
+            uuid = '';
+            uuid = $(e.target).attr('data-uuid');
+            type = $(e.target).attr('data-type');
+            specialtype = $(e.target).attr('data-specialType');
+        }
+        console.log('uuid', uuid);
+        if (!uuid) {
+            return;
+        }
+        // e.preventDefault();
+
+        if(type == 45){
+            return;
+        }else if (type == 3) {
+            //文稿
+            if (specialtype == 4) {
+                //专题 下
+                //        window.location.href ="https://m.bjnews.com.cn/h5special/"+uuid+".html";
+                jumpToHtml("https://m.bjnews.com.cn/h5special/" + uuid + ".html");
+            } else if (['1', '3', '5'].includes(specialtype)) {
+                //
+                //         window.location.href =https://m.bjnews.com.cn+"/detail/"+uuid+".html?uuid="+uuid+"&show_type="+typecode+"&show_uuid="+uuid;
+                // window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+                jumpToHtml("https://m.bjnews.com.cn/detail/" + uuid + ".html");
+            }
+        } else if (type == 50) {
+            // window.location.href = articleUrl;
+            jumpToHtml(articleUrl);
+        } else {
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                //App打开
+                // window.location.href =https://m.bjnews.com.cn+"/detail/"+ uuid +".html?uuid="+uuid+"&show_type="+typecode+"&show_uuid="+uuid;
+                // window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+                jumpToHtml("https://m.bjnews.com.cn/detail/" + uuid + ".html");
+            } else if (/(Android)/ig.test(navigator.userAgent)) {
+                //App打开
+                // window.location.href =https://m.bjnews.com.cn+"/detail/"+ uuid +".html?uuid="+ uuid +"&show_type="+typecode+"&show_uuid="+uuid;
+                // window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+                jumpToHtml("https://m.bjnews.com.cn/detail/" + uuid + ".html");
+            } else {
+                //pc打开
+                // window.location.href = PC_ROOT_HTML+"/detail/"+ uuid +".html";
+                // window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+                jumpToHtml("https://m.bjnews.com.cn/detail/" + uuid + ".html");
+            }
+        }
+        // if(win_width>750){
+        //     alert("https://m.bjnews.com.cn/detail/" + uuid + ".html")
+        //     window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+        //     // window.location.href="http://www.hsrb.com.cn/detail/" + uuid + ".html"
+        // }else{
+        //     alert("https://m.bjnews.com.cn/detail/" + uuid + ".html")
+        //     window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+        // }
+    });
+    function goDetail(item, e) {
+        console.log('goDetail', item);
+        e = event || window.event;
+        e.preventDefault();
+    }
+    $('.newsubject-list').on("click", ".swiper-container .swiper-slide", function (e) {
+        console.log('点击轮播图单个', e);
+    });
+    $('.newsubject-list').on("click", ".manuItem .manuItemA", function (e) {
+        var uuid = $(this).attr('data-uuid');
+        e.preventDefault();
+        if (win_width > 750) {
+            // alert("https://m.bjnews.com.cn/detail/" + uuid + ".html")
+            // window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+            // window.location.href="http://www.hsrb.com.cn/detail/" + uuid + ".html"
+            jumpToHtml("https://m.bjnews.com.cn/detail/" + uuid + ".html");
+        } else {
+            // alert("https://m.bjnews.com.cn/detail/" + uuid + ".html")
+            // window.location.href="https://m.bjnews.com.cn/detail/" + uuid + ".html"
+            jumpToHtml("https://m.bjnews.com.cn/detail/" + uuid + ".html");
+        }
+    });
+
+    // 打开页面跳到之前的高度
+    var d = sessionStorage.getItem('topDistance');
+    if (!!d && d.length > 0) {
+        var ds = JSON.parse(d);
+        if (ds.scrollTop && window.location.href === ds.url) {
+            $('html, body').animate({
+                scrollTop: ds.scrollTop
+            }, false);
+            sessionStorage.setItem('topDistance', "");
+        }
+    }
+
+    // 记录分享行为
+    var urlSearch = window.location.href.substring(window.location.href.indexOf("?")+1) || "";
+    let shareuser = "";
+    let searchArr = urlSearch.split("&")
+    searchArr.forEach((item,index) => {
+        let ab = item.split("=");
+        if(ab[0] === 'shareuser'){
+            shareuser = ab[1]
+        }
+    })
+    // console.log('newsubject ',shareuser)
+    if(shareuser){
+        $.ajax({
+            type: 'GET',
+            url: web_root_url + '/japi/pv?article_uuid=' + uuid + '&user_uuid=' + shareuser,
+            dataType: 'JSON',
+            success: function(st) {
+                if (st.suc == 1 && st.info == 'success') {
+                }else{
+                }
+            },
+            error: function() {}
+        })
+    }
+};
+
+
+function initSwiper() {
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal', //横向切换选项
+        loop: false, //循环模式选项
+        slidesPerView: 'auto'
+    });
+}
+function initMap(data,module_data,domID) {
+    var host = 'https://m.bjnews.com.cn/detail/';
+    var API = {
+        map_icon: host + '/resource/map_icon.png'
+        // map_icon : host + '/wap/img/icon@2x-bak.png'
+    };
+    var latitude = -1;
+    var longitude = -1;
+    latitude = parseFloat(module_data.latitude);
+    longitude = parseFloat(module_data.longitude);
+    // for (var i = 0; i < data.list.length; i++) {
+    //     var temp = data.list[i];
+    //     if (parseInt(temp.module_type) === 2) {
+    //         latitude = parseFloat(temp.module_data.latitude);
+    //         longitude = parseFloat(temp.module_data.longitude);
+    //         break;
+    //     }
+    // }
+    if (latitude === -1) {
+        return;
+    }
+    console.log('domID',domID)
+    var map = new window.AMap.Map(""+domID, {
+        center: [longitude, latitude],
+        zoom: 11
+    });
+
+    // 创建 AMap.Icon 实例：
+    var icon = new window.AMap.Icon({
+        size: new window.AMap.Size(34, 39), // 图标尺寸
+        // image: API.map_icon,  // Icon的图像
+        // imageOffset: new window.AMap.Pixel(0, -60),  // 图像相对展示区域的偏移量，适于雪碧图等
+        imageSize: new window.AMap.Size(34, 39) // 根据所设置的大小拉伸或压缩图片
+    });
+
+    // 创建一个 Marker 实例：
+    var marker = new window.AMap.Marker({
+        position: new window.AMap.LngLat(longitude, latitude),
+        // offset: new window.AMap.Pixel(-10, -10),
+        icon: icon, // 添加 Icon 图标 URL
+        title: '北京'
+    });
+
+    // 将创建的点标记添加到已有的地图实例：
+    map.add(marker);
+}
+// 跳入其他页面 - 增加存入session 滚动条位置 
+function jumpToHtml(url) {
+
+    var t = $(window, document, 'body').scrollTop();
+    var parent = {
+        url: window.location.href,
+        scrollTop: t
+    };
+    sessionStorage.setItem('topDistance', JSON.stringify(parent));
+    window.location.href = url;
+}
+
+// 新时间线点击标题跳转稿件页
+function goHTML(type,uuid){
+    console.log('goHTML-type',type,uuid)
+    // web_root_url:域名前缀
+    if(!!type && !!uuid){
+        if(     type === 'article'//图文
+            ||  type === 'xinjinghao'//新京号
+            ||  type === 'audio'//：音频
+            ||  type === 'video'//视频
+            ||  type === 'live'//：直播
+            ||  type === 'normalSpecial'//：普通专题
+            ||  type === 'special_3'//：专题3专题
+            ||  type === 'newSubject'//：新专题  
+            ||  type === 'imageSays'//：图说
+            ||  type === 'article_special'//：图文专题
+            ||  type === 'newSpecial'//新型专题
+            ||  type === 'ai' //ai稿件
+        ){
+            window.location.href= web_root_url+'/detail/'+uuid+'.html';
+        }else if (
+            type === 'h5Special'//：h5专题
+        ){
+            window.location.href= web_root_url+'/h5special/'+uuid+'.html';
+        }else if(
+                type === "no_special"//非专题
+            ||  type === 'fast' //快讯
+            ||  type === 'video_group' //快讯
+        ){
+        }
+    }
+}
+
+// 切换video
+var a= 0;
+function videojsnn(dom) {
+    console.log('数据过来了', dom);
+    setTimeout(function () {
+        if(a>10){
+          return;  
+        }
+        a++;
+        if ($('.video-js').length>0) {
+            videoName = videojs(dom);
+            videoName.on("play", function () {
+                console.log(123);
+            });
+            // console.log(pageState)
+            // console.log(pageState.videoName)
+            return;
+        } else {
+            videojsnn('video');
+        }
+    }, 800);
+}
+
+
+// 保利威视频初始化
+function polyvLoading(channelId){
+    console.log('保利威视频初始化',channelId)
+    var player = polyvLivePlayer({
+        wrap: "#player",
+        // width: 400,
+        height: '4.22rem',
+        uid: POLYV_UID, //用户id，即开发者信息下的userId（账号ID）
+        vid: channelId, // 频道id,即频道号
+        isAutoChange: true,
+    });
+}
+</script>
+<!-- 移动端调试工具 -->
+<!-- <script src="https://unpkg.com/vconsole/dist/vconsole.min.js"></script>
+<script>
+    // init vConsole
+    var vConsole = new VConsole();
+    console.log('Hello world');
+</script> -->
+
+<script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+<script>     
+// "use strict";
+
+$(function () {
+ 
+    $.ajax({
+        type: "GET",
+        url: "https://m.bjnews.com.cn/api/wxshare?app_id=wxbad48ed25d961bb9",
+        // url: "https://m.bjnews.com.cn/api/wxshare?app_id=wxbad48ed25d961bb9",
+        dataType: 'json',
+        success: function success(data) {
+            var signpackage = data.signpackage;
+            wx.config({
+                appId: "wxbad48ed25d961bb9", // 必填，公众号的唯一标识
+                // appId: "wxbad48ed25d961bb9", // 必填，公众号的唯一标识
+                timestamp: signpackage.timestamp, // 必填，生成签名的时间戳
+                nonceStr: signpackage.nonceStr, // 必填，生成签名的随机串
+                signature: signpackage.signature, // 必填，签名，见附录1
+                jsApiList: ['checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage'],
+                openTagList: ['wx-open-launch-app']
+            });
+        }
+    });
+    wx.ready(function () {
+        var share_uuid = "1740385284129039";
+        // 获取url分享后缀
+        var wxurlSearch = window.location.href.substring(window.location.href.indexOf("?")+1) || "";
+        let wxshareuser = "";//url 分享信息
+        if(wxurlSearch){
+            let wxsearchArr = wxurlSearch.split("&")
+            wxsearchArr.forEach((item,index) => {
+                let ab = item.split("=");
+                if(ab[0] === 'shareuser'){
+                    wxshareuser = item;
+                }
+            })
+        }
+
+        // 处理分享链接
+        var shareLinkUrl;
+        shareLinkUrl = web_root_url + "/detail/" + share_uuid + ".html";
+        if (wxshareuser) {
+            shareLinkUrl = shareLinkUrl + "?" + wxshareuser;
+        }
+
+        //分享到朋友圈
+        wx.onMenuShareTimeline({
+            title: "关注 | 俄乌冲突三周年", // 分享标题
+            link: shareLinkUrl, // 分享链接
+            imgUrl: "https://media.bjnews.com.cn/share_icon.jpg", // 分享图标
+            success: function success() {
+                // 用户确认分享后执行的回调函数
+                addShare(share_uuid);
+            }
+        });
+        //分享给朋友
+        wx.onMenuShareAppMessage({
+            title: "关注 | 俄乌冲突三周年", // 分享标题
+            desc: "自2022年2月开始，俄乌陷入旷日持久的冲突之中。三年来，俄乌战场内外局势都发生过哪些变化？", // 分享描述
+            imgUrl: "https://media.bjnews.com.cn/share_icon.jpg", // 分享图标
+            link: shareLinkUrl, // 分享链接
+            success: function success() {
+                // 用户确认分享后执行的回调函数
+                addShare(share_uuid);
+            }
+        });
+    });
+    var btn = document.getElementById('launch-btn');
+    btn.addEventListener('launch', function (e) {
+        // alert('lanuch成功');
+    });
+    btn.addEventListener('error', function (e) {
+        // alert($.param(e.detail))
+        window.location.href = web_root_url + "/guide/downv2?uuid=1740385284129039&show_type=newSpecial&show_uuid=1740385284129039";
+    });
+    var bt = document.getElementById('laun-btn');
+    bt.addEventListener('launch', function (e) {
+        // alert('lanuch成功');
+    });
+    bt.addEventListener('error', function (e) {
+        // alert($.param(e.detail))
+        window.location.href = web_root_url + "/guide/downv2?uuid=1740385284129039&show_type=newSpecial&show_uuid=1740385284129039";
+    });
+
+});
+
+
+</script>
+</body>
+</html>

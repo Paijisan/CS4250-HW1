@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        新京报 - 好新闻，无止境    </title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="apple-itunes-app" content="app-id=385679094"/>
+    <meta name="description" content="新京报以文字、图片、视频等全媒体形式，为用户提供全天候热点新闻，涵盖突发新闻、时事、财经、娱乐、体育，以及评论、杂志和博客等，新京报网本着品质源于责任的的信念,致力于成为用户喜爱的精品新闻网站。" />
+    <meta name="keywords" content="新京报,电子报,报纸,传媒,时政,娱乐,财经,经济,民生,国内,国际,视频,杂志,访谈,评论,投票,专题,周刊,手机报,博客" />
+    <meta name="baidu_union_verify" content="26ccec5630295fa67762aaf330df4a83">
+    <link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/bootstrap.min.css?v=1.0.8">
+    <link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/base.css?v=1.0.14" />
+    <link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/whole.css?v=1.0.55" />
+    
+    <script type="text/javascript" src="https://static.bjnews.com.cn/common/js/jquery.js"></script>
+    <script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/Alljs.js"></script>
+    <script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/qrcode.min.js"></script>
+    <style>
+        #menu .menu_inner{width: 1224px;left:9px}
+        #menu .menu_inner span{margin-right:9px;}
+    </style>
+</head>
+<body>
+    <div id="header2">
+        <div class="h_top">
+            <div class="w1200">
+                <a href="https://m.bjnews.com.cn/beijiaosuo/" target="_blank">北交所频道</a><span class="line"></span>
+                                <a href="/hao" target="_blank"  >新京号</a>
+                <span class="line"></span>
+                <a href="http://epaper.bjnews.com.cn/" target="_blank">电子报</a>
+                <span class="line"></span>
+                <a href="http://www.qianlong.com/" target="_blank">千龙网</a>
+                <span class="line"></span>
+                <a href="http://www.bkeconomy.com/" target="_blank">贝壳财经</a>
+                <span class="line"></span>
+                <a href="https://h5.bjnews.com.cn/xjbh5/202309beijing_cn/index.html" target="_blank">北京BEIJING</a>
+                <span class="line"></span>
+                <!-- <a href="/shop"  target="_blank" >小鲸铺子</a> -->
+                <a href="https://shop90373224.m.youzan.com/v2/feature/xie8IdUSkL" target="_blank" >新京雅集</a>
+                <span class="line"></span> 
+                <a href="/subject" target="_blank" >专题</a>
+                <span class="line"></span>
+                <a href="/site/business" class="business" target="_blank">商务合作</a>
+                <span class="line"></span>
+                <a id="toolbarSwitch" href="javascript:void(0);">爱心模式</a>
+                <script type="text/javascript" src="https://slwza.bjnews.com.cn/slwza/esdToolsInit.js"></script>
+                <script>
+                    rlink = window.location.pathname
+                    // console.log(rlink)
+                    if(rlink=="/site/business"){
+                        $(".business").css("color","#AA1F24");
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="h_mid">
+            <a href="/" class="logo"></a>
+                        <div class="search">
+                <input type="text" placeholder="输入搜索信息" class="fl inp_search" />
+                <button class="fr inp_ico"><i></i></button>
+            </div>
+                        <div class="mid_right">
+                <!-- 客户端 -->
+                <div class="hover1">
+                    <a href="javascript:;">
+                        <i class="kehu"></i>客户端
+                    </a>
+                    <div class="f-hov">
+                        <span class="arrow-top"></span>
+                        <img src="https://static.bjnews.com.cn/www/v6/images/footer032.png" alt="" />
+                    </div>
+                </div>
+                <span class="line"></span>
+                <!-- 微博 -->
+                <a href="https://www.weibo.com/xjb" target="_blank"><i class="weibo"></i>微博</a>
+                <span class="line"></span>
+                <!-- 微信 -->
+                <div class="hover3">
+                    <a href="javascript:;"><i class="weixin"></i>微信</a>
+                    <div class="f-hov">
+                        <img src="https://static.bjnews.com.cn/www/v6/images/footer01.jpg" alt="" />
+                        <span class="arrow-top"></span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                //头部二维码
+                $(".mid_right .hover1").mouseover(function(){
+                    $(".mid_right .hover1 .f-hov").show();
+                });
+                $(".mid_right .hover1").mouseout(function(){
+                    $(".mid_right .hover1 .f-hov").hide();
+                });
+                $(".mid_right .hover3").mouseover(function(){
+                    $(".mid_right .hover3 .f-hov").show();
+                });
+                $(".mid_right .hover3").mouseout(function(){
+                    $(".mid_right .hover3 .f-hov").hide();
+                });
+            </script>
+        </div>
+    </div>
+    <div id="menu" class = 'menu_habor menu_nobor'   >
+    <div class="menu_inner"  >
+                <span><a href="/"  > 首页</a></span>
+                <span><a href="/video"  > 视频</a></span>
+                <span><a href="/depth"  > 深读</a></span>
+                <span><a href="/gongyi"  > 公益</a></span>
+                <span><a href="/diyikandian"  > 第一看点</a></span>
+                <span><a href="/news"  > 时事</a></span>
+                <span><a href="/beijing"  > 北京</a></span>
+                <span><a href="/guoji"  > 国际</a></span>
+                <span><a href="/zhengshi"  > 政事儿</a></span>
+                <span><a href="/point"  > 观点</a></span>
+                <span><a href="/financial"  > 财经</a></span>
+                <span><a href="/industrial"  > 食品</a></span>
+                <span><a href="/shangye"  > 商业</a></span>
+                <span><a href="/entertainment"  > 娱乐</a></span>
+                <span><a href="/culture"  > 文化</a></span>
+                <span><a href="/sports"  > 体育</a></span>
+                <span><a href="/car"  > 汽车</a></span>
+                <span><a href="/estate"  > 房产</a></span>
+                <span><a href="/wine"  > 酒业</a></span>
+                <span><a href="/education"  > 教育</a></span>
+                <span><a href="/life"  > 健康</a></span>
+                <span><a href="/photo"  > 图说</a></span>
+                <span><a href="/technology"  > 科技</a></span>
+                <span><a href="/thinktank"  > 智库</a></span>
+                <span><a href="/country"  > 乡村</a></span>
+            </div>
+    </div> 
+<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/common.css" />
+<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/index.css" />
+<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/list.css" />
+<div class="listBar2" style="margin-bottom: 0;"></div>
+
+    <div class="common_banner">
+        <img src="https://static.bjnews.com.cn/www/v6/images/about/protocolservice.jpg" alt="">
+    </div>
+
+    <div id="main">
+        <!--中间部分-->
+        <div class="cooperation_box clear">
+            <div class="cooperation_left">
+                <ul class="cooperation_main_left">
+                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/about">关于我们</a></li>
+                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/copyright">版权声明</a></li>
+                    <li>
+                        <span class="cooperation_main_l_red"></span>
+                        <a class="conlor_red" href="/site/protocolservice">服务协议</a>
+                        <strong class="cooperation_main_l_line"></strong>
+                    </li>
+                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/contact#">联系我们</a></li>
+                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/jobs">工作机会</a></li>
+                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/links">友情链接</a></li>
+                </ul>
+            </div>
+            <div class="cooperation_right">
+                    <style>span.s1{font-size:14px;}</style>
+                    <div class="cooperation_about_us_cen">
+                        <!--这里是新添加的内容s-->  
+                       <p class="p1">本协议服务条款（以下简称“服务条款”）是由用户与派博在线（北京）科技有限责任公司（以下简称“派博在线”）就新京报网的服务所订立的相关权利义务规范，本服务条款对用户及派博在线均具有法律效力。</p>
+                       <p class="p1">新京报网特指派博在线开发的新闻内容阅读网站。</p>
+                       <p class="p1">一、服务条款的确认和接纳</p>
+                       <div class="neirong">
+                          <p>1、新京报网的所有权和经营权归新京报传媒有限责任公司下属公司派博在线（北京）科技有限责任公司 (网址：www.bjnews.com.cn）所有。</p>
+                          <p>2、用户在使用之前，应当仔细阅读本协议，并同意本协议的全部条款后方可使用新京报网提供的全部服务。</p>
+                          <p>3、用户浏览新京报网内容，或者使用新京报网有关服务，将视为已经仔细看过本协议并完全同意。</p>
+                          <p>4、本协议可由派博在线随时更新，用户应及时关注并同意，派博在线不承担通知义务。</p>
+                       </div>
+                       <p class="p1">二、用户使用规则</p>
+                       <div class="neirong1">
+                           <div class="div1">
+                              <p>1、用户通过新京报网发布信息时，必须遵守国家有关法律规定，并承担一切因自己发布信息不当导致的民事、行政或刑事法律责任。所有用户不得在本站任何页面发布、评论、批注、传送含有下列内容之一的信息，否则本站有权消除账号，并不通知用户：</p>
+                              <p><span class="s1">（1）</span>反对宪法所确定的基本原则的；</p>
+                              <p><span class="s1">（2）</span>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
+                              <p><span class="s1">（3）</span>损害国家荣誉和利益的；</p>
+                              <p><span class="s1">（4）</span>煽动民族仇恨、民族歧视、破坏民族团结的；</p>
+                              <p><span class="s1">（5）</span>破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
+                              <p><span class="s1">（6）</span>散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
+                              <p><span class="s1">（7）</span>散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p>
+                              <p><span class="s1">（8）</span>侮辱或者诽谤他人，侵害他人合法权利的；</p>
+                              <p><span class="s1">（9）</span>煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；</p>
+                              <p><span class="s1">（10）</span>以非法民间组织名义活动的；</p>
+                              <p><span class="s1">（11）</span>含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵或其它道德上令人反感的内容； </p>
+                              <p><span class="s1">（12）</span>含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的。</p>
+                           </div>
+                           <div class="div1">
+                              <p class="p2">2、用户不得使用未经派博在线授权的插件、外挂或第三方工具对新京报网进行干扰、破坏、修改或施加其他影响。</p>
+                           </div>
+                           <div class="div1">
+                              <p class="p2">3、用户同意与使用新京报网相关的一切资料、数据和记录，包括但不限于通行证帐号名称、所有登录、消费记录和相关的使用统计数字等归派博在线（北京）科技有限责任公司所有。发生争议时，用户同意以派博在线（北京）科技有限责任公司的系统数据为准，派博在线有责任保证该数据的真实性</p>
+                           </div>
+                       </div>
+                       <p class="p1">三、版权保护条款</p>
+                       <div class="neirong">
+                          <p>1、未经派博在线授权，任何人不得出于商业目的擅自使用、复制新京报网的知识产权（包括但不限于著作权）。所指知识产权包括文字报道、图片、音频、视频、图表、标志、标识、广告、商标、商号等其他资料。</p>
+                          <p>2、新京报网特有的报载标识、版面设计、专栏目录与名称、内容分类标准、编排方式等版权均属新京报传媒所有。未经派博在线许可，用户不得进行基于商业目的的复制、转载及其他侵权行为，亦无权给予第三方机构进行用于商业目的的复制、转载及其他侵权行为。</p>
+                          <p>3、新京报网所涉及所有产品icon、UI设计、交互设计、产品源代码等版权均属派博在线享有，未经派博在线许可，不得任意复制或修改以作为己用。</p>
+                       </div>
+                       <p class="p1">四、免责条款</p>
+                       <div class="neirong1">
+                           <div class="div1">
+                              <p class="p2">1、派博在线有权随时修改本协议的任何条款，且毋需另行通知，一旦本协议的内容发生变动，派博在线将在新京报网上公布修改之后的协议内容，该公布行为视为派博在线已经通知用户修改内容。如果不同意派博在线对本协议相关条款所做的修改，用户有权停止使用服务。如果用户继续使用服务，则视为用户接受派博在线对本协议相关条款所做的修改。</p>
+                           </div>
+                           <div class="div1">
+                              <p class="p2">2、鉴于新京报网服务的特殊性，用户同意派博在线有权随时变更、中断或终止部分或全部的客户端服务（包括收费服务）。如变更、中断或终止的服务属于免费服务，派博在线无需通知用户，也无需对任何用户或任何第三方承担任何责任；如变更、中断或终止的服务属于收费服务，派博在线应当在变更、中断或终止之后向受影响的用户提供等值的替代性的收费服务。</p>
+                           </div>
+                           <div class="div1">
+                              <p class="p2">3、派博在线需要定期或不定期地对提供服务的平台或相关的设备进行检修或者维护，如因此类情况而造成收费服务在合理时间内的中断，派博在线无需为此承担任何责任，但派博在线应尽可能事先进行通告。</p>
+                           </div>
+                           <div class="div1">
+                              <p>4、如发生下列任何一种情形，派博在线有权随时中断或终止向用户提供本协议项下的客户端服务而无需对用户或任何第三方承担任何责任：</p>
+                              <p><span class="s1">（1）</span>用户提供的个人资料不真实；</p>
+                              <p><span class="s1">（2）</span>用户违反本协议中规定的使用规则；</p>
+                              <p><span class="s1">（3）</span>用户在使用收费服务时未按规定向派博在线支付相应的服务费；</p>
+                              <p><span class="s1">（4）</span>用户使用服务的过程中出现违反国家法律法规及政策规定的情况。</p>
+                           </div>
+                           <div class="div1">
+                              <p class="p2">5、新京报网内所有内容并不反映任何派博在线之意见及观点。</p>
+                           </div>
+                           <div class="div1">
+                              <p class="p2">6、用户应维持其密码及帐号的机密安全，如果用户未保管好自己的帐号和密码而对用户、派博在线或第三方造成损害，用户将负全部责任。</p>
+                           </div>
+                           <div class="div1">
+                              <p class="p2">7、任何由于黑客政击、计算机病毒侵入或发作、因政府管制而造成的暂时性关闭等影响网络正常经营之不可抗力而造成的个人资料泄露、丢失、被盗用或被篡改等，派博在线不承担任何责任。</p>
+                           </div>
+                       </div>
+                       <p class="p1">五、附则</p>
+                       <div class="neirong">
+                          <p>1、本协议的版权归派博在线所有，派博在线保留对本协议的一切解释和修改权利。</p>
+                          <p>2、本协议的订立、执行和解释及争议的解决均应适用中华人民共和国大陆法律。因本协议
+        
+        引起的或有关的任何纠纷双方应本着求同存异、互相谅解的原则协商解决。若协商不成，任何一方可向北京仲裁委员会提起仲裁并按照其届时有效的仲裁规则仲裁，仲裁裁决是终局的，对双方均有约束力。</p>
+                          <p>3、派博在线未能及时行使本协议项下的任何权利或规定不应被视为放弃该权利，也不影响在将来行使该权利。</p>
+                          <p>4、如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，或违反任何适用的法律，则该条款被视为删除，但本协议的其余条款仍应有效并且有约束力。</p>
+                          <p>5、若用户对本协议有任何意见或建议，欢迎垂询新京报客服中心（新京报客户服务热线：010-67106666）。</p>
+                       </div>
+                       <p class="p1">派博在线（北京）科技有限责任公司</p>
+                       <p>2013年10月30日</p>
+                       <!--这里是新添加的内容end-->
+                    </div>
+                </div>
+        </div>
+    </div>
+<!-- 统计 -->
+<div style="display:none;">
+    <script type="text/javascript" src="https://static.bjnews.com.cn/public/tj.js"></script>
+</div>
+
+    <footer class="footer">
+         <div class="f-top">         
+         </div>  
+         <div class="f-partner">
+             <div class="content">
+                <p class="footer-t">
+                    <a rel="nofollow" target="_blank" href="http://www.sina.com/">新浪网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.163.com/">网易</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.sohu.com/">搜狐</a> |
+                    <!-- <a rel="nofollow" target="_blank" href="http://www.ifeng.com/">凤凰网</a> | -->
+                    <a rel="nofollow" target="_blank" href="https://news.uc.cn/">UC头条</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.xinhuanet.com/">新华网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.chinanews.com/">中新网</a> 
+                    <!-- <a rel="nofollow" target="_blank" href="http://www.china.com.cn/">中国网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.china.com/">中华网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.caijing.com.cn/">财经网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.fang.com/">房天下</a><br> -->
+                    <a rel="nofollow" target="_blank" href="https://www.wisers.com.cn/">慧科讯业</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.toutiao.com/">今日头条</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.yidianzixun.com/">一点资讯</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.qianlong.com/">千龙网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.bkeconomy.com/">贝壳财经</a>|
+                    <a rel="nofollow" target="_blank" href="https://www.qq.com/">腾讯网</a>|
+                    <a rel="nofollow" target="_blank" href="https://news.baidu.com/ ">百度</a>
+                </p>
+             </div>
+         </div> 
+          
+        <div class="dbnews_nr">
+            <p>
+               经营许可证编号：京ICP证090533号  <i>|</i> 
+               <a href="http://beian.miit.gov.cn/" target="_blank">京ICP备18053894号</a><i>|</i>  
+               国新办网备字[2006]7号  <i>|</i>  
+               广播电视节目制作经营许可证：(京)字第02592号  <i>|</i>  
+               <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102004542/" target="_blank">京公网安备11010102004542号</a><br>
+            </p>
+            <div class="dbnews_nr2 clearfix">
+                <div class="fl nr2_l">
+                    <p>
+                        <a href="/site/about" target="_blank">关于我们</a>
+                        <a href="/site/copyright" target="_blank">版权声明</a>    
+                        <a href="/site/contact" target="_blank">联系我们</a>    
+                        <a href="/site/jobs" target="_blank">工作机会</a>      
+                        <a href="/site/links" target="_blank">友情链接</a>   
+                        <a href="/site/protocolservice" target="_blank">服务协议</a>
+                        <br>
+                        Copy Right © 2004-2020 www.bjnews.com.cn All Rights Reserved
+                    </p>
+                </div>
+                <div class="fl nr2_r">
+                    <img class="" src="https://static.bjnews.com.cn/www/v6/images/footer-tel1_2.png" alt="" width="159"  />
+                    <img class="" src="https://static.bjnews.com.cn/www/v6/images/footer-tel1_1.png" alt="" width="159" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="backTop">
+        <!-- 返回顶部 -->
+        <div class="backTop1">
+            <em></em>       
+        </div>
+        <!-- 微信 -->
+        <div class="backTop2">
+            <em></em>
+            <div class="f-hov">
+                <img src="https://static.bjnews.com.cn/www/v6/images/footer01.jpg" alt="" />
+                <span class="arrow-right"></span>
+            </div>
+        </div>
+        <!-- 微博 -->
+        <div class="backTop3">
+            <a href="https://www.weibo.com/xjb" target="_blank"><em></em></a>
+        </div>
+        <!-- 客户端 -->
+        <div class="backTop4">
+            <em></em>
+            <div class="f-hov">
+                <img src="https://static.bjnews.com.cn/www/v6/images/footer032.png" alt="" />
+                <span class="arrow-right"></span>
+            </div> 
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $(document).keydown(function(event){ 
+                if(event.keyCode==13){ 
+                    $(".inp_ico").click(); 
+                } 
+            });
+            // 搜索页面跳转
+            $('.inp_ico').on('click', function () {
+                var key = $('.inp_search').val().trim();
+                if (key) { // 如果有值
+                    window.location.href = '/search?bwsk=' + key;
+                    // window.location.href = '/search?bwsk=' + key + '&orderby=1';
+                }
+            });
+            //底部二维码
+            $(".backTop4").mouseover(function(){
+                $(".backTop4 .f-hov").show();
+            });
+            $(".backTop4").mouseout(function(){
+                $(".backTop4 .f-hov").hide();
+            });
+            $(".backTop2").mouseover(function(){
+                $(".backTop2 .f-hov").show();
+            });
+            $(".backTop2").mouseout(function(){
+                $(".backTop2 .f-hov").hide();
+            });
+        })
+    </script>
+    <!-- 适老化改造 -->
+    <script type="text/javascript" src="https://slwza.bjnews.com.cn/slwza/www.bjnews.com.cn/route.js"></script>
+</body>
+</html>    
