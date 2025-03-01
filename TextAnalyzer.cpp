@@ -46,7 +46,7 @@ void freqSorter(string fileName) {
 	float twc = totalWordCount;
 	for (int i = 0; i < stemFreq.size() && i < 50; i++) fileOut << '"' << stemFreq[i].first << '"' << ", " << stemFreq[i].second << ", " << i + 1 << ", " << stemFreq[i].second/twc << '\n';
 	fileOut << '\n' << '"' << "Total World Count" << '"' << ", " << '"' << "Unique World Count" << '"' << ", " << '"' << "Expected" << '"' << '\n';
-	for (int i = 0; i < uniqueWordCount.size(); i++) fileOut << uniqueWordCount[i] << ", " << i+1 << ", " << 20 * sqrt(uniqueWordCount[i]) << '\n';
+	for (int i = 0; i < uniqueWordCount.size(); i++) fileOut << uniqueWordCount[i] << ", " << i+1 << ", " << 55 * sqrt(uniqueWordCount[i]) << '\n';
 	fileOut.close();
 }
 
