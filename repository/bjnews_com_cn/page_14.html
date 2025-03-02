@@ -1,6 +1,7 @@
-<script>
-    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|    wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
-            window.location.href= "https://m.bjnews.com.cn/detail/1740557904129256.html"
+﻿<script>
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|    wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) { 
+            //window.location.href= m_href
+            window.location.href= "https://m.bjnews.com.cn/detail/1740870830129075.html"
     }
 </script>
 <!DOCTYPE html>
@@ -8,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        国家消防救援局宁夏机动队伍前往罗山国家级自然保护区靠前驻防 — 新京报    </title>
+        以色列决定在斋月期间继续执行加沙停火协议 — 新京报    </title>
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta name="apple-itunes-app" content="app-id=385679094"/>
@@ -110,10 +111,10 @@
     <div id="menu" class = 'menu_habor'   >
     <div class="menu_inner"  >
                 <span><a href="/"  > 首页</a></span>
-                <span><a href="/video"   class="cur"  > 视频</a></span>
+                <span><a href="/video"  > 视频</a></span>
                 <span><a href="/depth"  > 深读</a></span>
                 <span><a href="/gongyi"  > 公益</a></span>
-                <span><a href="/diyikandian"  > 第一看点</a></span>
+                <span><a href="/diyikandian"   class="cur"  > 第一看点</a></span>
                 <span><a href="/news"  > 时事</a></span>
                 <span><a href="/beijing"  > 北京</a></span>
                 <span><a href="/guoji"  > 国际</a></span>
@@ -136,45 +137,40 @@
                 <span><a href="/country"  > 乡村</a></span>
             </div>
     </div>   
-<input type="hidden" id="detail_url_m" value="https://m.bjnews.com.cn/detail/1740557904129256.html">
+<input type="hidden" id="detail_url_m" value="https://m.bjnews.com.cn/detail/1740870830129075.html">
+
 <link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/details.css?v=1.0.43" />
+<!-- <link href="/css/video_m3u8.css" rel="stylesheet">
+<script src="/js/video_m3u8.js"></script>
+<script src="/js/videojs-contrib-hls.min.js" type="text/javascript"></script> -->
+<!-- videojs-contrib-hls 用于在电脑端播放 如果只需手机播放可以不引入 -->
+
 <link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/video-js.min.css" />
 <script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/video.min.js"></script>
+
 <!-- <script type="text/javascript" src ="/js/videojs.hls.min.js"></script> -->
-
-
 <style>
-    .my-video-dimensions{
-        width: 800px;
-    }
-    .jieshu {
+    .my-video-dimensions{ width: 800px;}
+    #contentStr .video-js{
         width: 800px;
         height: 450px;
-        position: relative;
-    }
-    .jieshu img {
-        width: 100%;
-        height: 100%;
-    }
-    .jieshu span {
-        font-size:24px;
-        display:block;
-        width: 100%;
-        height:30px;
-        text-align:center;
-        line-height:30px;
-        color:white;
-        position: absolute;
-        top:50%;
-        margin-top:-15px;
-
+        text-align: center;
     }
     .video-js .vjs-big-play-button{
-        top: 43% !important;
-        left: 45% !important;
+        /* top: 190px;
+        left: 352px; */
+        top: 225px;
+        left: 400px;
     }
+    .video-js .vjs-tech {
+        position: relative !important;
+        max-height: 450px;
+    }
+    /* .vjs-error .vjs-error-display .vjs-modal-dialog-content{
+        background-color: #000;
+        text-indent: -99999;
+    } */
 </style>
-
  <!-- 广告 -->
     <!-- <div class="detail_guanggao">
         <em>广告</em>
@@ -186,15 +182,15 @@
             <div class="bread-line">
                  
                 <a href="/" title="" class="home">首页</a> 
-                        > <i class="twoTit">视频</i> 
+                        > <i class="twoTit">第一看点</i> 
                                        
             </div>
-            <h1>国家消防救援局宁夏机动队伍前往罗山国家级自然保护区靠前驻防</h1>
+            <h1>以色列决定在斋月期间继续执行加沙停火协议</h1>
             <div class="clearfix employ-line">
                 <div class="fl left-info">
                     <!--新京号 判断 start-->
-                                        <span class="timer">2025-02-26 16:18</span>
-                                        
+                                            <span class="timer">2025-03-02 07:19</span> 
+                    
                 </div>
                 <!-- 字体变化 -->
                 <div class="fr fontChanges">
@@ -211,29 +207,112 @@
             <!-- 左侧部分 -->
             <div class="fl article">
                 <!-- 文章正文 -->
-                <div class="articleCenter articleCenter-video"> <!-- 判断如果是视频页面添加class：articleCenter-video -->
-                    <div class="article-text" id="contentStr">
-                                                <!-- m3u8 -->
-                            <video autoplay="autoplay" muted id="my-video" class="video-js vjs-big-play-centered" controls preload="auto" width="800" height="450" data-setup='{"techOrder": ["flash", "html5"]}' >
-                                <source src="//media.bjnews.com.cn/video/out/2025/02/26/5558850278628859967.m3u8" type="application/x-mpegURL" />
-                        </video>
-                                                                                                                                 <em>来源：国家消防救援局宁夏机动队伍
-<br />原标题：罗山脚下，“火焰蓝”铸就生态安全防线 国家消防救援局宁夏机动队伍前往罗山国家级自然保护区靠前驻防
+                <div class="articleCenter"> <!-- 判断如果是视频页面添加class：articleCenter-video -->
+                                        <!-- 除视频外 简介显示 start-->
+                    <div class="introduction">
+                        <p>
+                                                    </p>
+                        <div class="blank-line"></div>
+                    </div>
+                    <!-- 除视频外 简介显示 end-->
+                                        <div class="article-text" id="contentStr">
+                        <!--增加直播预告 start-->
+                                                <!--增加直播预告 end-->
+                                                <div class="content-name">
+                            <p>据新华社耶路撒冷3月2日电 以色列总理办公室2日凌晨发表声明说，以方决定在穆斯林斋月期间继续执行加沙地带停火协议。<br><br></p><p>编辑 刘佳妮</p>                        </div>
+                        <script>
+                            $("video").each(function (index, element) {
+                            // $(".videoP").each(function (index, element) {
+                                console.log(index)
+                                // var videoUrl = $(this).children("video").attr("src");
+                                // var videoCover = $(this).children("video").attr("poster");
+                                var videoUrl = $(this).attr("src");
+                                var videoCover = $(this).attr("poster");
+                                if (videoUrl) {
+                                    if (videoUrl.split(".").pop() === 'm3u8') {
+                                        if(index == 0){
+                                            var video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" autoplay="autoplay" muted controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="' + videoUrl + '" type="application/x-mpegURL" />'
+                                            + '</video>';
+                                        }else {
+                                            var video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="' + videoUrl + '" type="application/x-mpegURL" />'
+                                            + '</video>';
+                                        }
+                                        // $(this).html("");
+                                        // $(this).html(video);
+                                        $(this).replaceWith(video);
+                                    } else {
+                                        var video = ''
+                                        if(index == 0){
+                                            video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" autoplay="autoplay" muted controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="'+ videoUrl +'" type="video/webm" />'
+                                            + '<source src="'+ videoUrl +'" type="video/ogg" />'
+                                            + '<source src="' + videoUrl + '" type="video/mp4" />'
+                                            + '</video>';
+                                        }else {
+                                            video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="'+ videoUrl +'" type="video/webm" />'
+                                            + '<source src="'+ videoUrl +'" type="video/ogg" />'
+                                            + '<source src="' + videoUrl + '" type="video/mp4" />'
+                                            + '</video>';
+                                        }
+                                        // $(this).html("");
+                                        // $(this).html(video);
+                                        $(this).replaceWith(video);
+                                    }
+                                    var my = 'my-video' + index
+                                    my = videojs(my);
+                                    my.on("play", function () {
+                                        nameAllPause(this.id_)
+                                        pauseAll()
+                                    })
+                                }
+                            });
+                            var audios = document.getElementsByTagName("audio");
+                            // 暂停函数
+                            function pauseAll() {
+                                var self = this;
+                                console.log(self);
+                                [].forEach.call(audios, function (i) {
+                                    // 将audios中其他的audio全部暂停
+                                    i !== self && i.pause();
+                                    console.log(i !== self && i.pause())
+                                })
+                            }
+                            // 给play事件绑定暂停函数
+                            [].forEach.call(audios, function (i) {
+                                i.addEventListener("play",function(){
+                                    console.log(i)
+                                    pauseAll.bind(i)()
+                                    nameAllPause()
+                                }.bind(i));
+                            })
+                            function nameAllPause(params) {
+                                $('.video-js').each(function(index, element) {
+                                    if($(this).attr('id') !== params || params=== undefined){
+                                        // console.log(params)
+                                        my = 'my-video' + index
+                                        videojs(my).pause();
+                                        // pauseAll()
+                                    }
+                                })
+                            }
+                        </script>
+                                                                                 <em>来源：新华社
 <br /></em>
 
-
-                        <!-- 需要显示在视频下面的部分 -->
-                         <div class="introduction-video">
-                            <p>
-                                为全面做好2025年度森林草原防灭火工作，消除火灾安全隐患，2月25日，国家消防救援局宁夏机动队伍抽调专业力量组成驻防分队，携带各类防灭火装备前往同心县罗山国家级自然保护区开展为期三个月的靠前驻防任务。                            </p>
-                            <div class="blank-line"></div>
-                        </div> 
-                    </div> 
-
-                                        
+                                            </div> 
                 </div>
-            
-                <!-- 点赞 -->
+
+                
+
+
+                                <!-- 点赞 -->
                 <div class="giveThumbs-up clearfix" id="giveThumbs-up">
                                         <div class="fl interact dianzan" id="detailZan">
                         <a href="javascript:;" title="">
@@ -246,8 +325,8 @@
                     </div>
                     
                     <div class="fl interact weibo">
-                                                <a href="http://service.weibo.com/share/share.php?url=https://www.bjnews.com.cn/detail/1740557904129256.html&title=国家消防救援局宁夏机动队伍前往罗山国家级自然保护区靠前驻防" target="_blank" title=""><em></em>微博</a>                       
-                    </div>
+                                                <a href="http://service.weibo.com/share/share.php?url=https://www.bjnews.com.cn/detail/1740870830129075.html&title=以色列决定在斋月期间继续执行加沙停火协议" target="_blank" title=""><em></em>微博</a>
+                    </div>            
                 
                     <div class="fl interact weixin">
                         <a href="javascript:;" title="">
@@ -260,10 +339,8 @@
                             <span class="arrow-up"></span>
                         </div>                     
                     </div>
-                    
                 </div>
-
-                <!-- 我要评论 -->
+                                    <!-- 我要评论 -->
                 <div class="articleComment">
                     <h2 class="leftTitle">我要评论</h2>
                     <div class="make-comment clearfix">
@@ -278,119 +355,12 @@
 
                 <!-- 相关推荐 -->
                     <!-- 相关推荐 -->
-                                <div class="articleRecommend">
-                    <h2 class="leftTitle" style="padding: 30px 0 20px 0;">相关推荐</h2>
-                    <div class="listContent searchList2" style="margin-bottom: 110px;">
-                        <div id="course_box">
-                            <ul class="listInfo" id="courselist">
-
-                                
-                                <!-- 一张图 -->
-                                <li class="nomarlShow onePic clearfix">
-                                    <div class="fl listLeft">
-                                        <div class="listLeft-overflow ">
-                                            <a href="https://www.bjnews.com.cn/detail/1740487361168684.html"  target='_blank'>
-                                                <img   src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/yanghai20252252041512403988.jpg" alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fl listRight">
-                                        <h3 class="articleTitle">
-                                            <a href="https://www.bjnews.com.cn/detail/1740487361168684.html" title=""  target='_blank'>
-                                                顺义一农村民房起火，村民利用消防知识成功扑灭                                            </a>
-                                        </h3>
-                                        <!--
-                                                                                <div class="tags">
-                                                                                        <em><a href="/search?bwsk=灭火&orderby=1" title="">灭火</a></em>
-                                                                                         <em><a href="/search?bwsk=火灾&orderby=1" title="">火灾</a></em>
-                                                                                         <em><a href="/search?bwsk=农村&orderby=1" title="">农村</a></em>
-                                                                                         <em><a href="/search?bwsk=消防培训&orderby=1" title="">消防培训</a></em>
-                                                                                     </div>
-                                                                                -->
-                                        <div class="bom">
-                                                                                        <span class="source"><a title="">沸点</a></span>
-                                               
-                                                                                        
-                                                                                        <!--
-                                            
-                                                                                    -->
-                                        </div> 
-                                                                       
-                                    </div>
-                                </li>
-                                
-                                <!-- 一张图 -->
-                                <li class="nomarlShow onePic clearfix">
-                                    <div class="fl listLeft">
-                                        <div class="listLeft-overflow ">
-                                            <a href="https://www.bjnews.com.cn/detail/1740485646168672.html"  target='_blank'>
-                                                <img   src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong20252252012102403893.jpg" alt="" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="fl listRight">
-                                        <h3 class="articleTitle">
-                                            <a href="https://www.bjnews.com.cn/detail/1740485646168672.html" title=""  target='_blank'>
-                                                消防员休假时顺手搭救，男子苦寻救命恩人当面致谢                                            </a>
-                                        </h3>
-                                        <!--
-                                                                                <div class="tags">
-                                                                                        <em><a href="/search?bwsk=救人&orderby=1" title="">救人</a></em>
-                                                                                         <em><a href="/search?bwsk=落水&orderby=1" title="">落水</a></em>
-                                                                                     </div>
-                                                                                -->
-                                        <div class="bom">
-                                                                                        <span class="source"><a title="">沸点</a></span>
-                                               
-                                                                                        
-                                                                                        <!--
-                                            
-                                                                                    -->
-                                        </div> 
-                                                                       
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </div>
                                 
             </div>
             <!-- 右侧部分 -->
             <div class="fr aside detailsAside" style="margin-top: 34px;">
                 <!-- 直播 -->
 
-                                <h1 class="bigTitle">直播</h1>
-                <div class="asideList bghui">
-                    <ul class="list-f">
-                                                    <li>
-                                <div class="hot24-img">
-                                    <a href="https://www.bjnews.com.cn/detail/1740461871129440.html" title=""   target='_blank' ><img src="https://media.bjnews.com.cn/cover/2025/02/25/5558448891029956786.jpg" alt="" /></a>
-                                                                                                                <span class="">预告</span>
-                                                                    </div>
-                                <div class="hot24-right">
-                                    <!-- <a href="https://www.bjnews.com.cn/detail/1740461871129440.html" title="" class="hot24-text"  target='_blank'>直播丨二月二龙抬头 看非遗理发传承人打造专属龙抬头发型</a> -->
-                                    <a href="https://www.bjnews.com.cn/detail/1740461871129440.html" title="" target='_blank'>直播丨二月二龙抬头 看非遗理发传承人打造专属龙抬头发型</a>
-
-                                <div class="hot24-time">
-                                    <i></i>                                                                             2025-03-01 10:00                                                                        </div>
-                                </div> 
-                            </li>
-                                                    <li>
-                            <div class="hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740452048129333.html" title="" class="hot24-text" target='_blank' >
-                                    <span class="yugao">预 告</span>
-                                    直播丨网红罗大美遇害案一审开庭 直击庭审进展                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740452048129333.html" title="" target='_blank' >
-                                    <span class="yugao">预 告</span>
-                                    直播丨网红罗大美遇害案一审开庭 直击庭审进展                                </a>
-                                <div class="hot24-time"><i class="t"></i>2025-02-28 08:30                                </div>
-                            </div> 
-                        </li>
-                                            </ul>
-                </div>
-                 <!-- 直播 结束-->
                                
 
 
@@ -407,91 +377,91 @@
                                                 <li>
                             <!--有图会展示以下标签 start-->
                                                         <div class="fl hot24-img">
-                                <a href="https://www.bjnews.com.cn/detail/1740538468129987.html" title=""   target='_blank'>
-                                    <img src="https://media.bjnews.com.cn/image/2025/02/26/5558770443852262739.png" alt="" />
+                                <a href="https://www.bjnews.com.cn/detail/1740807143129837.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/cover/2025/03/01/5559897900651193589.jpeg?x-oss-process=image/resize,m_lfit,w_118" alt="" />
                                 </a>
                             </div>
                                                          <!--有图会展示以上标签 end-->
                             <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740538468129987.html" title="" class="hot24-text"  target='_blank'>
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740807143129837.html" title="" class="hot24-text"  target='_blank'>
                                     <i class="num">1</i>
-                                    续效丽，被查                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740538468129987.html" title=""  target='_blank'>
+                                    赋音乐有限公司：方大同于2月21日去世                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740807143129837.html" title=""  target='_blank'>
                                     <i class="num">1</i>
-                                    续效丽，被查                                </a>
-                                <div class="hot24-time"><i></i>4.7万</div>
+                                    赋音乐有限公司：方大同于2月21日去世                                </a>
+                                <div class="hot24-time"><i></i>32.6万</div>
                             </div> 
                         </li>
                                                 <li>
                             <!--有图会展示以下标签 start-->
                                                         <div class="fl hot24-img">
-                                <a href="https://www.bjnews.com.cn/detail/1740530247129926.html" title=""   target='_blank'>
-                                    <img src="https://media.bjnews.com.cn/cover/2025/02/26/5558747234188731852.jpg" alt="" />
+                                <a href="https://www.bjnews.com.cn/detail/1740802465129804.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/image/2025/03/01/5559877084769231820.jpg?x-oss-process=image/resize,m_lfit,w_118/quality,q_80" alt="" />
                                 </a>
                             </div>
                                                          <!--有图会展示以上标签 end-->
                             <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740530247129926.html" title="" class="hot24-text"  target='_blank'>
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740802465129804.html" title="" class="hot24-text"  target='_blank'>
                                     <i class="num">2</i>
-                                    对话｜服刑人员还原缅北电诈：发美女视频“养号”，封号遭电棍打                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740530247129926.html" title=""  target='_blank'>
+                                    二月二“龙抬头”，理发店生意火爆                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740802465129804.html" title=""  target='_blank'>
                                     <i class="num">2</i>
-                                    对话｜服刑人员还原缅北电诈：发美女视频“养号”，封号遭电棍打                                </a>
+                                    二月二“龙抬头”，理发店生意火爆                                </a>
+                                <div class="hot24-time"><i></i>6.4万</div>
+                            </div> 
+                        </li>
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740785700129740.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/cover/2025/03/01/5559806379025313412.jpg?x-oss-process=image/resize,m_lfit,w_118/quality,q_80" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740785700129740.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">3</i>
+                                    新闻8点见丨王毅同绍伊古进行战略沟通；李乐成任工信部党组书记                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740785700129740.html" title=""  target='_blank'>
+                                    <i class="num">3</i>
+                                    新闻8点见丨王毅同绍伊古进行战略沟通；李乐成任工信部党组书记                                </a>
+                                <div class="hot24-time"><i></i>3.0万</div>
+                            </div> 
+                        </li>
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740820902168088.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/lilei2025311721412410013.png?x-oss-process=image/resize,m_lfit,w_118" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740820902168088.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">4</i>
+                                    2月制造业采购经理指数重返扩张区间，经济景气水平总体有所回升                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740820902168088.html" title=""  target='_blank'>
+                                    <i class="num">4</i>
+                                    2月制造业采购经理指数重返扩张区间，经济景气水平总体有所回升                                </a>
+                                <div class="hot24-time"><i></i>2.3万</div>
+                            </div> 
+                        </li>
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740808373129844.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/cover/2025/03/01/5559902064575849984.jpg?x-oss-process=image/resize,m_lfit,w_118/quality,q_80" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740808373129844.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">5</i>
+                                    音乐人方大同去世 ：终年41岁 曾因操劳过度出现气胸多次住院                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740808373129844.html" title=""  target='_blank'>
+                                    <i class="num">5</i>
+                                    音乐人方大同去世 ：终年41岁 曾因操劳过度出现气胸多次住院                                </a>
                                 <div class="hot24-time"><i></i>2.1万</div>
-                            </div> 
-                        </li>
-                                                <li>
-                            <!--有图会展示以下标签 start-->
-                                                        <div class="fl hot24-img">
-                                <a href="https://www.bjnews.com.cn/detail/1740537127168720.html" title=""   target='_blank'>
-                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangl8820252251659192403478.jpg" alt="" />
-                                </a>
-                            </div>
-                                                         <!--有图会展示以上标签 end-->
-                            <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740537127168720.html" title="" class="hot24-text"  target='_blank'>
-                                    <i class="num">3</i>
-                                    益方生物2024年预计亏损2.46亿元                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740537127168720.html" title=""  target='_blank'>
-                                    <i class="num">3</i>
-                                    益方生物2024年预计亏损2.46亿元                                </a>
-                                <div class="hot24-time"><i></i>1.5万</div>
-                            </div> 
-                        </li>
-                                                <li>
-                            <!--有图会展示以下标签 start-->
-                                                        <div class="fl hot24-img">
-                                <a href="https://www.bjnews.com.cn/detail/1740537125168718.html" title=""   target='_blank'>
-                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangl882025225170162403486.jpg" alt="" />
-                                </a>
-                            </div>
-                                                         <!--有图会展示以上标签 end-->
-                            <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740537125168718.html" title="" class="hot24-text"  target='_blank'>
-                                    <i class="num">4</i>
-                                    莎普爱思盐酸奥洛他定滴眼液获药品注册证书                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740537125168718.html" title=""  target='_blank'>
-                                    <i class="num">4</i>
-                                    莎普爱思盐酸奥洛他定滴眼液获药品注册证书                                </a>
-                                <div class="hot24-time"><i></i>1.4万</div>
-                            </div> 
-                        </li>
-                                                <li>
-                            <!--有图会展示以下标签 start-->
-                                                        <div class="fl hot24-img">
-                                <a href="https://www.bjnews.com.cn/detail/1740542289168733.html" title=""   target='_blank'>
-                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/mapj2025226115882404580.png" alt="" />
-                                </a>
-                            </div>
-                                                         <!--有图会展示以上标签 end-->
-                            <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740542289168733.html" title="" class="hot24-text"  target='_blank'>
-                                    <i class="num">5</i>
-                                    “用不好”的标点符号：从“句号恐惧症”说起                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740542289168733.html" title=""  target='_blank'>
-                                    <i class="num">5</i>
-                                    “用不好”的标点符号：从“句号恐惧症”说起                                </a>
-                                <div class="hot24-time"><i></i>1.4万</div>
                             </div> 
                         </li>
                                             </ul>
@@ -511,28 +481,28 @@
                     <ul class="list-a">
                                                 <li>
                             <i class="round"></i>
-                            <a href="https://www.bjnews.com.cn/detail/1740583723129548.html" title=""  target='_blank' >国际｜泽连斯基：乌美矿产协议最终版本不涉及乌任何债务</a>
-                            <div class="t">5小时前</div>
+                            <a href="https://www.bjnews.com.cn/detail/1740870830129075.html" title=""  target='_blank' >以色列决定在斋月期间继续执行加沙停火协议</a>
+                            <div class="t">刚刚</div>
                         </li>
                                                 <li>
                             <i class="round"></i>
-                            <a href="https://www.bjnews.com.cn/detail/1740583275129545.html" title=""  target='_blank' >国际｜泰国男子称带妻子闺蜜相亲将她杀害 抢金饰变卖发现是假的</a>
-                            <div class="t">5小时前</div>
+                            <a href="https://www.bjnews.com.cn/detail/1740870750129074.html" title=""  target='_blank' >著名表演艺术家于洋在北京逝世，享年95岁</a>
+                            <div class="t">刚刚</div>
                         </li>
                                                 <li>
                             <i class="round"></i>
-                            <a href="https://www.bjnews.com.cn/detail/1740583202168798.html" title=""  target='_blank' >高途2024财年收入45.53亿元，第四季度亏损大幅收窄</a>
-                            <div class="t">5小时前</div>
+                            <a href="https://www.bjnews.com.cn/detail/1740870679129072.html" title=""  target='_blank' >纳米比亚为开国总统努乔马举行国葬</a>
+                            <div class="t">1分钟前</div>
                         </li>
                                                 <li>
                             <i class="round"></i>
-                            <a href="https://www.bjnews.com.cn/detail/1740583197168797.html" title=""  target='_blank' >全国校园食堂“互联网+明厨亮灶”覆盖率达98.5%</a>
-                            <div class="t">5小时前</div>
+                            <a href="https://www.bjnews.com.cn/detail/1740870618129070.html" title=""  target='_blank' >英国与乌克兰签署22.6亿英镑贷款协议 以加强乌国防能力</a>
+                            <div class="t">1分钟前</div>
                         </li>
                                                 <li>
                             <i class="round"></i>
-                            <a href="https://www.bjnews.com.cn/detail/174058260393642.html" title=""  target='_blank' >让“互联网+明厨亮灶”更好托举校园食品安全  | 新京报社论</a>
-                            <div class="t">6小时前</div>
+                            <a href="https://www.bjnews.com.cn/detail/1740870543129068.html" title=""  target='_blank' >尼加拉瓜宣布退出国际移民组织和国际劳工组织</a>
+                            <div class="t">1分钟前</div>
                         </li>
                                             </ul>
                 </div>
@@ -551,57 +521,57 @@
                                                 <!-- 只有第一条显示图片 -->
                         <li>
                                                         <div class="fl hot24-img">
-                                <a href="https://www.bjnews.com.cn/detail/1740525465129876.html" title="" target='_blank'>
-                                    <img src="https://media.bjnews.com.cn/cover/2025/02/26/5558715516631198609.jpg" alt="" />
+                                <a href="https://www.bjnews.com.cn/detail/1740820064129933.html"  target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/cover/2025/02/26/5558876379673602316.jpeg?x-oss-process=image/resize,m_lfit,w_332" alt="" />
                                 </a>
                             </div>
                                                         <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740525465129876.html" title="" class="hot24-text">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740820064129933.html"  class="hot24-text" target='_blank'>
                                     <i class="num"></i>
-                                    新闻8点见丨湖南沅陵发生船只相撞事故；泰国切断边境可疑网络                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740525465129876.html" title="">
+                                    南水北调工程圆满完成冰期输水任务                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740820064129933.html" target='_blank'>
                                     <i class="num"></i>
-                                    新闻8点见丨湖南沅陵发生船只相撞事故；泰国切断边境可疑网络                                </a>
+                                    南水北调工程圆满完成冰期输水任务                                </a>
                             </div> 
                         </li>
                                                                         <li>
                             <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740583197168797.html"  target='_blank' title="" class="hot24-text">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740820225129938.html"  target='_blank' title="" class="hot24-text">
                                     <i class="num"></i>
-                                    全国校园食堂“互联网+明厨亮灶”覆盖率达98.5%                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740583197168797.html"  target='_blank' title="">
+                                    2025年大学生志愿服务西部计划报名通道开启                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740820225129938.html"  target='_blank' title="">
                                     <i class="num"></i>
-                                    全国校园食堂“互联网+明厨亮灶”覆盖率达98.5%                                </a>
+                                    2025年大学生志愿服务西部计划报名通道开启                                </a>
                             </div> 
                         </li>
                                                 <li>
                             <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740583202168798.html"  target='_blank' title="" class="hot24-text">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740820412129940.html"  target='_blank' title="" class="hot24-text">
                                     <i class="num"></i>
-                                    高途2024财年收入45.53亿元，第四季度亏损大幅收窄                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740583202168798.html"  target='_blank' title="">
+                                    王诚任四川能源发展集团党委书记、董事长                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740820412129940.html"  target='_blank' title="">
                                     <i class="num"></i>
-                                    高途2024财年收入45.53亿元，第四季度亏损大幅收窄                                </a>
+                                    王诚任四川能源发展集团党委书记、董事长                                </a>
                             </div> 
                         </li>
                                                 <li>
                             <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740583275129545.html"  target='_blank' title="" class="hot24-text">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740843579129064.html"  target='_blank' title="" class="hot24-text">
                                     <i class="num"></i>
-                                    国际｜泰国男子称带妻子闺蜜相亲将她杀害 抢金饰变卖发现是假的                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740583275129545.html"  target='_blank' title="">
+                                    现场直击丨在基辅街头感受乌克兰民众的愤懑                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740843579129064.html"  target='_blank' title="">
                                     <i class="num"></i>
-                                    国际｜泰国男子称带妻子闺蜜相亲将她杀害 抢金饰变卖发现是假的                                </a>
+                                    现场直击丨在基辅街头感受乌克兰民众的愤懑                                </a>
                             </div> 
                         </li>
                                                 <li>
                             <div class="fl hot24-right">
-                                <!-- <a href="https://www.bjnews.com.cn/detail/1740583723129548.html"  target='_blank' title="" class="hot24-text">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740853661168100.html"  target='_blank' title="" class="hot24-text">
                                     <i class="num"></i>
-                                    国际｜泽连斯基：乌美矿产协议最终版本不涉及乌任何债务                                </a> -->
-                                <a href="https://www.bjnews.com.cn/detail/1740583723129548.html"  target='_blank' title="">
+                                    北京朝阳发放2025年第一批汽车消费券 总额共1500万元                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740853661168100.html"  target='_blank' title="">
                                     <i class="num"></i>
-                                    国际｜泽连斯基：乌美矿产协议最终版本不涉及乌任何债务                                </a>
+                                    北京朝阳发放2025年第一批汽车消费券 总额共1500万元                                </a>
                             </div> 
                         </li>
                                             </ul>
@@ -622,10 +592,9 @@
     </div>       
 </div>
 
-<input type='hidden' value="1740557904129256" id='cur_uuid_id'>
+<input type='hidden' value="1740870830129075" id='cur_uuid_id'>
 
-<script src="/detail/addpv?uuid=1740557904129256"></script>
-
+<script src="/detail/addpv?uuid=1740870830129075"></script>
 <script type="text/javascript">
         var mainDiv =$("#giveThumbs-up");
         // 添加微信二维码分享
@@ -665,18 +634,16 @@
         }
 
         $("#smaller").click(function(){
-            change_size($(".articleCenter .introduction-video p"),"smaller");
+            change_size($(".articleCenter p"),"smaller");   
         });
         $("#bigger").click(function(){
-            change_size($(".articleCenter .introduction-video p"),"bigger");  
+            change_size($(".articleCenter p"),"bigger");    
         });
         //给文章点赞
         $(".giveThumbs-up .dianzan").click(function(){
             $(this).addClass("dianzan-ok");
             $(this).find(".dianzan-move").fadeIn().fadeOut();  
-            if($("#detailZan").hasClass("dianzan-ok")){
-                $("#detailZan").addClass("noClick");
-            }
+            if($("#detailZan").hasClass("dianzan-ok")){$("#detailZan").addClass("noClick");}
             if( $("#qwlike").html() == '点赞'){
                 $("#qwlike").html(1);
             }
@@ -685,9 +652,7 @@
         $(".giveThumbs-up .qifu").click(function(){
             $(this).addClass("qifu-ok");
             $(this).find(".dianzan-move").fadeIn().fadeOut();
-            if($("#detailQifu").hasClass("qifu-ok")){
-                $("#detailQifu").addClass("noClick");
-            }  
+            if($("#detailQifu").hasClass("qifu-ok")){$("#detailQifu").addClass("noClick");}  
             if( $("#qwlike-qifu").html() == '祈福'){
                 $("#qwlike-qifu").html(1);
             }
@@ -713,7 +678,7 @@
                     var v = $("#qwlike").html() || 0;
                     var a = parseInt(v);
                     if( $.trim($("#qwlike").html()) == '点赞'){
-                        $("#qwlike").html(1);
+                        $("#qwlike").html("1");
                     }else{
                         a++;
                         $("#qwlike").html(a);
@@ -742,7 +707,6 @@
                 if (res.code == 1) {
                     var v = $("#qwlike-qifu").html() || 0;
                     var a = parseInt(v);
-                    
                     if( $.trim($("#qwlike-qifu").html()) == '祈福'){
                         $("#qwlike-qifu").html(1);
                     }else{
@@ -759,32 +723,94 @@
         })
     }) 
     
-    //获取视频的处理   
-    // setTimeout(function () { 
-    //     var vjs = $("video");
-    //     var len = vjs.length;
-    //     for( i=0; i<len; i++){
-    //         console.log('视频视频视频视频视频视频')
-    //         var srct = $(vjs).eq(i).attr('src');
-    //         $(vjs).eq(i).replaceWith('<video autoplay="autoplay" id="videoJs'+ i +'" muted class="video-js vjs-default-skin" controls preload="auto" width="800" height="428" data-setup="{}"><source src="'+ $(vjs).eq(i).attr('src') +'" type="application/x-mpegURL" /></video>');            
-    //     }            
-    // }, 2000); 
-    
-    if($('#videoJs0923').length>0){
-        setTimeout(function(){
-            var player0 = videojs("videoJs0923",{
-                controls : true
-            })
-        },2000)
-    }
-    
+
+    // function videoPlay(){
+    //     //var player = videojs(videoJs)
+    //     for( i=0; i<player.length; i++){
+    //         setTimeout(function(){
+    //             var player = videojs(videoJs(i))
+    //         },5000)
+    //     }
+    // }
+    // videoPlay();
 
 </script>
+
+<script>
+    // $(document).ready(function(){
+    //     //获取视频的处理   
+    //     //setTimeout(function () { 
+    //         var vjs = $("video");
+    //         var len = vjs.length;
+    //         for( i=0; i<len; i++){
+    //             var srct = $(vjs).eq(i).attr('src');
+    //             $(vjs).eq(i).replaceWith('<video autoplay="autoplay" muted id="videoJs'+ i +'" class="video-js vjs-default-skin" controls="controls" preload="auto" width="800" height="450" data-setup="{}"><source src="'+ $(vjs).eq(i).attr('src') +'" type="application/x-mpegURL" /></video>');            
+    //         }            
+    //     //}, 500); 
+
+        
+    //     if ( typeof(videoJs0) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player0 = videojs(videoJs0)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs1) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs1)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs2) != "undefined" ) {
+    //     setTimeout(function(){
+    //         var player1 = videojs(videoJs2)
+    //         },500)
+    //     }
+
+    //     if ( typeof(videoJs3) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs3)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs4) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs4)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs5) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs5)
+    //         },500)
+    //     }
+        
+        
+    // })  
+    // $(document).ready(function(){
+    //     var myVideo = videojs("myVideo", {
+    //         bigPlayButton: true,
+    //         textTrackDisplay: false,
+    //         posterImage: false,
+    //         errorDisplay: false, 
+    //     })
+    //     myVideo.play()
+    //     var changeVideo = function (vdoSrc) {
+    //         if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
+    //             myVideo.src({
+    //                 src: vdoSrc,
+    //                 type: "application/x-mpegURL" //在重新添加视频源的时候需要给新的type的值
+    //             })
+    //         } else {
+    //             myVideo.src(vdoSrc)
+    //         }
+    //         myVideo.load();
+    //         myVideo.play();
+    //     }  
+    //     changeVideo(src);
+    // })                             
+</script>
+
 <!-- 统计 -->
 <div style="display:none;">
     <script type="text/javascript" src="https://static.bjnews.com.cn/public/tj.js"></script>
 </div>
-
 
     <footer class="footer">
          <div class="f-top">         

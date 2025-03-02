@@ -3,145 +3,638 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <meta name="ROBOTS" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
+  <meta name="ROBOT" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@nhk_world">
-  <meta name="keywords" content="NHK, nhk, æ¥æ¬æ¾éåä¼, ã¨ãã¨ã¤ãã±ã¤, NHKWORLD, NHKã¯ã¼ã«ã JAPAN, å½éæ¾é, NHKã¯ã¼ã«ããã¬ãã¢ã , æ¥æ¬, ã¯ã¼ã«ãTV">
-  <meta name="description" content="NHKã¯ã¼ã«ã JAPANã¯24æéè±èªã§ããã¥ã¼ã¹ãçªçµãå¤å½ã®è¡ææ¾éãã±ã¼ãã«ãã¬ããªã©ãéãã¦æ¾éãã¦ãã¾ããã¢ããªãã¦ã§ããµã¤ãããããæ¥½ãã¿ããã ãã¾ãã">
+  <meta name="keywords" content="日本語,ビデオ,語学,言葉,文化,会話,話す">
+  <meta name="description" content="やくにたつ(useful)日本語（にほんご）を、ビデオでかんたんに勉強（べんきょう）できます。１レッスン３分（ぷん）。ぜんぶで48レッスンあります。すべて無料(むりょう　free)です。NHKワールド JAPANの初級（しょきゅう）の日本語ばんぐみです。たのしく勉強できます。">
   <meta property="fb:app_id" content="1717775218444936">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="music.radio_station">
   <meta property="og:site_name" content="NHK WORLD-JAPAN">
-  <meta property="og:title" content="ãã¬ãå½éæ¾é | NHK WORLD-JAPAN - NHKã®å½éãµã¼ãã¹">
-  <meta property="og:description" content="NHKã¯ã¼ã«ã JAPANã¯24æéè±èªã§ããã¥ã¼ã¹ãçªçµãå¤å½ã®è¡ææ¾éãã±ã¼ãã«ãã¬ããªã©ãéãã¦æ¾éãã¦ãã¾ããã¢ããªãã¦ã§ããµã¤ãããããæ¥½ãã¿ããã ãã¾ãã">
-  <meta property="og:image" content="https://www3.nhk.or.jp/nhkworld/ja/assets/images/common/nw_ogimage.jpg">
-  <meta property="og:url" content="https://www3.nhk.or.jp/nhkworld/nhkworld/ja/tv/">
-  <title>ãã¬ãå½éæ¾é | NHK WORLD-JAPAN - NHKã®å½éãµã¼ãã¹</title>
-  <link rel="icon" sizes="192x192" href="/nhkworld/common/site_images/nw_webapp_news_192x192.png">
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
+  <meta property="og:title" content="ビデオ‐日本語（にほんご）の勉強（べんきょう） | Easy Japanese「やさしい日本語」 | NHK WORLD-JAPAN">
+  <meta property="og:description" content="やくにたつ(useful)日本語（にほんご）を、ビデオでかんたんに勉強（べんきょう）できます。１レッスン３分（ぷん）。ぜんぶで48レッスンあります。すべて無料(むりょう　free)です。NHKワールド JAPANの初級（しょきゅう）の日本語ばんぐみです。たのしく勉強できます。">
+  <meta property="og:image" content="https://www.nhk.or.jp/lesson/assets/images/og/video.jpg">
+  <meta property="og:url" content="https://www.nhk.or.jp/lesson/ja/video/">
+  <title>ビデオ‐日本語（にほんご）の勉強（べんきょう） | Easy Japanese「やさしい日本語」 | NHK WORLD-JAPAN</title>
   <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
-  <link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/nhkworld/ja/tv/">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
+  <link rel="canonical" href="https://www.nhk.or.jp/lesson/ja/video/">
   <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css">
-  <!-- add css -->
-  <link rel="stylesheet" href="/nhkworld/ja/assets/css/style.css">
-  <!-- // add css -->
+  <link rel="stylesheet" href="/lesson/assets/css/video.css">
+  <link rel="stylesheet" href="/lesson/assets/css/lib/swiper.min.css">
   <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
   <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
-  <script src="/nhkworld/assets/javascripts/api-sdk.js" charset="utf-8"></script>
-  <!-- add script -->
-  <script src="/nhkworld/ja/assets/js/script.js" charset="utf-8"></script>
-  <!-- // add script -->
+  <script src="/nhkworld/common/js/lib/jquery-3.min.js" charset="utf-8"></script>
 </head>
 <body>
-  <div class="l-wrapper">
-    <header class="l-header">
-      <!-- NHK WORLD header -->
-      <div id="nw-global-header"></div>
-      <!-- // NHK WORLD header -->
-      <!-- Ja header -->
-      <div class="l-header__ja" id="l-header__ja" data-current="tv"></div>
-      <!-- // Ja header -->
+<div id="loading"><img src="/lesson/assets/images/loading.gif" alt=""></div>
+<div id="wapper">
+  <div id="nw-global-header"></div>
+  <div id="app" class="">
+    <header id="lesson-header">
+      <nav id="breadcrumb-list">
+        <ol>
+          <li><a href="https://www3.nhk.or.jp/nhkworld/">NHK WORLD-JAPAN</a></li>
+          <li><a href="/lesson/ja/">やさしい<ruby>日本語<rt>にほんご</rt></ruby></a></li>
+          <li><a href="/lesson/ja/video/">ビデオ</a></li>
+        </ol>
+      </nav>
     </header>
-
-    <div class="p-tv">
-      <div class="c-pageTop -half">
-        <div class="c-pageTop__inner">
-          <h1 class="c-pageTop__title -main"><i class="c-icon -tv"></i>NHKã¯ã¼ã«ã JAPAN</h1>
-          <div class="c-pageTop__text">24æéããã¥ã¼ã¹ã¨çªçµãè±èªã§ä¸çã«çºä¿¡ãã¦ãã¾ãã</div>
-        </div>
-      </div>
-
-      <div class="l-contents">
-        <div class="l-block">
-          <div class="c-block">
-            <h2 class="c-heading">ãã ãã¾æ¾éä¸­ã®çªçµ</h2>
-  
-            <div class="p-tv__items">
-              <div class="p-tv__live" id="p-tv__live"></div>
-
-              <div class="p-tv__texts">
-                <div class="p-tv__textsTitle">ããã160ã®å½ã»å°åã®ç´4å2,000ä¸ä¸å¸¯ã§è¦è´ã§ãã¾ãã</div>
-                <p>è¡ææ¾éãã±ã¼ãã«ãã¬ããå°ä¸ãã¸ã¿ã«æ¾éãªã©ãéãã¦ãè¦§ããã ãã¾ããæ¥æ¬å½åã§ã¯ãä¸é¨ã®ã±ã¼ãã«ãã¬ããIPTVã§ãè¦§ããã ãã¾ãã</p>
-
-                <div class="c-btns">
-                  <div class="c-btn">
-                    <a href="/nhkworld/ja/tv/howto/">
-                      <div class="c-btn__icon"><i class="c-icon -earth"></i></div>
-                      <div class="c-btn__texts">
-                        <span class="c-btn__text -arrow">æµ·å¤ã§è¦ãã«ã¯</span>
-                      </div>
-                    </a>
+    <!-- contents -->
+    <div id="contents-block">
+      <section>
+        <div class="inner-block">
+          <h1 class="circle-title"><i></i><span>ビデオ</span></h1>
+          <ul class="thumb-4-block">
+            <li>
+              <a href="/lesson/ja/video/01.html">
+                <figure><img src="/lesson/assets/images/video/01/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#1</span></p>
+                    <p class="cando"><ruby>場所<rt>ばしょ</rt></ruby>(place)をきく</p>
                   </div>
-
-                  <div class="c-btn">
-                    <a href="/nhkworld/ja/tv/howto_watch_in_japan/">
-                      <div class="c-btn__icon"><i class="c-icon -japan"></i></div>
-                      <div class="c-btn__texts">
-                        <span class="c-btn__text -arrow">æ¥æ¬ã§è¦ãã«ã¯</span>
-                      </div>
-                    </a>
+                  <p><em lang="ja">はるさんハウスはどこですか</em> Where is Haru-san House?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/02.html">
+                <figure><img src="/lesson/assets/images/video/02/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#2</span></p>
+                    <p class="cando"><ruby>名前<rt>なまえ</rt></ruby>と<ruby>仕事<rt>しごと</rt></ruby>を<ruby>言<rt>い</rt></ruby>って、<ruby>自分<rt>じぶん</rt></ruby>のことを<ruby>紹介<rt>しょうかい</rt></ruby>(introduce)する</p>
                   </div>
+                  <p><em lang="ja">タムです <ruby>学生<rt>がくせい</rt></ruby>です</em> I'm Tam. I'm a student.</p>
                 </div>
-
-                <p>ä¸é¨ã®çªçµã¯ãNHKã®å½åãã£ã³ãã«ã§ãæ¾éãã¦ãã¾ãã</p>
-
-                <div class="c-link">
-                  <a href="/nhkworld/ja/tv/program/">
-                    <i></i><span class="c-link__text">å½åã§æ¾éãã¦ããNHKã¯ã¼ã«ã JAPANã®ãã¬ãçªçµ</span>
-                  </a>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/03.html">
+                <figure><img src="/lesson/assets/images/video/03/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#3</span></p>
+                    <p class="cando"><ruby>出身<rt>しゅっしん</rt></ruby><ruby>地<rt>ち</rt></ruby>（where you’re from）を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">ベトナムから<ruby>来<rt>き</rt></ruby>ました</em> I'm from Vietnam.</p>
                 </div>
-              </div>
-            </div>
-          </div>
-  
-          <div class="c-block">
-            <h2 class="c-heading">ãªã³ããã³ããµã¼ãã¹</h2>
-            <div class="c-description">
-              <p>æ¾éãããçªçµããã¤ã§ããå¥½ããªæéã«ãè¦§ããã ãã¾ãã</p>
-            </div>
-
-            <!-- <div id="p-tv__recommend"></div> -->
-            <div class="p-tv__btn" style="margin: 40px 0 60px;"><a href="/nhkworld/en/shows/">ãªã³ããã³ããµã¼ãã¹ã®ãã¼ã¸ã¸ï¼è±èªï¼</a></div>
-
-            <div class="p-tv__hotelBox">
-              <div class="p-tv__hotelTitle">NHKã¯ã¼ã«ã JAPANãããã«ã»æé¤¨å®¢å®¤ã¸ã®å°å¥ã«ã¤ãã¦</div>
-              <p>NHKã¯ã¼ã«ã JAPANã®è±èªãã£ã³ãã«ã¯ãè¡æãåå½ã»å°åã®æ¾éäºæ¥­èç­ãéãã¦ä¸çã«åãã¦æ¾éãã¦ãã¾ããã¾ããè¨ªæ¥ã»å¨æ¥å¤å½äººã®æ¥æ¬ã¸ã®çè§£ãä¿é²ãããã¨ãç®çã¨ãã¦ãå½åã§ãCATV/IPTV/ãããäºæ¥­èã«æä¾ãã¦ãã¾ããè¡æããç´æ¥åä¿¡ãã¦ããã ãããæä¾åã®äºæ¥­èããã®éä¿¡ãµã¼ãã¹ããå©ç¨ããã ããã¨ã§ãããã«ã»æé¤¨å®¢å®¤ã¸ã®å°å¥ãå¯è½ã§ããï¼NHKã¯ã¼ã«ã JAPANã®åä¿¡ã¯ç¡æã§ããäºæ¥­èéä¿¡ãµã¼ãã¹ããå©ç¨ã®å ´åãå¥éãµã¼ãã¹æãå¿è¦ã¨ãªãã¾ãï¼<br>
-              <a href="/nhkworld/upld/thumbnails/ja/information/hotellist.pdf">å°å¥ããããã«ã»æé¤¨ã®ä¸è¦§</a>ãå¬éãã¦ãã¾ãã</p>
-            </div>
-          </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/04.html">
+                <figure><img src="/lesson/assets/images/video/04/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#4</span></p>
+                    <p class="cando">これからすることを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>大学<rt>だいがく</rt></ruby>で<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>します</em> I'm going to study Japanese at a university.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/05.html">
+                <figure><img src="/lesson/assets/images/video/05/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#5</span></p>
+                    <p class="cando">どうやって<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>したか<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">ラジオで<ruby>勉強<rt>べんきょう</rt></ruby>しました</em> I studied by listening to the radio.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/06.html">
+                <figure><img src="/lesson/assets/images/video/06/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#6</span></p>
+                    <p class="cando"><ruby>乗<rt>の</rt></ruby>り<ruby>物<rt>もの</rt></ruby>の<ruby>行<rt>い</rt></ruby>き<ruby>先<rt>さき</rt></ruby>をたしかめる</p>
+                  </div>
+                  <p><em lang="ja">この<ruby>電車<rt>でんしゃ</rt></ruby>は<ruby>池袋<rt>いけぶくろ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きますか</em> Does this train go to Ikebukuro?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/07.html">
+                <figure><img src="/lesson/assets/images/video/07/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#7</span></p>
+                    <p class="cando">わかりやすく<ruby>話<rt>はな</rt></ruby>すようお<ruby>願<rt>ねが</rt></ruby>いする</p>
+                  </div>
+                  <p><em lang="ja">ゆっくり<ruby>話<rt>はな</rt></ruby>してください</em> Please speak slowly.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/08.html">
+                <figure><img src="/lesson/assets/images/video/08/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#8</span></p>
+                    <p class="cando"><ruby>友達<rt>ともだち</rt></ruby>などを<ruby>紹介<rt>しょうかい</rt></ruby>(introduce)する</p>
+                  </div>
+                  <p><em lang="ja"><ruby>友達<rt>ともだち</rt></ruby>のあやかさんです</em> This is my friend, Ayaka-san.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/09.html">
+                <figure><img src="/lesson/assets/images/video/09/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#9</span></p>
+                    <p class="cando"><ruby>知<rt>し</rt></ruby>らない<ruby>物<rt>もの</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>をきく</p>
+                  </div>
+                  <p><em lang="ja">これは<ruby>何<rt>なに</rt></ruby>ですか</em> What is this?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/10.html">
+                <figure><img src="/lesson/assets/images/video/10/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#10</span></p>
+                    <p class="cando"><ruby>値段<rt>ねだん</rt></ruby>(price)をきく</p>
+                  </div>
+                  <p><em lang="ja">このドライヤーはいくらですか</em> How much is this hair dryer?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/11.html">
+                <figure><img src="/lesson/assets/images/video/11/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#11</span></p>
+                    <p class="cando"><ruby>欲<rt>ほ</rt></ruby>しい<ruby>物<rt>もの</rt></ruby>があるかどうかきく</p>
+                  </div>
+                  <p><em lang="ja">お<ruby>守<rt>まも</rt></ruby>りはありますか</em> Do you have any lucky charms?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/12.html">
+                <figure><img src="/lesson/assets/images/video/12/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#12</span></p>
+                    <p class="cando"><ruby>感想<rt>かんそう</rt></ruby>(impression)を<ruby>言<rt>い</rt></ruby>う、<ruby>説明<rt>せつめい</rt></ruby>する　1</p>
+                  </div>
+                  <p><em lang="ja">かわいいお<ruby>守<rt>まも</rt></ruby>りですね</em> This is a cute amulet, isn't it?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/13.html">
+                <figure><img src="/lesson/assets/images/video/13/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#13</span></p>
+                    <p class="cando">したいことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>雪<rt>ゆき</rt></ruby>が<ruby>見<rt>み</rt></ruby>たいです</em> I want to see the snow.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/14.html">
+                <figure><img src="/lesson/assets/images/video/14/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#14</span></p>
+                    <p class="cando">してみたいことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>日本<rt>にほん</rt></ruby>へ<ruby>行<rt>い</rt></ruby>ってみたいです</em> I want to go to Japan someday.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/15.html">
+                <figure><img src="/lesson/assets/images/video/15/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#15</span></p>
+                    <p class="cando">タクシーで<ruby>行<rt>い</rt></ruby>き<ruby>先<rt>さき</rt></ruby>を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>猿<rt>さる</rt></ruby>の<ruby>温泉<rt>おんせん</rt></ruby>までお<ruby>願<rt>ねが</rt></ruby>いします</em> To the monkey hot spring, please.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/16.html">
+                <figure><img src="/lesson/assets/images/video/16/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#16</span></p>
+                    <p class="cando"><ruby>感想<rt>かんそう</rt></ruby>(impression)を<ruby>言<rt>い</rt></ruby>う、<ruby>説明<rt>せつめい</rt></ruby>する　2</p>
+                  </div>
+                  <p><em lang="ja"><ruby>有名<rt>ゆうめい</rt></ruby>な<ruby>温泉<rt>おんせん</rt></ruby>です</em> This is a world-famous hot spring.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/17.html">
+                <figure><img src="/lesson/assets/images/video/17/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#17</span></p>
+                    <p class="cando"><ruby>今<rt>いま</rt></ruby>していることを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>日本<rt>にほん</rt></ruby>を<ruby>旅行<rt>りょこう</rt></ruby>しています</em> I've been traveling around Japan.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/18.html">
+                <figure><img src="/lesson/assets/images/video/18/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#18</span></p>
+                    <p class="cando">したことについて<ruby>感想<rt>かんそう</rt></ruby>(impression)を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">すごく<ruby>楽<rt>たの</rt></ruby>しかったです</em> It was really fun.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/19.html">
+                <figure><img src="/lesson/assets/images/video/19/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#19</span></p>
+                    <p class="cando"><ruby>買<rt>か</rt></ruby>いたい<ruby>物<rt>もの</rt></ruby>を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>手袋<rt>てぶくろ</rt></ruby>が<ruby>欲<rt>ほ</rt></ruby>しいんですが</em> I'd like a pair of gloves.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/20.html">
+                <figure><img src="/lesson/assets/images/video/20/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#20</span></p>
+                    <p class="cando"><ruby>料理<rt>りょうり</rt></ruby>に<ruby>入<rt>い</rt></ruby>れてほしくない<ruby>物<rt>もの</rt></ruby>を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">わさびは<ruby>入<rt>い</rt></ruby>れないでください</em> Please don't put wasabi in.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/21.html">
+                <figure><img src="/lesson/assets/images/video/21/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#21</span></p>
+                    <p class="cando">どこにいるか<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>時計<rt>とけい</rt></ruby><ruby>台<rt>だい</rt></ruby>の<ruby>中<rt>なか</rt></ruby>にいます</em> I'm in the clock tower.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/22.html">
+                <figure><img src="/lesson/assets/images/video/22/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#22</span></p>
+                    <p class="cando">いっしょに<ruby>何<rt>なに</rt></ruby>かをしようと<ruby>誘<rt>さそ</rt></ruby>う　１</p>
+                  </div>
+                  <p><em lang="ja"><ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>りましょう</em> Let's take a photo.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/23.html">
+                <figure><img src="/lesson/assets/images/video/23/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#23</span></p>
+                    <p class="cando"><ruby>好<rt>す</rt></ruby>きな<ruby>物<rt>もの</rt></ruby>を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>私<rt>わたし</rt></ruby>はこのねこが<ruby>好<rt>す</rt></ruby>きです</em> I like this cat.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/24.html">
+                <figure><img src="/lesson/assets/images/video/24/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#24</span></p>
+                    <p class="cando"><ruby>食<rt>た</rt></ruby>べられない<ruby>物<rt>もの</rt></ruby>を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>生卵<rt>なまたまご</rt></ruby>は<ruby>食<rt>た</rt></ruby>べられません</em> I can't eat raw eggs.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/25.html">
+                <figure><img src="/lesson/assets/images/video/25/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#25</span></p>
+                    <p class="cando"><ruby>体<rt>からだ</rt></ruby>の<ruby>調子<rt>ちょうし</rt></ruby>が<ruby>悪<rt>わる</rt></ruby>いことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">のどが<ruby>痛<rt>いた</rt></ruby>いんです</em> My throat hurts.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/26.html">
+                <figure><img src="/lesson/assets/images/video/26/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#26</span></p>
+                    <p class="cando">いろいろな<ruby>感想<rt>かんそう</rt></ruby>(impression)を<ruby>言<rt>い</rt></ruby>う　1</p>
+                  </div>
+                  <p><em lang="ja">この<ruby>卵焼<rt>たまごや</rt></ruby>き、<ruby>甘<rt>あま</rt></ruby>くておいしいです</em> This Japanese omelet is sweet and delicious.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/27.html">
+                <figure><img src="/lesson/assets/images/video/27/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#27</span></p>
+                    <p class="cando">どれを<ruby>選<rt>えら</rt></ruby>べばいいかきく</p>
+                  </div>
+                  <p><em lang="ja">どれが<ruby>一番<rt>いちばん</rt></ruby>おいしいですか</em> Which one is the most tasty?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/28.html">
+                <figure><img src="/lesson/assets/images/video/28/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#28</span></p>
+                    <p class="cando">してもいいかどうかきく</p>
+                  </div>
+                  <p><em lang="ja"><ruby>写真<rt>しゃしん</rt></ruby>を<ruby>撮<rt>と</rt></ruby>ってもいいですか</em> May I take photos here?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/29.html">
+                <figure><img src="/lesson/assets/images/video/29/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#29</span></p>
+                    <p class="cando"><ruby>何<rt>なに</rt></ruby>をしに<ruby>行<rt>い</rt></ruby>ったか<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">ピアノの<ruby>演奏<rt>えんそう</rt></ruby>を<ruby>聴<rt>き</rt></ruby>きに<ruby>行<rt>い</rt></ruby>きました</em> I went to listen to a piano recital.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/30.html">
+                <figure><img src="/lesson/assets/images/video/30/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#30</span></p>
+                    <p class="cando">したことやこれからすることを、いろいろ<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>歌<rt>うた</rt></ruby>ったり、おどったりしました</em> We sang songs and danced together.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/31.html">
+                <figure><img src="/lesson/assets/images/video/31/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#31</span></p>
+                    <p class="cando">いっしょに<ruby>何<rt>なに</rt></ruby>かをしようと<ruby>誘<rt>さそ</rt></ruby>う　２</p>
+                  </div>
+                  <p><em lang="ja"><ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>きませんか</em> Why don't we all go together?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/32.html">
+                <figure><img src="/lesson/assets/images/video/32/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#32</span></p>
+                    <p class="cando"><ruby>行<rt>い</rt></ruby>き<ruby>方<rt>かた</rt></ruby>をきく</p>
+                  </div>
+                  <p><em lang="ja"><ruby>忍者<rt>にんじゃ</rt></ruby><ruby>博物館<rt>はくぶつかん</rt></ruby>まで、どう<ruby>行<rt>い</rt></ruby>ったらいいですか</em> How can I get to the Ninja Museum?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/33.html">
+                <figure><img src="/lesson/assets/images/video/33/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#33</span></p>
+                    <p class="cando">どのくらい<ruby>時間<rt>じかん</rt></ruby>がかかるかきく</p>
+                  </div>
+                  <p><em lang="ja">どのくらい<ruby>待<rt>ま</rt></ruby>ちますか</em> How long does it take to get in?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/34.html">
+                <figure><img src="/lesson/assets/images/video/34/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#34</span></p>
+                    <p class="cando"><ruby>経験<rt>けいけん</rt></ruby>(experience)したことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>読<rt>よ</rt></ruby>んだことあります</em> I've read it.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/35.html">
+                <figure><img src="/lesson/assets/images/video/35/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#35</span></p>
+                    <p class="cando">したいことやしたことを<ruby>順番<rt>じゅんばん</rt></ruby>に<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>大涌谷<rt>おおわくだに</rt></ruby>に<ruby>行<rt>い</rt></ruby>って、<ruby>黒<rt>くろ</rt></ruby>たまごが<ruby>食<rt>た</rt></ruby>べたいです</em> I want to go to Owakudani and then eat a black egg.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/36.html">
+                <figure><img src="/lesson/assets/images/video/36/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#36</span></p>
+                    <p class="cando"><ruby>時間<rt>じかん</rt></ruby>についてきく</p>
+                  </div>
+                  <p><em lang="ja">お<ruby>風呂<rt>ふろ</rt></ruby>は<ruby>何時<rt>なんじ</rt></ruby>から<ruby>何時<rt>なんじ</rt></ruby>までですか</em> From what time to what time can we use the bath?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/37.html">
+                <figure><img src="/lesson/assets/images/video/37/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#37</span></p>
+                    <p class="cando">うまくいかないことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">テレビがつかないんですが・・・</em> The TV won't turn on...</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/38.html">
+                <figure><img src="/lesson/assets/images/video/38/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#38</span></p>
+                    <p class="cando">２つのものを<ruby>比<rt>くら</rt></ruby>べる(compare)</p>
+                  </div>
+                  <p><em lang="ja"><ruby>外<rt>そと</rt></ruby>のほうがいいです</em> I prefer outside.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/39.html">
+                <figure><img src="/lesson/assets/images/video/39/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#39</span></p>
+                    <p class="cando"><ruby>失敗<rt>しっぱい</rt></ruby>したことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>財布<rt>さいふ</rt></ruby>を<ruby>落<rt>お</rt></ruby>としてしまいました</em> I lost my wallet.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/40.html">
+                <figure><img src="/lesson/assets/images/video/40/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#40</span></p>
+                    <p class="cando"><ruby>理由<rt>りゆう</rt></ruby>(reason)を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>初<rt>はじ</rt></ruby>めてだったから、びっくりしました</em> Since it was my first earthquake, I was startled.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/41.html">
+                <figure><img src="/lesson/assets/images/video/41/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#41</span></p>
+                    <p class="cando">したいことができるかどうか<ruby>確<rt>たし</rt></ruby>かめる</p>
+                  </div>
+                  <p><em lang="ja">チケットを<ruby>買<rt>か</rt></ruby>うことができますか</em> Can we buy tickets?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/42.html">
+                <figure><img src="/lesson/assets/images/video/42/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#42</span></p>
+                    <p class="cando">しようと<ruby>思<rt>おも</rt></ruby>っていることや<ruby>予定<rt>よてい</rt></ruby>を<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>悠輝<rt>ゆうき</rt></ruby>さんに<ruby>渡<rt>わた</rt></ruby>すつもりです</em> I'm going to give them to Yuuki-san.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/43.html">
+                <figure><img src="/lesson/assets/images/video/43/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#43</span></p>
+                    <p class="cando"><ruby>見<rt>み</rt></ruby>て<ruby>感<rt>かん</rt></ruby>じたことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>元気<rt>げんき</rt></ruby>そうですね</em> You look well.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/44.html">
+                <figure><img src="/lesson/assets/images/video/44/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#44</span></p>
+                    <p class="cando"><ruby>聞<rt>き</rt></ruby>いたことを<ruby>他<rt>ほか</rt></ruby>の<ruby>人<rt>ひと</rt></ruby>に<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja">またコンサートがあるそうです</em> I've heard he's giving another recital.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/45.html">
+                <figure><img src="/lesson/assets/images/video/45/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#45</span></p>
+                    <p class="cando"><ruby>丁寧<rt>ていねい</rt></ruby>にお<ruby>願<rt>ねが</rt></ruby>いする</p>
+                  </div>
+                  <p><em lang="ja"><ruby>日本語<rt>にほんご</rt></ruby>をチェックしてもらえませんか</em> Would you check the Japanese in my email?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/46.html">
+                <figure><img src="/lesson/assets/images/video/46/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#46</span></p>
+                    <p class="cando">いろいろな<ruby>感想<rt>かんそう</rt></ruby>(impression)を<ruby>言<rt>い</rt></ruby>う　2</p>
+                  </div>
+                  <p><em lang="ja"><ruby>小<rt>ちい</rt></ruby>さいけどきれいですね</em> It's small but beautiful.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/47.html">
+                <figure><img src="/lesson/assets/images/video/47/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#47</span></p>
+                    <p class="cando">やり<ruby>方<rt>かた</rt></ruby>(how to do)をきく</p>
+                  </div>
+                  <p><em lang="ja">どうやってするんですか</em> How do you do it?</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="/lesson/ja/video/48.html">
+                <figure><img src="/lesson/assets/images/video/48/skit.jpg" alt=""></figure>
+                <div class="in-box">
+                  <div class="cando-box">
+                    <p class="num"><span>#48</span></p>
+                    <p class="cando">これからしたいことを<ruby>言<rt>い</rt></ruby>う</p>
+                  </div>
+                  <p><em lang="ja"><ruby>卒業<rt>そつぎょう</rt></ruby>したら、<ruby>日本<rt>にほん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>きたいです</em> When I graduate, I want to work in Japan.</p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div class="c-bnrLink">
-        <div class="c-bnrLink__item">
-          <a href="/nhkworld/ja/japanese/">
-            <div class="c-bnrLink__itemBnr">
-              <img src="/nhkworld/assets/images/statics/ja_nw_premium_img_2019.png" alt="NHKã¯ã¼ã«ãã»ãã¬ãã¢ã ">
-            </div>
-            <div class="c-bnrLink__itemTexts">
-              <div class="c-bnrLink__itemTitle">NHKã¯ã¼ã«ãã»ãã¬ãã¢ã </div>
-              <p>æµ·å¤åãæ¥æ¬èªãã¬ããã£ã³ãã«</p>
-            </div>
-          </a>
-        </div>
-      </div>
+      </section>
     </div>
-
-    <footer class="l-footer">
-      <!-- Ja footer -->
-      <div class="l-footer__ja" id="l-footer__ja"></div>
-      <!-- // Ja footer -->
-      <!-- NHK WORLD footer -->
-      <div id="nw-global-footer"></div>
-      <!-- // NHK WORLD footer -->
-    </footer>
+    <!-- contents -->
+    <aside id="lesson-aside"></aside>
+    <div id="lesson-footer"></div>
   </div>
+  <footer id="nw-global-footer"></footer>
+</div>
+<script src="/lesson/assets/js/main.js"></script>
 
-  <script>
-    window.nw_html5();
-    window.NWTool('NWHeader', { lang: 'ja' });
-    window.NWTool('NWFooter', { lang: 'ja' });
-  </script>
 </body>
 </html>

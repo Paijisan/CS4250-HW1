@@ -3,248 +3,197 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <meta name="ROBOTS" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
+  <meta name="ROBOT" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@nhk_world">
-  <meta name="keywords" content="NHK, nhk, æ¥æ¬æ¾éåä¼, ã¨ãã¨ã¤ãã±ã¤, NHKWORLD, NHKã¯ã¼ã«ã JAPAN, å½éæ¾é, NHKã¯ã¼ã«ããã¬ãã¢ã , æ¥æ¬, ã©ã¸ãªæ¥æ¬">
-  <meta name="description" content="æµ·å¤åãã®æ¥æ¬èªãã¬ãæ¾éã®ä¸é¨ãã¤ã³ã¿ã¼ãããã§åæéä¿¡ãã¦ãã¾ãã">
+  <meta name="keywords" content="日本語,語学,言葉,NHK,初級,かんたん">
+  <meta name="description" content="NHKワールド JAPANのばんぐみです。初級（しょきゅう）の日本語(にほんご）を勉強（べんきょう）します。あいさつや、かいもの、りょこうなどの日本語を、たのしく勉強します。ホームページは、MP3音声（おんせい）とPDFテキストをダウンロードできます。無料（むりょう　free)です。">
   <meta property="fb:app_id" content="1717775218444936">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="music.radio_station">
   <meta property="og:site_name" content="NHK WORLD-JAPAN">
-  <meta property="og:title" content="NHKã¯ã¼ã«ãã»ãã¬ãã¢ã åæéä¿¡ | NHK WORLD JAPAN - NHKã®å½éãµã¼ãã¹">
-  <meta property="og:description" content="æµ·å¤åãã®æ¥æ¬èªãã¬ãæ¾éã®ä¸é¨ãã¤ã³ã¿ã¼ãããã§åæéä¿¡ãã¦ãã¾ãã">
-  <meta property="og:image" content="https://www3.nhk.or.jp/nhkworld/ja/assets/images/og_premiunlive.jpg">
-  <meta property="og:url" content="https://www3.nhk.or.jp/nhkworld/ja/premiumlive/">
-  <title>NHKã¯ã¼ã«ãã»ãã¬ãã¢ã åæéä¿¡ | NHK WORLD JAPAN - NHKã®å½éãµã¼ãã¹</title>
-  <link rel="icon" sizes="192x192" href="/nhkworld/common/site_images/nw_webapp_news_192x192.png">
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
+  <meta property="og:title" content="Easy Japanese「やさしい日本語」 日本語（にほんご）の勉強（べんきょう）　教材　無料　free | NHK WORLD-JAPAN">
+  <meta property="og:description" content="NHKワールド JAPANのばんぐみです。初級（しょきゅう）の日本語(にほんご）を勉強（べんきょう）します。あいさつや、かいもの、りょこうなどの日本語を、たのしく勉強します。ホームページは、MP3音声（おんせい）とPDFテキストをダウンロードできます。無料（むりょう　free)です。">
+  <meta property="og:image" content="https://www.nhk.or.jp/lesson/assets/images/og/top_ja.jpg">
+  <meta property="og:url" content="https://www.nhk.or.jp/lesson/ja/">
+  <title>Easy Japanese「やさしい日本語」 日本語（にほんご）の勉強（べんきょう）　教材　無料　free | NHK WORLD-JAPAN</title>
   <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
-  <link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/ja/premiumlive/">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
+  <link rel="canonical" href="https://www.nhk.or.jp/lesson/ja/">
   <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css">
-  <!-- add css -->
-  <link rel="stylesheet" href="/nhkworld/ja/assets/css/style.css">
-  <!-- // add css -->
+  <link rel="stylesheet" href="/lesson/assets/css/top.css">
+  <link rel="stylesheet" href="/lesson/assets/css/lib/swiper.min.css">
   <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
   <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
-  <!-- add script -->
-  <script src="/nhkworld/ja/assets/js/script.js" charset="utf-8"></script>
-  <!-- // add script -->
+  <script src="/nhkworld/common/js/lib/jquery-3.min.js" charset="utf-8"></script>
 </head>
 <body>
-  <div class="l-wrapper">
-    <header class="l-header">
-      <!-- NHK WORLD header -->
-      <div id="nw-global-header"></div>
-      <!-- // NHK WORLD header -->
-      <!-- Ja header -->
-      <div class="l-header__ja" id="l-header__ja" data-current="japanese"></div>
-      <!-- // Ja header -->
+<div id="loading"><img src="/lesson/assets/images/loading.gif" alt=""></div>
+<div id="wapper">
+  <div id="nw-global-header"></div>
+  <div id="app" class="">
+    <header id="lesson-header">
+      <nav id="breadcrumb-list">
+        <ol>
+          <li><a href="https://www3.nhk.or.jp/nhkworld/">NHK WORLD-JAPAN</a></li>
+          <li><a href="/lesson/ja/">やさしい<ruby>日本語<rt>にほんご</rt></ruby></a></li>
+        </ol>
+      </nav>
     </header>
-
-    <div class="p-livestreaming" id="p-livestreaming">
-      <div class="c-pageTop">
-        <div class="c-pageTop__inner">
-          <h1 class="c-pageTop__title">NHKã¯ã¼ã«ãã»ãã¬ãã¢ã </h1>
-        </div>
-      </div>
-
-      <div class="l-contents">
-        <div class="l-block">
-          <div class="p-livestreaming__main c-block">
-            <h2 class="c-heading">åæéä¿¡ <span>/ ã©ã¤ãã¹ããªã¼ãã³ã°</span></h2>
-            <p><span class="-is-red">â»æ¥æ¬å½åã§ã¯è¦è´ãããã¨ãã§ãã¾ããã</span></p>
-            <div class="p-livestreaming__note" id="p-livestreaming__note">
-              <p>æ¥æ¬å½åã§ã¯ãNHKã®çªçµéä¿¡ã<a href="https://plus.nhk.jp/">NHKãã©ã¹</a>ã§ãè¦§ã«ãªãã¾ãã<span>â»å©ç¨ç»é²ãå¿è¦ã§ã</span></p>
+    <!-- contents -->
+    <div id="contents-block">
+      <section id="slider-block">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="/lesson/ja/lessons/">
+                <div class="txt-lesson">
+                  <figure><img src="/lesson/assets/images/top/top_lesson.jpg" alt=""></figure>
+                  <p class="swiper-title">レッスンはこちら</p>
+                </div>
+                <p><span><ruby>全部<rt>ぜんぶ</rt></ruby>で48<ruby>課<rt>か</rt></ruby>(lesson)あります。<ruby>初級<rt>しょきゅう</rt></ruby>(beginner)の<ruby>日本語<rt>にほんご</rt></ruby>レッスンです。<ruby>挨拶<rt>あいさつ</rt></ruby>や<ruby>買<rt>か</rt></ruby>い<ruby>物<rt>もの</rt></ruby>、<ruby>旅行<rt>りょこう</rt></ruby>などに<ruby>使<rt>つか</rt></ruby>うことばを<ruby>勉強<rt>べんきょう</rt></ruby>します。<ruby>日本<rt>にほん</rt></ruby>の<ruby>文化<rt>ぶんか</rt></ruby>や<ruby>生活<rt>せいかつ</rt></ruby>についても<ruby>分<rt>わ</rt></ruby>かります。</span></p>
+              </a>
             </div>
-
-            <div class="p-livestreaming__video">
-              <div class="p-livestreaming__frame" id="p-livestreaming__frame">
-                <img src="/nhkworld/ja/assets/images/premiumlive.jpg" width="800" height="450" alt="NHKã¯ã¼ã«ãã»ãã¬ãã¢ã ">
-              </div>
-
-              <div class="p-livestreaming__info" id="p-livestreaming__info"></div>
-
-              <h3 class="c-timeTable__heading">éä¿¡æ¥æ</h3>
-              <div class="c-timeTable">
-
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¯ããæ¥æ¬ï¼6æå°ï¼</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½åæ</div>
-                      <div class="c-timeTable__itemTime">6:00 - 7:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
+            <div class="swiper-slide">
+              <a href="/lesson/ja/about/howtouse/">
+                <div class="txt-howto">
+                  <figure><img src="/lesson/assets/images/top/top_howto_use2.jpg" alt=""></figure>
+                  <p class="swiper-title">「やさしい<ruby>日本語<rt>にほんご</rt></ruby>」の<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby></p>
                 </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¥ã¼ã¹ï¼12æå°ï¼</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½éæ</div>
-                      <div class="c-timeTable__itemTime">12:00 - 12:20<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">åæï½æ¥æ</div>
-                      <div class="c-timeTable__itemTime">12:00 - 12:15<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
+                <p><span><ruby>全部<rt>ぜんぶ</rt></ruby>で48<ruby>課<rt>か</rt></ruby>(lesson)あります。<ruby>音声<rt>おんせい</rt></ruby>(sound)とテキスト(text)がそろっています。<ruby>独<rt>ひと</rt></ruby>りでも<ruby>勉強<rt>べんきょう</rt></ruby>できます。ウェブサイトの<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>はこちら。</span></p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/lesson/ja/myharusan/myrecord/">
+                <div class="txt-myharu">
+                  <figure><img src="/lesson/assets/images/top/top_myharu.jpg" alt=""></figure>
+                  <p class="swiper-title"><span>My はるさん</span><span>どこまで<ruby>勉強<rt>べんきょう</rt></ruby>したかな</span></p>
                 </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¥ã¼ã¹7</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½æ¥æ</div>
-                      <div class="c-timeTable__itemTime">19:00 - 19:30<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
+                <p><span>「My はるさん」は、あなただけのページです。どこまで<ruby>勉強<rt>べんきょう</rt></ruby>したかが<ruby>分<rt>わ</rt></ruby>かります。<ruby>覚<rt>おぼ</rt></ruby>えたいことばを<ruby>登録<rt>とうろく</rt></ruby>(register)できます。</span></p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/lesson/ja/segment/downloads/">
+                <div class="txt-download">
+                  <figure><img src="/lesson/assets/images/top/top_download_d.jpg" alt=""></figure>
+                  <p class="swiper-title">ダウンロードはこちら</p>
                 </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ã¯ã­ã¼ãºã¢ããç¾ä»£</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½æ°´æ</div>
-                      <div class="c-timeTable__itemTime">19:30 - 19:57<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
+                <p><span>「やさしい<ruby>日本語<rt>にほんご</rt></ruby>」のテキスト（PDF）は、<ruby>全部<rt>ぜんぶ</rt></ruby>ダウンロードできます。（ダウンロードは<ruby>個人<rt>こじん</rt></ruby>での<ruby>利用<rt>りよう</rt></ruby>に<ruby>限<rt>かぎ</rt></ruby>ります）</span>
+</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="/lesson/ja/qa">
+                <div class="txt-qa">
+                  <figure><img src="/lesson/assets/images/top/top_qa.jpg" alt=""></figure>
+                  <p class="swiper-title">あなたの<ruby>質問<rt>しつもん</rt></ruby>に<ruby>答<rt>こた</rt></ruby>えます</p>
                 </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">é¦é½åãã¥ã¼ã¹845</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½éæ</div>
-                      <div class="c-timeTable__itemTime">20:45 - 21:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¥ã¼ã¹ã¦ãªãã9</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½éæ</div>
-                      <div class="c-timeTable__itemTime">21:00 - 22:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">æè«å¬è«</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½éæ</div>
-                      <div class="c-timeTable__itemTime">23:30 - 23:40<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¥ã¼ã¹ã»æ°è±¡æå ±</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½éæ</div>
-                      <div class="c-timeTable__itemTime">23:40 - 23:45<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">å½éå ±éï¼ï¼ï¼ï¼</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">ææï½éæ</div>
-                      <div class="c-timeTable__itemTime">23:45 - 24:30<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¥ã¼ã¹ã»æ°è±¡æå ±</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">åæ</div>
-                      <div class="c-timeTable__itemTime">20:55 - 21:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãµã¿ãã¼ã¦ãªãã9</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">åæ</div>
-                      <div class="c-timeTable__itemTime">21:00 - 22:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¥ã¼ã¹ï¼6æå°ï¼</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">æ¥æ</div>
-                      <div class="c-timeTable__itemTime">6:00 - 6:10<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ããããèªç¶ç¾æ¯</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">æ¥æ</div>
-                      <div class="c-timeTable__itemTime">7:45 - 8:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">å°ããªæ</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">æ¥æ</div>
-                      <div class="c-timeTable__itemTime">8:00 - 8:25<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">æ¥æè¨è«</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">æ¥æ</div>
-                      <div class="c-timeTable__itemTime">9:00 - 10:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="c-timeTable__item">
-                  <div class="c-timeTable__itemHead">ãã¥ã¼ã¹ã»æ°è±¡æå ±</div>
-                  <div class="c-timeTable__itemData">
-                    <div class="c-timeTable__itemRow">
-                      <div class="c-timeTable__itemDate">æ¥æ</div>
-                      <div class="c-timeTable__itemTime">20:45 - 21:00<span class="ib">ï¼æ¥æ¬æéï¼</span></div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              <p><span>â»æéãå¤æ´ã«ãªããã¨ãéä¿¡ãä¼æ­¢ãããã¨ãããã¾ãã</span></p>
-              <div class="c-link">
-                <a href="/nhkworld/ja/japanese/premium/">
-                  <i></i><span class="c-link__text">æµ·å¤åãæ¥æ¬èªãã£ã³ãã«ãNHKã¯ã¼ã«ãã»ãã¬ãã¢ã ãã®åä¿¡æ¹æ³ã¯ãã¡ã</span>
-                </a>
-              </div>
+                <p><span><ruby>日本語<rt>にほんご</rt></ruby>についてのみなさんからの<ruby>質問<rt>しつもん</rt></ruby>に、<ruby>番組<rt>ばんぐみ</rt></ruby>の<ruby>監修者<rt>かんしゅうしゃ</rt></ruby>(supervisors)<ruby>藤長<rt>ふじなが</rt></ruby>かおる<ruby>先生<rt>せんせい</rt></ruby>と<ruby>磯村<rt>いそむら</rt></ruby><ruby>一弘<rt>かずひろ</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>が<ruby>答<rt>こた</rt></ruby>えます。</span></p>
+              </a>
             </div>
           </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-      </div>
+      </section>
+      <section id="topics-block">
+        <div class="inner-block">
+          <a href="/lesson/ja/lessons/">
+            <p><span>レッスンを<ruby>選<rt>えら</rt></ruby>ぶ</span></p>
+            <p class="sp-only"><img src="/lesson/assets/images/top/bnr_sp_lesson.png" alt=""></p>
+            <p class="pc-only"><img src="/lesson/assets/images/top/bnr_pc_lesson.png" alt=""></p>
+          </a>
+        </div>
+        <div class="inner-block">
+          <a href="/lesson/ja/qa/">
+            <p><span>あなたの<ruby>質問<rt>しつもん</rt></ruby>に<ruby>答<rt>こた</rt></ruby>えます</span></p>
+            <p class="sp-only"><img src="/lesson/assets/images/top/bnr_sp_qa.png" alt=""></p>
+            <p class="pc-only"><img src="/lesson/assets/images/top/bnr_pc_qa.png" alt=""></p>
+          </a>
+        </div>
+      </section>
+      <section id="index-block">
+        <div class="inner-block">
+          <div>
+            <a href="/lesson/ja/letters/hiragana.html">
+              <p><ruby>日本語<rt>にほんご</rt></ruby>の<ruby>文字<rt>もじ</rt></ruby></p>
+              <figure>
+                <img src="/lesson/assets/images/top/index_01.jpg" alt="">
+              </figure>
+            </a>
+            <a href="/lesson/ja/segment/skits/">
+              <p>スキット</p>
+              <figure>
+                <img src="/lesson/assets/images/top/index_02.jpg" alt="">
+              </figure>
+            </a>
+            <a href="/lesson/ja/segment/keyphrases/">
+              <p>キーフレーズ</p>
+              <figure>
+                <img src="/lesson/assets/images/top/index_03.jpg" alt="">
+              </figure>
+            </a>
+            <a href="/lesson/ja/segment/useit/">
+              <p><ruby>練習<rt>れんしゅう</rt></ruby><ruby>問題<rt>もんだい</rt></ruby></p>
+              <figure>
+                <img src="/lesson/assets/images/top/index_04.jpg" alt="">
+              </figure>
+            </a>
+            <a href="/lesson/ja/segment/vocabulary/">
+              <p><ruby>新<rt>あたら</rt></ruby>しいことば</p>
+              <figure>
+                <img src="/lesson/assets/images/top/index_05.jpg" alt="">
+              </figure>
+            </a>
+            <a href="/lesson/ja/segment/culture/">
+              <p><ruby>日本<rt>にほん</rt></ruby>の<ruby>文化<rt>ぶんか</rt></ruby>と<ruby>生活<rt>せいかつ</rt></ruby></p>
+              <figure>
+                <img src="/lesson/assets/images/top/index_06.jpg" alt="">
+              </figure>
+            </a>
+          </div>
+          <!--<p class="btn-more"><span>See more&hellip;</span><i class="toggle"></i></p>-->
+        </div>
+      </section>
     </div>
-
-    <footer class="l-footer">
-      <!-- Ja footer -->
-      <div class="l-footer__ja" id="l-footer__ja"></div>
-      <!-- // Ja footer -->
-      <!-- NHK WORLD footer -->
-      <div id="nw-global-footer"></div>
-      <!-- // NHK WORLD footer -->
-    </footer>
+    <!-- contents -->
+    <aside id="lesson-aside"></aside>
+    <div id="lesson-footer"></div>
   </div>
+  <footer id="nw-global-footer"></footer>
+</div>
+<script src="/lesson/assets/js/main.js"></script>
+<script src="/lesson/assets/js/lib/swiper.min.js"></script>
+<script>
+$(function(){
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1.8,
+    centeredSlides: true,
+    loop: true,
+    loopAdditionalSlides: 1,
+    speed: 1000,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      480: {
+        slidesPerView: 1
+      }
+    }
+  });
+});
+</script>
 
-  <script>
-    window.nw_html5();
-    window.NWTool('NWHeader', { lang: 'ja' });
-    window.NWTool('NWFooter', { lang: 'ja' });
-  </script>
 </body>
 </html>

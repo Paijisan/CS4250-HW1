@@ -3,197 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <meta name="ROBOT" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
+  <meta name="ROBOTS" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@nhk_world">
-  <meta name="keywords" content="æ¥æ¬èª,èªå­¦,è¨è,NHK,åç´,ãããã">
-  <meta name="description" content="NHKã¯ã¼ã«ã JAPANã®ã°ããã¿ã§ããåç´ï¼ãããããï¼ã®æ¥æ¬èª(ã«ã»ããï¼ãåå¼·ï¼ã¹ããããï¼ãã¾ãããããã¤ãããããã®ããããããªã©ã®æ¥æ¬èªãããã®ããåå¼·ãã¾ãããã¼ã ãã¼ã¸ã¯ãMP3é³å£°ï¼ããããï¼ã¨PDFãã­ã¹ãããã¦ã³ã­ã¼ãã§ãã¾ããç¡æï¼ãããããfree)ã§ãã">
+  <meta name="keywords" content="NHK, Japan Broadcasting Corporation, Public Broadcaster, NHKWORLD, NHK WORLD, NHK WORLD PREMIUM, NHK WORLD TV, RADIO JAPAN, Japan">
+  <meta name="description" content="海外に滞在されている日本人の皆様の安全と安心を支えるため、日本語チャンネル「NHKワールド・プレミアム」から一部のニュース・番組をインターネットで配信しています。">
   <meta property="fb:app_id" content="1717775218444936">
-  <meta property="og:type" content="music.radio_station">
-  <meta property="og:site_name" content="NHK WORLD-JAPAN">
-  <meta property="og:title" content="Easy Japaneseãããããæ¥æ¬èªã æ¥æ¬èªï¼ã«ã»ããï¼ã®åå¼·ï¼ã¹ããããï¼ãææãç¡æãfree | NHK WORLD-JAPAN">
-  <meta property="og:description" content="NHKã¯ã¼ã«ã JAPANã®ã°ããã¿ã§ããåç´ï¼ãããããï¼ã®æ¥æ¬èª(ã«ã»ããï¼ãåå¼·ï¼ã¹ããããï¼ãã¾ãããããã¤ãããããã®ããããããªã©ã®æ¥æ¬èªãããã®ããåå¼·ãã¾ãããã¼ã ãã¼ã¸ã¯ãMP3é³å£°ï¼ããããï¼ã¨PDFãã­ã¹ãããã¦ã³ã­ã¼ãã§ãã¾ããç¡æï¼ãããããfree)ã§ãã">
-  <meta property="og:image" content="https://www.nhk.or.jp/lesson/assets/images/og/top_ja.jpg">
-  <meta property="og:url" content="https://www.nhk.or.jp/lesson/ja/">
-  <title>Easy Japaneseãããããæ¥æ¬èªã æ¥æ¬èªï¼ã«ã»ããï¼ã®åå¼·ï¼ã¹ããããï¼ãææãç¡æãfree | NHK WORLD-JAPAN</title>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NHK WORLD">
+  <meta property="og:title" content="NHKワールド・プレミアム 日本語見逃し配信  | NHK WORLD-JAPAN - NHKの国際サービス">
+  <meta property="og:description" content="海外に滞在されている日本人の皆様の安全と安心を支えるため、日本語チャンネル「NHKワールド・プレミアム」から一部のニュース・番組をインターネットで配信しています。">
+  <meta property="og:image" content="https://www3.nhk.or.jp/nhkworld/common/assets/ondemand/images/ogimage.jpg">
+  <meta property="og:url" content="https://www3.nhk.or.jp/nhkworld/ja/ondemand/video/">
+  <title>NHKワールド・プレミアム 日本語見逃し配信  | NHK WORLD-JAPAN - NHKの国際サービス</title>
   <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
   <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
-  <link rel="canonical" href="https://www.nhk.or.jp/lesson/ja/">
+  <link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/ja/ondemand/video/">
   <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css">
-  <link rel="stylesheet" href="/lesson/assets/css/top.css">
-  <link rel="stylesheet" href="/lesson/assets/css/lib/swiper.min.css">
+  <!-- add css -->
+  <link rel="stylesheet" href="/nhkworld/common/assets/ondemand/css/style.css">
+  <!-- // add css -->
   <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
   <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
-  <script src="/nhkworld/common/js/lib/jquery-3.min.js" charset="utf-8"></script>
+  <script src="/nhkworld/assets/javascripts/api-sdk.js" charset="utf-8"></script>
+  <!-- add script -->
+  <script src="/nhkworld/common/assets/ondemand/js/script.js" charset="utf-8"></script>
+  <!-- // add script -->
 </head>
 <body>
-<div id="loading"><img src="/lesson/assets/images/loading.gif" alt=""></div>
-<div id="wapper">
-  <div id="nw-global-header"></div>
-  <div id="app" class="">
-    <header id="lesson-header">
-      <nav id="breadcrumb-list">
-        <ol>
-          <li><a href="https://www3.nhk.or.jp/nhkworld/">NHK WORLD-JAPAN</a></li>
-          <li><a href="/lesson/ja/">ãããã<ruby>æ¥æ¬èª<rt>ã«ã»ãã</rt></ruby></a></li>
-        </ol>
-      </nav>
+  <div class="l-wrapper">
+    <header class="l-header">
+      <!-- NHK WORLD header -->
+      <div id="nw-global-header"></div>
+      <!-- // NHK WORLD header -->
+      <!-- Ondemand header -->
+      <div class="l-header__onDemand" id="l-header__onDemand" data-current="video" data-lang="ja"></div>
+      <!-- // Ondemand header -->
     </header>
-    <!-- contents -->
-    <div id="contents-block">
-      <section id="slider-block">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <a href="/lesson/ja/lessons/">
-                <div class="txt-lesson">
-                  <figure><img src="/lesson/assets/images/top/top_lesson.jpg" alt=""></figure>
-                  <p class="swiper-title">ã¬ãã¹ã³ã¯ãã¡ã</p>
-                </div>
-                <p><span><ruby>å¨é¨<rt>ããã¶</rt></ruby>ã§48<ruby>èª²<rt>ã</rt></ruby>(lesson)ããã¾ãã<ruby>åç´<rt>ããããã</rt></ruby>(beginner)ã®<ruby>æ¥æ¬èª<rt>ã«ã»ãã</rt></ruby>ã¬ãã¹ã³ã§ãã<ruby>æ¨æ¶<rt>ãããã¤</rt></ruby>ã<ruby>è²·<rt>ã</rt></ruby>ã<ruby>ç©<rt>ãã®</rt></ruby>ã<ruby>æè¡<rt>ãããã</rt></ruby>ãªã©ã«<ruby>ä½¿<rt>ã¤ã</rt></ruby>ããã¨ã°ã<ruby>åå¼·<rt>ã¹ãããã</rt></ruby>ãã¾ãã<ruby>æ¥æ¬<rt>ã«ã»ã</rt></ruby>ã®<ruby>æå<rt>ã¶ãã</rt></ruby>ã<ruby>çæ´»<rt>ãããã¤</rt></ruby>ã«ã¤ãã¦ã<ruby>å<rt>ã</rt></ruby>ããã¾ãã</span></p>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="/lesson/ja/about/howtouse/">
-                <div class="txt-howto">
-                  <figure><img src="/lesson/assets/images/top/top_howto_use2.jpg" alt=""></figure>
-                  <p class="swiper-title">ããããã<ruby>æ¥æ¬èª<rt>ã«ã»ãã</rt></ruby>ãã®<ruby>ä½¿<rt>ã¤ã</rt></ruby>ã<ruby>æ¹<rt>ãã</rt></ruby></p>
-                </div>
-                <p><span><ruby>å¨é¨<rt>ããã¶</rt></ruby>ã§48<ruby>èª²<rt>ã</rt></ruby>(lesson)ããã¾ãã<ruby>é³å£°<rt>ãããã</rt></ruby>(sound)ã¨ãã­ã¹ã(text)ãããã£ã¦ãã¾ãã<ruby>ç¬<rt>ã²ã¨</rt></ruby>ãã§ã<ruby>åå¼·<rt>ã¹ãããã</rt></ruby>ã§ãã¾ããã¦ã§ããµã¤ãã®<ruby>ä½¿<rt>ã¤ã</rt></ruby>ã<ruby>æ¹<rt>ãã</rt></ruby>ã¯ãã¡ãã</span></p>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="/lesson/ja/myharusan/myrecord/">
-                <div class="txt-myharu">
-                  <figure><img src="/lesson/assets/images/top/top_myharu.jpg" alt=""></figure>
-                  <p class="swiper-title"><span>My ã¯ããã</span><span>ã©ãã¾ã§<ruby>åå¼·<rt>ã¹ãããã</rt></ruby>ããããª</span></p>
-                </div>
-                <p><span>ãMy ã¯ããããã¯ãããªãã ãã®ãã¼ã¸ã§ããã©ãã¾ã§<ruby>åå¼·<rt>ã¹ãããã</rt></ruby>ãããã<ruby>å<rt>ã</rt></ruby>ããã¾ãã<ruby>è¦<rt>ãã¼</rt></ruby>ããããã¨ã°ã<ruby>ç»é²<rt>ã¨ããã</rt></ruby>(register)ã§ãã¾ãã</span></p>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="/lesson/ja/segment/downloads/">
-                <div class="txt-download">
-                  <figure><img src="/lesson/assets/images/top/top_download_d.jpg" alt=""></figure>
-                  <p class="swiper-title">ãã¦ã³ã­ã¼ãã¯ãã¡ã</p>
-                </div>
-                <p><span>ããããã<ruby>æ¥æ¬èª<rt>ã«ã»ãã</rt></ruby>ãã®ãã­ã¹ãï¼PDFï¼ã¯ã<ruby>å¨é¨<rt>ããã¶</rt></ruby>ãã¦ã³ã­ã¼ãã§ãã¾ããï¼ãã¦ã³ã­ã¼ãã¯<ruby>åäºº<rt>ããã</rt></ruby>ã§ã®<ruby>å©ç¨<rt>ããã</rt></ruby>ã«<ruby>é<rt>ãã</rt></ruby>ãã¾ãï¼</span>
-</p>
-              </a>
-            </div>
-            <div class="swiper-slide">
-              <a href="/lesson/ja/qa">
-                <div class="txt-qa">
-                  <figure><img src="/lesson/assets/images/top/top_qa.jpg" alt=""></figure>
-                  <p class="swiper-title">ããªãã®<ruby>è³ªå<rt>ãã¤ãã</rt></ruby>ã«<ruby>ç­<rt>ãã</rt></ruby>ãã¾ã</p>
-                </div>
-                <p><span><ruby>æ¥æ¬èª<rt>ã«ã»ãã</rt></ruby>ã«ã¤ãã¦ã®ã¿ãªããããã®<ruby>è³ªå<rt>ãã¤ãã</rt></ruby>ã«ã<ruby>çªçµ<rt>ã°ããã¿</rt></ruby>ã®<ruby>ç£ä¿®è<rt>ããããããã</rt></ruby>(supervisors)<ruby>è¤é·<rt>ãµããªã</rt></ruby>ããã<ruby>åç<rt>ãããã</rt></ruby>ã¨<ruby>ç£¯æ<rt>ãããã</rt></ruby><ruby>ä¸å¼<rt>ããã²ã</rt></ruby><ruby>åç<rt>ãããã</rt></ruby>ã<ruby>ç­<rt>ãã</rt></ruby>ãã¾ãã</span></p>
-              </a>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-      </section>
-      <section id="topics-block">
-        <div class="inner-block">
-          <a href="/lesson/ja/lessons/">
-            <p><span>ã¬ãã¹ã³ã<ruby>é¸<rt>ãã</rt></ruby>ã¶</span></p>
-            <p class="sp-only"><img src="/lesson/assets/images/top/bnr_sp_lesson.png" alt=""></p>
-            <p class="pc-only"><img src="/lesson/assets/images/top/bnr_pc_lesson.png" alt=""></p>
-          </a>
-        </div>
-        <div class="inner-block">
-          <a href="/lesson/ja/qa/">
-            <p><span>ããªãã®<ruby>è³ªå<rt>ãã¤ãã</rt></ruby>ã«<ruby>ç­<rt>ãã</rt></ruby>ãã¾ã</span></p>
-            <p class="sp-only"><img src="/lesson/assets/images/top/bnr_sp_qa.png" alt=""></p>
-            <p class="pc-only"><img src="/lesson/assets/images/top/bnr_pc_qa.png" alt=""></p>
-          </a>
-        </div>
-      </section>
-      <section id="index-block">
-        <div class="inner-block">
-          <div>
-            <a href="/lesson/ja/letters/hiragana.html">
-              <p><ruby>æ¥æ¬èª<rt>ã«ã»ãã</rt></ruby>ã®<ruby>æå­<rt>ãã</rt></ruby></p>
-              <figure>
-                <img src="/lesson/assets/images/top/index_01.jpg" alt="">
-              </figure>
-            </a>
-            <a href="/lesson/ja/segment/skits/">
-              <p>ã¹ã­ãã</p>
-              <figure>
-                <img src="/lesson/assets/images/top/index_02.jpg" alt="">
-              </figure>
-            </a>
-            <a href="/lesson/ja/segment/keyphrases/">
-              <p>ã­ã¼ãã¬ã¼ãº</p>
-              <figure>
-                <img src="/lesson/assets/images/top/index_03.jpg" alt="">
-              </figure>
-            </a>
-            <a href="/lesson/ja/segment/useit/">
-              <p><ruby>ç·´ç¿<rt>ããããã</rt></ruby><ruby>åé¡<rt>ããã ã</rt></ruby></p>
-              <figure>
-                <img src="/lesson/assets/images/top/index_04.jpg" alt="">
-              </figure>
-            </a>
-            <a href="/lesson/ja/segment/vocabulary/">
-              <p><ruby>æ°<rt>ããã</rt></ruby>ãããã¨ã°</p>
-              <figure>
-                <img src="/lesson/assets/images/top/index_05.jpg" alt="">
-              </figure>
-            </a>
-            <a href="/lesson/ja/segment/culture/">
-              <p><ruby>æ¥æ¬<rt>ã«ã»ã</rt></ruby>ã®<ruby>æå<rt>ã¶ãã</rt></ruby>ã¨<ruby>çæ´»<rt>ãããã¤</rt></ruby></p>
-              <figure>
-                <img src="/lesson/assets/images/top/index_06.jpg" alt="">
-              </figure>
-            </a>
-          </div>
-          <!--<p class="btn-more"><span>See more&hellip;</span><i class="toggle"></i></p>-->
-        </div>
-      </section>
-    </div>
-    <!-- contents -->
-    <aside id="lesson-aside"></aside>
-    <div id="lesson-footer"></div>
-  </div>
-  <footer id="nw-global-footer"></footer>
-</div>
-<script src="/lesson/assets/js/main.js"></script>
-<script src="/lesson/assets/js/lib/swiper.min.js"></script>
-<script>
-$(function(){
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1.8,
-    centeredSlides: true,
-    loop: true,
-    loopAdditionalSlides: 1,
-    speed: 1000,
-    autoplay: {
-      delay: 7000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      480: {
-        slidesPerView: 1
-      }
-    }
-  });
-});
-</script>
 
+    <!-- Main Slider -->
+    <div class="c-mainSlider" id="p-topMainSlider" data-contentType="video"></div>
+    <!-- // Main Slider -->
+
+    <div class="l-contents">
+      <!-- MyList -->
+      <section class="l-section" id="p-topMylist"></section>
+      <!-- Latest Episodes -->
+      <section class="l-section" id="p-topLatest"></section>
+      <!-- Most Watched -->
+      <section class="l-section" id="p-topMostwatched"></section>
+      <!-- Playlist -->
+      <section class="l-section" id="p-topPlaylists"></section>
+      <!--Lists -->
+            <section class="l-section p-topList" data-heading="おはよう日本" data-mode="program" data-key="ohayou" data-disabletype=""></section>
+            <section class="l-section p-topList" data-heading="ニュース7" data-mode="program" data-key="news7" data-disabletype=""></section>
+            <section class="l-section p-topList" data-heading="列島ニュース" data-mode="program" data-key="retto" data-disabletype=""></section>
+            <!-- Multilingual -->
+      <section class="p-topMulti l-section" id="p-topMulti"></section>
+    </div>
+    <!-- // l-content -->
+
+    <footer class="l-footer">
+      <!-- Ondemand footer -->
+      <div class="l-footer__onDemand" id="l-footer__onDemand"></div>
+      <!-- // Ondemand header -->
+      <!-- NHK WORLD footer -->
+      <div id="nw-global-footer"></div>
+      <!-- /NHK WORLD footer -->
+    </footer>
+  </div>
+
+  <script>
+    window.nw_html5();
+    window.NWTool('NWHeader', { lang: 'ja', current: 'ondemand' });
+    window.NWTool('NWFooter', { lang: 'ja' });
+  </script>
 </body>
 </html>

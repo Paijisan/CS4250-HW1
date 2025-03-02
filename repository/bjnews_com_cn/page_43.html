@@ -1,298 +1,387 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>
-        新京报 - 好新闻，无止境    </title>
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <meta name="apple-itunes-app" content="app-id=385679094"/>
-    <meta name="description" content="新京报以文字、图片、视频等全媒体形式，为用户提供全天候热点新闻，涵盖突发新闻、时事、财经、娱乐、体育，以及评论、杂志和博客等，新京报网本着品质源于责任的的信念,致力于成为用户喜爱的精品新闻网站。" />
-    <meta name="keywords" content="新京报,电子报,报纸,传媒,时政,娱乐,财经,经济,民生,国内,国际,视频,杂志,访谈,评论,投票,专题,周刊,手机报,博客" />
-    <meta name="baidu_union_verify" content="26ccec5630295fa67762aaf330df4a83">
-    <link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/bootstrap.min.css?v=1.0.8">
-    <link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/base.css?v=1.0.14" />
-    <link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/whole.css?v=1.0.55" />
-    
-    <script type="text/javascript" src="https://static.bjnews.com.cn/common/js/jquery.js"></script>
-    <script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/Alljs.js"></script>
-    <script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/qrcode.min.js"></script>
-    <style>
-        #menu .menu_inner{width: 1224px;left:9px}
-        #menu .menu_inner span{margin-right:9px;}
-    </style>
-</head>
-<body>
-    <div id="header2">
-        <div class="h_top">
-            <div class="w1200">
-                <a href="https://m.bjnews.com.cn/beijiaosuo/" target="_blank">北交所频道</a><span class="line"></span>
-                                <a href="/hao" target="_blank"  >新京号</a>
-                <span class="line"></span>
-                <a href="http://epaper.bjnews.com.cn/" target="_blank">电子报</a>
-                <span class="line"></span>
-                <a href="http://www.qianlong.com/" target="_blank">千龙网</a>
-                <span class="line"></span>
-                <a href="http://www.bkeconomy.com/" target="_blank">贝壳财经</a>
-                <span class="line"></span>
-                <a href="https://h5.bjnews.com.cn/xjbh5/202309beijing_cn/index.html" target="_blank">北京BEIJING</a>
-                <span class="line"></span>
-                <!-- <a href="/shop"  target="_blank" >小鲸铺子</a> -->
-                <a href="https://shop90373224.m.youzan.com/v2/feature/xie8IdUSkL" target="_blank" >新京雅集</a>
-                <span class="line"></span> 
-                <a href="/subject" target="_blank" >专题</a>
-                <span class="line"></span>
-                <a href="/site/business" class="business" target="_blank">商务合作</a>
-                <span class="line"></span>
-                <a id="toolbarSwitch" href="javascript:void(0);">爱心模式</a>
-                <script type="text/javascript" src="https://slwza.bjnews.com.cn/slwza/esdToolsInit.js"></script>
-                <script>
-                    rlink = window.location.pathname
-                    // console.log(rlink)
-                    if(rlink=="/site/business"){
-                        $(".business").css("color","#AA1F24");
-                    }
-                </script>
-            </div>
-        </div>
-        <div class="h_mid">
-            <a href="/" class="logo"></a>
-                        <div class="search">
-                <input type="text" placeholder="输入搜索信息" class="fl inp_search" />
-                <button class="fr inp_ico"><i></i></button>
-            </div>
-                        <div class="mid_right">
-                <!-- 客户端 -->
-                <div class="hover1">
-                    <a href="javascript:;">
-                        <i class="kehu"></i>客户端
-                    </a>
-                    <div class="f-hov">
-                        <span class="arrow-top"></span>
-                        <img src="https://static.bjnews.com.cn/www/v6/images/footer032.png" alt="" />
-                    </div>
-                </div>
-                <span class="line"></span>
-                <!-- 微博 -->
-                <a href="https://www.weibo.com/xjb" target="_blank"><i class="weibo"></i>微博</a>
-                <span class="line"></span>
-                <!-- 微信 -->
-                <div class="hover3">
-                    <a href="javascript:;"><i class="weixin"></i>微信</a>
-                    <div class="f-hov">
-                        <img src="https://static.bjnews.com.cn/www/v6/images/footer01.jpg" alt="" />
-                        <span class="arrow-top"></span>
-                    </div>
-                </div>
-            </div>
-            <script>
-                //头部二维码
-                $(".mid_right .hover1").mouseover(function(){
-                    $(".mid_right .hover1 .f-hov").show();
-                });
-                $(".mid_right .hover1").mouseout(function(){
-                    $(".mid_right .hover1 .f-hov").hide();
-                });
-                $(".mid_right .hover3").mouseover(function(){
-                    $(".mid_right .hover3 .f-hov").show();
-                });
-                $(".mid_right .hover3").mouseout(function(){
-                    $(".mid_right .hover3 .f-hov").hide();
-                });
-            </script>
-        </div>
-    </div>
-    <div id="menu" class = 'menu_habor menu_nobor'   >
-    <div class="menu_inner"  >
-                <span><a href="/"  > 首页</a></span>
-                <span><a href="/video"  > 视频</a></span>
-                <span><a href="/depth"  > 深读</a></span>
-                <span><a href="/gongyi"  > 公益</a></span>
-                <span><a href="/diyikandian"  > 第一看点</a></span>
-                <span><a href="/news"  > 时事</a></span>
-                <span><a href="/beijing"  > 北京</a></span>
-                <span><a href="/guoji"  > 国际</a></span>
-                <span><a href="/zhengshi"  > 政事儿</a></span>
-                <span><a href="/point"  > 观点</a></span>
-                <span><a href="/financial"  > 财经</a></span>
-                <span><a href="/industrial"  > 食品</a></span>
-                <span><a href="/shangye"  > 商业</a></span>
-                <span><a href="/entertainment"  > 娱乐</a></span>
-                <span><a href="/culture"  > 文化</a></span>
-                <span><a href="/sports"  > 体育</a></span>
-                <span><a href="/car"  > 汽车</a></span>
-                <span><a href="/estate"  > 房产</a></span>
-                <span><a href="/wine"  > 酒业</a></span>
-                <span><a href="/education"  > 教育</a></span>
-                <span><a href="/life"  > 健康</a></span>
-                <span><a href="/photo"  > 图说</a></span>
-                <span><a href="/technology"  > 科技</a></span>
-                <span><a href="/thinktank"  > 智库</a></span>
-                <span><a href="/country"  > 乡村</a></span>
-            </div>
-    </div> 
-<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/common.css" />
-<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/index.css" />
-<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/list.css" />
-<div class="listBar2" style="margin-bottom: 0;"></div>
-
-    <div class="common_banner">
-        <img src="https://static.bjnews.com.cn/www/v6/images/about/CopyrightNotice.jpg" alt="">
-    </div>
-
-    <div id="main">
-        <!--中间部分-->
-        <div class="cooperation_box clear">
-            <div class="cooperation_left">
-                <ul class="cooperation_main_left">
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/about">关于我们</a></li>
-                    <li>
-                        <span class="cooperation_main_l_red"></span>
-                        <a class="conlor_red" href="/site/copyright">版权声明</a>
-                        <strong class="cooperation_main_l_line"></strong>
-                    </li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/protocolservice">服务协议</a></li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/contact#">联系我们</a></li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/jobs">工作机会</a></li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/links">友情链接</a></li>
-                </ul>
-            </div>
-            <div class="cooperation_right">
-                <div class="cooperation_about_us_cen">
-                    <div>
-                        <p class="em2">《新京报》和新京报网(www.bjnews.com.cn)上刊载的所有内容，包括但不限于文字报导、图片、声音、录像、图表、标志、标识、广告、商标、商号、域名、软件、程序、版面设计、专栏目录与名称、内容分类标准，均受《中华人民共和国著作权法》、《中华人民共和国商标法》、《中华人民共和国专利法》及适用之国际公约中有关著作权、商标权、专利权及／或其它财产所有权法律的保护，为新京报社及/或相关权利人专属所有或持有。</p>
-                        <p class="em2">使用者将新京报提供的内容与服务用于非商业用途、非盈利、非广告目的而纯作个人消费时，应遵守著作权法以及其他相关法律的规定，不得侵犯新京报社或相关权利人的权利。</p>
-                        <p class="em2">使用者将新京报提供的内容与服务用于商业、盈利、广告性目的时，需征得新京报社及或相关权利人的书面特别授权，注明作者及文章出处"新京报"，并按有关国际公约和中华人民共和国法律的有关规定向相关权利人支付版税。</p>
-                        <p class="em2">凡未经新京报的明确书面特别授权，任何人不得变更、发行、播送、转载、复制、重制、改动、散布、表演、展示或利用新京报的局部或全部的内容或服务或在非新京报所属的服务器上作镜像，否则以侵权论，依法追究相关法律责任。</p>
-                        <div class="copyright_contact">
-                            <h3>版权合作：</h3>
-                            <p>010-67106089</p>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" centent="IE=edge, chrom=1">
+		<title>专题丨为什么立遗嘱的年轻人越来越多？</title>
+		<link rel="stylesheet" href="/css/2020fenx/base.css">
+		<script src="/js/2020fenx/flexible.js"></script>
+		<!-- <script src="/js/jquery-3.3.1.min.js"></script> -->
+		<script src="https://static.bjnews.com.cn/common/js/jquery.js"></script>
+		<!-- 轮播图 -->
+		<!-- <link rel="stylesheet" href="/css/2020fenx/swiper.min.css">	 -->
+		<link rel="stylesheet" href="/css/2020fenx/swiper-bundle.min.css">	
+		<style>
+			*{margin:0;padding:0;font-family:PingFangSC-Regular;}
+			body{max-width:750px;margin:0 auto;overflow-x: hidden;}
+			.header{position:relative;background-size:cover;background-repeat:no-repeat;background-position:center;min-height:3.2rem;}
+			.header .cover{width:100%}
+			.header_top{position:absolute;height:5.1866rem;left:0;right:0;bottom:0;background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.50) 100%);}
+			/* 压封面图上 */
+			.header_cen{position:absolute;bottom:0.55rem;margin:0 0.8rem;}
+			.header_cen h2{padding-bottom:0.3866rem;font-size:0.5066rem;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.3);line-height:1.4;}
+			.header_introduce p{font-size:0.4rem;color:#fff;line-height:1.3;text-shadow:0 1px 2px rgba(0,0,0,0.3);opacity: 0.76;}
+			.header_introduce footer{padding-top:0.2666rem;font-size:0.3733rem;color:#fff;line-height:1.4;text-shadow: 0 2px 4px rgba(0,0,0,0.50);}
+			.cen{padding:0.7466rem 0;padding-bottom:0;position:relative;background:#fff;}
+			/* 封面图下方 */
+			.header_cen_bottom{margin: 0 0.8rem;position:static;}
+			.header_cen_bottom .header_introduce p{color:#606060;text-shadow:none;opacity:1;line-height:1.5;margin-top:.5rem;}
+			.header_cen_bottom .header_introduce footer{color:#D12D2B;text-shadow:none;}
+			.plate{margin:0 0.8rem;}
+			.plate > header{font-size:0.4232rem;color: #D12D2B;line-height:1.2;margin-bottom:0.48rem;}
+			.plate > header > span{background:#D12D2B;height:0.16rem;width:0.16rem;display:inline-block;margin-right:0.1333rem;vertical-align:middle;margin-top:-2px;}
+			.plate > .list{margin-bottom:0.8533rem;}
+			.plate > .list h2{font-size:0.48rem;color:#333;line-height:1.4;padding-bottom:0.2rem;}
+			.list_img{margin-top:0.1rem;margin-bottom:0.24rem;position:relative;background-size:cover;background-position:center;background-repeat:no-repeat;height:4.72rem;}
+			.list_img img{width:100%;}
+			.list_img span{position:absolute;left:50%;top:50%;transform:translate3d(-50%,-50%,0px);border-radius:50%;background:url(/img/2020fenx/anniu.png) no-repeat center;width:1.3333rem;height:1.3333rem;}
+			.list p{font-size:0.4232rem;color:#999;line-height:1.5;margin-bottom:0.2rem;text-align: justify;}
+			.footer{display:flex;justify-content:space-between;}
+			.footer footer{font-size:0.375rem;color:#D12D2B;line-height:1.366;}
+			.footer footer a{color:#D12D2B;}
+			.footer p{font-size:0.3733rem;color:#666;line-height: 1.366;}
+			.footer strong{display:inline-block;width:0.3733rem;height:0.32rem;margin-right:0.2rem;}
+			.footer strong img{width:100%;height:100%;vertical-align:baseline;}
+			.share_xiao{display:none;}
+			.cen_bottom{padding:0.9333rem 0 1.4rem;display:none;}
+			.share{display: -ms-flexbox; /* 混合版本语法: IE 10 */display: -webkit-flex; /* 新版本语法: Chrome 21+ */display:flex;margin:0 0.8rem;justify-content:space-between;}
+			.share_left{line-height:0.64rem;font-size: 0.4rem;color: #AAA;}
+			.share_right span{display:inline-block;width:0.7rem;margin-right:0.95rem;}
+			.share_right span:last-child{margin-right:0;}
+			.share_right span img{width:100%;}
+			.advertisement{background-size: cover;height:4.2rem;margin:0 0.8rem 0.6666rem;}
+			.reporter{font-size:0.32rem;padding:0 0.8rem 0.6666rem;color: #BBB;}
+			/* 轮播图 */
+			.swiper-container {width:100%;height:4.72rem;margin:20px auto;position: relative;}
+			.swiper-slide {text-align:center;font-size:18px;background: #fff;height:4.72rem;position: relative;}
+			.swiper-slide .swiper_img{width:100%;height:4.72rem;background-size:cover;background-position:center;background-repeat:no-repeat;}
+			.swiper-pagination-bullet{border-radius:18px;opacity:0.6;width:14px;height:3px;background:#fff;}
+			.swiper-pagination-bullet-active{width:28px;opacity:1;background:#fff;}
+			.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 3px;}
+			.list .swiper-slide .swiper_text{position:absolute;bottom:0;color:#fff;padding:.7rem .3rem .5rem .3rem;margin:0;line-height:1.5;font-size:0.4232rem;
+				background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.50) 100%);width:100%}
+			.swiper-container-horizontal>.swiper-pagination-bullets{bottom:.16rem}
+		</style>
+	</head>
+	<body>
+		<!-- 压封面图上 -->
+                    <!-- <header class="header" style="background-image:url(<//?php echo $special["inner_cover"];?>)"> -->
+            <header class="header">
+                <img src="https://media.bjnews.com.cn/image/2025/02/19/5556348920336032027.png" class="cover">
+                <div class="header_top"></div>
+                <div class="header_cen">
+                                            <h2>专题丨为什么立遗嘱的年轻人越来越多？</h2>
+                        <div class="header_introduce">
+                            <a data-relateuuid="1739961257129821" data-type="3" data-specialtype="4" href="https://m.bjnews.com.cn/h5special/1739961257129821.html">
+                                <p>遗嘱，不仅是财产的分配，更是情感的延续与责任的传递。最近几年，年轻人立遗嘱比例不断上升，他们用行动诠释对未来的思考。本期专题报道《时光的嘱托》带你走进遗嘱背后的世界，探寻那些关于爱、家庭与未来的故事。</p>
+                                <footer>查看详情<span>></span></footer>
+                            </a>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-<!-- 统计 -->
-<div style="display:none;">
-    <script type="text/javascript" src="https://static.bjnews.com.cn/public/tj.js"></script>
-</div>
+                                        </div>
+            </header>
+        
+		<div class="cen">
+			<div class="plate">
+			<!-- 轮播图 -->
+                                	<header><span></span>数据</header>
+                                                            <div class="list"><a data-relateuuid="1740009181168222" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009181168222.html?uuid=1740009181168222&show_type=article&show_uuid=1740009181168222">
+                                    <h2>从传统观念到现代选择：数读我国遗嘱订立趋势</h2>
+                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong202522014072395603.jpeg)"></div>
+                                                                        <p></p>
+								</a>
+								<div class="footer">
+									<footer>
+                                        <a data-relateuuid="1740009181168222" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009181168222.html?uuid=1740009181168222&show_type=article&show_uuid=1740009181168222">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
+                                    </footer>
+								</div>
+                                
+							</div>
+                                    	<header><span></span>故事</header>
+                                                            <div class="list"><a data-relateuuid="1740009120168221" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009120168221.html?uuid=1740009120168221&show_type=article&show_uuid=1740009120168221">
+                                    <h2>30多万份遗嘱里，封存着人们最真实的牵挂</h2>
+                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/yanghai202522003262395568.png)"></div>
+                                                                        <p></p>
+								</a>
+								<div class="footer">
+									<footer>
+                                        <a data-relateuuid="1740009120168221" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009120168221.html?uuid=1740009120168221&show_type=article&show_uuid=1740009120168221">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
+                                    </footer>
+								</div>
+                                
+							</div>
+                                                <div class="list"><a data-relateuuid="1740009302168225" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009302168225.html?uuid=1740009302168225&show_type=article&show_uuid=1740009302168225">
+                                    <h2>遗嘱咨询师与一份遗嘱的诞生</h2>
+                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong2025220124272395577.jpg)"></div>
+                                                                        <p></p>
+								</a>
+								<div class="footer">
+									<footer>
+                                        <a data-relateuuid="1740009302168225" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009302168225.html?uuid=1740009302168225&show_type=article&show_uuid=1740009302168225">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
+                                    </footer>
+								</div>
+                                
+							</div>
+                                    	<header><span></span>访谈</header>
+                                                            <div class="list"><a data-relateuuid="1740009268168224" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009268168224.html?uuid=1740009268168224&show_type=article&show_uuid=1740009268168224">
+                                    <h2>中华遗嘱库陈凯：用公益守护和谐家风传承</h2>
+                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong202522012702395583.jpg)"></div>
+                                                                        <p></p>
+								</a>
+								<div class="footer">
+									<footer>
+                                        <a data-relateuuid="1740009268168224" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009268168224.html?uuid=1740009268168224&show_type=article&show_uuid=1740009268168224">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
+                                    </footer>
+								</div>
+                                
+							</div>
+                                                <div class="list"><a data-relateuuid="1740009235168223" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009235168223.html?uuid=1740009235168223&show_type=article&show_uuid=1740009235168223">
+                                    <h2>《民法典》编纂参与者、立法专家杨立新：普及遗嘱是社会共同责任</h2>
+                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong2025220132302395592.jpg)"></div>
+                                                                        <p></p>
+								</a>
+								<div class="footer">
+									<footer>
+                                        <a data-relateuuid="1740009235168223" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009235168223.html?uuid=1740009235168223&show_type=article&show_uuid=1740009235168223">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
+                                    </footer>
+								</div>
+                                
+							</div>
+                    			</div>
+                        
+			<div style="height:0.1333rem;background:#F4F4F4;"></div>
+			<div class="cen_bottom">
+				<div class="share">
+					<div class="share_left">分享到</div>
+					<div class="share_right">
+						<span class="wx"><img src="/img/2020fenx/article_icon_wechat3_1.png"></span>
+						<span class="qq"><img src="/img/2020fenx/article_icon_wechat3.png"></span>
+						<span class="xl"><img src="/img/2020fenx/article_icon_wbt3.png"></span>
+						<span class="pyq"><img src="/img/2020fenx/article_ic3.png"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="display:none;">
+			<script charset="utf-8" language="javascript" src="https://static.bjnews.com.cn/public/tj.js"></script>
+		</div>
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<!-- <script src="/js/2020fenx/swiper.min.js"></script> -->
+		<!-- 轮播图 -->
+		<!-- 最新版swiper默认一张图不轮播的功能 -->
+		<script src="/js/2020fenx/swiper-bundle.min.js"></script> 
+		<script>
+			//轮播图
+			var swiper = new Swiper('.swiper-container', {
+				direction: 'horizontal',
+				paginationClickable: true,
+				spaceBetween: 30,
+				observer: true,
+                observeParents: true,
+				pagination: {
+					el: ".swiper-pagination",
+					clickable: true,
+				},
+				loop: true,
+			});
+		</script>
+		
+		<script>
+            			var isApp = false
+			function didOpenInApp(App,version,deviceID){
+				isApp = true
+				window.webkit.messageHandlers.log.postMessage(isApp);
+				if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+					window.webkit.messageHandlers.log.postMessage(App + version + deviceID +'0610');
+				}else if(/(Android)/i.test(navigator.userAgent)){
+				}
+			}
+			$(function(){
+				let web_root_url = "https://m.bjnews.com.cn";
+                let h5_special_url = "https://m.bjnews.com.cn/h5special/1739961257129821.html";
+                let h5_special_title = "专题丨为什么立遗嘱的年轻人越来越多？";
+				let h5_special_desc = "遗嘱，不仅是财产的分配，更是情感的延续与责任的传递。最近几年，年轻人立遗嘱比例不断上升，他们用行动诠释对未来的思考。本期专题报道《时光的嘱托》带你走进遗嘱背后的世界，探寻那些关于爱、家庭与未来的故事。";
+                let h5_special_cover = "https://media.bjnews.com.cn/image/2025/02/19/5556348886815158138.png";
+				
+				//判断是否是在App中
+				function viewDidAppear(string){
+					try{
+						if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
+							window.webkit.messageHandlers.AppConfirm.postMessage("userInfo");
+							window.webkit.messageHandlers.log.postMessage(string);
+						}else if(/(Android)/i.test(navigator.userAgent)){
+							window.bjnewapp.AppConfirm();
+						}
+					}
+					catch(err){
+						isApp = false;
+					}
+				}
+				viewDidAppear('确认是否在App')
+				//var setviewDidAppear = setTimeout(function(){
+					//viewDidAppear()
+				//},300)
+				setTimeout(function(){
+					if(isApp){
+						$('.share_xiao').show();
+						$('.cen_bottom').show();
+					}
+				},300)
+				$('.share_xiao').click(function(){
+					let data_type = $(this).attr('data-type');
+					let dataHref = $(this).attr('data-href');
+					let dataTitle = $(this).attr('data-title');
+					let datadesc = $(this).attr('data-desc');
+					let dataFx = $(this).attr('data-fx');
+					let data = 'type=' + data_type + '&title=' + dataTitle + '&desc=' + datadesc + '&cover=' + dataFx + '&url=' + dataHref
+					shareToPlatform(data)
+				})
+				$('a').click(function(event){
+					var data_type = $(this).attr('data-type');
+					var specialtype = $(this).attr('data-specialtype');
+					var uuid = $(this).data('relateuuid')
+					if(uuid){
+						if(!isApp){
+							if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) && data_type/1 !== 3 && data_type/1 !== 4) {
+								event.preventDefault();
+								console.log($(this))
+								console.log(uuid)
+								window.location.href =  `https://www.bjnews.com.cn/detail/${uuid}.html`
+							}
+						}
+					}
+				})
+				
+				$('.share_right span').click(function(){
+					let leix = $(this).attr('class')
+					let type = 'WechatSession'
+					if(leix === 'wx'){
+						type = 'WechatSession'
+					}else if(leix === 'qq'){
+						type = 'QQ'
+					}else if(leix === 'xl'){
+						type = 'Sina'
+					}else if(leix === 'pyq'){
+						type = 'WechatTimeLine'
+					}
+					let data = 'type=' + type + '&title=' + h5_special_title + '&desc=' + h5_special_desc + '&cover=' + h5_special_cover + '&url=' + h5_special_url
+					console.log(data);
+					shareToPlatform(data)
+				})
+				function shareToPlatform(jsonString){
+					try{
+						if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+							window.webkit.messageHandlers.shareToPlatform.postMessage(jsonString);
+							window.webkit.messageHandlers.log.postMessage(jsonString);
+						}else if(/(Android)/i.test(navigator.userAgent)){
+							window.bjnewapp.shareToPlatform(jsonString);
+						}
+					}
+					catch(err){
+						console.log('没在app环境')
+					}
+					
+				}
+				$.ajax({
+					type: "GET",
+					url: "https://m.bjnews.com.cn/api/wxshare?app_id=wxbad48ed25d961bb9",
+					dataType: 'json',
+					success: function(data) {
+						var signpackage = data.signpackage;
+						wx.config({
+							appId: "wxbad48ed25d961bb9", // 必填，公众号的唯一标识
+							timestamp: signpackage.timestamp, // 必填，生成签名的时间戳
+							nonceStr: signpackage.nonceStr, // 必填，生成签名的随机串
+							signature: signpackage.signature, // 必填，签名，见附录1
+							jsApiList: [
+								'checkJsApi',
+								'onMenuShareTimeline',
+								'onMenuShareAppMessage'
+							]
+						});
+					}
+				});
+				wx.ready(function() {
 
-    <footer class="footer">
-         <div class="f-top">         
-         </div>  
-         <div class="f-partner">
-             <div class="content">
-                <p class="footer-t">
-                    <a rel="nofollow" target="_blank" href="http://www.sina.com/">新浪网</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.163.com/">网易</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.sohu.com/">搜狐</a> |
-                    <!-- <a rel="nofollow" target="_blank" href="http://www.ifeng.com/">凤凰网</a> | -->
-                    <a rel="nofollow" target="_blank" href="https://news.uc.cn/">UC头条</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.xinhuanet.com/">新华网</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.chinanews.com/">中新网</a> 
-                    <!-- <a rel="nofollow" target="_blank" href="http://www.china.com.cn/">中国网</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.china.com/">中华网</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.caijing.com.cn/">财经网</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.fang.com/">房天下</a><br> -->
-                    <a rel="nofollow" target="_blank" href="https://www.wisers.com.cn/">慧科讯业</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.toutiao.com/">今日头条</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.yidianzixun.com/">一点资讯</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.qianlong.com/">千龙网</a> |
-                    <a rel="nofollow" target="_blank" href="http://www.bkeconomy.com/">贝壳财经</a>|
-                    <a rel="nofollow" target="_blank" href="https://www.qq.com/">腾讯网</a>|
-                    <a rel="nofollow" target="_blank" href="https://news.baidu.com/ ">百度</a>
-                </p>
-             </div>
-         </div> 
-          
-        <div class="dbnews_nr">
-            <p>
-               经营许可证编号：京ICP证090533号  <i>|</i> 
-               <a href="http://beian.miit.gov.cn/" target="_blank">京ICP备18053894号</a><i>|</i>  
-               国新办网备字[2006]7号  <i>|</i>  
-               广播电视节目制作经营许可证：(京)字第02592号  <i>|</i>  
-               <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102004542/" target="_blank">京公网安备11010102004542号</a><br>
-            </p>
-            <div class="dbnews_nr2 clearfix">
-                <div class="fl nr2_l">
-                    <p>
-                        <a href="/site/about" target="_blank">关于我们</a>
-                        <a href="/site/copyright" target="_blank">版权声明</a>    
-                        <a href="/site/contact" target="_blank">联系我们</a>    
-                        <a href="/site/jobs" target="_blank">工作机会</a>      
-                        <a href="/site/links" target="_blank">友情链接</a>   
-                        <a href="/site/protocolservice" target="_blank">服务协议</a>
-                        <br>
-                        Copy Right © 2004-2020 www.bjnews.com.cn All Rights Reserved
-                    </p>
-                </div>
-                <div class="fl nr2_r">
-                    <img class="" src="https://static.bjnews.com.cn/www/v6/images/footer-tel1_2.png" alt="" width="159"  />
-                    <img class="" src="https://static.bjnews.com.cn/www/v6/images/footer-tel1_1.png" alt="" width="159" />
-                </div>
-            </div>
-        </div>
-    </footer>
+					var share_uuid = 1739961257129821;
+					// 获取url分享后缀
+					var wxurlSearch = window.location.href.substring(window.location.href.indexOf("?")+1) || "";
+					let wxshareuser = "";//url 分享信息
+					if(wxurlSearch){
+						let wxsearchArr = wxurlSearch.split("&")
+						wxsearchArr.forEach((item,index) => {
+							let ab = item.split("=");
+							if(ab[0] === 'shareuser'){
+								wxshareuser = item;
+							}
+						})
+					}
 
-    <div id="backTop">
-        <!-- 返回顶部 -->
-        <div class="backTop1">
-            <em></em>       
-        </div>
-        <!-- 微信 -->
-        <div class="backTop2">
-            <em></em>
-            <div class="f-hov">
-                <img src="https://static.bjnews.com.cn/www/v6/images/footer01.jpg" alt="" />
-                <span class="arrow-right"></span>
-            </div>
-        </div>
-        <!-- 微博 -->
-        <div class="backTop3">
-            <a href="https://www.weibo.com/xjb" target="_blank"><em></em></a>
-        </div>
-        <!-- 客户端 -->
-        <div class="backTop4">
-            <em></em>
-            <div class="f-hov">
-                <img src="https://static.bjnews.com.cn/www/v6/images/footer032.png" alt="" />
-                <span class="arrow-right"></span>
-            </div> 
-        </div>
-    </div>
+					// 处理分享链接
+					var shareLinkUrl;
+					shareLinkUrl = web_root_url + "/h5special/" + share_uuid + ".html";
+					if (wxshareuser) {
+						shareLinkUrl = shareLinkUrl + "?" + wxshareuser;
+					}
+					
+					//分享到朋友圈
+					wx.onMenuShareTimeline({
+						title: "专题丨为什么立遗嘱的年轻人越来越多？", // 分享标题
+						link: shareLinkUrl, // 分享链接
+						imgUrl: "https://media.bjnews.com.cn/image/2025/02/19/5556348886815158138.png", // 分享图标
+						success: function() {
+							// 用户确认分享后执行的回调函数
+							addShare(share_uuid);
+						}
+					});
+					//分享给朋友
+					wx.onMenuShareAppMessage({
+						title: "专题丨为什么立遗嘱的年轻人越来越多？", // 分享标题
+						desc: "新京报客户端", // 分享描述
+						imgUrl: "https://media.bjnews.com.cn/image/2025/02/19/5556348886815158138.png", // 分享图标
+						link: shareLinkUrl, // 分享链接
+						success: function() {
+							// 用户确认分享后执行的回调函数
+							addShare(share_uuid);
+						}
+					});
+				});
+				function addShare(uuid) {
+					$.ajax({
+						type: "GET",
+						url: web_root_url + "/api/addshare?uuid=" + uuid,
+						dataType: 'json',
+						success: function(data) {
+							//...
+						}
+					});
+				}
 
-    <script type="text/javascript">
-        $(function () {
-            $(document).keydown(function(event){ 
-                if(event.keyCode==13){ 
-                    $(".inp_ico").click(); 
-                } 
-            });
-            // 搜索页面跳转
-            $('.inp_ico').on('click', function () {
-                var key = $('.inp_search').val().trim();
-                if (key) { // 如果有值
-                    window.location.href = '/search?bwsk=' + key;
-                    // window.location.href = '/search?bwsk=' + key + '&orderby=1';
-                }
-            });
-            //底部二维码
-            $(".backTop4").mouseover(function(){
-                $(".backTop4 .f-hov").show();
-            });
-            $(".backTop4").mouseout(function(){
-                $(".backTop4 .f-hov").hide();
-            });
-            $(".backTop2").mouseover(function(){
-                $(".backTop2 .f-hov").show();
-            });
-            $(".backTop2").mouseout(function(){
-                $(".backTop2 .f-hov").hide();
-            });
-        })
-    </script>
-    <!-- 适老化改造 -->
-    <script type="text/javascript" src="https://slwza.bjnews.com.cn/slwza/www.bjnews.com.cn/route.js"></script>
-</body>
+				// 记录分享行为
+				var lastShare_uuid = 1739961257129821;
+            	var urlSearch = window.location.href.substring(window.location.href.indexOf("?")+1) || "";
+				let shareuser = "";
+				let searchArr = urlSearch.split("&")
+				searchArr.forEach((item,index) => {
+					let ab = item.split("=");
+					if(ab[0] === 'shareuser'){
+						shareuser = ab[1]
+					}
+				})
+				if(shareuser){
+					$.ajax({
+						type: 'GET',
+						url: web_root_url + '/japi/pv?article_uuid=' + lastShare_uuid + '&user_uuid=' + shareuser,
+						dataType: 'JSON',
+						success: function(st) {
+							if (st.suc == 1 && st.info == 'success') {
+							}else{
+							}
+						},
+						error: function() {}
+					})
+				}
+			})
+		</script>
+	</body>
 </html>

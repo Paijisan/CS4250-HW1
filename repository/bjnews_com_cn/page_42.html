@@ -1,387 +1,1841 @@
+﻿<script>
+    var pathnam = window.location.pathname;
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|    wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        window.location.href= 'https://'+ "m.bjnews.com.cn" + pathnam;
+    }
+</script>
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no">
-		<meta http-equiv="X-UA-Compatible" centent="IE=edge, chrom=1">
-		<title>专题丨为什么立遗嘱的年轻人越来越多？</title>
-		<link rel="stylesheet" href="/css/2020fenx/base.css">
-		<script src="/js/2020fenx/flexible.js"></script>
-		<!-- <script src="/js/jquery-3.3.1.min.js"></script> -->
-		<script src="https://static.bjnews.com.cn/common/js/jquery.js"></script>
-		<!-- 轮播图 -->
-		<!-- <link rel="stylesheet" href="/css/2020fenx/swiper.min.css">	 -->
-		<link rel="stylesheet" href="/css/2020fenx/swiper-bundle.min.css">	
-		<style>
-			*{margin:0;padding:0;font-family:PingFangSC-Regular;}
-			body{max-width:750px;margin:0 auto;overflow-x: hidden;}
-			.header{position:relative;background-size:cover;background-repeat:no-repeat;background-position:center;min-height:3.2rem;}
-			.header .cover{width:100%}
-			.header_top{position:absolute;height:5.1866rem;left:0;right:0;bottom:0;background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.50) 100%);}
-			/* 压封面图上 */
-			.header_cen{position:absolute;bottom:0.55rem;margin:0 0.8rem;}
-			.header_cen h2{padding-bottom:0.3866rem;font-size:0.5066rem;color:#fff;text-shadow:0 1px 2px rgba(0,0,0,0.3);line-height:1.4;}
-			.header_introduce p{font-size:0.4rem;color:#fff;line-height:1.3;text-shadow:0 1px 2px rgba(0,0,0,0.3);opacity: 0.76;}
-			.header_introduce footer{padding-top:0.2666rem;font-size:0.3733rem;color:#fff;line-height:1.4;text-shadow: 0 2px 4px rgba(0,0,0,0.50);}
-			.cen{padding:0.7466rem 0;padding-bottom:0;position:relative;background:#fff;}
-			/* 封面图下方 */
-			.header_cen_bottom{margin: 0 0.8rem;position:static;}
-			.header_cen_bottom .header_introduce p{color:#606060;text-shadow:none;opacity:1;line-height:1.5;margin-top:.5rem;}
-			.header_cen_bottom .header_introduce footer{color:#D12D2B;text-shadow:none;}
-			.plate{margin:0 0.8rem;}
-			.plate > header{font-size:0.4232rem;color: #D12D2B;line-height:1.2;margin-bottom:0.48rem;}
-			.plate > header > span{background:#D12D2B;height:0.16rem;width:0.16rem;display:inline-block;margin-right:0.1333rem;vertical-align:middle;margin-top:-2px;}
-			.plate > .list{margin-bottom:0.8533rem;}
-			.plate > .list h2{font-size:0.48rem;color:#333;line-height:1.4;padding-bottom:0.2rem;}
-			.list_img{margin-top:0.1rem;margin-bottom:0.24rem;position:relative;background-size:cover;background-position:center;background-repeat:no-repeat;height:4.72rem;}
-			.list_img img{width:100%;}
-			.list_img span{position:absolute;left:50%;top:50%;transform:translate3d(-50%,-50%,0px);border-radius:50%;background:url(/img/2020fenx/anniu.png) no-repeat center;width:1.3333rem;height:1.3333rem;}
-			.list p{font-size:0.4232rem;color:#999;line-height:1.5;margin-bottom:0.2rem;text-align: justify;}
-			.footer{display:flex;justify-content:space-between;}
-			.footer footer{font-size:0.375rem;color:#D12D2B;line-height:1.366;}
-			.footer footer a{color:#D12D2B;}
-			.footer p{font-size:0.3733rem;color:#666;line-height: 1.366;}
-			.footer strong{display:inline-block;width:0.3733rem;height:0.32rem;margin-right:0.2rem;}
-			.footer strong img{width:100%;height:100%;vertical-align:baseline;}
-			.share_xiao{display:none;}
-			.cen_bottom{padding:0.9333rem 0 1.4rem;display:none;}
-			.share{display: -ms-flexbox; /* 混合版本语法: IE 10 */display: -webkit-flex; /* 新版本语法: Chrome 21+ */display:flex;margin:0 0.8rem;justify-content:space-between;}
-			.share_left{line-height:0.64rem;font-size: 0.4rem;color: #AAA;}
-			.share_right span{display:inline-block;width:0.7rem;margin-right:0.95rem;}
-			.share_right span:last-child{margin-right:0;}
-			.share_right span img{width:100%;}
-			.advertisement{background-size: cover;height:4.2rem;margin:0 0.8rem 0.6666rem;}
-			.reporter{font-size:0.32rem;padding:0 0.8rem 0.6666rem;color: #BBB;}
-			/* 轮播图 */
-			.swiper-container {width:100%;height:4.72rem;margin:20px auto;position: relative;}
-			.swiper-slide {text-align:center;font-size:18px;background: #fff;height:4.72rem;position: relative;}
-			.swiper-slide .swiper_img{width:100%;height:4.72rem;background-size:cover;background-position:center;background-repeat:no-repeat;}
-			.swiper-pagination-bullet{border-radius:18px;opacity:0.6;width:14px;height:3px;background:#fff;}
-			.swiper-pagination-bullet-active{width:28px;opacity:1;background:#fff;}
-			.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 3px;}
-			.list .swiper-slide .swiper_text{position:absolute;bottom:0;color:#fff;padding:.7rem .3rem .5rem .3rem;margin:0;line-height:1.5;font-size:0.4232rem;
-				background-image: linear-gradient(180deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.50) 100%);width:100%}
-			.swiper-container-horizontal>.swiper-pagination-bullets{bottom:.16rem}
-		</style>
-	</head>
-	<body>
-		<!-- 压封面图上 -->
-                    <!-- <header class="header" style="background-image:url(<//?php echo $special["inner_cover"];?>)"> -->
-            <header class="header">
-                <img src="https://media.bjnews.com.cn/image/2025/02/19/5556348920336032027.png" class="cover">
-                <div class="header_top"></div>
-                <div class="header_cen">
-                                            <h2>专题丨为什么立遗嘱的年轻人越来越多？</h2>
-                        <div class="header_introduce">
-                            <a data-relateuuid="1739961257129821" data-type="3" data-specialtype="4" href="https://m.bjnews.com.cn/h5special/1739961257129821.html">
-                                <p>遗嘱，不仅是财产的分配，更是情感的延续与责任的传递。最近几年，年轻人立遗嘱比例不断上升，他们用行动诠释对未来的思考。本期专题报道《时光的嘱托》带你走进遗嘱背后的世界，探寻那些关于爱、家庭与未来的故事。</p>
-                                <footer>查看详情<span>></span></footer>
-                            </a>
-                        </div>
+<head>
+    <meta charset="utf-8">
+    <title>
+        新京报 - 好新闻，无止境    </title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="apple-itunes-app" content="app-id=385679094"/>
+    <meta name="description" content="新京报以文字、图片、视频等全媒体形式，为用户提供全天候热点新闻，涵盖突发新闻、时事、财经、娱乐、体育，以及评论、杂志和博客等，新京报网本着品质源于责任的的信念,致力于成为用户喜爱的精品新闻网站。" />
+    <meta name="keywords" content="新京报,电子报,报纸,传媒,时政,娱乐,财经,经济,民生,国内,国际,视频,杂志,访谈,评论,投票,专题,周刊,手机报,博客" />
+    <meta name="baidu_union_verify" content="26ccec5630295fa67762aaf330df4a83">
+    <link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/bootstrap.min.css?v=1.0.8">
+    <link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/base.css?v=1.0.14" />
+    <link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/whole.css?v=1.0.55" />
+    
+    <script type="text/javascript" src="https://static.bjnews.com.cn/common/js/jquery.js"></script>
+    <script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/Alljs.js"></script>
+    <script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/qrcode.min.js"></script>
+    <style>
+        #menu .menu_inner{width: 1224px;left:9px}
+        #menu .menu_inner span{margin-right:9px;}
+    </style>
+</head>
+<body>
+    <div id="header2">
+        <div class="h_top">
+            <div class="w1200">
+                <a href="https://m.bjnews.com.cn/beijiaosuo/" target="_blank">北交所频道</a><span class="line"></span>
+                                <a href="/hao" target="_blank"  >新京号</a>
+                <span class="line"></span>
+                <a href="http://epaper.bjnews.com.cn/" target="_blank">电子报</a>
+                <span class="line"></span>
+                <a href="http://www.qianlong.com/" target="_blank">千龙网</a>
+                <span class="line"></span>
+                <a href="http://www.bkeconomy.com/" target="_blank">贝壳财经</a>
+                <span class="line"></span>
+                <a href="https://h5.bjnews.com.cn/xjbh5/202309beijing_cn/index.html" target="_blank">北京BEIJING</a>
+                <span class="line"></span>
+                <!-- <a href="/shop"  target="_blank" >小鲸铺子</a> -->
+                <a href="https://shop90373224.m.youzan.com/v2/feature/xie8IdUSkL" target="_blank" >新京雅集</a>
+                <span class="line"></span> 
+                <a href="/subject" target="_blank" >专题</a>
+                <span class="line"></span>
+                <a href="/site/business" class="business" target="_blank">商务合作</a>
+                <span class="line"></span>
+                <a id="toolbarSwitch" href="javascript:void(0);">爱心模式</a>
+                <script type="text/javascript" src="https://slwza.bjnews.com.cn/slwza/esdToolsInit.js"></script>
+                <script>
+                    rlink = window.location.pathname
+                    // console.log(rlink)
+                    if(rlink=="/site/business"){
+                        $(".business").css("color","#AA1F24");
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="h_mid">
+            <a href="/" class="logo"></a>
+                        <div class="search">
+                <input type="text" placeholder="输入搜索信息" class="fl inp_search" />
+                <button class="fr inp_ico"><i></i></button>
+            </div>
+                        <div class="mid_right">
+                <!-- 客户端 -->
+                <div class="hover1">
+                    <a href="javascript:;">
+                        <i class="kehu"></i>客户端
+                    </a>
+                    <div class="f-hov">
+                        <span class="arrow-top"></span>
+                        <img src="https://static.bjnews.com.cn/www/v6/images/footer032.png" alt="" />
+                    </div>
+                </div>
+                <span class="line"></span>
+                <!-- 微博 -->
+                <a href="https://www.weibo.com/xjb" target="_blank"><i class="weibo"></i>微博</a>
+                <span class="line"></span>
+                <!-- 微信 -->
+                <div class="hover3">
+                    <a href="javascript:;"><i class="weixin"></i>微信</a>
+                    <div class="f-hov">
+                        <img src="https://static.bjnews.com.cn/www/v6/images/footer01.jpg" alt="" />
+                        <span class="arrow-top"></span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                //头部二维码
+                $(".mid_right .hover1").mouseover(function(){
+                    $(".mid_right .hover1 .f-hov").show();
+                });
+                $(".mid_right .hover1").mouseout(function(){
+                    $(".mid_right .hover1 .f-hov").hide();
+                });
+                $(".mid_right .hover3").mouseover(function(){
+                    $(".mid_right .hover3 .f-hov").show();
+                });
+                $(".mid_right .hover3").mouseout(function(){
+                    $(".mid_right .hover3 .f-hov").hide();
+                });
+            </script>
+        </div>
+    </div>
+    <div id="menu" class = 'menu_habor menu_nobor'   >
+    <div class="menu_inner"  >
+                <span><a href="/"  > 首页</a></span>
+                <span><a href="/video"  > 视频</a></span>
+                <span><a href="/depth"  > 深读</a></span>
+                <span><a href="/gongyi"  > 公益</a></span>
+                <span><a href="/diyikandian"  > 第一看点</a></span>
+                <span><a href="/news"  > 时事</a></span>
+                <span><a href="/beijing"  > 北京</a></span>
+                <span><a href="/guoji"  > 国际</a></span>
+                <span><a href="/zhengshi"  > 政事儿</a></span>
+                <span><a href="/point"  > 观点</a></span>
+                <span><a href="/financial"  > 财经</a></span>
+                <span><a href="/industrial"  > 食品</a></span>
+                <span><a href="/shangye"   class="cur"  > 商业</a></span>
+                <span><a href="/entertainment"  > 娱乐</a></span>
+                <span><a href="/culture"  > 文化</a></span>
+                <span><a href="/sports"  > 体育</a></span>
+                <span><a href="/car"  > 汽车</a></span>
+                <span><a href="/estate"  > 房产</a></span>
+                <span><a href="/wine"  > 酒业</a></span>
+                <span><a href="/education"  > 教育</a></span>
+                <span><a href="/life"  > 健康</a></span>
+                <span><a href="/photo"  > 图说</a></span>
+                <span><a href="/technology"  > 科技</a></span>
+                <span><a href="/thinktank"  > 智库</a></span>
+                <span><a href="/country"  > 乡村</a></span>
+            </div>
+    </div>  
+<link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/list.css?v=1.0.12" />
+<link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/css/swiper.min.css?v=1.0" />
+<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/index2.css?v=1.0.26">
+<link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/index.css?v=1.0.41" />
+
+<style>
+    img {
+        transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -webkit-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+    }
+    #waterfall-container {
+        margin-left: -20px;
+        margin-right: -10px;
+        position: relative;
+    }
+    
+   
+</style>
+<div class="listBar2"></div>
+<div class="content">
+        <article class="clearfix">
+            <!-- 左侧部分 -->
+            <div class="fl article">
+                <!-- 列表 -->
+                <div class="listContent">
+                    <!-- <h2 class="bigTitle">热点精选</h2> -->
+                    <!-- 瀑布加载 -->
+                    <div class="container hidden-desktop visible-lg clearfix" style="width: 781px;">
+                        <div class="row" style="margin-bottom: 80px">
+                            <div class="col-xs-12 col-lg-12">
+                                <div id="waterfall-container">
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://m.bjnews.com.cn/h5special/1737441972129114.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            2025春节 年货就这么办</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                            <!-- 如果是专题样式 -->
+                                                            <div class="index-overflow-zt">
+                                                                <a href="https://m.bjnews.com.cn/h5special/1737441972129114.html" target="_blank">
+                                                                    <img class="img-responsive fd index_zt" src="https://media.bjnews.com.cn/image/2025/01/21/5545780664244183400.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                </a>
+                                                                <span class="zt-bom"></span>
+                                                            </div>
+                                                            <!-- 如果是专题样式end -->
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                            <div class="pin_tips">
+                                                                                                                                    <a href="https://www.bjnews.com.cn/detail/1737073971168823.html" target="_blank">
+                                                                        <span></span>
+                                                                        2025春节年货就这么办｜年夜饭拒绝“时令价”“反向抹零”                                                                    </a>
+                                                                                                                                        <a href="https://www.bjnews.com.cn/detail/1737423051168196.html" target="_blank">
+                                                                        <span></span>
+                                                                        2025春节年货就这么办｜智能小家电成新宠，消费陷阱如何破？                                                                    </a>
+                                                                                                                                        <a href="https://www.bjnews.com.cn/detail/1737374732168158.html" target="_blank">
+                                                                        <span></span>
+                                                                        过节囤年货，年轻人更爱即食类滋补品，专家提醒食用前应分清体质                                                                    </a>
+                                                                                                                                </div>
+                                                                                                                <div class="bom">
+                                                            <span class="source">
+                                                                                                                                专题                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                            <em class="indexLine"></em>
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                            <span class="see">43.0万</span>
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-            </header>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://m.bjnews.com.cn/detail/1735729233129703.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                                <span class="zt_tit">专题</span>
+                                                                                                                            2024消费趋势报告</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                            <!-- 如果是专题样式 -->
+                                                            <div class="index-overflow-zt">
+                                                                <a href="https://m.bjnews.com.cn/detail/1735729233129703.html" target="_blank">
+                                                                    <img class="img-responsive fd index_zt" src="https://media.bjnews.com.cn/image/2025/01/01/5538598615636846059.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                </a>
+                                                                <span class="zt-bom"></span>
+                                                            </div>
+                                                            <!-- 如果是专题样式end -->
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                    <div class="pin_tips" style="margin-bottom: 10px;font-size: 12px;line-height: 1.5;">
+                                                                <a class="noPadd" href="https://m.bjnews.com.cn/detail/1735729233129703.html" target="_blank">
+                                                                    新一轮稳增长政策发力背景下，消费动能逐步增强，消费市场不断改善。一年来，在消费领域各个行业，食品、健康、餐饮、智能家居、教育，一些...                                                                    <i>[全文]</i>
+                                                                </a>
+                                                            </div>
+                                                                                                                                                                            <div class="pin_tips">
+                                                                                                                                    <a href="https://www.bjnews.com.cn/detail/1735804133168430.html" target="_blank">
+                                                                        <span></span>
+                                                                        2024食品行业品质报告：新质生产力守护“舌尖安全”                                                                    </a>
+                                                                                                                                        <a href="https://www.bjnews.com.cn/detail/1735775816168372.html" target="_blank">
+                                                                        <span></span>
+                                                                        餐饮下沉市场活力增加 “刚需”品类成主力                                                                    </a>
+                                                                                                                                        <a href="https://www.bjnews.com.cn/detail/1735775797168371.html" target="_blank">
+                                                                        <span></span>
+                                                                        紧密“牵手”大家居 “智能+”渐趋成熟                                                                    </a>
+                                                                                                                                </div>
+                                                                                                                <div class="bom">
+                                                            <span class="source">
+                                                                                                                                专题                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                            <em class="indexLine"></em>
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                            <span class="see">29.8万</span>
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://m.bjnews.com.cn/detail/1730899472129344.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                                <span class="zt_tit">专题</span>
+                                                                                                                            消费向潮</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                            <!-- 如果是专题样式 -->
+                                                            <div class="index-overflow-zt">
+                                                                <a href="https://m.bjnews.com.cn/detail/1730899472129344.html" target="_blank">
+                                                                    <img class="img-responsive fd index_zt" src="https://media.bjnews.com.cn/image/2024/11/06/5518341071941217171.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                </a>
+                                                                <span class="zt-bom"></span>
+                                                            </div>
+                                                            <!-- 如果是专题样式end -->
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                    <div class="pin_tips" style="margin-bottom: 10px;font-size: 12px;line-height: 1.5;">
+                                                                <a class="noPadd" href="https://m.bjnews.com.cn/detail/1730899472129344.html" target="_blank">
+                                                                    今年以来，消费仍然是中国经济发展的第一拉动力。在此大趋势下，消费升级的一端，连接着企业的破题之路：新业态的诞生、新模式的搭建、新产...                                                                    <i>[全文]</i>
+                                                                </a>
+                                                            </div>
+                                                                                                                                                                            <div class="pin_tips">
+                                                                                                                                    <a href="https://www.bjnews.com.cn/detail/1731062416168782.html" target="_blank">
+                                                                        <span></span>
+                                                                        研发战略有“新”更用“心”，紫燕食品解锁卤味消费新密码                                                                    </a>
+                                                                                                                                        <a href="https://www.bjnews.com.cn/detail/1730941172168594.html" target="_blank">
+                                                                        <span></span>
+                                                                        转型布局显成效，养元饮品焕新“核桃经”                                                                    </a>
+                                                                                                                                        <a href="https://www.bjnews.com.cn/detail/1730941189168595.html" target="_blank">
+                                                                        <span></span>
+                                                                        美赞臣致力打造真实有效的奶粉配方                                                                    </a>
+                                                                                                                                </div>
+                                                                                                                <div class="bom">
+                                                            <span class="source">
+                                                                                                                                专题                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                            <em class="indexLine"></em>
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                            <span class="see">67.2万</span>
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740791122168060.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            商超及电商平台开启“春菜季”，板蓝根青菜等新品热销</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740791122168060.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/wangh20253195212409194.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业观察                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740791122168060">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740786839168059.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            西单明珠大厦6层流拍，或将再次降价拍卖</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740786839168059.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/wangh202531753582409144.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业观察                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740786839168059">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740786711168058.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            关闭205家亏损门店，达美乐中国：与中国市场无关，将继续拓店</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740786711168058.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/wangh202531751502409140.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                餐饮热点                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740786711168058">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740786687168057.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            艺术力量唤醒关注海洋生态，“Lafuma守护蓝色星球”展启幕</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740786687168057.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/wangh202531751262409139.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740786687168057">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740786555168056.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            江南布衣：2026财年百亿零售目标不变，将继续丰富品牌组合</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740786555168056.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/wangh202531749142409138.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业观察                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740786555168056">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740739153168000.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            东方雨虹2024年实现营业收入280.56亿元</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740739153168000.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252281839122408651.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740739153168000">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740739105168999.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            设施适老化、菜品宜无骨无刺，北京发布全国首个“养老助餐”团标</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740739105168999.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252281838242408650.JPG?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                餐饮热点                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740739105168999">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740732765168990.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            “二月二”将至，北京多家老字号上线“龙”美食</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740732765168990.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252281652442408531.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                餐饮热点                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740732765168990">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740705778168934.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            永辉超市将选举新董事，叶国富等名创优品成员被提名为董事候选人</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740705778168934.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh2025228922572407779.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740705778168934">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740705762168933.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            东鹏控股：拟通过DeepSeek等AI技术深化数字化转型</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740705762168933.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh2025228922412407778.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740705762168933">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740705748168932.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            富森美：2024年实现营业收入14.3亿元</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740705748168932.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh2025228922272407777.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740705748168932">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740638516168850.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            “月薪5000不要吃巴奴”？创始人杜中兵回应争议</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740638516168850.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252271441562406612.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                餐饮热点                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740638516168850">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740629172168837.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            文和友撤出广州，“景点式餐饮”如何平衡流量和复购？</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740629172168837.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh2025227126112406285.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业观察                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740629172168837">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740576260168788.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            ST中装：实控人庄展诺所持694.99万股公司股份被拍卖</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740576260168788.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252262124192405758.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740576260168788">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740576234168787.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            *ST名家第三次披露公司股票可能被终止上市的风险提示公告</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740576234168787.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252262123532405756.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740576234168787">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740576188168786.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            伟星新材：2024年实现营收62.71亿元</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740576188168786.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh2025226212372405750.png?x-oss-process=image/resize,m_lfit,w_365" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740576188168786">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="col-xs-12 col-lg-4 hotlist">
+                                        <div class="row">
+                                            <div class="pin_demo_out">
+                                                <div class="pin">
+                                                    <div class="pin_demo">
+                                                        <a href="https://www.bjnews.com.cn/detail/1740557749168759.html" target="_blank">
+                                                            <div class="pin_tit">
+                                                                
+                                                                                                                            世纪金源4月1日起接管新燕莎租赁区域，合作品牌交接换签已完成</div>
+                                                        </a>
+                                                        <!-- 无图稿件判断 start-->
+                                                                                                                                                                        <div class="imgBor">
+                                                                                                                                                                                                                                                <a href="https://www.bjnews.com.cn/detail/1740557749168759.html" target="_blank">
+                                                                <img class="img-responsive fd" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252261615482405041.jpg?x-oss-process=image/resize,m_lfit,w_365/quality,q_80" data-bd-imgshare-binded="1">
+                                                                                                                                                                                            </a>
+                                                        </div>
+                                                                                                                <!--无图稿件判断 end-->
+                                                                                                                                                                        <div class="bom">
+                                                            <span class="source">
+                                                                                                                                商业快讯                                                            </span>
+                                                            <!-- 如果tag或者数量没有则不显示竖线 -->
+                                                                                                                        <!-- 有什么数显示什么数，只显示一个 -->
+                                                                                                                        <!-- 如果有时间显示时间 -->
+                                                            
+                                                            <!-- 分享 -->
+                                                            <div class="share-to">
+                                                                
+                                                                                                                                <!-- 点赞 -->
+                                                                    <input class="pubu_dianzan" value="1740557749168759">
+                                                                    <span class="dianzan-move2"><i></i>+1</span>
+                                                                    <span id="qwlike" style="display: none"></span> 
+                                                                                                                                <!-- 微博分享 -->
+                                                                <span class="sina" id="v4_s">
+                                                                    <a href="http://service.weibo.com/share/share.php?url=&pic=" target="_blank">
+                                                                        <span class="weibo yunafen"></span>
+                                                                    </a>
+                                                                </span>
+                                                                <!-- 微信分享 -->
+                                                                <span class="weixin" tagertUrl="">
+                                                                    <div class="weixin-code">
+                                                                        <p class="wx-t">分享到微信朋友圈</p>
+                                                                        <div class="er"></div>
+                                                                        <!-- <span class="closeWx"></span> -->
+                                                                        <p class="wx-t2">打开微信，点击底部的“发现”，使用“扫<br>一扫”即可将网页分享到我的朋友圈。</p>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="pin_line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    </div>
+                                <!-- <div class="loading">
+                                    <img src="./千龙网_files/loading.png" alt="" data-bd-imgshare-binded="1">
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 分页 -->
+                    <div class="turnPage">
+                        <ul class="pagination2">
+                            <li><a class='active'>1</a></li><li><a href='/shangye/2.html'>2</a></li><li><a href='/shangye/3.html'>3</a></li><li><a href='/shangye/4.html'>4</a></li><li><a href='/shangye/5.html'>5</a></li><li><a href='/shangye/6.html'>6</a></li><li><a href='/shangye/7.html'>7</a></li><li><a href='/shangye/8.html'>8</a></li> <li><a href='/shangye/2.html' class='last'>下一页</a></li>                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧部分 -->
+            <div class="fr aside" style="margin-top: 14px">
+                <!-- 最热 -->
+                                <div class="asideList bghui">
+                    <h1 class="bigTitle" style="color: #27282D">最热</h1>
+                    <ul class="list-d">
+                                                <li>
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740739105168999.html" title="" target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/wangh20252281838242408650.JPG?x-oss-process=image/resize,m_lfit,w_320/quality,q_80" alt="" />
+                                </a>
+                            </div>
+                                                        <div class="fl hot24-right hot24-img-first">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740739105168999.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">1</i>
+                                    设施适老化、菜品宜无骨无刺，北京发布全国首个“养老助餐”团标                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740739105168999.html" title="" target='_blank'>
+                                    <i class="num">1</i>
+                                    设施适老化、菜品宜无骨无刺，北京发布全国首个“养老助餐”团标                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>3712                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740732765168990.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">2</i>
+                                    “二月二”将至，北京多家老字号上线“龙”美食                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740732765168990.html" title="" target='_blank'>
+                                    <i class="num">2</i>
+                                    “二月二”将至，北京多家老字号上线“龙”美食                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>2302                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740705778168934.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">3</i>
+                                    永辉超市将选举新董事，叶国富等名创优品成员被提名为董事候选人                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740705778168934.html" title="" target='_blank'>
+                                    <i class="num">3</i>
+                                    永辉超市将选举新董事，叶国富等名创优品成员被提名为董事候选人                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>1269                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740786711168058.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">4</i>
+                                    关闭205家亏损门店，达美乐中国：与中国市场无关，将继续拓店                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740786711168058.html" title="" target='_blank'>
+                                    <i class="num">4</i>
+                                    关闭205家亏损门店，达美乐中国：与中国市场无关，将继续拓店                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>1197                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740791122168060.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">5</i>
+                                    商超及电商平台开启“春菜季”，板蓝根青菜等新品热销                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740791122168060.html" title="" target='_blank'>
+                                    <i class="num">5</i>
+                                    商超及电商平台开启“春菜季”，板蓝根青菜等新品热销                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>1148                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740786839168059.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">6</i>
+                                    西单明珠大厦6层流拍，或将再次降价拍卖                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740786839168059.html" title="" target='_blank'>
+                                    <i class="num">6</i>
+                                    西单明珠大厦6层流拍，或将再次降价拍卖                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>810                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740705748168932.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">7</i>
+                                    富森美：2024年实现营业收入14.3亿元                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740705748168932.html" title="" target='_blank'>
+                                    <i class="num">7</i>
+                                    富森美：2024年实现营业收入14.3亿元                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>677                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740705762168933.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">8</i>
+                                    东鹏控股：拟通过DeepSeek等AI技术深化数字化转型                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740705762168933.html" title="" target='_blank'>
+                                    <i class="num">8</i>
+                                    东鹏控股：拟通过DeepSeek等AI技术深化数字化转型                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>673                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740786555168056.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">9</i>
+                                    江南布衣：2026财年百亿零售目标不变，将继续丰富品牌组合                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740786555168056.html" title="" target='_blank'>
+                                    <i class="num">9</i>
+                                    江南布衣：2026财年百亿零售目标不变，将继续丰富品牌组合                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>609                                                                    </div>
+                            </div> 
+                        </li>
+                                                <li>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740786687168057.html" title="" class="hot24-text" target='_blank'>
+                                    <i class="num">10</i>
+                                    艺术力量唤醒关注海洋生态，“Lafuma守护蓝色星球”展启幕                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740786687168057.html" title="" target='_blank'>
+                                    <i class="num">10</i>
+                                    艺术力量唤醒关注海洋生态，“Lafuma守护蓝色星球”展启幕                                </a>
+                                <div class="hot24-time">
+                                    <!-- 新京号的右侧改成头像 -->
+                                                                            <i></i>539                                                                    </div>
+                            </div> 
+                        </li>
+                                            </ul>
+                </div>
+                                <!-- 广告 -->
+                <!-- <div class="list_guanggao">
+                    <em>广告</em>
+                    <a href="#"><img class="g1" src="/images/temp/gg_list.png" alt="" /></a>
+                </div> -->
+
+                <!-- 最新 -->
+                                <div class="asideList" style="padding: 25px 0 0 20px;">
+                    <h1 class="bigTitle" style="color:#27282D;margin-left:0px;">最新</h1>
+                    <ul class="list-a">
+                                                 <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740791122168060.html" title="" target='_blank'>商超及电商平台开启“春菜季”，板蓝根青菜等新品热销</a>
+                            <div class="t">21小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740786839168059.html" title="" target='_blank'>西单明珠大厦6层流拍，或将再次降价拍卖</a>
+                            <div class="t">23小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740786711168058.html" title="" target='_blank'>关闭205家亏损门店，达美乐中国：与中国市场无关，将继续拓店</a>
+                            <div class="t">23小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740786687168057.html" title="" target='_blank'>艺术力量唤醒关注海洋生态，“Lafuma守护蓝色星球”展启幕</a>
+                            <div class="t">23小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740786555168056.html" title="" target='_blank'>江南布衣：2026财年百亿零售目标不变，将继续丰富品牌组合</a>
+                            <div class="t">23小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740739153168000.html" title="" target='_blank'>东方雨虹2024年实现营业收入280.56亿元</a>
+                            <div class="t">1天前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740739105168999.html" title="" target='_blank'>设施适老化、菜品宜无骨无刺，北京发布全国首个“养老助餐”团标</a>
+                            <div class="t">1天前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740732765168990.html" title="" target='_blank'>“二月二”将至，北京多家老字号上线“龙”美食</a>
+                            <div class="t">1天前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740705778168934.html" title="" target='_blank'>永辉超市将选举新董事，叶国富等名创优品成员被提名为董事候选人</a>
+                            <div class="t">1天前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1740705762168933.html" title="" target='_blank'>东鹏控股：拟通过DeepSeek等AI技术深化数字化转型</a>
+                            <div class="t">1天前</div>
+                        </li>
+                                            </ul>
+                </div>
+                                                <!-- 企业资讯 -->
+                <div class="qyzx">
+                    <div class="qyzx-title">
+                        <span>企业资讯</span>
+                        <a href="/qiyezixun" target="_blank" class="more">更多>></a>
+                    </div>
+                    <div class="qyzx-list">
+                        <ul>
+                                                        <li>
+                                <a href="https://www.bjnews.com.cn/detail/1740819067129924.html" target="_blank">
+                                    <i></i>
+                                    中兴通讯2024年报：六年研发投入破千亿，AI向实，转型成效明显                                </a>
+                            </li> 
+                                                        <li>
+                                <a href="https://www.bjnews.com.cn/detail/1740819061129923.html" target="_blank">
+                                    <i></i>
+                                    "3·7中国疝气宣传日"全国公益行动即将启动 千家医院联动守护百姓健康                                </a>
+                            </li> 
+                                                        <li>
+                                <a href="https://www.bjnews.com.cn/detail/1740811412129862.html" target="_blank">
+                                    <i></i>
+                                    聚智谋远 创新赋能 | 第四届湖北（荆州）体育产业发展大会召开 湖北体育产业奏响高质量发展                                </a>
+                            </li> 
+                                                        <li>
+                                <a href="https://www.bjnews.com.cn/detail/1740810142129856.html" target="_blank">
+                                    <i></i>
+                                    东方杯《我为家乡代言》品牌发布会顺利举行                                </a>
+                            </li> 
+                                                        <li>
+                                <a href="https://www.bjnews.com.cn/detail/1740810130129855.html" target="_blank">
+                                    <i></i>
+                                    河南漯河郾城区初级实验中学七年级学生家长送锦旗、感师恩                                </a>
+                            </li> 
+                                                    </ul>
+                    </div>
+                </div>
+                <!-- 企业资讯end -->
+                        </div>
+        </article>
+    </div>
+
+
+
+
+    
+    <script type="text/javascript">
         
-		<div class="cen">
-			<div class="plate">
-			<!-- 轮播图 -->
-                                	<header><span></span>数据</header>
-                                                            <div class="list"><a data-relateuuid="1740009181168222" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009181168222.html?uuid=1740009181168222&show_type=article&show_uuid=1740009181168222">
-                                    <h2>从传统观念到现代选择：数读我国遗嘱订立趋势</h2>
-                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong202522014072395603.jpeg)"></div>
-                                                                        <p></p>
-								</a>
-								<div class="footer">
-									<footer>
-                                        <a data-relateuuid="1740009181168222" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009181168222.html?uuid=1740009181168222&show_type=article&show_uuid=1740009181168222">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
-                                    </footer>
-								</div>
-                                
-							</div>
-                                    	<header><span></span>故事</header>
-                                                            <div class="list"><a data-relateuuid="1740009120168221" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009120168221.html?uuid=1740009120168221&show_type=article&show_uuid=1740009120168221">
-                                    <h2>30多万份遗嘱里，封存着人们最真实的牵挂</h2>
-                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/yanghai202522003262395568.png)"></div>
-                                                                        <p></p>
-								</a>
-								<div class="footer">
-									<footer>
-                                        <a data-relateuuid="1740009120168221" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009120168221.html?uuid=1740009120168221&show_type=article&show_uuid=1740009120168221">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
-                                    </footer>
-								</div>
-                                
-							</div>
-                                                <div class="list"><a data-relateuuid="1740009302168225" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009302168225.html?uuid=1740009302168225&show_type=article&show_uuid=1740009302168225">
-                                    <h2>遗嘱咨询师与一份遗嘱的诞生</h2>
-                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong2025220124272395577.jpg)"></div>
-                                                                        <p></p>
-								</a>
-								<div class="footer">
-									<footer>
-                                        <a data-relateuuid="1740009302168225" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009302168225.html?uuid=1740009302168225&show_type=article&show_uuid=1740009302168225">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
-                                    </footer>
-								</div>
-                                
-							</div>
-                                    	<header><span></span>访谈</header>
-                                                            <div class="list"><a data-relateuuid="1740009268168224" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009268168224.html?uuid=1740009268168224&show_type=article&show_uuid=1740009268168224">
-                                    <h2>中华遗嘱库陈凯：用公益守护和谐家风传承</h2>
-                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong202522012702395583.jpg)"></div>
-                                                                        <p></p>
-								</a>
-								<div class="footer">
-									<footer>
-                                        <a data-relateuuid="1740009268168224" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009268168224.html?uuid=1740009268168224&show_type=article&show_uuid=1740009268168224">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
-                                    </footer>
-								</div>
-                                
-							</div>
-                                                <div class="list"><a data-relateuuid="1740009235168223" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009235168223.html?uuid=1740009235168223&show_type=article&show_uuid=1740009235168223">
-                                    <h2>《民法典》编纂参与者、立法专家杨立新：普及遗嘱是社会共同责任</h2>
-                                                                                <div class="list_img" style="background-image:url(https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/2/pengchong2025220132302395592.jpg)"></div>
-                                                                        <p></p>
-								</a>
-								<div class="footer">
-									<footer>
-                                        <a data-relateuuid="1740009235168223" data-type="1" data-specialtype="0" href="https://m.bjnews.com.cn/detail/1740009235168223.html?uuid=1740009235168223&show_type=article&show_uuid=1740009235168223">查看详情<span><img style="width:0.2187rem;height:0.2187rem;margin-top:-3px;" src="/img/2020fenx/jiant.png" alt=""></span></a>
-                                    </footer>
-								</div>
-                                
-							</div>
-                    			</div>
-                        
-			<div style="height:0.1333rem;background:#F4F4F4;"></div>
-			<div class="cen_bottom">
-				<div class="share">
-					<div class="share_left">分享到</div>
-					<div class="share_right">
-						<span class="wx"><img src="/img/2020fenx/article_icon_wechat3_1.png"></span>
-						<span class="qq"><img src="/img/2020fenx/article_icon_wechat3.png"></span>
-						<span class="xl"><img src="/img/2020fenx/article_icon_wbt3.png"></span>
-						<span class="pyq"><img src="/img/2020fenx/article_ic3.png"></span>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div style="display:none;">
-			<script charset="utf-8" language="javascript" src="https://static.bjnews.com.cn/public/tj.js"></script>
-		</div>
-		<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-		<!-- <script src="/js/2020fenx/swiper.min.js"></script> -->
-		<!-- 轮播图 -->
-		<!-- 最新版swiper默认一张图不轮播的功能 -->
-		<script src="/js/2020fenx/swiper-bundle.min.js"></script> 
-		<script>
-			//轮播图
-			var swiper = new Swiper('.swiper-container', {
-				direction: 'horizontal',
-				paginationClickable: true,
-				spaceBetween: 30,
-				observer: true,
-                observeParents: true,
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
-				},
-				loop: true,
-			});
-		</script>
-		
-		<script>
-            			var isApp = false
-			function didOpenInApp(App,version,deviceID){
-				isApp = true
-				window.webkit.messageHandlers.log.postMessage(isApp);
-				if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-					window.webkit.messageHandlers.log.postMessage(App + version + deviceID +'0610');
-				}else if(/(Android)/i.test(navigator.userAgent)){
-				}
-			}
-			$(function(){
-				let web_root_url = "https://m.bjnews.com.cn";
-                let h5_special_url = "https://m.bjnews.com.cn/h5special/1739961257129821.html";
-                let h5_special_title = "专题丨为什么立遗嘱的年轻人越来越多？";
-				let h5_special_desc = "遗嘱，不仅是财产的分配，更是情感的延续与责任的传递。最近几年，年轻人立遗嘱比例不断上升，他们用行动诠释对未来的思考。本期专题报道《时光的嘱托》带你走进遗嘱背后的世界，探寻那些关于爱、家庭与未来的故事。";
-                let h5_special_cover = "https://media.bjnews.com.cn/image/2025/02/19/5556348886815158138.png";
-				
-				//判断是否是在App中
-				function viewDidAppear(string){
-					try{
-						if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)){
-							window.webkit.messageHandlers.AppConfirm.postMessage("userInfo");
-							window.webkit.messageHandlers.log.postMessage(string);
-						}else if(/(Android)/i.test(navigator.userAgent)){
-							window.bjnewapp.AppConfirm();
-						}
-					}
-					catch(err){
-						isApp = false;
-					}
-				}
-				viewDidAppear('确认是否在App')
-				//var setviewDidAppear = setTimeout(function(){
-					//viewDidAppear()
-				//},300)
-				setTimeout(function(){
-					if(isApp){
-						$('.share_xiao').show();
-						$('.cen_bottom').show();
-					}
-				},300)
-				$('.share_xiao').click(function(){
-					let data_type = $(this).attr('data-type');
-					let dataHref = $(this).attr('data-href');
-					let dataTitle = $(this).attr('data-title');
-					let datadesc = $(this).attr('data-desc');
-					let dataFx = $(this).attr('data-fx');
-					let data = 'type=' + data_type + '&title=' + dataTitle + '&desc=' + datadesc + '&cover=' + dataFx + '&url=' + dataHref
-					shareToPlatform(data)
-				})
-				$('a').click(function(event){
-					var data_type = $(this).attr('data-type');
-					var specialtype = $(this).attr('data-specialtype');
-					var uuid = $(this).data('relateuuid')
-					if(uuid){
-						if(!isApp){
-							if (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) && data_type/1 !== 3 && data_type/1 !== 4) {
-								event.preventDefault();
-								console.log($(this))
-								console.log(uuid)
-								window.location.href =  `https://www.bjnews.com.cn/detail/${uuid}.html`
-							}
-						}
-					}
-				})
-				
-				$('.share_right span').click(function(){
-					let leix = $(this).attr('class')
-					let type = 'WechatSession'
-					if(leix === 'wx'){
-						type = 'WechatSession'
-					}else if(leix === 'qq'){
-						type = 'QQ'
-					}else if(leix === 'xl'){
-						type = 'Sina'
-					}else if(leix === 'pyq'){
-						type = 'WechatTimeLine'
-					}
-					let data = 'type=' + type + '&title=' + h5_special_title + '&desc=' + h5_special_desc + '&cover=' + h5_special_cover + '&url=' + h5_special_url
-					console.log(data);
-					shareToPlatform(data)
-				})
-				function shareToPlatform(jsonString){
-					try{
-						if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
-							window.webkit.messageHandlers.shareToPlatform.postMessage(jsonString);
-							window.webkit.messageHandlers.log.postMessage(jsonString);
-						}else if(/(Android)/i.test(navigator.userAgent)){
-							window.bjnewapp.shareToPlatform(jsonString);
-						}
-					}
-					catch(err){
-						console.log('没在app环境')
-					}
-					
-				}
-				$.ajax({
-					type: "GET",
-					url: "https://m.bjnews.com.cn/api/wxshare?app_id=wxbad48ed25d961bb9",
-					dataType: 'json',
-					success: function(data) {
-						var signpackage = data.signpackage;
-						wx.config({
-							appId: "wxbad48ed25d961bb9", // 必填，公众号的唯一标识
-							timestamp: signpackage.timestamp, // 必填，生成签名的时间戳
-							nonceStr: signpackage.nonceStr, // 必填，生成签名的随机串
-							signature: signpackage.signature, // 必填，签名，见附录1
-							jsApiList: [
-								'checkJsApi',
-								'onMenuShareTimeline',
-								'onMenuShareAppMessage'
-							]
-						});
-					}
-				});
-				wx.ready(function() {
+        //var page = 2;
+        //var hot_list = [];
+        
+        //var LockMore = false; //锁定
+        //var flag = false; //
+        // waterFlow();
+        
+        // hotlist(page)
+        // $(window, document, "body").scroll(function(event) {
+            
+        //     $('.bdsharebuttonbox').hide()
+        //     var wScrollY = $("html,body").scrollTop();
+        //     var newwScrollY = document.body.scrollTop
+        //     if (newwScrollY != 0) {
+        //         wScrollY = newwScrollY
+        //     }
+        //     var wInnerH = window.innerHeight; // 设备窗口的高度（不会变）  
+        //     var newwInnerH = document.documentElement.clientWidth
+        //     var bScrollH = document.body.scrollHeight; // 滚动条总高度
 
-					var share_uuid = 1739961257129821;
-					// 获取url分享后缀
-					var wxurlSearch = window.location.href.substring(window.location.href.indexOf("?")+1) || "";
-					let wxshareuser = "";//url 分享信息
-					if(wxurlSearch){
-						let wxsearchArr = wxurlSearch.split("&")
-						wxsearchArr.forEach((item,index) => {
-							let ab = item.split("=");
-							if(ab[0] === 'shareuser'){
-								wxshareuser = item;
-							}
-						})
-					}
+        //     // if (page >= 6) {
+        //     //     $("#btn_Page").hide();
+        //     //     $(".jiazai_ing").show(); 
+        //     //     return
+        //     // }
 
-					// 处理分享链接
-					var shareLinkUrl;
-					shareLinkUrl = web_root_url + "/h5special/" + share_uuid + ".html";
-					if (wxshareuser) {
-						shareLinkUrl = shareLinkUrl + "?" + wxshareuser;
-					}
-					
-					//分享到朋友圈
-					wx.onMenuShareTimeline({
-						title: "专题丨为什么立遗嘱的年轻人越来越多？", // 分享标题
-						link: shareLinkUrl, // 分享链接
-						imgUrl: "https://media.bjnews.com.cn/image/2025/02/19/5556348886815158138.png", // 分享图标
-						success: function() {
-							// 用户确认分享后执行的回调函数
-							addShare(share_uuid);
-						}
-					});
-					//分享给朋友
-					wx.onMenuShareAppMessage({
-						title: "专题丨为什么立遗嘱的年轻人越来越多？", // 分享标题
-						desc: "新京报客户端", // 分享描述
-						imgUrl: "https://media.bjnews.com.cn/image/2025/02/19/5556348886815158138.png", // 分享图标
-						link: shareLinkUrl, // 分享链接
-						success: function() {
-							// 用户确认分享后执行的回调函数
-							addShare(share_uuid);
-						}
-					});
-				});
-				function addShare(uuid) {
-					$.ajax({
-						type: "GET",
-						url: web_root_url + "/api/addshare?uuid=" + uuid,
-						dataType: 'json',
-						success: function(data) {
-							//...
-						}
-					});
-				}
+        //     // if (wScrollY + newwInnerH >= bScrollH) {
+        //     //     if (flag) {
+        //     //         //console.log("触发");
+        //     //         if (page != 1) {
+        //     //             //console.log("触发底部");
+        //     //             flag = false;
+        //     //             // hotlist(page)
+        //     //             LockMore = true;
+        //     //         }
+        //     //     }
+        //     //     if (LockMore) {
+        //     //         return false;
+        //     //     }
+        //     // }     
+        // });
 
-				// 记录分享行为
-				var lastShare_uuid = 1739961257129821;
-            	var urlSearch = window.location.href.substring(window.location.href.indexOf("?")+1) || "";
-				let shareuser = "";
-				let searchArr = urlSearch.split("&")
-				searchArr.forEach((item,index) => {
-					let ab = item.split("=");
-					if(ab[0] === 'shareuser'){
-						shareuser = ab[1]
-					}
-				})
-				if(shareuser){
-					$.ajax({
-						type: 'GET',
-						url: web_root_url + '/japi/pv?article_uuid=' + lastShare_uuid + '&user_uuid=' + shareuser,
-						dataType: 'JSON',
-						success: function(st) {
-							if (st.suc == 1 && st.info == 'success') {
-							}else{
-							}
-						},
-						error: function() {}
-					})
-				}
-			})
-		</script>
-	</body>
-</html>
+        // 瀑布加载计算代码
+        var num = 2;
+        // setTimeout("waterFlow()","5000");
+        function waterFlow() {
+            var arr = []; //定义一个数组
+            var imgWidth = $(".hotlist").innerWidth();
+            for (var j = 0; j < $(".hotlist").length; j++) {
+                if (j < num) { //一行显示num个div   ,将第一行的每个div高度写入数组
+                    arr[j] = $(".hotlist").eq(j).innerHeight()
+                } else {
+                    var minImgHeight = Math.min.apply(null, arr); //取得数组中最小高度的div
+                    var index = getMinIndex(arr, minImgHeight); //取得数组中最小高度的div的索引
+                    $(".hotlist").eq(j).css({
+                        "position": "absolute",
+                        "top": minImgHeight + "px",
+                        "left": imgWidth * index + "px",
+                    }); //瀑布流布局
+                    arr[index] += $(".hotlist").eq(j).innerHeight(); //将布局好的该div的高度和该div上面的div高度相加，重新放入数组
+                }
+            }
+            var maxHeight = Math.max.apply(null, arr);
+            $("#waterfall-container").css({
+                "height": maxHeight + 30 + "px"
+            })
+        }
+        function getMinIndex(arr, min) { //取得数组中最小高度的div的索引
+            for (var k in arr) {
+                if (arr[k] == min) {
+                    return k;
+                }
+            }
+        }
+        // 瀑布加载计算代码 end
+        window.onload = waterFlow;
+    </script>   
+    
+    <script>
+        // 微信分享
+        $(".share-to .weixin").mouseover(function(){
+            $(this).find('.er').find('img').remove();
+            $(this).find('.weixin-code').show();
+            var tragetUrl = $(this).attr('tagertUrl');
+            var targetElement = $(this).find('.er')[0];                           
+            new QRCode(targetElement, tragetUrl);
+        });
+        $(".share-to .weixin").mouseout(function(){
+            $(this).find('.weixin-code').hide();
+        });
+
+        //点赞接口获取
+        $(".pubu_dianzan").click(function () {
+            $(this).addClass("dianzan-ok2");
+            $(this).next().fadeIn().fadeOut();
+            if($(this).hasClass("dianzan-ok2")){
+                $(this).addClass("noClick");
+            }  
+            var uuid = $(this).val();
+            $.ajax({
+                type:'get',
+                url:'/detail/zan',
+                data:{
+                    "article_uuid" : uuid
+                },
+                dataType:'json',
+                success:function(res){
+                    if (res.code == 1) {
+                        var v = $("#qwlike").html() || 0;
+                        var a = parseInt(v);
+                        a++;
+                        $("#qwlike").html(a);
+                    }else{
+                        return;
+                    }
+                },
+                complete:function(){
+                }
+            })
+        })
+        //祈福接口获取
+        $(".pubu_qifu").click(function () {
+            $(this).addClass("dianzan-ok2q");
+            $(this).next().fadeIn().fadeOut();
+            if($(this).hasClass("dianzan-ok2q")){
+                $(this).addClass("noClick");
+            }   
+            var uuid = $(this).val();
+            $.ajax({
+                type:'get',
+                url:'/detail/zan',
+                data:{
+                    "article_uuid" : uuid
+                },
+                dataType:'json',
+                success:function(res){
+                    if (res.code == 1) {
+                        var v = $("#qwlike").html() || 0;
+                        var a = parseInt(v);
+                        a++;
+                        $("#qwlike").html(a);
+                    }else{
+                        return;
+                    }
+                },
+                complete:function(){
+                }
+            })
+        })  
+    </script>
+
+    <!-- 统计 -->
+    <div style="display:none;">
+        <script type="text/javascript" src="https://static.bjnews.com.cn/public/tj.js"></script>
+    </div>
+
+    <footer class="footer">
+         <div class="f-top">         
+         </div>  
+         <div class="f-partner">
+             <div class="content">
+                <p class="footer-t">
+                    <a rel="nofollow" target="_blank" href="http://www.sina.com/">新浪网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.163.com/">网易</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.sohu.com/">搜狐</a> |
+                    <!-- <a rel="nofollow" target="_blank" href="http://www.ifeng.com/">凤凰网</a> | -->
+                    <a rel="nofollow" target="_blank" href="https://news.uc.cn/">UC头条</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.xinhuanet.com/">新华网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.chinanews.com/">中新网</a> 
+                    <!-- <a rel="nofollow" target="_blank" href="http://www.china.com.cn/">中国网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.china.com/">中华网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.caijing.com.cn/">财经网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.fang.com/">房天下</a><br> -->
+                    <a rel="nofollow" target="_blank" href="https://www.wisers.com.cn/">慧科讯业</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.toutiao.com/">今日头条</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.yidianzixun.com/">一点资讯</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.qianlong.com/">千龙网</a> |
+                    <a rel="nofollow" target="_blank" href="http://www.bkeconomy.com/">贝壳财经</a>|
+                    <a rel="nofollow" target="_blank" href="https://www.qq.com/">腾讯网</a>|
+                    <a rel="nofollow" target="_blank" href="https://news.baidu.com/ ">百度</a>
+                </p>
+             </div>
+         </div> 
+          
+        <div class="dbnews_nr">
+            <p>
+               经营许可证编号：京ICP证090533号  <i>|</i> 
+               <a href="http://beian.miit.gov.cn/" target="_blank">京ICP备18053894号</a><i>|</i>  
+               国新办网备字[2006]7号  <i>|</i>  
+               广播电视节目制作经营许可证：(京)字第02592号  <i>|</i>  
+               <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102004542/" target="_blank">京公网安备11010102004542号</a><br>
+            </p>
+            <div class="dbnews_nr2 clearfix">
+                <div class="fl nr2_l">
+                    <p>
+                        <a href="/site/about" target="_blank">关于我们</a>
+                        <a href="/site/copyright" target="_blank">版权声明</a>    
+                        <a href="/site/contact" target="_blank">联系我们</a>    
+                        <a href="/site/jobs" target="_blank">工作机会</a>      
+                        <a href="/site/links" target="_blank">友情链接</a>   
+                        <a href="/site/protocolservice" target="_blank">服务协议</a>
+                        <br>
+                        Copy Right © 2004-2020 www.bjnews.com.cn All Rights Reserved
+                    </p>
+                </div>
+                <div class="fl nr2_r">
+                    <img class="" src="https://static.bjnews.com.cn/www/v6/images/footer-tel1_2.png" alt="" width="159"  />
+                    <img class="" src="https://static.bjnews.com.cn/www/v6/images/footer-tel1_1.png" alt="" width="159" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="backTop">
+        <!-- 返回顶部 -->
+        <div class="backTop1">
+            <em></em>       
+        </div>
+        <!-- 微信 -->
+        <div class="backTop2">
+            <em></em>
+            <div class="f-hov">
+                <img src="https://static.bjnews.com.cn/www/v6/images/footer01.jpg" alt="" />
+                <span class="arrow-right"></span>
+            </div>
+        </div>
+        <!-- 微博 -->
+        <div class="backTop3">
+            <a href="https://www.weibo.com/xjb" target="_blank"><em></em></a>
+        </div>
+        <!-- 客户端 -->
+        <div class="backTop4">
+            <em></em>
+            <div class="f-hov">
+                <img src="https://static.bjnews.com.cn/www/v6/images/footer032.png" alt="" />
+                <span class="arrow-right"></span>
+            </div> 
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $(document).keydown(function(event){ 
+                if(event.keyCode==13){ 
+                    $(".inp_ico").click(); 
+                } 
+            });
+            // 搜索页面跳转
+            $('.inp_ico').on('click', function () {
+                var key = $('.inp_search').val().trim();
+                if (key) { // 如果有值
+                    window.location.href = '/search?bwsk=' + key;
+                    // window.location.href = '/search?bwsk=' + key + '&orderby=1';
+                }
+            });
+            //底部二维码
+            $(".backTop4").mouseover(function(){
+                $(".backTop4 .f-hov").show();
+            });
+            $(".backTop4").mouseout(function(){
+                $(".backTop4 .f-hov").hide();
+            });
+            $(".backTop2").mouseover(function(){
+                $(".backTop2 .f-hov").show();
+            });
+            $(".backTop2").mouseout(function(){
+                $(".backTop2 .f-hov").hide();
+            });
+        })
+    </script>
+    <!-- 适老化改造 -->
+    <script type="text/javascript" src="https://slwza.bjnews.com.cn/slwza/www.bjnews.com.cn/route.js"></script>
+</body>
+</html>   

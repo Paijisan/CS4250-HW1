@@ -1,157 +1,364 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="ROBOTS" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@nhk_world">
-  <meta name="keywords" content="NHK, nhk, æ¥æ¬æ¾éåä¼, ã¨ãã¨ã¤ãã±ã¤, NHKWORLD, NHKã¯ã¼ã«ã JAPAN, å½éæ¾é, NHKã¯ã¼ã«ããã¬ãã¢ã , æ¥æ¬, ã¯ã¼ã«ãTV">
-  <meta name="description" content="NHKã¯ã¼ã«ã JAPANã¯å¬å¼ã¦ã§ããµã¤ããã¢ããªãéãã¦ããã¥ã¼ã¹ãå¤å½©ãªçªçµã®ã©ã¤ãéä¿¡ããªã³ããã³ãéä¿¡ãè¡ã£ã¦ãã¾ãã">
-  <meta property="fb:app_id" content="1717775218444936">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="NHK WORLD-JAPAN">
-  <meta property="og:title" content="NHKã¯ã¼ã«ã JAPANã¨ã¯ | NHK WORLD-JAPAN - NHKã®å½éãµã¼ãã¹">
-  <meta property="og:description" content="NHKã¯ã¼ã«ã JAPANã¯å¬å¼ã¦ã§ããµã¤ããã¢ããªãéãã¦ããã¥ã¼ã¹ãå¤å½©ãªçªçµã®ã©ã¤ãéä¿¡ããªã³ããã³ãéä¿¡ãè¡ã£ã¦ãã¾ãã">
-  <meta property="og:image" content="https://www3.nhk.or.jp/nhkworld/ja/assets/images/common/nw_ogimage.jpg">
-  <meta property="og:url" content="https://www3.nhk.or.jp/nhkworld/ja/about/">
-  <title>NHKã¯ã¼ã«ã JAPANã¨ã¯ | NHK WORLD-JAPAN - NHKã®å½éãµã¼ãã¹</title>
-  <link rel="icon" sizes="192x192" href="/nhkworld/common/site_images/nw_webapp_news_192x192.png">
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
-  <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
-  <link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/ja/about/">
-  <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css">
-  <!-- add css -->
-  <link rel="stylesheet" href="/nhkworld/ja/assets/css/style.css">
-  <!-- // add css -->
-  <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
-  <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
-  <script src="/nhkworld/assets/javascripts/api-sdk.js" charset="utf-8"></script>
-  <!-- add script -->
-  <script src="/nhkworld/ja/assets/js/script.js" charset="utf-8"></script>
-  <!-- // add script -->
-</head>
-<body>
-  <div class="l-wrapper">
-    <header class="l-header">
-      <!-- NHK WORLD header -->
-      <div id="nw-global-header"></div>
-      <!-- // NHK WORLD header -->
-      <!-- Ja header -->
-      <div class="l-header__ja" id="l-header__ja"></div>
-      <!-- // Ja header -->
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="ROBOT" content="NOODP, NOARCHIVE, INDEX, FOLLOW" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@nhk_world" />
+    <meta name="description" content="NHKワールド JAPANの番組「やさしい日本語 Easy Japanese 会話編」を使ったサンプル授業をまとめています。ここでは第1課「場所ををきく」について教えます。" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta property="fb:app_id" content="1717775218444936" />
+    <meta property="og:type" content="music.radio_station" />
+    <meta property="og:site_name" content="NHK WORLD-JAPAN" />
+    <meta property="og:title" content="日本語学習番組「やさしい日本語」サンプル授業 | 先生向け 日本語学習番組・教材活用ガイド | NHK WORLD-JAPAN - NHKの国際サービス" />
+    <meta property="og:description" content="NHKワールド JAPANの番組「やさしい日本語 Easy Japanese 会話編」を使ったサンプル授業をまとめています。ここでは第1課「場所ををきく」について教えます。" />
+    <meta property="og:image" content="https://www3.nhk.or.jp/nhkworld/ja/learnjapanese/teacher/assets/images/og.jpg" />
+    <meta property="og:url" content="https://www3.nhk.or.jp/nhkworld/ja/learnjapanese/teacher/" />
+    <title>日本語学習番組「やさしい日本語」サンプル授業 | 先生向け 日本語学習番組・教材活用ガイド | NHK WORLD-JAPAN - NHKの国際サービス</title>
+    <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png" />
+    <link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/ja/learnjapanese/teacher/howto_easyjapanese/material/" />
+    <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css" />
+    <!-- add css -->
+    <link rel="stylesheet" href="/nhkworld/ja/learnjapanese/teacher/assets/css/inside.css" />
+    <!-- // add css -->
+    <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
+    <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
+    <script  src="/nhkworld/assets/javascripts/api-sdk.js" charset="utf-8"></script>
+    <script src="/nhkworld/common/js/lib/jquery-3.min.js" charset="utf-8"></script>
+    <!-- add script -->
+    <script src="/nhkworld/ja/learnjapanese/teacher/assets/js/min/main.min.js" charset="utf-8"></script>
+    <!-- // add script -->
+  </head>
+  <body id="">
+    <div id="nw-global-header"></div>
 
-    <div class="p-about">
-      <div class="c-pageTop -half">
-        <div class="c-pageTop__inner">
-          <h1 class="c-pageTop__title -main">NHKã¯ã¼ã«ã JAPANã¨ã¯</h1>
+    <!-- add CONTENTS -->
+    <div id="for-teacher">
+
+      <header id="teacher-menu"></header>
+
+      <section id="head-block">
+        <div class="inner-block">
+          <h2 class="ttl"><span class="sub">「やさしい日本語 Easy Japanese」の使い方</span>サンプル授業</h2>
+          <p>日本語での授業を想定しています。学習者は、<span class="mylang">自言語の</span>1課のテキストを事前にダウンロードし、印刷するかスマートフォンやタブレット、パソコンなどで表示しておきましょう。</p>
+          <div class="box">
+            <p class="sample">1課 場所を聞く</p>
+            <h3>「はるさんハウスはどこですか」で授業をしてみよう!</h3>
+            <p><a href="https://www.nhk.or.jp/lesson/ja/lessons/01.html" class="link-btn" target="_blank">1課のレッスンページ（日本語版）はこちら</a></p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="l-contents">
-        <div class="l-block">
-          <div class="c-lead">
-            <p>NHKã¯ã¼ã«ã JAPANã¯æ¥æ¬ã®å¬å±ã¡ãã£ã¢ãNHKã®å½éãµã¼ãã¹ã§ãããã¬ããã©ã¸ãªãã¤ã³ã¿ã¼ããããéãã¦ãä¸çã«åãã¦å¤è¨èªã§æå ±ãçºä¿¡ãã¦ãã¾ãã</p>
-          </div>
+      <section id="sample-block">
+        <div class="inner-block">
 
-          <div class="c-block">
-            <h2 class="c-heading">ããã·ã§ã³ã¹ãã¼ãã¡ã³ã</h2>
-
-            <h3 class="c-heading2">NHKã¯ã¼ã«ã JAPANã¯ã</h3>
-            <div class="p-about__text">
-              <h4>ãã£ã¨ãä¿¡é ¼ãããã¡ãã£ã¢ããããã¾ã</h4>
-              <p>ç§ãã¡ã¯ãæ¥æ¬ã®å¬å±ã¡ãã£ã¢ãNHKã®å½éãµã¼ãã¹ã§ãããã¬ããã©ã¸ãªãã¤ã³ã¿ã¼ããããéãã¦ãæ­£ç¢ºã§å¬å¹³ãªãã¥ã¼ã¹ããå¤å½©ã§è³ªã®é«ãã³ã³ãã³ãããä¸çã«åãã¦å¤è¨èªã§çºä¿¡ãã¾ããèªç±ã¨æ°ä¸»ä¸»ç¾©ãå°éããç·¨éæ¹éãå®ããä¸çã®äººãã®ç¸äºçè§£ã®ä¿é²ã«åªãã¾ãã</p>
-            </div>
-
-            <div class="p-about__text">
-              <h4>ããªãã®è¦éãåºãã¾ã</h4>
-              <p>ç§ãã¡ã¯ããã¾ä¸çã§èµ·ãã¦ãããã¨ã«ã¤ãã¦ãæ¥æ¬ããã®è¦ç¹ããå¤æ§ãªãã®ã®è¦æ¹ãæç¤ºãã¾ããæ§ããªè§åº¦ããå½éç¤¾ä¼ãåæããç©äºã®æ¬è³ªãè¦ã¤ããããã®æ°ããªè¦ç¹ããå±ããã¾ãã</p>
-            </div>
-
-            <div class="p-about__text">
-              <h4>æ¥æ¬ã¨ã¢ã¸ã¢ã®ä»ãä¼ãã¾ã</h4>
-              <p>ç§ãã¡ã¯ãæ¥æ¬ã¨ã¢ã¸ã¢ã¸ã®ãæãã¨ãã¦ããã®å°åã®æåãä¼çµ±ã®å¤æ§æ§ããã¸ãã¹ãç§å­¦æè¡ã®ææ°æå ±ãç´¹ä»ãã¾ããããã¦ãæ¥æ¬ã¨ã¢ã¸ã¢ã®äººãã¨ã®ã¤ãªãããå¤§åã«ããªãããããã§çããäººãã®æ®ãããæããä¼ãã¦ããã¾ãã</p>
-            </div>
-
-            <div class="p-about__widing">
-              NHKã¯ã¼ã«ã JAPAN<br>
-              ããªãã®ä¸çãåºãã¾ã
-            </div>
-          </div>
-
-          <div class="p-aboutRecommend c-block" id="p-aboutRecommend" style="padding-top: 0;">
-            <h2 class="c-heading">ãç¥ãã</h2>
-
-            <div class="p-about__recommend" id="p-about__recommend"></div>
-          </div>
-
-        </div>
-
-        <div class="p-about-learn-more">
-          <div class="p-about-learn-more-item">
-            <div class="p-about-learn-more-item-head">
-              <div class="p-about-learn-more-image p-about-learn-more-image--1"></div>
-            </div>
-            <div class="p-about-learn-more-item-body">
-              <h3 class="p-about-learn-more-heading">NHKã«ã¤ãã¦</h3>
-              <p>å½åæ¾éãå«ãããNHKå¨ä½ã«ã¤ãã¦ã¯ãã¡ãããè¦§ãã ããã</p>
+          <div class="box">
+            <div class="head num1"><span><span>1</span>Can-do</span>の確認</div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/01.png" alt="">
+            </figure>
+            <div class="text">
               <ul>
-                <li><a href="https://www.nhk.or.jp/info/about/">æ¦è¦ã»æ²¿é©ã»æ¥­ååå®¹ãªã©</a></li>
+                <li>Can-doを提示。</li>
+              </ul>
+              <p class="teacer"><i class="icn-teacer"></i><span>今日の目標は、『場所をきく』です。行きたいところの場所について 質問できるようになりましょう。</span></p>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>学習者は、自言語のテキストでもCan-doを確認する。</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num2"><span><span>2</span>スキット</span>の動画再生</div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/02.png" alt="">
+            </figure>
+            <div class="text">
+              <ul>
+                <li>字幕の「日本語」か「日本語（ローマ字）」を選択して動画を再生。学習者は、自言語のテキストで、スキットの意味を確認。</li>
+                <li>字幕の「日本語」か「日本語（ローマ字）」を選択してもう1度、動画を再生。</li>
+                <li>セリフをひとつずつ再生、その際、意味も確認。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>字幕は学習者のレベルや授業目的に合わせて選択。学習者の自言語が全て同じ場合は、その言語の字幕を選択してスキット動画を再生してもよい。</li>
+                    <li>教室で動画を再生できない場合は、教師がセリフを読んでもよい。</li>
+                    <li>この段階では会話の内容が把握できることを目的とし、細かいセリフの理解までは求めない。</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num3"><span><span>3</span>キーフレーズ</span>の確認</div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/03.png" alt="">
+            </figure>
+            <div class="text">
+              <ul>
+                <li>Can-do とキーフレーズを確認する。</li>
+              </ul>
+              <p class="teacer"><i class="icn-teacer"></i><span>今日の目標（Can-do）『場所をきく』ができるようになるためのキーフレーズは、『はるさんハウスはどこですか』です。</span></p>
+              <ul class="step">
+                <li>板書：【場所】はどこですか</li>
+              </ul>
+              <ul>
+                <li>キーフレーズの文法のポイントを確認。</li>
+              </ul>
+              <p class="teacer"><i class="icn-teacer"></i><span>ききたい場所に『は』をつけて、『どこですか』と言います。<br>『か』は質問の文につきます。</span></p>
+              <ul>
+                <li>学習者に自言語のテキストの、キーフレーズ解説を読ませる。</li>
+                <li>キーフレーズの「はるさんハウスはどこですか」を再生、あるいは教師が言い、学習者にリピートさせる。</li>
               </ul>
             </div>
           </div>
 
-          <div class="p-about-learn-more-item">
-            <div class="p-about-learn-more-item-head">
-              <div class="p-about-learn-more-image p-about-learn-more-image--5"></div>
-            </div>
-            <div class="p-about-learn-more-item-body">
-              <h3 class="p-about-learn-more-heading">æ¥æ¬è³</h3>
-              <p>ãæ¥æ¬è³ãã¯ãNHKãä¸»å¬ãããæè²ã³ã³ãã³ããå¯¾è±¡ã¨ããå½éã³ã³ã¯ã¼ã«ã§ãã</p>
+          <div class="box">
+            <div class="head num4"><span><span>4</span>使ってみよう！</span>を使って会話練習</div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/04.png" alt="">
+            </figure>
+            <div class="text">
               <ul>
-                <li><a href="http://www.nhk.or.jp/jp-prize/">æ¥æ¬è³ãµã¤ã</a></li>
+                <li>会話を一通り再生。（以下、再生できない場合は教師が読む）学習者は、自言語のテキストで意味を確認。</li>
+              </ul>
+              <p class="teacer"><i class="icn-teacer"></i><span>「すみません。トイレはどこですか」「あそこです。」</span></p>
+              <ul>
+                <li>人物毎のセリフを再生し、リピート練習させる。<br>
+                「トイレ」以外に学習者が知っている場所の名前を入れて言わせる。</li>
+                <li>2人1組でロールプレイ練習をする。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>右側のセリフの音声を使ってシャドーイングの練習もできる。</li>
+                    <li>余裕があれば、「お手洗い」など「トイレ」の別の呼び方を紹介する。</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num5"><span><span>5</span>できるかな？</span>を使って練習問題を解く</div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/05.png" alt="">
+            </figure>
+            <div class="text">
+              <ul>
+                <li>1番目の問題をする。問題文の各言語訳を見せ、日本語でどう言えば良いか、学習者に考えさせる。</li>
+                <li>教師が3つの答えの文章を読み、正しい言い方の番号を答えさせる。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>選択肢の間違った日本語は学習者には読ませず、教師が読み上げる。</li>
+                  </ul>
+                </dd>
+              </dl>
+              <ul>
+                <li>2問目、3問目のイラストと問題文を見せ、各自に答えさせる。</li>
+                <li>答えの音声を再生。正解と自分の答えとどこが違うか確認。</li>
+                <li>答えの音声を聞かせ、リピート。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num6"><span><span>6</span>Can-do</span></div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/06.png" alt="">
+            </figure>
+            <div class="text">
+              <ul>
+                <li>ここでもう1度、まとめとして、今日の目標を確認する。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="more">
+            <p>ここからは、授業を発展させるためのアクティビティです。<br>
+            時間と余裕があれば、お使いください！</p>
+          </div>
+
+          <div class="box">
+            <div class="head num7"><span><span>7</span>発展的な活動</span></div>
+            <div class="text">
+              <ul>
+                <li>駅の構内図を用意。<br>
+                「改札口」「エスカレーター」「エレベーター」などの語彙を確認。</li>
+                <li>キーフレーズの「～はどこですか」を使って、場所を聞く練習。教えてもらった時のお礼の言い方も確認。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>駅構内以外にもスーパーマーケットの売り場案内図を準備し、「野菜売り場」「果物売り場」「魚売り場」などを聞くようにしても良い。</li>
+                  </ul>
+                </dd>
+              </dl>
+              <ul>
+                <li>「役に立つことば」の左ページの2段目「街の中」にある語彙を使う。<br>
+                <a href="https://www.nhk.or.jp/lesson/ja/pdf/textbook_appendix.pdf#page=3" class="link-btn sm" target="_blank">役に立つことばはこちら</a></li>
+                <li>まず「役に立つことば」の「駅」「病院」などひとつずつ読んで聞かせ、意味と発音を確認、リピート練習。</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num8"><span><span>8</span>今日のもう一言</span>で役に立つ言葉を丸覚え</div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/07.png" alt="">
+            </figure>
+            <div class="text">
+              <ul>
+                <li>「いろいろな人が発音します」を再生し、いろいろな言い方を聞かせる。</li>
+                <li>学習者にも実際に言わせて、便利な表現として覚えさせる。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>「ありがとうございます」の返事として、「どういたしまして」「いえいえ」などの短い表現を紹介してもよい。</li>
+                  </ul>
+                </dd>
+              </dl>
+              <p>※課によっては、「今日のもう一言」コーナーの代わりに、「ステップアップ」コーナーがある。「ステップアップ」では数字や言葉をリピート練習。</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num9"><span><span>9</span>日本の文化と生活</span></div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/08.png" alt="">
+            </figure>
+            <div class="text">
+              <ul>
+                <li>ひらがな表を見せたりしながら、日本語の構造を紹介。<br>
+                「子音と母音」→「ひらがな表」を用意し、5つの母音とその母音と子音の組み合わせを確認。<br>
+                <a href="https://www.nhk.or.jp/lesson/ja/letters/hiragana.html" class="link-btn sm" target="_blank">ひらがな表はこちら</a></li>
+                <li>イラストの「雨」「飴」を見せ、日本語のアクセントは、弱い強いではなく、高い低いであることを説明。</li>
+                <li>「雨と飴」の違いを発音してみせて、「では、これから言うのはどっちでしょう」などと言って聞き分ける練習などをする。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>学習者の母語でも同様のことがあるかなど自由に言わせる。</li>
+                    <li>課ごとに日本の食べ物や旅情報、緊急時の対応といったさまざまな話題があり、学習者といっしょに話を膨らませる。</li>
+                    <li>教材に出てくるものの他にも「橋」「箸」などアクセントが異なると意味が異なる語彙を紹介。</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num10"><span><span>10</span>漢字</span></div>
+            <figure>
+              <img src="/nhkworld/ja/learnjapanese/teacher/assets/images/sample/09.png" alt="">
+            </figure>
+            <div class="text">
+              <ul>
+                <li>動画を再生する。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>ここでは漢字に興味を持ってもらうことが目的。<br>書く練習や覚えさせることまではしなくてよい。</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="head num11"><span><span>11</span>スキット</span></div>
+            <div class="text">
+              <ul>
+                <li>今日の学習のポイントを確認する。</li>
+              </ul>
+              <p class="teacer"><i class="icn-teacer"></i><span>今日のキーフレーズ『はるさんハウスはどこですか』でしたね。<br>行きたいところの場所について質問できるようになりましたね。</span></p>
+              <ul>
+                <li>「すみません」「すぐ近くです」「一緒に行きましょう」などの意味や使い方を確認。</li>
+              </ul>
+              <dl>
+                <dt>POINT</dt>
+                <dd>
+                  <ul>
+                    <li>余裕があれば、［スキット］や［新しいことば］に出てくる他の表現やことばを取り上げる。意味も書いてあるので、細かい説明なしで表現として活用できる。</li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="more">
+            <p>今回の「サンプル授業」を参考に、2課以降も授業でご活用ください！</p>
+            <a href="/nhkworld/ja/learnjapanese/teacher/howto_easyjapanese/lesson/sample/tips/" class="link-btn">2課以降の教え方Tipsはこちら</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="link-block">
+        <div class="inner-block">
+          <div class="lesson-box spin">
+            <div>
+              <h3>授業で使ってみよう</h3>
+              <ul>
+                <li><a href="/nhkworld/ja/learnjapanese/teacher/howto_easyjapanese/lesson/segment/">コーナー紹介</a></li>
+                <li><a href="/nhkworld/ja/learnjapanese/teacher/howto_easyjapanese/lesson/cando/">全レッスンのCan-do</a></li>
+                <li class="is-active"><a href="/nhkworld/ja/learnjapanese/teacher/howto_easyjapanese/lesson/sample/01.html">サンプル授業</a></li>
               </ul>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="p-about-bottom-content">
-          <div class="p-about-press-kit">
-            <h3 class="p-about-press-kit-heading"><a class="p-about-press-kit-link" href="https://www3.nhk.or.jp/nhkworld/ja/information/brochure/">å¬å¼ãã³ãã¬ãã</a></h3>
-          </div>
-
-          <div class="p-about-contact-us">
-            <h3 class="p-about-press-kit-heading">ãåãåãã</h3>
-            <p>
-              NHKã¯ã¼ã«ã JAPANãNHKã¯ã¼ã«ãã»ã©ã¸ãªæ¥æ¬ã¸ã®ãåãåããã¯ãã¡ã¼ã«ãã©ã¼ã ãããéããã ããã
-              <span>NHKã¯ã¼ã«ãã»ãã¬ãã¢ã ã¸ã®ãåãåããã¯<a href=" https://nhkworldpremium.com/ja/inquiry" target="_blank">ï¼æ ªï¼æ¥æ¬å½éæ¾éãã«ã¹ã¿ãã¼ã»ã³ã¿ã¼ã</a>ã¾ã§ãå¯ããã ããã*NHKãµã¤ããé¢ãã¾ãã</span>
-            </p>
-            <div class="p-about-contact-us-actions c-btnR -blk -default">
-              <a href="/nhkworld/ja/contact/" class="c-btnR__text">ã¡ã¼ã«ãã©ã¼ã </a>
-            </div>
+      <aside>
+        <div id="sns-block"><div id="share"></div></div>
+        <div id="banner-block">
+          <div class="inner-block">
+            <div class="banner-item" data-name="learnjapanese"><a href="https://www3.nhk.or.jp/nhkworld/en/learnjapanese/"><div class="banner-image"></div></a></div>
           </div>
         </div>
-
-      </div>
+      </aside>
+      <div id="page-top"><i></i></div>
     </div>
+    <!-- // add CONTENTS -->
 
-    <footer class="l-footer">
-      <!-- Ja footer -->
-      <div class="l-footer__ja" id="l-footer__ja"></div>
-      <!-- // Ja footer -->
-      <!-- NHK WORLD footer -->
-      <div id="nw-global-footer"></div>
-      <!-- // NHK WORLD footer -->
-    </footer>
-  </div>
-
-  <script>
-    window.nw_html5();
-    window.NWTool('NWHeader', { lang: 'ja' });
-    window.NWTool('NWFooter', { lang: 'ja' });
-  </script>
-</body>
+    <div id="nw-global-footer"></div>
+    <script>
+      window.nw_html5()
+      NWTool('NWHeader', {
+        lang: 'ja',
+        pathAbsolute: true,
+      })
+      NWTool('NWFooter', {
+        lang: 'ja',
+        pathAbsolute: true,
+      })
+      var sns = nw_showSNS.en({
+        url: 'https://www3.nhk.or.jp/nhkworld/ja/learnjapanese/teacher/',
+        title: '日本語学習番組「やさしい日本語」サンプル授業 | 先生向け 日本語学習番組・教材活用ガイド | NHK WORLD-JAPAN - NHKの国際サービス',
+      })
+      document.getElementById('share').appendChild(sns)
+    </script>
+  </body>
 </html>
