@@ -34,6 +34,7 @@ class WebCrawler:
                 print(f"Crawling: {url}")
                 response = requests.get(url, timeout=10, headers={"User-Agent": "Mozilla/5.0"})
                 response.raise_for_status()
+                response.encoding = "utf-8" # Assume content of page is in UTF-8
                 soup = BeautifulSoup(response.text, "html.parser")
 
                 # Detect page language
