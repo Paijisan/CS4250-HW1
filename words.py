@@ -6,10 +6,10 @@ from nltk.corpus import stopwords
 
 LANGUAGE_MAPPING = {
     "en": "english",
-    "zh-cn": "chinese",
-    "tl": "tagalog",
-    "ko": "korean",
-    "ja": "japanese"
+    "es": "spanish",
+    "nl": "dutch",
+    "fr": "french",
+    "de": "german"
 }
 
 SYMBOLS = {"|", "-", ",", ".", "+", ":", "?", "!", '"', "'", "(", ")", "[", "]", "...", "$"}
@@ -23,11 +23,15 @@ def tokenize_document(filename: str, lang: str) -> list[str]:
     # Remove unnecessary elements
     for element in soup.find_all(["script", "style", ""]):
         element.decompose()
-
-    # TODO: support other languages besides English
+    
     text = soup.get_text()
-    stop_words = stopwords.words("english")
-    tokens = word_tokenize(text, language="english")
+    if lang in LANGUAGE_MAPPING:
+        language = LANGUAGE_MAPPING[lang]
+    else:
+        print(f"WARNING: No language mapping for {lang}; defaulting to English (en)...")
+        language = "english"
+    stop_words = stopwords.words(language)
+    tokens = word_tokenize(text, language=language)
     filtered_tokens = list(filter(lambda x: x.lower() not in stop_words and x not in SYMBOLS, tokens))
     return filtered_tokens
     
