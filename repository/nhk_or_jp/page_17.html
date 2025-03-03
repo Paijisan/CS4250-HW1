@@ -1,84 +1,393 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="ROBOTS" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@nhk_world">
-  <meta name="keywords" content="NHK, Japan Broadcasting Corporation, Public Broadcaster, NHKWORLD, NHK WORLD, NHK WORLD PREMIUM, NHK WORLD TV, RADIO JAPAN, Japan">
-  <meta name="description" content="海外に滞在されている日本人の皆様の安全と安心を支えるため、日本語チャンネル「NHKワールド・プレミアム」から一部のニュース・番組をインターネットで配信しています。">
-  <meta property="fb:app_id" content="1717775218444936">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="NHK WORLD">
-  <meta property="og:title" content="NHKワールド・プレミアム 日本語見逃し配信  | NHK WORLD-JAPAN - NHKの国際サービス">
-  <meta property="og:description" content="海外に滞在されている日本人の皆様の安全と安心を支えるため、日本語チャンネル「NHKワールド・プレミアム」から一部のニュース・番組をインターネットで配信しています。">
-  <meta property="og:image" content="https://www3.nhk.or.jp/nhkworld/common/assets/ondemand/images/ogimage.jpg">
-  <meta property="og:url" content="https://www3.nhk.or.jp/nhkworld/ja/ondemand/video/">
-  <title>NHKワールド・プレミアム 日本語見逃し配信  | NHK WORLD-JAPAN - NHKの国際サービス</title>
-  <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
-  <link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/ja/ondemand/video/">
-  <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css">
-  <!-- add css -->
-  <link rel="stylesheet" href="/nhkworld/common/assets/ondemand/css/style.css">
-  <!-- // add css -->
-  <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
-  <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
-  <script src="/nhkworld/assets/javascripts/api-sdk.js" charset="utf-8"></script>
-  <!-- add script -->
-  <script src="/nhkworld/common/assets/ondemand/js/script.js" charset="utf-8"></script>
-  <!-- // add script -->
+<!DOCTYPE HTML>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 eq-ie6"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 eq-ie7"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 eq-ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
+
+<title>NHKニュース 速報・最新情報</title>
+<meta name="robots" content="noodp,noarchive">
+<meta name="keywords" content="NHK,ニュース,NHK NEWS WEB" />
+<meta name="description" content="NHKのニュースサイト「NHK NEWS WEB」。国内外の取材網を生かし、さまざまな分野のニュースをいち早く、正確にお伝えします。ニュース速報はもちろん、現場の記者が執筆した読み応えのある特集記事や、ＮＨＫならではの豊富な動画コンテンツも。" />
+<meta name="copyright" content="NHK(Japan Broadcasting Corporation)" />
+<meta name="author" content="日本放送協会" />
+<meta name="Targeted Geographic Area" content="Japan" />
+<meta name="coverage" content="Japan" />
+<meta name="rating" content="general" />
+<meta name="content-language" content="ja" />
+<meta name="robots" content="index,follow" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta property="og:site_name" content="NHK NEWS WEB" />
+<meta property="og:title" content="NHK NEWS WEB｜NHKのニュースサイト" />
+<meta property="og:locale" content="ja_JP" />
+<meta property="og:description" content="NHKのニュースサイト「NHK NEWS WEB」。国内外の取材網を生かし、さまざまな分野のニュースをいち早く、正確にお伝えします。ニュース速報はもちろん、現場の記者が執筆した読み応えのある特集記事や、ＮＨＫならではの豊富な動画コンテンツも。" />
+<meta property="og:url" content="https://www3.nhk.or.jp/news/" />
+<meta property="og:image" content="https://www3.nhk.or.jp/news/img/ogp_news_top_1280px.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:type" content="website" />
+<meta property="fb:app_id" content="157582317936888" />
+
+<meta name="theme-color" content="#0076d1" /><!-- meta-theme-color for Chrome -->
+<meta name="msapplication-config" content="/news/browserconfig.xml" />
+<meta name="msapplication-TileImage" content="/news/parts16/images/favicon/apple-touch-icon-180x180-precomposed.png" />
+<meta name="msapplication-TileColor" content="#0076d1" />
+
+<link rel="manifest" href="/news/manifest.json" />
+<link rel="shortcut icon" type="image/x-icon" href="/news/parts16/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/news/parts16/images/favicon/apple-touch-icon-180x180-precomposed.png" />
+
+<link rel="alternate" href="http://k.nhk.jp/knews/" media="handheld" />
+<link rel="canonical" href="https://www3.nhk.or.jp/news/" />
+
+<link rel="alternate" type="application/rss+xml" title="NHKニュース JUST IN" href="http://www3.nhk.or.jp/rss/news/cat-live.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース 主要ニュース" href="http://www3.nhk.or.jp/rss/news/cat0.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース 社会" href="http://www3.nhk.or.jp/rss/news/cat1.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース 科学・医療" href="http://www3.nhk.or.jp/rss/news/cat3.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース 政治" href="http://www3.nhk.or.jp/rss/news/cat4.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース 経済" href="http://www3.nhk.or.jp/rss/news/cat5.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース 国際" href="http://www3.nhk.or.jp/rss/news/cat6.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース スポーツ" href="http://www3.nhk.or.jp/rss/news/cat7.xml" />
+<link rel="alternate" type="application/rss+xml" title="NHKニュース 文化・エンタメ" href="http://www3.nhk.or.jp/rss/news/cat2.xml" />
+
+<script src="/common/js/nol_tools.js"></script>
+<link rel="stylesheet" href="/news/parts16/css/reset-v3.css?stamp=ph5120" />
+<link rel="stylesheet" href="/news/parts16/css/style-v3.css?stamp=ph5120" />
+<script src="/news/parts16/js/pre.bundle-v3.js?stamp=ph5120"></script>
+<script src="/news/parts16/js/modernizr.js" async="async"></script>
+<script src="/common/sp/nol_SmartPhone.js" charset="utf-8"></script>
+<script src="/common/sns/nol_share.js" charset="utf-8"></script>
+<script src="/news/r/js/exist.js" charset="utf-8"></script>
+<script>NHKSNS.initSNSOnLoad();</script>
+<script type="text/javascript">var _sf_startpt = (new Date()).getTime();var _cb_sections_preset = '一覧';</script>
+<script src="/news/parts16/js/chartbeat_mab_config.js" charset="UTF-8"></script>
 </head>
-<body>
-  <div class="l-wrapper">
-    <header class="l-header">
-      <!-- NHK WORLD header -->
-      <div id="nw-global-header"></div>
-      <!-- // NHK WORLD header -->
-      <!-- Ondemand header -->
-      <div class="l-header__onDemand" id="l-header__onDemand" data-current="video" data-lang="ja"></div>
-      <!-- // Ondemand header -->
-    </header>
+<body class="index">
 
-    <!-- Main Slider -->
-    <div class="c-mainSlider" id="p-topMainSlider" data-contentType="video"></div>
-    <!-- // Main Slider -->
+<section id="appsbanner">
+<script>NEWSPRE.preAppsBanner()</script>
+</section>
 
-    <div class="l-contents">
-      <!-- MyList -->
-      <section class="l-section" id="p-topMylist"></section>
-      <!-- Latest Episodes -->
-      <section class="l-section" id="p-topLatest"></section>
-      <!-- Most Watched -->
-      <section class="l-section" id="p-topMostwatched"></section>
-      <!-- Playlist -->
-      <section class="l-section" id="p-topPlaylists"></section>
-      <!--Lists -->
-            <section class="l-section p-topList" data-heading="おはよう日本" data-mode="program" data-key="ohayou" data-disabletype=""></section>
-            <section class="l-section p-topList" data-heading="ニュース7" data-mode="program" data-key="news7" data-disabletype=""></section>
-            <section class="l-section p-topList" data-heading="列島ニュース" data-mode="program" data-key="retto" data-disabletype=""></section>
-            <!-- Multilingual -->
-      <section class="p-topMulti l-section" id="p-topMulti"></section>
-    </div>
-    <!-- // l-content -->
+<aside id="nhkheader">
+<script>nol_showCmnHeader({design:'gray'});</script>
+</aside><!--/ #nhkheader -->
 
-    <footer class="l-footer">
-      <!-- Ondemand footer -->
-      <div class="l-footer__onDemand" id="l-footer__onDemand"></div>
-      <!-- // Ondemand header -->
-      <!-- NHK WORLD footer -->
-      <div id="nw-global-footer"></div>
-      <!-- /NHK WORLD footer -->
-    </footer>
-  </div>
+<aside class="module--news-flash" role="complementary"></aside><!--/ .flash_news -->
+<aside class="module--modal is-close"></aside><!--/ .module_modal -->
 
-  <script>
-    window.nw_html5();
-    window.NWTool('NWHeader', { lang: 'ja', current: 'ondemand' });
-    window.NWTool('NWFooter', { lang: 'ja' });
-  </script>
+<div id="wrapper">
+
+<header id="header" role="banner"></header><!--/ #header -->
+
+<div id="content">
+<div id="content-inner" class="-wide">
+
+<noscript>
+	このページではJavaScriptを使用しています。
+</noscript>
+
+<aside class="module--hot-trends"></aside><!--/ .hot_trends -->
+
+	<main id="main" role="main">
+
+		<article class="module module--site-information"></article>
+		<article class="module module--tsunami-information"></article>
+		<article class="module module--notifications"></article>
+		<article class="module module--free-space"></article>
+		<article class="module module--news-main index-main">
+			<header class="module--header">
+				<div class="module--header-text">
+					<h1>トップニュース</h1>
+					<p class="module--header-summary none-mobile">国内外の取材網を生かし、さまざまな分野のニュースをいち早く、正確にお伝えします</p>
+				</div>
+			</header>
+			<section class="module--content">
+				<div class="content--header">
+					<figure class="content--thumb">
+						<a href="/news/html/20250304/k10014738731000.html">
+							<img class="lazy" src="/news/parts16/images/common/noimg_default.gif" data-src="html/20250304/K10014738731_2503031947_0304002138_02_01.jpg" alt="新年度予算案 きょう衆院通過の見通し 修正は29年ぶり">
+						</a>
+					</figure>
+					<div class="content--summary">
+						<h1 class="content--header-title">
+							<a href="/news/html/20250304/k10014738731000.html">
+								<em class="title">新年度予算案 きょう衆院通過の見通し 修正は29年ぶり</em>
+							</a>
+							<span class="content--header-title-info">
+								<time datetime="2025-03-04T04:40:25">3月4日 4時40分</time>
+								<i class="i-new" aria-hidden="true">NEW</i>
+								<i class="i-media-video" aria-hidden="true">動画<i class="i-arrow"></i></i>
+								<a href="/news/word/0000456.html" class="i-word">来年度（新年度）予算</a>
+							</span>
+						</h1>
+						<div class="content--header-links none-mobile">
+							<ul>
+								<li><a href="/news/catnew.html"><i class="i-arrow is-right_g"></i>新着ニュース一覧<svg viewBox="0 0 21.52 18.5" width="21.52" height="18.5"><use xlink:href="/news/parts16/images/common/news-icons.svg#latest-news"></use></svg></a></li>
+								<li><a href="/news/special/lnews/"><i class="i-arrow is-right_g"></i>地域発ニュース<svg viewBox="0 0 19.17 20" width="19.17" height="20"><use xlink:href="/news/parts16/images/common/news-icons.svg#local-news"></use></svg></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="content--items">
+					<ul class="content--list grid--col -column2-md">
+						<li>
+							<dl>
+								<dt>
+									<a href="/news/html/20250304/k10014738811000.html">
+										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250304/K10014738811_2503031957_0304005700_02_01.jpg" alt="トランプ大統領 追加関税発動迫る 各国とのギリギリの交渉続く">
+									</a>
+								</dt>
+								<dd>
+									<a href="/news/html/20250304/k10014738811000.html">
+										<em class="title">トランプ大統領 追加関税発動迫る 各国とのギリギリの交渉続く</em>
+									</a>
+									<span class="content--items-info">
+										<a href="/news/word/0000277.html" class="i-word">トランプ大統領</a>
+										<time datetime="2025-03-04T02:45:50">3月4日 2時45分</time>
+										<i class="i-new" aria-hidden="true">NEW</i>
+									</span>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>
+									<a href="/news/html/20250303/k10014738171000.html">
+										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014738171_2503031454_0303153259_02_01.jpg" alt="東京都心で雪 4日の夜以降再び 関東甲信平地でも雪の見込み">
+									</a>
+								</dt>
+								<dd>
+									<a href="/news/html/20250303/k10014738171000.html">
+										<em class="title">東京都心で雪 4日の夜以降再び 関東甲信平地でも雪の見込み</em>
+									</a>
+									<span class="content--items-info">
+										<a href="/news/word/0000035.html" class="i-word">気象</a>
+										<time datetime="2025-03-03T19:07:58">3月3日 19時07分</time>
+										<i class="i-new" aria-hidden="true">NEW</i>
+									</span>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>
+									<a href="/news/html/20250303/k10014738141000.html">
+										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014738141_2503031501_0303150259_02_01.jpg" alt="秋篠宮ご夫妻の長男 悠仁さま 成年にあたり初の記者会見">
+										<i class="i-media-video"><i class="i-arrow"></i></i>
+									</a>
+								</dt>
+								<dd>
+									<a href="/news/html/20250303/k10014738141000.html">
+										<em class="title">秋篠宮ご夫妻の長男 悠仁さま 成年にあたり初の記者会見</em>
+									</a>
+									<span class="content--items-info">
+										<a href="/news/word/0000527.html" class="i-word">皇室</a>
+										<time datetime="2025-03-03T18:01:34">3月3日 18時01分</time>
+										<i class="i-new" aria-hidden="true">NEW</i>
+										<i class="i-media-video" aria-hidden="false"><i class="i-arrow"></i></i>
+									</span>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>
+									<a href="/news/html/20250303/k10014737921000.html">
+										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014737921_2503031003_0303100915_02_01.jpg" alt="岩手 大船渡 山林火災 赤崎町南側で被害拡大 夜を徹し消火活動">
+										<i class="i-media-video"><i class="i-arrow"></i></i>
+									</a>
+								</dt>
+								<dd>
+									<a href="/news/html/20250303/k10014737921000.html">
+										<em class="title">岩手 大船渡 山林火災 赤崎町南側で被害拡大 夜を徹し消火活動</em>
+									</a>
+									<span class="content--items-info">
+										<a href="/news/word/0002203.html" class="i-word">岩手県</a>
+										<time datetime="2025-03-03T19:44:04">3月3日 19時44分</time>
+										<i class="i-new" aria-hidden="true">NEW</i>
+										<i class="i-media-video" aria-hidden="false"><i class="i-arrow"></i></i>
+									</span>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>
+									<a href="/news/html/20250304/k10014738951000.html">
+										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250304/K10014738951_2503040209_0304021312_02_01.jpg" alt="台湾 TSMC アメリカに15兆円余の投資を計画 米有力紙報道">
+									</a>
+								</dt>
+								<dd>
+									<a href="/news/html/20250304/k10014738951000.html">
+										<em class="title">台湾 TSMC アメリカに15兆円余の投資を計画 米有力紙報道</em>
+									</a>
+									<span class="content--items-info">
+										<a href="/news/word/0002421.html" class="i-word">半導体</a>
+										<time datetime="2025-03-04T02:27:04">3月4日 2時27分</time>
+										<i class="i-new" aria-hidden="true">NEW</i>
+									</span>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>
+									<a href="/news/html/20250303/k10014738881000.html">
+										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014738881_2503032253_0303225624_02_01.jpg" alt="ドイツ 車が人混みに突っ込む 2人死亡10人けが 運転の男を拘束">
+									</a>
+								</dt>
+								<dd>
+									<a href="/news/html/20250303/k10014738881000.html">
+										<em class="title">ドイツ 車が人混みに突っ込む 2人死亡10人けが 運転の男を拘束</em>
+									</a>
+									<span class="content--items-info">
+										<a href="/news/word/0001798.html" class="i-word">ドイツ</a>
+										<time datetime="2025-03-04T04:49:29">3月4日 4時49分</time>
+										<i class="i-new" aria-hidden="true">NEW</i>
+									</span>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<ul class="content--list grid--col -column4-md -column2-sm">
+						<li>
+							<a href="/news/html/20250303/k10014738521000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014738521_2503031707_0303172403_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">伊藤忠会長「スキームに無理あった」セブン＆アイ非上場化白紙</em>
+							</a>
+						</li>
+						<li>
+							<a href="/news/html/20250303/k10014738201000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014738201_2503031300_0303143634_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">日本の自動車メーカー トランプ大統領の関税措置 影響は？</em>
+							</a>
+						</li>
+						<li>
+							<a href="/news/html/20250303/k10014735771000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014735771_2503031418_0303142238_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">追跡 広がるロシアの軍事 “闇ルート”</em>
+							</a>
+						</li>
+						<li>
+							<a href="/news/html/20250303/k10014734171000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250303/K10014734171_2502271705_0227183303_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">選挙ポスターの品位は SNSで偽情報拡散は 「2馬力」は？</em>
+							</a>
+						</li>
+						<li>
+							<a href="/news/html/20250302/k10014737411000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737411_2503012259_0301230402_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">【やり取り全文・前編】トランプ氏 ゼレンスキー氏 なぜ口論に</em>
+							</a>
+						</li>
+						<li>
+							<a href="/news/html/20250302/k10014737431000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737431_2503012300_0301230159_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">【やり取り全文・中編】トランプ氏 ゼレンスキー氏 なぜ口論に</em>
+							</a>
+						</li>
+						<li>
+							<a href="/news/html/20250302/k10014737471000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737471_2503012328_0302001445_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">【やり取り全文・後編】トランプ氏 ゼレンスキー氏 なぜ口論に</em>
+							</a>
+						</li>
+						<li>
+							<a href="/news/html/20250228/k10014735851000.html">
+								<figure>
+									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250228/K10014735851_2502281424_0228143206_02_01.jpg" alt="">
+									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
+								</figure>
+								<em class="title">国際課税 米が離脱示唆 歴史的改正の行く末は【経済コラム】</em>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<footer class="module--footer none-screen">
+				<p class="button">
+					<a href="/news/catnew.html"><i class="i-arrow is-right_g"></i>新着ニュース一覧を見る</a>
+				</p>
+				<p class="button">
+					<a href="/news/special/lnews/"><i class="i-arrow is-right_g"></i>地域発ニュースを見る</a>
+				</p>
+			</footer>
+		</article>
+
+		<article class="module module--announce announce-weather--2107 none-screen"></article>
+		<article class="module module--top-movie none-screen"></article>
+
+		<div class="module module--featured-articles--2022">
+			<article class="module module--featured-contents-tab"></article>
+			<article class="module module--featured-articles--local"></article>
+		</div>
+		<article class="module module--news-easy none-mobile"></article>
+		<article class="module module--program-info none-mobile"></article>
+		<article class="module module--recommend--2107 none-mobile"></article>
+		<article class="module module--tag--2309 none-mobile module--featured-recommend-list"></article>
+	</main><!--/ #main -->
+
+	<aside id="side" role="complementary">
+		<div id="side-inner" class="side-inner">
+
+			<article class="module_aside module_aside--earthquake"></article>
+			<article class="module_aside module_aside--search-widget none-mobile"></article>
+			<article class="module_aside module_aside--announce announce-weather--2212 none-mobile"></article>
+			<article class="module_aside module_aside--featured-movie none-mobile"></article>
+			<article class="module_aside module_aside--ranking ranking-social--2107"></article>
+			<article class="module_aside module_aside--ranking ranking-access--2107"></article>
+			<article class="module_aside module_aside--news-latest-and-local"></article>
+			<article class="module_aside module_aside--news-closeup"></article>
+			<article class="module_aside module_aside--featured-program"></article>
+			<article class="module_aside module_aside--announce announce-sdc"></article>
+			<article class="module_aside module_aside--recommend--2107 none-screen"></article>
+			<article class="module_aside module_aside--tag--2309 none-screen module--featured-recommend-list"></article>
+
+		</div><!--/ #side-inner -->
+	</aside><!--/ #side -->
+
+	<nav id="pagetop" class="pagetop" role="navigation" onclick="_tc_onClick(s_omni, {'eVar58':'all_footer','eVar59':'btn_pagetop'}, 'click');">
+		<a href="#wrapper" title="ページの先頭へ戻る"><i class="i-arrow is-up_w">ページの先頭へ戻る</i></a>
+	</nav>
+
+</div><!--/ #content-inner -->
+
+<footer id="footer" role="contentinfo"></footer><!--/ #footer -->
+
+<aside id="nhkfooter">
+<script>nol_showCmnFooter({mode:'full'});</script>
+</aside>
+
+</div><!--/ #content -->
+
+</div><!--/ #wrapper -->
+
+<script src="/news/parts16/js/vendor-v3.js?stamp=ph5120"></script>
+<script src="/news/parts16/js/app.bundle-v3.js?stamp=ph5120"></script>
+
 </body>
 </html>

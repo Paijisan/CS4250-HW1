@@ -1,9 +1,15 @@
-﻿<!DOCTYPE html>
+﻿<script>
+    if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|    wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) { 
+            //window.location.href= m_href
+            window.location.href= "https://m.bjnews.com.cn/detail/1741002789168191.html"
+    }
+</script>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>
-        新京报 - 好新闻，无止境    </title>
+        北京房山消防深入小区以车量道，打通消防救援“最后一公里” — 新京报    </title>
     <meta content="yes" name="apple-mobile-web-app-capable" />
     <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <meta name="apple-itunes-app" content="app-id=385679094"/>
@@ -102,14 +108,14 @@
             </script>
         </div>
     </div>
-    <div id="menu" class = 'menu_habor menu_nobor'   >
+    <div id="menu" class = 'menu_habor'   >
     <div class="menu_inner"  >
                 <span><a href="/"  > 首页</a></span>
                 <span><a href="/video"  > 视频</a></span>
                 <span><a href="/depth"  > 深读</a></span>
                 <span><a href="/gongyi"  > 公益</a></span>
                 <span><a href="/diyikandian"  > 第一看点</a></span>
-                <span><a href="/news"  > 时事</a></span>
+                <span><a href="/news"   class="cur"  > 时事</a></span>
                 <span><a href="/beijing"  > 北京</a></span>
                 <span><a href="/guoji"  > 国际</a></span>
                 <span><a href="/zhengshi"  > 政事儿</a></span>
@@ -130,121 +136,753 @@
                 <span><a href="/thinktank"  > 智库</a></span>
                 <span><a href="/country"  > 乡村</a></span>
             </div>
-    </div> 
-<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/common.css" />
-<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/index.css" />
-<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/list.css" />
-<div class="listBar2" style="margin-bottom: 0;"></div>
+    </div>   
+<input type="hidden" id="detail_url_m" value="https://m.bjnews.com.cn/detail/1741002789168191.html">
 
-    <div class="common_banner">
-        <img src="https://static.bjnews.com.cn/www/v6/images/about/protocolservice.jpg" alt="">
-    </div>
+<link rel="stylesheet" type="text/css" href="https://static.bjnews.com.cn/www/v6/css/details.css?v=1.0.43" />
+<!-- <link href="/css/video_m3u8.css" rel="stylesheet">
+<script src="/js/video_m3u8.js"></script>
+<script src="/js/videojs-contrib-hls.min.js" type="text/javascript"></script> -->
+<!-- videojs-contrib-hls 用于在电脑端播放 如果只需手机播放可以不引入 -->
 
-    <div id="main">
-        <!--中间部分-->
-        <div class="cooperation_box clear">
-            <div class="cooperation_left">
-                <ul class="cooperation_main_left">
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/about">关于我们</a></li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/copyright">版权声明</a></li>
-                    <li>
-                        <span class="cooperation_main_l_red"></span>
-                        <a class="conlor_red" href="/site/protocolservice">服务协议</a>
-                        <strong class="cooperation_main_l_line"></strong>
-                    </li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/contact#">联系我们</a></li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/jobs">工作机会</a></li>
-                    <li><span class="cooperation_main_l_bronze"></span><a href="/site/links">友情链接</a></li>
-                </ul>
+<link rel="stylesheet" href="https://static.bjnews.com.cn/www/v6/css/video-js.min.css" />
+<script type="text/javascript" src="https://static.bjnews.com.cn/www/v6/js/video.min.js"></script>
+
+<!-- <script type="text/javascript" src ="/js/videojs.hls.min.js"></script> -->
+<style>
+    .my-video-dimensions{ width: 800px;}
+    #contentStr .video-js{
+        width: 800px;
+        height: 450px;
+        text-align: center;
+    }
+    .video-js .vjs-big-play-button{
+        /* top: 190px;
+        left: 352px; */
+        top: 225px;
+        left: 400px;
+    }
+    .video-js .vjs-tech {
+        position: relative !important;
+        max-height: 450px;
+    }
+    /* .vjs-error .vjs-error-display .vjs-modal-dialog-content{
+        background-color: #000;
+        text-indent: -99999;
+    } */
+</style>
+ <!-- 广告 -->
+    <!-- <div class="detail_guanggao">
+        <em>广告</em>
+        <a href="#"><img class="g1" src="/images/temp/guanggao-d.png" alt="" /></a>
+    </div> -->
+    <!-- 正文标题 -->
+    <div class="bodyTitle">
+        <div class="content">
+            <div class="bread-line">
+                 
+                <a href="/" title="" class="home">首页</a> 
+                        > <i class="twoTit">时事</i> 
+                                       
             </div>
-            <div class="cooperation_right">
-                    <style>span.s1{font-size:14px;}</style>
-                    <div class="cooperation_about_us_cen">
-                        <!--这里是新添加的内容s-->  
-                       <p class="p1">本协议服务条款（以下简称“服务条款”）是由用户与派博在线（北京）科技有限责任公司（以下简称“派博在线”）就新京报网的服务所订立的相关权利义务规范，本服务条款对用户及派博在线均具有法律效力。</p>
-                       <p class="p1">新京报网特指派博在线开发的新闻内容阅读网站。</p>
-                       <p class="p1">一、服务条款的确认和接纳</p>
-                       <div class="neirong">
-                          <p>1、新京报网的所有权和经营权归新京报传媒有限责任公司下属公司派博在线（北京）科技有限责任公司 (网址：www.bjnews.com.cn）所有。</p>
-                          <p>2、用户在使用之前，应当仔细阅读本协议，并同意本协议的全部条款后方可使用新京报网提供的全部服务。</p>
-                          <p>3、用户浏览新京报网内容，或者使用新京报网有关服务，将视为已经仔细看过本协议并完全同意。</p>
-                          <p>4、本协议可由派博在线随时更新，用户应及时关注并同意，派博在线不承担通知义务。</p>
-                       </div>
-                       <p class="p1">二、用户使用规则</p>
-                       <div class="neirong1">
-                           <div class="div1">
-                              <p>1、用户通过新京报网发布信息时，必须遵守国家有关法律规定，并承担一切因自己发布信息不当导致的民事、行政或刑事法律责任。所有用户不得在本站任何页面发布、评论、批注、传送含有下列内容之一的信息，否则本站有权消除账号，并不通知用户：</p>
-                              <p><span class="s1">（1）</span>反对宪法所确定的基本原则的；</p>
-                              <p><span class="s1">（2）</span>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</p>
-                              <p><span class="s1">（3）</span>损害国家荣誉和利益的；</p>
-                              <p><span class="s1">（4）</span>煽动民族仇恨、民族歧视、破坏民族团结的；</p>
-                              <p><span class="s1">（5）</span>破坏国家宗教政策，宣扬邪教和封建迷信的；</p>
-                              <p><span class="s1">（6）</span>散布谣言，扰乱社会秩序，破坏社会稳定的；</p>
-                              <p><span class="s1">（7）</span>散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</p>
-                              <p><span class="s1">（8）</span>侮辱或者诽谤他人，侵害他人合法权利的；</p>
-                              <p><span class="s1">（9）</span>煽动非法集会、结社、游行、示威、聚众扰乱社会秩序的；</p>
-                              <p><span class="s1">（10）</span>以非法民间组织名义活动的；</p>
-                              <p><span class="s1">（11）</span>含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵或其它道德上令人反感的内容； </p>
-                              <p><span class="s1">（12）</span>含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的。</p>
-                           </div>
-                           <div class="div1">
-                              <p class="p2">2、用户不得使用未经派博在线授权的插件、外挂或第三方工具对新京报网进行干扰、破坏、修改或施加其他影响。</p>
-                           </div>
-                           <div class="div1">
-                              <p class="p2">3、用户同意与使用新京报网相关的一切资料、数据和记录，包括但不限于通行证帐号名称、所有登录、消费记录和相关的使用统计数字等归派博在线（北京）科技有限责任公司所有。发生争议时，用户同意以派博在线（北京）科技有限责任公司的系统数据为准，派博在线有责任保证该数据的真实性</p>
-                           </div>
-                       </div>
-                       <p class="p1">三、版权保护条款</p>
-                       <div class="neirong">
-                          <p>1、未经派博在线授权，任何人不得出于商业目的擅自使用、复制新京报网的知识产权（包括但不限于著作权）。所指知识产权包括文字报道、图片、音频、视频、图表、标志、标识、广告、商标、商号等其他资料。</p>
-                          <p>2、新京报网特有的报载标识、版面设计、专栏目录与名称、内容分类标准、编排方式等版权均属新京报传媒所有。未经派博在线许可，用户不得进行基于商业目的的复制、转载及其他侵权行为，亦无权给予第三方机构进行用于商业目的的复制、转载及其他侵权行为。</p>
-                          <p>3、新京报网所涉及所有产品icon、UI设计、交互设计、产品源代码等版权均属派博在线享有，未经派博在线许可，不得任意复制或修改以作为己用。</p>
-                       </div>
-                       <p class="p1">四、免责条款</p>
-                       <div class="neirong1">
-                           <div class="div1">
-                              <p class="p2">1、派博在线有权随时修改本协议的任何条款，且毋需另行通知，一旦本协议的内容发生变动，派博在线将在新京报网上公布修改之后的协议内容，该公布行为视为派博在线已经通知用户修改内容。如果不同意派博在线对本协议相关条款所做的修改，用户有权停止使用服务。如果用户继续使用服务，则视为用户接受派博在线对本协议相关条款所做的修改。</p>
-                           </div>
-                           <div class="div1">
-                              <p class="p2">2、鉴于新京报网服务的特殊性，用户同意派博在线有权随时变更、中断或终止部分或全部的客户端服务（包括收费服务）。如变更、中断或终止的服务属于免费服务，派博在线无需通知用户，也无需对任何用户或任何第三方承担任何责任；如变更、中断或终止的服务属于收费服务，派博在线应当在变更、中断或终止之后向受影响的用户提供等值的替代性的收费服务。</p>
-                           </div>
-                           <div class="div1">
-                              <p class="p2">3、派博在线需要定期或不定期地对提供服务的平台或相关的设备进行检修或者维护，如因此类情况而造成收费服务在合理时间内的中断，派博在线无需为此承担任何责任，但派博在线应尽可能事先进行通告。</p>
-                           </div>
-                           <div class="div1">
-                              <p>4、如发生下列任何一种情形，派博在线有权随时中断或终止向用户提供本协议项下的客户端服务而无需对用户或任何第三方承担任何责任：</p>
-                              <p><span class="s1">（1）</span>用户提供的个人资料不真实；</p>
-                              <p><span class="s1">（2）</span>用户违反本协议中规定的使用规则；</p>
-                              <p><span class="s1">（3）</span>用户在使用收费服务时未按规定向派博在线支付相应的服务费；</p>
-                              <p><span class="s1">（4）</span>用户使用服务的过程中出现违反国家法律法规及政策规定的情况。</p>
-                           </div>
-                           <div class="div1">
-                              <p class="p2">5、新京报网内所有内容并不反映任何派博在线之意见及观点。</p>
-                           </div>
-                           <div class="div1">
-                              <p class="p2">6、用户应维持其密码及帐号的机密安全，如果用户未保管好自己的帐号和密码而对用户、派博在线或第三方造成损害，用户将负全部责任。</p>
-                           </div>
-                           <div class="div1">
-                              <p class="p2">7、任何由于黑客政击、计算机病毒侵入或发作、因政府管制而造成的暂时性关闭等影响网络正常经营之不可抗力而造成的个人资料泄露、丢失、被盗用或被篡改等，派博在线不承担任何责任。</p>
-                           </div>
-                       </div>
-                       <p class="p1">五、附则</p>
-                       <div class="neirong">
-                          <p>1、本协议的版权归派博在线所有，派博在线保留对本协议的一切解释和修改权利。</p>
-                          <p>2、本协议的订立、执行和解释及争议的解决均应适用中华人民共和国大陆法律。因本协议
-        
-        引起的或有关的任何纠纷双方应本着求同存异、互相谅解的原则协商解决。若协商不成，任何一方可向北京仲裁委员会提起仲裁并按照其届时有效的仲裁规则仲裁，仲裁裁决是终局的，对双方均有约束力。</p>
-                          <p>3、派博在线未能及时行使本协议项下的任何权利或规定不应被视为放弃该权利，也不影响在将来行使该权利。</p>
-                          <p>4、如本协议中的任何条款无论因何种原因完全或部分无效或不具有执行力，或违反任何适用的法律，则该条款被视为删除，但本协议的其余条款仍应有效并且有约束力。</p>
-                          <p>5、若用户对本协议有任何意见或建议，欢迎垂询新京报客服中心（新京报客户服务热线：010-67106666）。</p>
-                       </div>
-                       <p class="p1">派博在线（北京）科技有限责任公司</p>
-                       <p>2013年10月30日</p>
-                       <!--这里是新添加的内容end-->
-                    </div>
+            <h1>北京房山消防深入小区以车量道，打通消防救援“最后一公里”</h1>
+            <div class="clearfix employ-line">
+                <div class="fl left-info">
+                    <!--新京号 判断 start-->
+                                            <span class="timer">2025-03-03 19:53</span> 
+                    
+                    <span class="reporter">
+                        <i class="xjh-t-line"></i>
+                        <em>记者：彭镜陶&nbsp;&nbsp;&nbsp;&nbsp;编辑：甘浩</em>
+                    </span>
+                    
                 </div>
+                <!-- 字体变化 -->
+                <div class="fr fontChanges">
+                    <!-- 分享 -->
+                    <!-- <span class="back fenxiang" data-id="" data-title="{$title} " id="resetter"></span> -->
+                    <span class="small" id="smaller"></span>
+                    <span class="add" id="bigger"></span>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="content">        
+        <article class="clearfix">
+            <!-- 左侧部分 -->
+            <div class="fl article">
+                <!-- 文章正文 -->
+                <div class="articleCenter"> <!-- 判断如果是视频页面添加class：articleCenter-video -->
+                                        <!-- 除视频外 简介显示 start-->
+                    <div class="introduction">
+                        <p>
+                            自 “以车量道” 行动开展以来，房山区消防救援支队已对35个小区、54条街道完成实地测量与宣传劝导工作，成功解决18起占用、堵塞消防车通道的违法行为，显著提升了消防车通道的通行效率。                        </p>
+                        <div class="blank-line"></div>
+                    </div>
+                    <!-- 除视频外 简介显示 end-->
+                                        <div class="article-text" id="contentStr">
+                        <!--增加直播预告 start-->
+                                                <!--增加直播预告 end-->
+                                                <div class="content-name">
+                            <div><p>新京报讯（记者彭镜陶）“以前总以为在小区消防车通道上临时停下车没什么大不了的，可今天亲眼看着消防车被堵住过不去，我才明白问题有多严重，以后一定注意！”北京房山一小区的一位私家车车主说。 近期，房山区消防救援支队开展 “以车量道” 行动，全力打通消防救援 “最后一公里” 。<br/></p><p><br/></p><p><img   id="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/ganhao822025331950592413062.jpg" src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/ganhao822025331950592413062.jpg?x-oss-process=image/resize,m_lfit,w_800/quality,q_80" type="image"  data-key="" title="" newsedit_path="附件发布设备,/2025/3/ganhao822025331950592413062.jpg" /></p><p label="图片说明" style="font-size: 14px; color: rgb(153, 153, 153); letter-spacing: 0.2px; line-height: 24px;">消防员驾驶消防车进入小区实测消防车通道是否畅通。图源：房山区消防救援支队</p><p><br/></p><p>消防车通道，作为火灾发生时消防车快速通行的关键道路，是实施灭火救援的 “生命通道”。但近年来，随着私家车保有量急剧增加，消防车通道被占用、堵塞的现象屡见不鲜，给火灾扑救和应急救援工作带来极大阻碍。<br/></p><p><br/></p><p>为强化消防车通道管理，同时增进辖区居民群众对消防工作的理解与支持，房山区消防救援支队创新工作思路，依托辖区各消防队站，积极开展 “以车量道” 行动。消防员们驾驶消防车深入各个小区、街道，实地仔细测量消防车通道的宽度、转弯半径、净空高度等关键数据，并针对占用、堵塞消防车通道的违法行为，现场进行耐心劝导并进行消防安全宣传教育。<br/></p><p><br/></p><p>“过去，我们更多是通过张贴海报、发放宣传单页等方式进行宣传，可效果不尽如人意。现在，我们直接把消防车开进小区，让居民群众亲眼看到消防车通行面临的实际困难，这种更直观的方式，大家更容易理解和接受。”房山区消防救援支队防火监督员姚远介绍说。</p><p><br/></p><p>自 “以车量道” 行动开展以来，房山区消防救援支队已对35个小区、54条街道完成实地测量与宣传劝导工作，成功解决18起占用、堵塞消防车通道的违法行为，显著提升了消防车通道的通行效率，赢得广大居民群众的高度认可。</p><p><br/></p><p>“消防员们为了我们的安全，这么晚还开着消防车到小区测试，太辛苦了。我们也得从自己做起，自觉维护消防车通道畅通。”一位小区居民说。</p><p><br/></p><p>消防部门在此呼吁广大市民朋友：自觉遵守消防法律法规，不占用、不堵塞消防车通道，为生命让出绿色通道。</p><p><br/></p><p>编辑 甘浩</p><p>校对 李立军</p><p><br/></p></div>                        </div>
+                        <script>
+                            $("video").each(function (index, element) {
+                            // $(".videoP").each(function (index, element) {
+                                console.log(index)
+                                // var videoUrl = $(this).children("video").attr("src");
+                                // var videoCover = $(this).children("video").attr("poster");
+                                var videoUrl = $(this).attr("src");
+                                var videoCover = $(this).attr("poster");
+                                if (videoUrl) {
+                                    if (videoUrl.split(".").pop() === 'm3u8') {
+                                        if(index == 0){
+                                            var video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" autoplay="autoplay" muted controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="' + videoUrl + '" type="application/x-mpegURL" />'
+                                            + '</video>';
+                                        }else {
+                                            var video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="' + videoUrl + '" type="application/x-mpegURL" />'
+                                            + '</video>';
+                                        }
+                                        // $(this).html("");
+                                        // $(this).html(video);
+                                        $(this).replaceWith(video);
+                                    } else {
+                                        var video = ''
+                                        if(index == 0){
+                                            video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" autoplay="autoplay" muted controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="'+ videoUrl +'" type="video/webm" />'
+                                            + '<source src="'+ videoUrl +'" type="video/ogg" />'
+                                            + '<source src="' + videoUrl + '" type="video/mp4" />'
+                                            + '</video>';
+                                        }else {
+                                            video = '<video id="my-video' + index + '" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" poster="' + videoCover + '"'
+                                            + 'data-setup="{}" src="' + videoUrl + '">'
+                                            + '<source src="'+ videoUrl +'" type="video/webm" />'
+                                            + '<source src="'+ videoUrl +'" type="video/ogg" />'
+                                            + '<source src="' + videoUrl + '" type="video/mp4" />'
+                                            + '</video>';
+                                        }
+                                        // $(this).html("");
+                                        // $(this).html(video);
+                                        $(this).replaceWith(video);
+                                    }
+                                    var my = 'my-video' + index
+                                    my = videojs(my);
+                                    my.on("play", function () {
+                                        nameAllPause(this.id_)
+                                        pauseAll()
+                                    })
+                                }
+                            });
+                            var audios = document.getElementsByTagName("audio");
+                            // 暂停函数
+                            function pauseAll() {
+                                var self = this;
+                                console.log(self);
+                                [].forEach.call(audios, function (i) {
+                                    // 将audios中其他的audio全部暂停
+                                    i !== self && i.pause();
+                                    console.log(i !== self && i.pause())
+                                })
+                            }
+                            // 给play事件绑定暂停函数
+                            [].forEach.call(audios, function (i) {
+                                i.addEventListener("play",function(){
+                                    console.log(i)
+                                    pauseAll.bind(i)()
+                                    nameAllPause()
+                                }.bind(i));
+                            })
+                            function nameAllPause(params) {
+                                $('.video-js').each(function(index, element) {
+                                    if($(this).attr('id') !== params || params=== undefined){
+                                        // console.log(params)
+                                        my = 'my-video' + index
+                                        videojs(my).pause();
+                                        // pauseAll()
+                                    }
+                                })
+                            }
+                        </script>
+                                                 
+
+                                            </div> 
+                </div>
+
+                
+
+
+                                <!-- 点赞 -->
+                <div class="giveThumbs-up clearfix" id="giveThumbs-up">
+                                        <div class="fl interact dianzan" id="detailZan">
+                        <a href="javascript:;" title="">
+                            <em></em>
+                            <span id="qwlike">
+                                                                    点赞
+                                                            </span>
+                        </a>
+                        <span class="dianzan-move"><i></i>+1</span>
+                    </div>
+                    
+                    <div class="fl interact weibo">
+                                                <a href="http://service.weibo.com/share/share.php?url=https://www.bjnews.com.cn/detail/1741002789168191.html&title=北京房山消防深入小区以车量道，打通消防救援“最后一公里”" target="_blank" title=""><em></em>微博</a>
+                    </div>            
+                
+                    <div class="fl interact weixin">
+                        <a href="javascript:;" title="">
+                            <em></em>
+                            微信
+                        </a>
+                        <div class="weixin-code-detail">
+                            <div class="er"></div>
+                            <!-- <img class="er" src="images/weixin-code.png" alt="" /> -->
+                            <span class="arrow-up"></span>
+                        </div>                     
+                    </div>
+                </div>
+                                    <!-- 我要评论 -->
+                <div class="articleComment">
+                    <h2 class="leftTitle">我要评论</h2>
+                    <div class="make-comment clearfix">
+                        <div class="head-portrait"></div>
+                        <div class="fr comment-input clearfix">
+                            <input type="text" class="fl entering codeAlert" placeholder="输入评论····" />
+                            <button class="fl register codeAlert">登录</button>
+                        </div>
+                    </div>
+                    <!-- 评论列表 -->
+                                    </div>
+
+                <!-- 相关推荐 -->
+                    <!-- 相关推荐 -->
+                                <div class="articleRecommend">
+                    <h2 class="leftTitle" style="padding: 30px 0 20px 0;">相关推荐</h2>
+                    <div class="listContent searchList2" style="margin-bottom: 110px;">
+                        <div id="course_box">
+                            <ul class="listInfo" id="courselist">
+
+                                
+                                <!-- 一张图 -->
+                                <li class="nomarlShow onePic clearfix">
+                                    <div class="fl listLeft">
+                                        <div class="listLeft-overflow ">
+                                            <a href="https://www.bjnews.com.cn/detail/1740123924129903.html"  target='_blank'>
+                                                <img   src="https://media.bjnews.com.cn/cover/2025/02/21/5557032430239559314.jpeg?x-oss-process=image/resize,m_lfit,w_240" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="fl listRight">
+                                        <h3 class="articleTitle">
+                                            <a href="https://www.bjnews.com.cn/detail/1740123924129903.html" title=""  target='_blank'>
+                                                北京将专项整治占用消防车通道，不驶离影响消防车通行将清拖车辆                                            </a>
+                                        </h3>
+                                        <!--
+                                                                                -->
+                                        <div class="bom">
+                                                                                        <span class="source"><a>北京快闻</a></span>
+                                               
+                                                                                        
+                                                                                        <span class="see">1.0万</span>
+                                                                                        <!--
+                                            
+                                                                                    -->
+                                        </div> 
+                                                                       
+                                    </div>
+                                </li>
+                                
+                                <!-- 一张图 -->
+                                <li class="nomarlShow onePic clearfix">
+                                    <div class="fl listLeft">
+                                        <div class="listLeft-overflow ">
+                                            <a href="https://www.bjnews.com.cn/detail/1731762447168553.html"  target='_blank'>
+                                                <img   src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2024/11/yanghai20241116216432250228.jpg?x-oss-process=image/resize,m_lfit,w_240/quality,q_80" alt="" />
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="fl listRight">
+                                        <h3 class="articleTitle">
+                                            <a href="https://www.bjnews.com.cn/detail/1731762447168553.html" title=""  target='_blank'>
+                                                因堵占消防车通道和疏散通道，北京大兴区多家单位和个人被罚                                            </a>
+                                        </h3>
+                                        <!--
+                                                                                <div class="tags">
+                                                                                        <em><a href="/search?bwsk=疏散通道&orderby=1">疏散通道</a></em>
+                                                                                         <em><a href="/search?bwsk=消防车通道&orderby=1">消防车通道</a></em>
+                                                                                     </div>
+                                                                                -->
+                                        <div class="bom">
+                                                                                        <span class="source"><a>沸点</a></span>
+                                               
+                                                                                        
+                                                                                        <!--
+                                            
+                                                                                    -->
+                                        </div> 
+                                                                       
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                                
+            </div>
+            <!-- 右侧部分 -->
+            <div class="fr aside detailsAside" style="margin-top: 34px;">
+                <!-- 直播 -->
+
+                               
+
+
+                <!-- 广告 -->
+                <!-- <div class="list_guanggao">
+                    <em>广告</em>
+                    <a href="#"><img class="g1" src="/images/temp/gg_list.png" alt="" /></a>
+                </div> -->
+
+                <!-- 热点 -->
+                                <h1 class="bigTitle">热点</h1>
+                <div class="asideList bghui">
+                    <ul class="list-e">
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740969484168129.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/hejw202533103832411528.jpg?x-oss-process=image/resize,m_lfit,w_118/quality,q_80" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740969484168129.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">1</i>
+                                    白敬亭、章若楠《难哄》更新追剧日历，3月10日直通大结局                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740969484168129.html" title=""  target='_blank'>
+                                    <i class="num">1</i>
+                                    白敬亭、章若楠《难哄》更新追剧日历，3月10日直通大结局                                </a>
+                                <div class="hot24-time"><i></i>8.5万</div>
+                            </div> 
+                        </li>
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740966813168120.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/wangrf202533953322411214.jpg?x-oss-process=image/resize,m_lfit,w_118/quality,q_80" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740966813168120.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">2</i>
+                                    特朗普与泽连斯基激烈争吵，或影响俄乌停火谈判走向                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740966813168120.html" title=""  target='_blank'>
+                                    <i class="num">2</i>
+                                    特朗普与泽连斯基激烈争吵，或影响俄乌停火谈判走向                                </a>
+                                <div class="hot24-time"><i></i>5.6万</div>
+                            </div> 
+                        </li>
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740979672168138.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/liaoal2025331327502411721.jpg?x-oss-process=image/resize,m_lfit,w_118/quality,q_80" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740979672168138.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">3</i>
+                                    车企开打“智驾战”                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740979672168138.html" title=""  target='_blank'>
+                                    <i class="num">3</i>
+                                    车企开打“智驾战”                                </a>
+                                <div class="hot24-time"><i></i>5.5万</div>
+                            </div> 
+                        </li>
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1741008078129817.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/image/2025/03/03/5560741938128302007.png?x-oss-process=image/resize,m_lfit,w_118" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1741008078129817.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">4</i>
+                                    DeepSeek公开利润引服务商互怼 AI基建如何降本                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1741008078129817.html" title=""  target='_blank'>
+                                    <i class="num">4</i>
+                                    DeepSeek公开利润引服务商互怼 AI基建如何降本                                </a>
+                                <div class="hot24-time"><i></i>3.0万</div>
+                            </div> 
+                        </li>
+                                                <li>
+                            <!--有图会展示以下标签 start-->
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1741009417129823.html" title=""   target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/image/2025/03/03/5560745638259401736.png?x-oss-process=image/resize,m_lfit,w_118" alt="" />
+                                </a>
+                            </div>
+                                                         <!--有图会展示以上标签 end-->
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1741009417129823.html" title="" class="hot24-text"  target='_blank'>
+                                    <i class="num">5</i>
+                                    张政，已任中国文联党组书记                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1741009417129823.html" title=""  target='_blank'>
+                                    <i class="num">5</i>
+                                    张政，已任中国文联党组书记                                </a>
+                                <div class="hot24-time"><i></i>2.2万</div>
+                            </div> 
+                        </li>
+                                            </ul>
+                </div>
+                <!--热点结束-->
+                
+
+                <!-- 广告 -->
+                <!-- <div class="list_guanggao">
+                    <em>广告</em>
+                    <a href="#"><img class="g1" src="/images/temp/gg_list.png" alt="" /></a>
+                </div> -->
+
+                                <!-- 最新 -->
+                <h1 class="bigTitle">最新</h1>
+                <div class="asideList" style="padding: 25px 0 0 20px;">
+                    <ul class="list-a">
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/174101910293778.html" title=""  target='_blank' >田轩：将隐私保护、算法公平纳入金融伦理规范|代表委员议政录</a>
+                            <div class="t">3小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/174101850293777.html" title=""  target='_blank' >又到一年两会时：来路不凡，前路可期 | 新京报社论</a>
+                            <div class="t">3小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1741017654168227.html" title=""  target='_blank' >田轩：将隐私保护、算法公平纳入金融伦理规范|代表委员议政录</a>
+                            <div class="t">3小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1741017635168226.html" title=""  target='_blank' >又到一年两会时：来路不凡，前路可期 | 新京报社论</a>
+                            <div class="t">3小时前</div>
+                        </li>
+                                                <li>
+                            <i class="round"></i>
+                            <a href="https://www.bjnews.com.cn/detail/1741016271129849.html" title=""  target='_blank' >中国科学家实现超导体系“量子计算优越性”新纪录</a>
+                            <div class="t">3小时前</div>
+                        </li>
+                                            </ul>
+                </div>
+                <!--最新结束-->
+                
+                <!-- 广告 -->
+                <!-- <div class="list_guanggao">
+                    <em>广告</em>
+                    <a href="#"><img class="g1" src="/images/temp/gg_list.png" alt="" /></a>
+                </div> -->
+
+                                <!-- 热议 -->
+                <h1 class="bigTitle">热议</h1>
+                <div class="asideList bghui">
+                    <ul class="list-g">
+                                                <!-- 只有第一条显示图片 -->
+                        <li>
+                                                        <div class="fl hot24-img">
+                                <a href="https://www.bjnews.com.cn/detail/1740961798168119.html"  target='_blank'>
+                                    <img src="https://media.bjnews.com.cn/fz/html/AttachPubDev/2025/3/wangyu202533829562411179.jpg?x-oss-process=image/resize,m_lfit,w_332/quality,q_80" alt="" />
+                                </a>
+                            </div>
+                                                        <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1740961798168119.html"  class="hot24-text" target='_blank'>
+                                    <i class="num"></i>
+                                    多家互联网公司涉赌被查，网络游戏如何变成网络赌博？                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1740961798168119.html" target='_blank'>
+                                    <i class="num"></i>
+                                    多家互联网公司涉赌被查，网络游戏如何变成网络赌博？                                </a>
+                            </div> 
+                        </li>
+                                                                        <li>
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/174101850293777.html"  target='_blank' title="" class="hot24-text">
+                                    <i class="num"></i>
+                                    又到一年两会时：来路不凡，前路可期 | 新京报社论                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/174101850293777.html"  target='_blank' title="">
+                                    <i class="num"></i>
+                                    又到一年两会时：来路不凡，前路可期 | 新京报社论                                </a>
+                            </div> 
+                        </li>
+                                                <li>
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/174101910293778.html"  target='_blank' title="" class="hot24-text">
+                                    <i class="num"></i>
+                                    田轩：将隐私保护、算法公平纳入金融伦理规范|代表委员议政录                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/174101910293778.html"  target='_blank' title="">
+                                    <i class="num"></i>
+                                    田轩：将隐私保护、算法公平纳入金融伦理规范|代表委员议政录                                </a>
+                            </div> 
+                        </li>
+                                                <li>
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1741017635168226.html"  target='_blank' title="" class="hot24-text">
+                                    <i class="num"></i>
+                                    又到一年两会时：来路不凡，前路可期 | 新京报社论                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1741017635168226.html"  target='_blank' title="">
+                                    <i class="num"></i>
+                                    又到一年两会时：来路不凡，前路可期 | 新京报社论                                </a>
+                            </div> 
+                        </li>
+                                                <li>
+                            <div class="fl hot24-right">
+                                <!-- <a href="https://www.bjnews.com.cn/detail/1741017654168227.html"  target='_blank' title="" class="hot24-text">
+                                    <i class="num"></i>
+                                    田轩：将隐私保护、算法公平纳入金融伦理规范|代表委员议政录                                </a> -->
+                                <a href="https://www.bjnews.com.cn/detail/1741017654168227.html"  target='_blank' title="">
+                                    <i class="num"></i>
+                                    田轩：将隐私保护、算法公平纳入金融伦理规范|代表委员议政录                                </a>
+                            </div> 
+                        </li>
+                                            </ul>
+                </div>
+                <!--热议结束-->
+                            </div>
+        </article>
+    </div>
+
+
+<!-- 评论处弹框 -->
+<div class="pinglunCode">
+    <div class="desk"></div>
+    <div class="consinl" style="height: 290px">
+        <div class="close"></div>
+        <img class="er" src="https://static.bjnews.com.cn/www/v6/images/footer032.png" alt="" />
+        <p class="bbm">想要发表评论，阅读更多精彩内容，快来下<br>载新京报客户端吧</p>
+    </div>       
+</div>
+
+<input type='hidden' value="1741002789168191" id='cur_uuid_id'>
+
+<script src="/detail/addpv?uuid=1741002789168191"></script>
+<script type="text/javascript">
+        var mainDiv =$("#giveThumbs-up");
+        // 添加微信二维码分享
+        mainDiv.on('click', '.weixin', function() {
+            $(this).find('.er').find('img').remove();
+            $(this).find('.weixin-code-detail').toggle();
+            var tragetUrl = $('#detail_url_m').val();
+            var targetElement = $(this).find('.er')[0];
+            new QRCode(targetElement, tragetUrl);
+        })
+
+        //评论弹框
+        $(".codeAlert").on('click', function() {
+            $(".pinglunCode").show();
+        });
+        $(".pinglunCode .close").on('click', function() {
+            $(".pinglunCode").hide();
+        });
+
+
+        //文字变大缩小
+        function change_size(element,size){
+            var current = parseInt(element.css('font-size'));
+            //alert(current);
+            if(size == "smaller"){
+                var newSize = current - 2;
+                
+            }else if(size == "bigger"){
+                var newSize = current + 2;
+                
+            }else if(size == "resetter"){
+                var newSize = 16;                   
+            }     
+            if( newSize <= 22){
+                element.css('font-size',newSize+'px');
+            }
+        }
+
+        $("#smaller").click(function(){
+            change_size($(".articleCenter p"),"smaller");   
+        });
+        $("#bigger").click(function(){
+            change_size($(".articleCenter p"),"bigger");    
+        });
+        //给文章点赞
+        $(".giveThumbs-up .dianzan").click(function(){
+            $(this).addClass("dianzan-ok");
+            $(this).find(".dianzan-move").fadeIn().fadeOut();  
+            if($("#detailZan").hasClass("dianzan-ok")){$("#detailZan").addClass("noClick");}
+            if( $("#qwlike").html() == '点赞'){
+                $("#qwlike").html(1);
+            }
+        }); 
+        //给文章祈福
+        $(".giveThumbs-up .qifu").click(function(){
+            $(this).addClass("qifu-ok");
+            $(this).find(".dianzan-move").fadeIn().fadeOut();
+            if($("#detailQifu").hasClass("qifu-ok")){$("#detailQifu").addClass("noClick");}  
+            if( $("#qwlike-qifu").html() == '祈福'){
+                $("#qwlike-qifu").html(1);
+            }
+        });
+</script>
+
+
+<script type="text/javascript">
+    //点赞接口获取
+    $("#detailZan").click(function () {
+        var uuid = $('#cur_uuid_id').val();
+        var timestamp = new Date().getTime();
+        $.ajax({
+            type:'get',
+            url:'/detail/zan',
+            data:{
+                "article_uuid" : uuid,
+                "time" : timestamp
+            },
+            dataType:'json',
+            success:function(res){
+                if (res.code == 1) {
+                    var v = $("#qwlike").html() || 0;
+                    var a = parseInt(v);
+                    if( $.trim($("#qwlike").html()) == '点赞'){
+                        $("#qwlike").html("1");
+                    }else{
+                        a++;
+                        $("#qwlike").html(a);
+                    }
+                    // console.log($("#qwlike").html());
+                }else{
+                    return;
+                }
+            },
+            complete:function(){
+            }
+        })
+    }) 
+
+    //祈福接口获取
+    $("#detailQifu").click(function () {
+        var uuid = $('#cur_uuid_id').val();
+        $.ajax({
+            type:'get',
+            url:'/detail/zan',
+            data:{
+                "article_uuid" : uuid
+            },
+            dataType:'json',
+            success:function(res){
+                if (res.code == 1) {
+                    var v = $("#qwlike-qifu").html() || 0;
+                    var a = parseInt(v);
+                    if( $.trim($("#qwlike-qifu").html()) == '祈福'){
+                        $("#qwlike-qifu").html(1);
+                    }else{
+                        a++;
+                        $("#qwlike-qifu").html(a);
+                    }
+                    // console.log($("#qwlike-qifu").html());
+                }else{
+                    return;
+                }
+            },
+            complete:function(){
+            }
+        })
+    }) 
+    
+
+    // function videoPlay(){
+    //     //var player = videojs(videoJs)
+    //     for( i=0; i<player.length; i++){
+    //         setTimeout(function(){
+    //             var player = videojs(videoJs(i))
+    //         },5000)
+    //     }
+    // }
+    // videoPlay();
+
+</script>
+
+<script>
+    // $(document).ready(function(){
+    //     //获取视频的处理   
+    //     //setTimeout(function () { 
+    //         var vjs = $("video");
+    //         var len = vjs.length;
+    //         for( i=0; i<len; i++){
+    //             var srct = $(vjs).eq(i).attr('src');
+    //             $(vjs).eq(i).replaceWith('<video autoplay="autoplay" muted id="videoJs'+ i +'" class="video-js vjs-default-skin" controls="controls" preload="auto" width="800" height="450" data-setup="{}"><source src="'+ $(vjs).eq(i).attr('src') +'" type="application/x-mpegURL" /></video>');            
+    //         }            
+    //     //}, 500); 
+
+        
+    //     if ( typeof(videoJs0) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player0 = videojs(videoJs0)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs1) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs1)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs2) != "undefined" ) {
+    //     setTimeout(function(){
+    //         var player1 = videojs(videoJs2)
+    //         },500)
+    //     }
+
+    //     if ( typeof(videoJs3) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs3)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs4) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs4)
+    //         },500)
+    //     }
+    //     if ( typeof(videoJs5) != "undefined" ) {
+    //         setTimeout(function(){
+    //             var player1 = videojs(videoJs5)
+    //         },500)
+    //     }
+        
+        
+    // })  
+    // $(document).ready(function(){
+    //     var myVideo = videojs("myVideo", {
+    //         bigPlayButton: true,
+    //         textTrackDisplay: false,
+    //         posterImage: false,
+    //         errorDisplay: false, 
+    //     })
+    //     myVideo.play()
+    //     var changeVideo = function (vdoSrc) {
+    //         if (/\.m3u8$/.test(vdoSrc)) { //判断视频源是否是m3u8的格式
+    //             myVideo.src({
+    //                 src: vdoSrc,
+    //                 type: "application/x-mpegURL" //在重新添加视频源的时候需要给新的type的值
+    //             })
+    //         } else {
+    //             myVideo.src(vdoSrc)
+    //         }
+    //         myVideo.load();
+    //         myVideo.play();
+    //     }  
+    //     changeVideo(src);
+    // })                             
+</script>
+
 <!-- 统计 -->
 <div style="display:none;">
     <script type="text/javascript" src="https://static.bjnews.com.cn/public/tj.js"></script>
@@ -367,4 +1005,4 @@
     <!-- 适老化改造 -->
     <script type="text/javascript" src="https://slwza.bjnews.com.cn/slwza/www.bjnews.com.cn/route.js"></script>
 </body>
-</html>    
+</html>  

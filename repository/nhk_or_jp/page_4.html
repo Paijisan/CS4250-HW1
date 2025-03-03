@@ -1,237 +1,150 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:mixi="http://mixi-platform.com/ns#">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="ROBOTS" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="msapplication-config" content="/nhkworld/common/notification/browserconfig.xml">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@nhk_world">
-  <meta name="keywords" content="NHK, nhk, 日本放送協会, エヌエイチケイ, NHKWORLD, NHKワールド JAPAN, 国際放送, NHKワールドプレミアム, 日本, ワールドTV, ラジオ日本">
-  <meta name="description" content="日本の公共メディア、NHKは国際放送とインターネットを通じて、多言語で情報を発信しています。ニュースなど日本語放送の一部について同時配信・見逃し配信も行っています。">
-  <meta property="fb:app_id" content="1717775218444936">
-  <meta property="og:type" content="article">
-  <meta property="og:site_name" content="NHK WORLD-JAPAN">
-  <meta property="og:title" content="NHK WORLD-JAPAN - NHKの国際サービス">
-  <meta property="og:description" content="日本の公共メディア、NHKは国際放送とインターネットを通じて、多言語で情報を発信しています。ニュースなど日本語放送の一部について同時配信・見逃し配信も行っています。">
-  <meta property="og:image" content="https://www3.nhk.or.jp/nhkworld/ja/assets/images/common/nw_ogimage.jpg">
-  <meta property="og:url" content="https://www3.nhk.or.jp/nhkworld/ja/">
-  <title>NHK WORLD-JAPAN - NHKの国際サービス</title>
-  <link rel="icon" sizes="192x192" href="/nhkworld/common/site_images/nw_webapp_news_192x192.png">
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/nhkworld/common/site_images/nw_webapp_152x152.png">
-  <link rel="shortcut icon" href="/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
-  <link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/ja/">
-  <link rel="stylesheet" href="/nhkworld/common/assets/parts/css/global.css">
-  <!-- add css -->
-  <link rel="stylesheet" href="/nhkworld/ja/assets/css/style.css">
-  <!-- // add css -->
-  <script src="/nhkworld/common/js/common.js" charset="utf-8"></script>
-  <script src="/nhkworld/common/assets/parts/js/global.js" charset="utf-8"></script>
-  <!-- add script -->
-  <script src="/nhkworld/ja/assets/js/script.js" charset="utf-8"></script>
-  <!-- // add script -->
+	<meta charset="UTF-8">
+	<title>NHK ポッドキャスト</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width">
+
+	<!-- Twitter cards -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="nhk_radiru">
+	<meta name="twitter:creator" content="nhk_radiru">
+
+	<!-- OGP -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="NHK ポッドキャスト">
+	<meta property="og:description" content="NHKラジオやNHK Worldのポッドキャストをお聴きになれます。">
+	<meta property="og:url" content="https://www.nhk.or.jp/podcasts/">
+	<meta property="og:image" content="https://www.nhk.or.jp/podcasts/common/images/ogp_image2.jpg">
+	<meta property="og:site_name" content="NHK ポッドキャスト">
+
+	<!-- Meta -->
+	<meta name="keywords" content="NHK,ラジオ,podcast,ポッドキャスト,番組,ラジオ第1,R1,ラジオ第2,R2,NHK-FM,FM,NHKラジオニュース">
+	<meta property="og:description" content="NHKラジオやNHK Worldの番組などをお聴きになれます。">
+	<meta name="description" content="">
+	<meta name="nhk.bangumi.rubi" content="えぬえいちけー らじおぽっどきゃすと">
+	<meta name="nhk.bangumi.shutsuensha" content="">
+	<meta name="author" content="日本放送協会">
+	<meta name="copyright" content="NHK(Japan Broadcasting Corporation)">
+	<meta name="shorturl" content="https://www.nhk.or.jp/podcasts/">
+	<link rel="canonical" href="https://www.nhk.or.jp/podcasts/">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="./common/css/common.css">
+	<link rel="stylesheet" media="print" href="./common/css/print.css">
+
+	<!-- NHK -->
+	<script src="//www.nhk.or.jp/common/fonts/nol_wfn_v3.js?onload=false"></script>
+	<script src="//www.nhk.or.jp/common/jquery/jquery-3.2.js"></script>
+	<script src="//www.nhk.or.jp/common/sp/nol_SmartPhone.js"></script>
+	<script src="//www.nhk.or.jp/common/sns/nol_share.js"></script>
+ 	<script>NHKSNS.initSNSOnLoad();</script>
+ 	<script src="//www.nhk.or.jp/radio/js/common.js"></script>
+
+ 	<!-- js -->
+ 	<script src="./common/js/jquery.matchHeight-min.js"></script>
+ 	<script src="./common/js/conf_lang_lesson.js"></script>
+	<script src="./common/js/common.js"></script>
+
+	<!-- for page -->
+	<script src="./data/cnt_top.js"></script>
+
 </head>
-<body>
-  <div class="l-wrapper">
-    <header class="l-header">
-      <!-- NHK WORLD header -->
-      <div id="nw-global-header"></div>
-      <!-- // NHK WORLD header -->
-      <!-- Ja header -->
-      <div class="l-header__ja" id="l-header__ja" data-current="top"></div>
-      <!-- // Ja header -->
-    </header>
+<body id="pageHome">
 
-    <div class="p-top">
-      <div class="c-pageTop">
-        <div class="c-pageTop__inner">
-          <h1 class="c-pageTop__title">
-            <a href="/"><img src="/nhkworld/ja/assets/images/top/top_logo2.png" width="230" height="24" alt="NHK の国際放送"></a>
-          </h1>
-        </div>
-      </div>
+	<header id="siteHead">
+		<script>nol_showCmnHeader();</script>
+		<script type="text/javascript">headerWrite();</script>
+	</header>
 
-      <div class="l-contents">
-        <nav class="p-topNav">
-          <div class="l-block">
-            <a href="#japanese-lauguage" class="p-topNav__link">
-              <dl>
-                <dt>在外邦人向けサービス</dt>
-                <dd>日本語のニュースや番組をテレビとラジオで海外向けに放送しています。海外にお住まいの方、旅行中の方にも情報をお届けします。</dd>
-              </dl>
-            </a>
 
-            <a href="#foreign-lauguage" class="p-topNav__link">
-              <dl>
-                <dt>NHKの国際放送「NHKワールド JAPAN」</dt>
-                <dd>テレビは英語で、ラジオは17言語でニュースや番組を放送しています。ウェブサイトやアプリでは、全19言語でサービスを提供しています。</dd>
-              </dl>
-            </a>
-          </div>
-        </nav>
+	<div id="tab">
+		<div class="tabWrap">
+			<div class="inner">
+				<div class="search">
+					<form id="searchForm">
+						<input id="search" type="text" name="search" placeholder="番組名で検索">
+						<img src="./common/images/icon_search.svg" alt="検索する" class="icon">
+					</form>
+				</div>
+				<ul class="sort">
+					<li class="new">一覧</li>
+					<li class="genre">ジャンル</li>
+					<li class="on50">50音</li>
+				</ul>
+			</div>
+		</div>
 
-        <div class="p-topJapanese" id="japanese-lauguage">
-          <div class="l-block">
-            <h2 class="c-heading -lg">在外邦人向けサービス</h2>
+		<div id="sortGenre" class="sub">
+			<div class="inner">
+				<ul>
+					<li>ニュース</li>
+					<!--li>スポーツ</li-->
+					<li>情報・ワイドショー</li>
+					<li>ドラマ</li>
+					<!--li>音楽</li-->
+					<!--li>バラエティ</li-->
+					<li>アニメ・特撮</li>
+					<!--li>ドキュメンタリー・教養</li>
+					<li>劇場・公演</li-->
+					<li>趣味・教養</li>
+					<li>福祉</li>
+					<!--li>キッズ</li>
+					<li>語学</li>
+					<li>地域放送局</li-->
+					<li>NHK WORLD JAPAN</li>
+				</ul>
+			</div>
+		</div>
+		<div id="sortOn50" class="sub">
+			<div class="inner">
+				<ul>
+					<li>あ</li>
+					<li>か</li>
+					<li>さ</li>
+					<li>た</li>
+					<li>な</li>
+					<li>は</li>
+					<li>ま</li>
+					<li>や</li>
+					<li>ら</li>
+					<li>わ</li>
+				</ul>
+			</div>
+		</div>
 
-            <div class="p-topMain__items">
-              <div class="p-topMain__item">
-                <h2 class="p-topMain__itemTitle"><i class="c-icon -tv"></i>日本語テレビチャンネル</h2>
-                <a href="/nhkworld/ja/japanese/">
-                  <div class="p-topMain__itemImg">
-                    <img src="/nhkworld/ja/assets/images/top/japanese_tv.png" alt="">
-                  </div>
-                  <div class="p-topMain__itemText">
-                    <p>在外邦人向けサービス「NHKワールド・プレミアム」は、NHKが国内で放送するニュース・情報番組、ドラマ、音楽番組、子ども番組、スポーツ中継などから選んだ番組を24時間編成しています。</p>
-                    <div class="p-topMain__itemBtn"><span>NHKワールド・プレミアムについて</span></div>
-                  </div>
-                </a>
+	</div>
 
-                <div class="p-topMain__itemBottom">
-                  <p><strong>一部の番組はインターネットで配信しています。</strong> <span>日本国内では視聴することができません。</span></p>
 
-                  <div class="c-link">
-                    <a href="/nhkworld/ja/ondemand/video/">
-                      <i></i><span class="c-link__text">見逃し配信を見る</span>
-                    </a>
-                  </div>
+	<div id="main" class=""><!-- ソート確認用クラス viewSort -->
+		<div class="innerPC">
+			<ul class="list">
+			</ul>
+			<p class="noHit">お探しの配信は見つかりませんでした。</p>
+		</div>
+	</div>
 
-                  <div class="c-link">
-                    <a href="/nhkworld/ja/premiumlive/">
-                      <i></i><span class="c-link__text">同時配信を見る</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
 
-              <div class="p-topMain__item">
-                <h2 class="p-topMain__itemTitle"><i class="c-icon -radio"></i>日本語ラジオチャンネル</h2>
-                <a href="/nhkworld/ja/japanese/#radio_japan">
-                  <div class="p-topMain__itemImg">
-                    <img src="/nhkworld/ja/assets/images/top/japanese_radio.png" alt="">
-                  </div>
-                  <div class="p-topMain__itemText">
-                    <p>「NHKワールド・ラジオ日本」は在外邦人のライフラインとして、安全・安心を支える情報を届けます。ニュース、情報番組、音楽番組、ラジオドラマなどを放送しています。</p>
-                    <div class="p-topMain__itemBtn"><span>NHKワールド・ラジオ日本について</span></div>
-                  </div>
-                </a>
+	<!--div id="news">
+		<div class="inner">
+			<h2 class="lineTitle">お知らせ</h2>
+			<div class="wrap">
+				<p class="text"></p>
+			</div>
+		</div>
+	</div-->
 
-                <div class="p-topMain__itemBottom">
-                  <p><strong>一部の番組はポッドキャストで提供しています。</strong></p>
 
-                  <div class="c-link">
-                    <a href="https://www.nhk.or.jp/podcasts/">
-                      <i></i><span class="c-link__text">NHK ポッドキャスト</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+	<script type="text/javascript">footerWrite();</script>
 
-        <div id="p-top__bnrs"></div>
+	<p id="toPageTop"><img src="./common/images/totop.svg" alt="ページトップへ"></p>
 
-        <div class="p-topExBanners c-extraBanners -col3">
-          <div class="l-block">
-            <div class="c-extraBanners__items">
-              <div class="c-extraBanners__item">
-                <a href="https://www3.nhk.or.jp/news/">
-                  <img src="/nhkworld/ja/assets/images/common/bnr_newsweb_736x160.jpg" alt="NHK NEWS WEB">
-                </a>
-              </div>
-              <div class="c-extraBanners__item">
-                <a href="/nhkworld/en/multilingual_links/">
-                  <img src="/nhkworld/ja/assets/images/common/bnr_emergency_736x160.jpg" alt="がいこくごのニュースと防災情報">
-                </a>
-              </div>
-              <div class="c-extraBanners__item">
-                <a href="https://www.anzen.mofa.go.jp/" target="_blank">
-                  <img src="/nhkworld/ja/assets/images/common/bnr_kaigaianzen_736x160.jpg" alt="外務省 海外安全ホームページはこちら">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="p-topMain" id="foreign-lauguage">
-          <div class="l-block">
-            <h2 class="c-heading -lg">NHKの国際放送「NHKワールド JAPAN」</h2>
-            <div class="p-topMain__items">
-              <div class="p-topMain__item">
-                <h2 class="p-topMain__itemTitle"><i class="c-icon -tv"></i>テレビ国際放送</h2>
-                <a href="/nhkworld/ja/tv/">
-                  <div class="p-topMain__itemImg">
-                    <img src="/nhkworld/ja/assets/images/top/tv02.png" alt="">
-                  </div>
-                  <div class="p-topMain__itemText">
-                    <p>24時間英語でニュース・番組を外国の衛星放送やケー ブルテレビなどを通じて放送しています。また、インターネットでもご覧いただけます。</p>
-                    <div class="p-topMain__itemBtn"><span>もっと見る</span></div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="p-topMain__item">
-                <h2 class="p-topMain__itemTitle"><i class="c-icon -radio"></i>ラジオ国際放送</h2>
-                <a href="/nhkworld/ja/radio/">
-                  <div class="p-topMain__itemImg">
-                    <img src="/nhkworld/ja/assets/images/top/radio.png" alt="">
-                  </div>
-                  <div class="p-topMain__itemText">
-                    <p>17の外国語で放送しています。短波、FM、中波や衛星ラジオによる送信、インターネット展開など、多様な手段で情報発信しています。</p>
-                    <div class="p-topMain__itemBtn"><span>もっと見る</span></div>
-                  </div>
-                </a>
-              </div>
-
-              <div class="p-topMain__item">
-                <h2 class="p-topMain__itemTitle"><i class="c-icon -internet"></i>インターネットサービス</h2>
-                <a href="/nhkworld/ja/internet/">
-                  <div class="p-topMain__itemImg">
-                    <img src="/nhkworld/ja/assets/images/top/internet02.png" alt="">
-                  </div>
-                  <div class="p-topMain__itemText">
-                    <p>ウェブサイトとアプリでは、19の言語でニュースや番組を提供しています。くり返し視聴できる豊富な外国語コンテンツは、語学学習にも活用できます。</p>
-                    <div class="p-topMain__itemBtn"><span>もっと見る</span></div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div class="p-topNwj">
-              <div class="p-topNwj__item">
-                <a href="/nhkworld/ja/about/">
-                  <div class="p-topNwj__itemTitle -sp">NHKワールド JAPANとは</div>
-                  <div class="p-topNwj__items">
-                    <div class="p-topNwj__itemText">
-                      <h2 class="p-topNwj__itemTitle">NHKワールド JAPANとは</h2>
-                      <p>NHKワールド JAPANは日本の公共メディア、NHKの国際サービスです。<br>
-                      テレビ、ラジオ、インターネットを通じて、世界に向けて多言語で情報を発信しています。</p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <footer class="l-footer">
-      <!-- Ja footer -->
-      <div class="l-footer__ja" id="l-footer__ja"></div>
-      <!-- // Ja footer -->
-      <!-- NHK WORLD footer -->
-      <div id="nw-global-footer"></div>
-      <!-- // NHK WORLD footer -->
-    </footer>
-  </div>
-
-  <script>
-    window.nw_html5();
-    window.NWTool('NWHeader', { lang: 'ja' });
-    window.NWTool('NWFooter', { lang: 'ja' });
-  </script>
+	<footer>
+		<script>nol_showCmnFooter({mode: 'simple'});</script>
+	</footer>
 </body>
 </html>

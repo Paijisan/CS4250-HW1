@@ -55,7 +55,7 @@ class WebCrawler:
                 links = {link for link in links if self.valid_url(link)}
 
                 # Store the URL and number of outlinks
-                self.report.append([url, len(links), lang])
+                self.report.append((url, len(links), lang, filename))
 
                 # Mark the page as visited
                 self.visited.add(url)
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     # Create a report file with headers
     with open("report.csv", "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
-        writer.writerow(["URL", "Outlinks", "Language"])
+        writer.writerow(["URL", "Outlinks", "Language", "Filename"])
 
     # Start separate crawlers for each domain
     for url, domain in zip(seed_urls, domain_restrictions):

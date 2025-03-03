@@ -1,393 +1,583 @@
-<!DOCTYPE HTML>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 eq-ie6"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 eq-ie7"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9 eq-ie8"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta http-equiv="X-UA-Compatible" content="requiresActiveX=true" />
-
-<title>NHKニュース 速報・最新情報</title>
-<meta name="robots" content="noodp,noarchive">
-<meta name="keywords" content="NHK,ニュース,NHK NEWS WEB" />
-<meta name="description" content="NHKのニュースサイト「NHK NEWS WEB」。国内外の取材網を生かし、さまざまな分野のニュースをいち早く、正確にお伝えします。ニュース速報はもちろん、現場の記者が執筆した読み応えのある特集記事や、ＮＨＫならではの豊富な動画コンテンツも。" />
-<meta name="copyright" content="NHK(Japan Broadcasting Corporation)" />
-<meta name="author" content="日本放送協会" />
-<meta name="Targeted Geographic Area" content="Japan" />
-<meta name="coverage" content="Japan" />
-<meta name="rating" content="general" />
-<meta name="content-language" content="ja" />
-<meta name="robots" content="index,follow" />
-<meta name="format-detection" content="telephone=no" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta property="og:site_name" content="NHK NEWS WEB" />
-<meta property="og:title" content="NHK NEWS WEB｜NHKのニュースサイト" />
-<meta property="og:locale" content="ja_JP" />
-<meta property="og:description" content="NHKのニュースサイト「NHK NEWS WEB」。国内外の取材網を生かし、さまざまな分野のニュースをいち早く、正確にお伝えします。ニュース速報はもちろん、現場の記者が執筆した読み応えのある特集記事や、ＮＨＫならではの豊富な動画コンテンツも。" />
-<meta property="og:url" content="https://www3.nhk.or.jp/news/" />
-<meta property="og:image" content="https://www3.nhk.or.jp/news/img/ogp_news_top_1280px.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="og:type" content="website" />
-<meta property="fb:app_id" content="157582317936888" />
-
-<meta name="theme-color" content="#0076d1" /><!-- meta-theme-color for Chrome -->
-<meta name="msapplication-config" content="/news/browserconfig.xml" />
-<meta name="msapplication-TileImage" content="/news/parts16/images/favicon/apple-touch-icon-180x180-precomposed.png" />
-<meta name="msapplication-TileColor" content="#0076d1" />
-
-<link rel="manifest" href="/news/manifest.json" />
-<link rel="shortcut icon" type="image/x-icon" href="/news/parts16/images/favicon/favicon.ico" />
-<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/news/parts16/images/favicon/apple-touch-icon-180x180-precomposed.png" />
-
-<link rel="alternate" href="http://k.nhk.jp/knews/" media="handheld" />
-<link rel="canonical" href="https://www3.nhk.or.jp/news/" />
-
-<link rel="alternate" type="application/rss+xml" title="NHKニュース JUST IN" href="http://www3.nhk.or.jp/rss/news/cat-live.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース 主要ニュース" href="http://www3.nhk.or.jp/rss/news/cat0.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース 社会" href="http://www3.nhk.or.jp/rss/news/cat1.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース 科学・医療" href="http://www3.nhk.or.jp/rss/news/cat3.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース 政治" href="http://www3.nhk.or.jp/rss/news/cat4.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース 経済" href="http://www3.nhk.or.jp/rss/news/cat5.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース 国際" href="http://www3.nhk.or.jp/rss/news/cat6.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース スポーツ" href="http://www3.nhk.or.jp/rss/news/cat7.xml" />
-<link rel="alternate" type="application/rss+xml" title="NHKニュース 文化・エンタメ" href="http://www3.nhk.or.jp/rss/news/cat2.xml" />
-
-<script src="/common/js/nol_tools.js"></script>
-<link rel="stylesheet" href="/news/parts16/css/reset-v3.css?stamp=ph5120" />
-<link rel="stylesheet" href="/news/parts16/css/style-v3.css?stamp=ph5120" />
-<script src="/news/parts16/js/pre.bundle-v3.js?stamp=ph5120"></script>
-<script src="/news/parts16/js/modernizr.js" async="async"></script>
-<script src="/common/sp/nol_SmartPhone.js" charset="utf-8"></script>
-<script src="/common/sns/nol_share.js" charset="utf-8"></script>
-<script src="/news/r/js/exist.js" charset="utf-8"></script>
-<script>NHKSNS.initSNSOnLoad();</script>
-<script type="text/javascript">var _sf_startpt = (new Date()).getTime();var _cb_sections_preset = '一覧';</script>
-<script src="/news/parts16/js/chartbeat_mab_config.js" charset="UTF-8"></script>
+<!DOCTYPE html>
+<html prefix="og:http://ogp.me/ns#" lang="en" dir="ltr">
+<head itemscope itemtype="http://schema.org/Website">
+<title>Multilingual Portal: Japan LIFE & BOSAI　がいこくごの 生活と防災の情報 | NHK WORLD-JAPAN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta content="noodp, noarchive, index, follow" name="robots">
+<meta content="telephone=no" name="format-detection">
+<meta content="https://www3.nhk.or.jp/nhkworld/common/notification/browserconfig.xml" name="msapplication-config">
+<meta content="summary_large_image" name="twitter:card">
+<meta content="@nhk_world" name="twitter:site">
+<meta content="1717775218444936" property="fb:app_id">
+<meta content="Multilingual Portal: Japan LIFE & BOSAI　がいこくごの 生活と防災の情報 - English | NHK WORLD-JAPAN" property="og:site_name">
+<meta content="Multilingual Portal: Japan LIFE & BOSAI　がいこくごの 生活と防災の情報 | NHK WORLD-JAPAN" property="og:title" itemprop="name">
+<meta content="https://www3.nhk.or.jp/nhkworld/en/multilingual_links/assets/img/og_en.png" property="og:image">
+<meta content="https://www3.nhk.or.jp/nhkworld/en/multilingual_links/" property="og:url">
+<meta content="article" property="og:type">
+<link rel="canonical" href="https://www3.nhk.or.jp/nhkworld/en/multilingual_links/">
+<link rel="alternate" href="/nhkworld/ar/multilingual_links/" hreflang="ar">
+<link rel="alternate" href="/nhkworld/bn/multilingual_links/" hreflang="bn">
+<link rel="alternate" href="/nhkworld/my/multilingual_links/" hreflang="my">
+<link rel="alternate" href="/nhkworld/zh/multilingual_links/" hreflang="zh-cmn-Hans">
+<link rel="alternate" href="/nhkworld/zt/multilingual_links/" hreflang="zh-cmn-Hant">
+<link rel="alternate" href="/nhkworld/fr/multilingual_links/" hreflang="fr">
+<link rel="alternate" href="/nhkworld/hi/multilingual_links/" hreflang="hi">
+<link rel="alternate" href="/nhkworld/id/multilingual_links/" hreflang="id">
+<link rel="alternate" href="/nhkworld/ko/multilingual_links/" hreflang="ko">
+<link rel="alternate" href="/nhkworld/fa/multilingual_links/" hreflang="fa">
+<link rel="alternate" href="/nhkworld/pt/multilingual_links/" hreflang="pt">
+<link rel="alternate" href="/nhkworld/ru/multilingual_links/" hreflang="ru">
+<link rel="alternate" href="/nhkworld/es/multilingual_links/" hreflang="es">
+<link rel="alternate" href="/nhkworld/sw/multilingual_links/" hreflang="sw">
+<link rel="alternate" href="/nhkworld/th/multilingual_links/" hreflang="th">
+<link rel="alternate" href="/nhkworld/tr/multilingual_links/" hreflang="tr">
+<link rel="alternate" href="/nhkworld/uk/multilingual_links/" hreflang="uk">
+<link rel="alternate" href="/nhkworld/ur/multilingual_links/" hreflang="ur">
+<link rel="alternate" href="/nhkworld/vi/multilingual_links/" hreflang="vi">
+<link rel="alternate" href="/nhkworld/ja/multilingual_links/" hreflang="ja">
+<link rel="shortcut icon" href="https://www3.nhk.or.jp/nhkworld/common/site_images/nw_webapp.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www3.nhk.or.jp/nhkworld/common/site_images/nw_webapp_152x152.png">
+<link rel="preload" href="/nhkworld/en/multilingual_links/assets/css/index.css" as="style">
+<link rel="stylesheet" href="https://www3.nhk.or.jp/nhkworld/common/assets/parts/css/global.css">
+<link rel="stylesheet" href="/nhkworld/en/multilingual_links/assets/css/index.css">
+<script src="https://www3.nhk.or.jp/nhkworld/common/js/common.js"></script>
+<script src="https://www3.nhk.or.jp/nhkworld/common/assets/parts/js/global.js"></script>
+<script src="https://www3.nhk.or.jp/nhkworld/assets/javascripts/api-sdk.js"></script>
+<script src="https://www3.nhk.or.jp/nhkworld/common/js/lib/jquery-3.min.js"></script>
+<script src="/nhkworld/en/multilingual_links/assets/js/index.js" async></script>
 </head>
-<body class="index">
-
-<section id="appsbanner">
-<script>NEWSPRE.preAppsBanner()</script>
-</section>
-
-<aside id="nhkheader">
-<script>nol_showCmnHeader({design:'gray'});</script>
-</aside><!--/ #nhkheader -->
-
-<aside class="module--news-flash" role="complementary"></aside><!--/ .flash_news -->
-<aside class="module--modal is-close"></aside><!--/ .module_modal -->
-
-<div id="wrapper">
-
-<header id="header" role="banner"></header><!--/ #header -->
-
-<div id="content">
-<div id="content-inner" class="-wide">
-
-<noscript>
-	このページではJavaScriptを使用しています。
-</noscript>
-
-<aside class="module--hot-trends"></aside><!--/ .hot_trends -->
-
-	<main id="main" role="main">
-
-		<article class="module module--site-information"></article>
-		<article class="module module--tsunami-information"></article>
-		<article class="module module--notifications"></article>
-		<article class="module module--free-space"></article>
-		<article class="module module--news-main index-main">
-			<header class="module--header">
-				<div class="module--header-text">
-					<h1>トップニュース</h1>
-					<p class="module--header-summary none-mobile">国内外の取材網を生かし、さまざまな分野のニュースをいち早く、正確にお伝えします</p>
-				</div>
-			</header>
-			<section class="module--content">
-				<div class="content--header">
-					<figure class="content--thumb">
-						<a href="/news/html/20250302/k10014737471000.html">
-							<img class="lazy" src="/news/parts16/images/common/noimg_default.gif" data-src="html/20250302/K10014737471_2503012328_0302001445_02_01.jpg" alt="【やり取り全文・後編】トランプ氏 ゼレンスキー氏 なぜ口論に">
-						</a>
-					</figure>
-					<div class="content--summary">
-						<h1 class="content--header-title">
-							<a href="/news/html/20250302/k10014737471000.html">
-								<em class="title">【やり取り全文・後編】トランプ氏 ゼレンスキー氏 なぜ口論に</em>
-							</a>
-							<span class="content--header-title-info">
-								<time datetime="2025-03-02T03:48:37">3月2日 3時48分</time>
-								<i class="i-new" aria-hidden="true">NEW</i>
-								<i class="i-media-video" aria-hidden="true">動画<i class="i-arrow"></i></i>
-								<a href="/news/word/0000277.html" class="i-word">トランプ大統領</a>
-							</span>
-						</h1>
-						<div class="content--header-links none-mobile">
-							<ul>
-								<li><a href="/news/catnew.html"><i class="i-arrow is-right_g"></i>新着ニュース一覧<svg viewBox="0 0 21.52 18.5" width="21.52" height="18.5"><use xlink:href="/news/parts16/images/common/news-icons.svg#latest-news"></use></svg></a></li>
-								<li><a href="/news/special/lnews/"><i class="i-arrow is-right_g"></i>地域発ニュース<svg viewBox="0 0 19.17 20" width="19.17" height="20"><use xlink:href="/news/parts16/images/common/news-icons.svg#local-news"></use></svg></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="content--items">
-					<ul class="content--list grid--col -column2-md">
-						<li>
-							<dl>
-								<dt>
-									<a href="/news/html/20250302/k10014737331000.html">
-										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737331_2503020506_0302051431_02_01.jpg" alt="ゼレンスキー大統領 欧州各国の首脳らとの会合に参加へ">
-										<i class="i-media-video"><i class="i-arrow"></i></i>
-									</a>
-								</dt>
-								<dd>
-									<a href="/news/html/20250302/k10014737331000.html">
-										<em class="title">ゼレンスキー大統領 欧州各国の首脳らとの会合に参加へ</em>
-									</a>
-									<span class="content--items-info">
-										<a href="/news/word/0002378.html" class="i-word">ゼレンスキー大統領</a>
-										<time datetime="2025-03-02T05:14:29">3月2日 5時14分</time>
-										<i class="i-new" aria-hidden="true">NEW</i>
-										<i class="i-media-video" aria-hidden="false"><i class="i-arrow"></i></i>
-									</span>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="/news/html/20250302/k10014737371000.html">
-										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737371_2503020610_0302061300_02_01.jpg" alt="岩手 大船渡の山林火災 発生から4日も延焼続く焼失約1400haに">
-										<i class="i-media-video"><i class="i-arrow"></i></i>
-									</a>
-								</dt>
-								<dd>
-									<a href="/news/html/20250302/k10014737371000.html">
-										<em class="title">岩手 大船渡の山林火災 発生から4日も延焼続く焼失約1400haに</em>
-									</a>
-									<span class="content--items-info">
-										<a href="/news/word/0002203.html" class="i-word">岩手県</a>
-										<time datetime="2025-03-02T04:09:33">3月2日 4時09分</time>
-										<i class="i-new" aria-hidden="true">NEW</i>
-										<i class="i-media-video" aria-hidden="false"><i class="i-arrow"></i></i>
-									</span>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="/news/html/20250302/k10014737521000.html">
-										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737521_2503020809_0302081005_02_01.jpg" alt="大阪 西成区 集合住宅で火事 2人死亡1人けが">
-									</a>
-								</dt>
-								<dd>
-									<a href="/news/html/20250302/k10014737521000.html">
-										<em class="title">大阪 西成区 集合住宅で火事 2人死亡1人けが</em>
-									</a>
-									<span class="content--items-info">
-										<a href="/news/word/0002227.html" class="i-word">大阪府</a>
-										<time datetime="2025-03-02T08:10:35">3月2日 8時10分</time>
-										<i class="i-new" aria-hidden="true">NEW</i>
-									</span>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="/news/html/20250302/k10014737501000.html">
-										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737501_2503020144_0302040738_02_01.jpg" alt="フィギュア世界ジュニア女子シングル 島田麻央が史上初の3連覇">
-									</a>
-								</dt>
-								<dd>
-									<a href="/news/html/20250302/k10014737501000.html">
-										<em class="title">フィギュア世界ジュニア女子シングル 島田麻央が史上初の3連覇</em>
-									</a>
-									<span class="content--items-info">
-										<a href="/news/word/0002053.html" class="i-word">#フィギュアスケート</a>
-										<time datetime="2025-03-02T04:08:41">3月2日 4時08分</time>
-										<i class="i-new" aria-hidden="true">NEW</i>
-									</span>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="/news/html/20250302/k10014737321000.html">
-										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737321_2503020427_0302052110_02_01.jpg" alt="ガザ停戦合意の期限過ぎる 第2段階への移行めぐり主張が対立">
-									</a>
-								</dt>
-								<dd>
-									<a href="/news/html/20250302/k10014737321000.html">
-										<em class="title">ガザ停戦合意の期限過ぎる 第2段階への移行めぐり主張が対立</em>
-									</a>
-									<span class="content--items-info">
-										<a href="/news/word/0001594.html" class="i-word">イスラエル・パレスチナ</a>
-										<time datetime="2025-03-02T05:21:08">3月2日 5時21分</time>
-										<i class="i-new" aria-hidden="true">NEW</i>
-									</span>
-								</dd>
-							</dl>
-						</li>
-						<li>
-							<dl>
-								<dt>
-									<a href="/news/html/20250302/k10014737451000.html">
-										<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737451_2503020003_0302065424_02_01.jpg" alt="トルコ 武装闘争続けてきたクルド労働者党“停戦”を発表">
-									</a>
-								</dt>
-								<dd>
-									<a href="/news/html/20250302/k10014737451000.html">
-										<em class="title">トルコ 武装闘争続けてきたクルド労働者党“停戦”を発表</em>
-									</a>
-									<span class="content--items-info">
-										<a href="/news/word/0002327.html" class="i-word">トルコ</a>
-										<time datetime="2025-03-02T00:09:58">3月2日 0時09分</time>
-										<i class="i-new" aria-hidden="true">NEW</i>
-									</span>
-								</dd>
-							</dl>
-						</li>
-					</ul>
-					<ul class="content--list grid--col -column4-md -column2-sm">
-						<li>
-							<a href="/news/html/20250302/k10014737411000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737411_2503012259_0301230402_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">【やり取り全文・前編】トランプ氏 ゼレンスキー氏 なぜ口論に</em>
-							</a>
-						</li>
-						<li>
-							<a href="/news/html/20250302/k10014737431000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250302/K10014737431_2503012300_0301230159_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">【やり取り全文・中編】トランプ氏 ゼレンスキー氏 なぜ口論に</em>
-							</a>
-						</li>
-						<li>
-							<a href="/news/html/20250228/k10014733961000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250228/K10014733961_2502272010_0227201506_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">プロ野球観戦に新ルール 試合中のSNS投稿に制限 なぜ？</em>
-							</a>
-						</li>
-						<li>
-							<a href="/news/html/20250301/k10014736991000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250301/K10014736991_2503011449_0301145033_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">就職活動本格化 “3割が被害” 就活セクハラ 対策は 【QAで】</em>
-							</a>
-						</li>
-						<li>
-							<a href="/news/html/20250228/k10014736161000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250228/K10014736161_2502281540_0228154155_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">岩手 大船渡の山林火災めぐりSNSで根拠ない情報が拡散 注意を</em>
-							</a>
-						</li>
-						<li>
-							<a href="/news/html/20250228/k10014735851000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250228/K10014735851_2502281424_0228143206_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">国際課税 米が離脱示唆 歴史的改正の行く末は【経済コラム】</em>
-							</a>
-						</li>
-						<li>
-							<a href="/news/html/20250228/k10014733691000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250228/K10014733691_2502271624_0227162450_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">職場や社会はどう支える? 認知症の家族の見守り</em>
-							</a>
-						</li>
-						<li>
-							<a href="/news/html/20250228/k10014732281000.html">
-								<figure>
-									<img class="lazy" src="/news/parts16/images/common/noimg_default_s.gif" data-src="/news/html/20250228/K10014732281_2502261345_0226134654_02_01.jpg" alt="">
-									<!-- <i class="i-media-video"><i class="i-arrow"></i></i> -->
-								</figure>
-								<em class="title">【詳しく】悪質リフォーム 業者がわざと屋根を…</em>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<footer class="module--footer none-screen">
-				<p class="button">
-					<a href="/news/catnew.html"><i class="i-arrow is-right_g"></i>新着ニュース一覧を見る</a>
-				</p>
-				<p class="button">
-					<a href="/news/special/lnews/"><i class="i-arrow is-right_g"></i>地域発ニュースを見る</a>
-				</p>
-			</footer>
-		</article>
-
-		<article class="module module--announce announce-weather--2107 none-screen"></article>
-		<article class="module module--top-movie none-screen"></article>
-
-		<div class="module module--featured-articles--2022">
-			<article class="module module--featured-contents-tab"></article>
-			<article class="module module--featured-articles--local"></article>
-		</div>
-		<article class="module module--news-easy none-mobile"></article>
-		<article class="module module--program-info none-mobile"></article>
-		<article class="module module--recommend--2107 none-mobile"></article>
-		<article class="module module--tag--2309 none-mobile module--featured-recommend-list"></article>
-	</main><!--/ #main -->
-
-	<aside id="side" role="complementary">
-		<div id="side-inner" class="side-inner">
-
-			<article class="module_aside module_aside--earthquake"></article>
-			<article class="module_aside module_aside--search-widget none-mobile"></article>
-			<article class="module_aside module_aside--announce announce-weather--2212 none-mobile"></article>
-			<article class="module_aside module_aside--featured-movie none-mobile"></article>
-			<article class="module_aside module_aside--ranking ranking-social--2107"></article>
-			<article class="module_aside module_aside--ranking ranking-access--2107"></article>
-			<article class="module_aside module_aside--news-latest-and-local"></article>
-			<article class="module_aside module_aside--news-closeup"></article>
-			<article class="module_aside module_aside--featured-program"></article>
-			<article class="module_aside module_aside--announce announce-sdc"></article>
-			<article class="module_aside module_aside--recommend--2107 none-screen"></article>
-			<article class="module_aside module_aside--tag--2309 none-screen module--featured-recommend-list"></article>
-
-		</div><!--/ #side-inner -->
-	</aside><!--/ #side -->
-
-	<nav id="pagetop" class="pagetop" role="navigation" onclick="_tc_onClick(s_omni, {'eVar58':'all_footer','eVar59':'btn_pagetop'}, 'click');">
-		<a href="#wrapper" title="ページの先頭へ戻る"><i class="i-arrow is-up_w">ページの先頭へ戻る</i></a>
-	</nav>
-
-</div><!--/ #content-inner -->
-
-<footer id="footer" role="contentinfo"></footer><!--/ #footer -->
-
-<aside id="nhkfooter">
-<script>nol_showCmnFooter({mode:'full'});</script>
+<body class="top">
+<div class="l-wrapper">
+<div class="pageBlock -blockskip"><a href="#mainContents">Skip Navigation</a></div>
+<div id="nw-global-header"></div>
+<div class="page__container"><header class="pageBlock -header">
+<div class="pageBlock__inner">
+<h1 class="pageBlock__name">
+<span class="pageBlock__logo">
+<picture>
+<source srcset="/nhkworld/en/multilingual_links/assets/img/img_kv_top_lg_en.png" media="(min-width: 769px)">
+<img src="/nhkworld/en/multilingual_links/assets/img/img_kv_top_sm_en.png" alt="Multilingual Portal : Japan LIFE & BOSAI">
+</picture>
+</span>
+</h1>
+</div>
+</header>
+<main class="page__mainContents" id="mainContents" role="main">
+<div class="emergency-swap">
+<div data-emergency="3">
+<div class="pageBlock -cardboard">
+<div class="pageBlock__inner">
+<div class="pageList__items swiper">
+<div class="swiper-wrapper"><div class="pageList__item swiper-slide" data-normal-order="1" data-disaster-order="2">
+<div><figure><picture style="background-image:url(/nhkworld/en/multilingual_links/assets/img/icn_qa_disaster.png)"><img src="/nhkworld/en/multilingual_links/assets/img/icn_qa_disaster.png" alt=""></picture><figcaption><span class="txt__native">Disaster Preparedness Q&A</span><span class="txt__ja" lang="ja"><p><ruby>防災<rt>ぼうさい</rt></ruby>Q&A</p>
+</span></figcaption></figure></div>
+<div class="btn__items"><div class="btn__item btn__item-1"><div class="select__links">
+<select><option style="display:none;"></option>
+<option value="/nhkworld/en/multilingual_links/en/disaster/">English  (英語)</option>
+<option value="/nhkworld/bn/multilingual_links/disaster/">বাংলা  (ベンガル語)</option>
+<option value="/nhkworld/my/multilingual_links/disaster/">မြန်မာဘာသာစကား  (ビルマ語)</option>
+<option value="/nhkworld/zh/multilingual_links/disaster/">中文（简体）  (中国語（簡体字）)</option>
+<option value="/nhkworld/zt/multilingual_links/disaster/">中文（繁體）  (中国語（繁体字）)</option>
+<option value="/nhkworld/fr/multilingual_links/disaster/">Français  (フランス語)</option>
+<option value="/nhkworld/hi/multilingual_links/disaster/">हिन्दी  (ヒンディー語)</option>
+<option value="/nhkworld/id/multilingual_links/disaster/">Indonesia  (インドネシア語)</option>
+<option value="/nhkworld/ko/multilingual_links/disaster/">코리언  (ハングル)</option>
+<option value="/nhkworld/fa/multilingual_links/disaster/">فارسی  (ペルシャ語)</option>
+<option value="/nhkworld/pt/multilingual_links/disaster/">Português  (ポルトガル語)</option>
+<option value="/nhkworld/th/multilingual_links/disaster/">ภาษาไทย  (タイ語)</option>
+<option value="/nhkworld/tr/multilingual_links/disaster/">Türkçe  (トルコ語)</option>
+<option value="/nhkworld/uk/multilingual_links/disaster/">Українська  (ウクライナ語)</option>
+<option value="/nhkworld/ur/multilingual_links/disaster/">اردو  (ウルドゥー語)</option>
+<option value="/nhkworld/vi/multilingual_links/disaster/">Tiếng Việt  (ベトナム語)</option></select><span class="btn"><span class="txt__native">Select language</span><span class="txt__ja" lang="ja"><ruby>言語<rt>げんご</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ</span></span>
+</div></div></div>
+</div>
+<div class="pageList__item swiper-slide" data-normal-order="2" data-disaster-order="3">
+<div><figure><picture style="background-image:url(/nhkworld/en/multilingual_links/assets/img/icn_qa_safety.png)"><img src="/nhkworld/en/multilingual_links/assets/img/icn_qa_safety.png" alt=""></picture><figcaption><span class="txt__native">Everyday Safety Q&A</span><span class="txt__ja" lang="ja"><p><ruby>暮<rt>く</rt></ruby>らしの<ruby>安全<rt>あんぜん</rt></ruby>Q&A</p>
+</span></figcaption></figure></div>
+<div class="btn__items"><div class="btn__item btn__item-1"><div class="select__links">
+<select><option style="display:none;"></option>
+<option value="/nhkworld/en/multilingual_links/en/safety/">English  (英語)</option>
+<option value="/nhkworld/bn/multilingual_links/safety/">বাংলা  (ベンガル語)</option>
+<option value="/nhkworld/my/multilingual_links/safety/">မြန်မာဘာသာစကား  (ビルマ語)</option>
+<option value="/nhkworld/zh/multilingual_links/safety/">中文（简体）  (中国語（簡体字）)</option>
+<option value="/nhkworld/zt/multilingual_links/safety/">中文（繁體）  (中国語（繁体字）)</option>
+<option value="/nhkworld/fr/multilingual_links/safety/">Français  (フランス語)</option>
+<option value="/nhkworld/hi/multilingual_links/safety/">हिन्दी  (ヒンディー語)</option>
+<option value="/nhkworld/id/multilingual_links/safety/">Indonesia  (インドネシア語)</option>
+<option value="/nhkworld/ko/multilingual_links/safety/">코리언  (ハングル)</option>
+<option value="/nhkworld/fa/multilingual_links/safety/">فارسی  (ペルシャ語)</option>
+<option value="/nhkworld/pt/multilingual_links/safety/">Português  (ポルトガル語)</option>
+<option value="/nhkworld/ru/multilingual_links/safety/">Русский  (ロシア語)</option>
+<option value="/nhkworld/es/multilingual_links/safety/">Español  (スペイン語)</option>
+<option value="/nhkworld/th/multilingual_links/safety/">ภาษาไทย  (タイ語)</option>
+<option value="/nhkworld/tr/multilingual_links/safety/">Türkçe  (トルコ語)</option>
+<option value="/nhkworld/ur/multilingual_links/safety/">اردو  (ウルドゥー語)</option>
+<option value="/nhkworld/vi/multilingual_links/safety/">Tiếng Việt  (ベトナム語)</option>
+<option value="/nhkworld/ja/multilingual_links/safety/">やさしいにほんご（やさしい日本語）</option></select><span class="btn"><span class="txt__native">Select language</span><span class="txt__ja" lang="ja"><ruby>言語<rt>げんご</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ</span></span>
+</div></div></div>
+</div>
+<div class="pageList__item swiper-slide" data-normal-order="3" data-disaster-order="4">
+<div><figure><picture style="background-image:url(/nhkworld/en/multilingual_links/assets/img/icn_qa_school.png)"><img src="/nhkworld/en/multilingual_links/assets/img/icn_qa_school.png" alt=""></picture><figcaption><span class="txt__native">School Enrollment Q&A</span><span class="txt__ja" lang="ja"><p><ruby>学校<rt>がっこう</rt></ruby>に<ruby>通<rt>かよ</rt></ruby>うQ&A</p>
+</span></figcaption></figure></div>
+<div class="btn__items"><div class="btn__item btn__item-1"><div class="select__links">
+<select><option style="display:none;"></option>
+<option value="/nhkworld/en/multilingual_links/en/school/">English  (英語)</option>
+<option value="/nhkworld/bn/multilingual_links/school/">বাংলা  (ベンガル語)</option>
+<option value="/nhkworld/my/multilingual_links/school/">မြန်မာဘာသာစကား  (ビルマ語)</option>
+<option value="/nhkworld/zh/multilingual_links/school/">中文（简体）  (中国語（簡体字）)</option>
+<option value="/nhkworld/fr/multilingual_links/school/">Français  (フランス語)</option>
+<option value="/nhkworld/hi/multilingual_links/school/">हिन्दी  (ヒンディー語)</option>
+<option value="/nhkworld/id/multilingual_links/school/">Indonesia  (インドネシア語)</option>
+<option value="/nhkworld/ko/multilingual_links/school/">코리언  (ハングル)</option>
+<option value="/nhkworld/fa/multilingual_links/school/">فارسی  (ペルシャ語)</option>
+<option value="/nhkworld/pt/multilingual_links/school/">Português  (ポルトガル語)</option>
+<option value="/nhkworld/th/multilingual_links/school/">ภาษาไทย  (タイ語)</option>
+<option value="/nhkworld/tr/multilingual_links/school/">Türkçe  (トルコ語)</option>
+<option value="/nhkworld/ur/multilingual_links/school/">اردو  (ウルドゥー語)</option>
+<option value="/nhkworld/vi/multilingual_links/school/">Tiếng Việt  (ベトナム語)</option>
+<option value="/nhkworld/ja/multilingual_links/school/">やさしいにほんご（やさしい日本語）</option></select><span class="btn"><span class="txt__native">Select language</span><span class="txt__ja" lang="ja"><ruby>言語<rt>げんご</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ</span></span>
+</div></div></div>
+</div><div class="pageList__item swiper-slide" data-normal-order="4" data-disaster-order="5">
+<div><figure><picture style="background-image:url(/nhkworld/en/multilingual_links/assets/2024/06/1717442983738.png)"><img src="/nhkworld/en/multilingual_links/assets/2024/06/1717442983738.png" alt=""></picture><figcaption><span class="txt__native">Living in Japan
+</span><span class="txt__ja" lang="ja"><p><ruby>日本<rt>にほん</rt></ruby>での<ruby>暮<rt>く</rt></ruby>らしに<ruby>役立<rt>やくだ</rt></ruby>つ<ruby>番組<rt>ばんぐみ</rt></ruby></p>
+</span></figcaption></figure></div>
+<div class="btn__items"><div class="btn__item btn__item-1"><div class="select__links">
+<select><option style="display:none;"></option>
+<option value="https://www3.nhk.or.jp/nhkworld/en/ondemand/program/audio/livinginjapan/?type=radioEpisode&">English  (英語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/zh/ondemand/program/audio/livinginjapan/?type=radioEpisode&">中文（简体）  (中国語（簡体字）)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/pt/ondemand/program/audio/livinginjapan/?type=radioEpisode&">Português  (ポルトガル語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/vi/ondemand/program/audio/livinginjapan/?type=radioEpisode&">Tiếng Việt  (ベトナム語)</option></select><span class="btn"><span class="txt__native">Select language</span><span class="txt__ja" lang="ja"><ruby>言語<rt>げんご</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ</span></span>
+</div></div></div>
+</div>
+<div class="pageList__item swiper-slide" data-normal-order="5" data-disaster-order="6">
+<div><figure><picture style="background-image:url(/nhkworld/en/multilingual_links/assets/2024/06/1717442990218.png)"><img src="/nhkworld/en/multilingual_links/assets/2024/06/1717442990218.png" alt=""></picture><figcaption><span class="txt__native">HOW TO CRAFT SAFETY
+</span><span class="txt__ja" lang="ja"><p><ruby>身近<rt>みぢか</rt></ruby>なもので<ruby>防災<rt>ぼうさい</rt></ruby>グッズを<ruby>作<rt>つく</rt></ruby>る</p>
+</span></figcaption></figure></div>
+<div class="btn__items"><div class="btn__item btn__item-1"><div class="select__links">
+<select><option style="display:none;"></option>
+<option value="https://www3.nhk.or.jp/nhkworld/en/ondemand/tag/how_to_craft_safety/?type=clip&">English  (英語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/zh/ondemand/tag/how_to_craft_safety/?type=clip&">中文（简体）  (中国語（簡体字）)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/zt/ondemand/tag/how_to_craft_safety/?type=clip&">中文（繁體）  (中国語（繁体字）)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/hi/ondemand/tag/how_to_craft_safety/?type=clip&">हिन्दी  (ヒンディー語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/id/ondemand/tag/how_to_craft_safety/?type=clip&">Indonesia  (インドネシア語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/pt/ondemand/tag/how_to_craft_safety/?type=clip&">Português  (ポルトガル語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/th/ondemand/tag/how_to_craft_safety/?type=clip&">ภาษาไทย  (タイ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/vi/ondemand/tag/how_to_craft_safety/?type=clip&">Tiếng Việt  (ベトナム語)</option></select><span class="btn"><span class="txt__native">Select language</span><span class="txt__ja" lang="ja"><ruby>言語<rt>げんご</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ</span></span>
+</div></div></div>
+</div>
+<div class="pageList__item swiper-slide" data-normal-order="6" data-disaster-order="7">
+<div><figure><picture style="background-image:url(/nhkworld/en/multilingual_links/assets/2024/06/1717442983433.png)"><img src="/nhkworld/en/multilingual_links/assets/2024/06/1717442983433.png" alt=""></picture><figcaption><span class="txt__native">NHK WORLD-JAPAN NEWS
+</span><span class="txt__ja" lang="ja"><p>ニュース</p>
+</span></figcaption></figure></div>
+<div class="btn__items"><div class="btn__item btn__item-1"><div class="select__links">
+<select><option style="display:none;"></option>
+<option value="https://www3.nhk.or.jp/nhkworld/en/news/">English  (英語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ar/news/">العربية  (アラビア語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/bn/news/">বাংলা  (ベンガル語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/my/news/">မြန်မာဘာသာစကား  (ビルマ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/zh/news/">中文（简体）  (中国語（簡体字）)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/zt/news/">中文（繁體）  (中国語（繁体字）)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/fr/news/">Français  (フランス語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/hi/news/">हिन्दी  (ヒンディー語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/id/news/">Indonesia  (インドネシア語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ko/news/">코리언  (ハングル)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/fa/news/">فارسی  (ペルシャ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/pt/news/">Português  (ポルトガル語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ru/news/">Русский  (ロシア語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/es/news/">Español  (スペイン語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/sw/news/">Kiswahili  (スワヒリ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/th/news/">ภาษาไทย  (タイ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/tr/news/">Türkçe  (トルコ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/uk/news/">Українська  (ウクライナ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ur/news/">اردو  (ウルドゥー語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/vi/news/">Tiếng Việt  (ベトナム語)</option>
+<option value="https://www3.nhk.or.jp/news/easy/">やさしいにほんご（やさしい日本語）</option></select><span class="btn"><span class="txt__native">Select language</span><span class="txt__ja" lang="ja"><ruby>言語<rt>げんご</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ</span></span>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="swiper-navigation">
+<div class="swiper-button-prev"><button>prev</button></div>
+<div class="swiper-button-next"><button>next</button></div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</div>
+</div>
+<div data-emergency="2"><aside class="pageBlock -program">
+<div class="pageBlock__inner">
+<div class="pageList__items">
+<div class="pageList__item">
+<figure>
+<picture>
+<img src="/nhkworld/en/multilingual_links/assets/img/bnr_icn_learn.png" alt="live">
+</picture>
+<figcaption>
+<span class="txt__native">Learn Japanese</span>
+<span class="txt__ja" lang="ja"><ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby></span></figcaption>
+<div class="btn__items"><div class="btn__item btn__item-1">
+<div class="select__links">
+<select><option style="display:none;"></option>
+<option value="https://www3.nhk.or.jp/nhkworld/en/learnjapanese/">English  (英語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ar/learnjapanese/">العربية  (アラビア語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/bn/learnjapanese/">বাংলা  (ベンガル語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/my/learnjapanese/">မြန်မာဘာသာစကား  (ビルマ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/zh/learnjapanese/">中文（简体）  (中国語（簡体字）)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/zt/learnjapanese/">中文（繁體）  (中国語（繁体字）)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/fr/learnjapanese/">Français  (フランス語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/hi/learnjapanese/">हिन्दी  (ヒンディー語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/id/learnjapanese/">Indonesia  (インドネシア語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ko/learnjapanese/">코리언  (ハングル)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/fa/learnjapanese/">فارسی  (ペルシャ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/pt/learnjapanese/">Português  (ポルトガル語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ru/learnjapanese/">Русский  (ロシア語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/es/learnjapanese/">Español  (スペイン語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/sw/learnjapanese/">Kiswahili  (スワヒリ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/th/learnjapanese/">ภาษาไทย  (タイ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/tr/learnjapanese/">Türkçe  (トルコ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/uk/learnjapanese/">Українська  (ウクライナ語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/ur/learnjapanese/">اردو  (ウルドゥー語)</option>
+<option value="https://www3.nhk.or.jp/nhkworld/vi/learnjapanese/">Tiếng Việt  (ベトナム語)</option></select><span class="btn">
+<span class="txt__native">Select language</span><span class="txt__ja" lang="ja"><ruby>言語<rt>げんご</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶ</span></span>                            </div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div>
 </aside>
-
-</div><!--/ #content -->
-
-</div><!--/ #wrapper -->
-
-<script src="/news/parts16/js/vendor-v3.js?stamp=ph5120"></script>
-<script src="/news/parts16/js/app.bundle-v3.js?stamp=ph5120"></script>
-
+</div>
+<div data-emergency="1">
+<div id="localnav" class="pageBlock -localnav">
+<div class="pageBlock__inner">
+<h2>
+<em>News and information in your language</em><span class="txt__ja" lang="ja"><ruby>言語別<rt>げんごべつ</rt></ruby>のニュースとその<ruby>他<rt>ほか</rt></ruby>の<ruby>情報<rt>じょうほう</rt></ruby></span>
+</h2>
+<nav class="pageList -localnav">
+<ul class="pageList__items">
+<li lang="en" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/en/multilingual_links/en/">
+<dl>
+<dt class="txt__native">English</dt>
+<dd class="txt__ja" lang="ja">英語</dd></dl>
+</a>
+</div></li>
+<li lang="ar" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/ar/multilingual_links/">
+<dl>
+<dt class="txt__native">العربية</dt>
+<dd class="txt__ja" lang="ja">アラビア語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="bn" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/bn/multilingual_links/">
+<dl>
+<dt class="txt__native">বাংলা</dt>
+<dd class="txt__ja" lang="ja">ベンガル語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="my" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/my/multilingual_links/">
+<dl>
+<dt class="txt__native">မြန်မာဘာသာစကား</dt>
+<dd class="txt__ja" lang="ja">ビルマ語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="zh" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/zh/multilingual_links/">
+<dl>
+<dt class="txt__native">中文(简体)</dt>
+<dd class="txt__ja" lang="ja">中国語（簡体字）</dd></dl>
+</a>
+</div>
+</li>
+<li lang="zt" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/zt/multilingual_links/">
+<dl>
+<dt class="txt__native">中文（繁體）</dt>
+<dd class="txt__ja" lang="ja">中国語（繁体字）</dd></dl>
+</a>
+</div>
+</li>
+<li lang="fr" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/fr/multilingual_links/">
+<dl>
+<dt class="txt__native">Français</dt>
+<dd class="txt__ja" lang="ja">フランス語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="hi" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/hi/multilingual_links/">
+<dl>
+<dt class="txt__native">हिन्दी</dt>
+<dd class="txt__ja" lang="ja">ヒンディー語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="id" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/id/multilingual_links/">
+<dl>
+<dt class="txt__native">Bahasa Indonesia</dt>
+<dd class="txt__ja" lang="ja">インドネシア語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="ko" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/ko/multilingual_links/">
+<dl>
+<dt class="txt__native">코리언</dt>
+<dd class="txt__ja" lang="ja">ハングル</dd></dl>
+</a>
+</div>
+</li>
+<li lang="fa" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/fa/multilingual_links/">
+<dl>
+<dt class="txt__native">فارسی</dt>
+<dd class="txt__ja" lang="ja">ペルシャ語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="pt" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/pt/multilingual_links/">
+<dl>
+<dt class="txt__native">Português</dt>
+<dd class="txt__ja" lang="ja">ポルトガル語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="ru" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/ru/multilingual_links/">
+<dl>
+<dt class="txt__native">Русский</dt>
+<dd class="txt__ja" lang="ja">ロシア語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="es" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/es/multilingual_links/">
+<dl>
+<dt class="txt__native">Español</dt>
+<dd class="txt__ja" lang="ja">スペイン語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="sw" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/sw/multilingual_links/">
+<dl>
+<dt class="txt__native">Kiswahili</dt>
+<dd class="txt__ja" lang="ja">スワヒリ語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="th" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/th/multilingual_links/">
+<dl>
+<dt class="txt__native">ภาษาไทย</dt>
+<dd class="txt__ja" lang="ja">タイ語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="tr" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/tr/multilingual_links/">
+<dl>
+<dt class="txt__native">Türkçe</dt>
+<dd class="txt__ja" lang="ja">トルコ語</dd></dl>
+</a>
+</div>
+</li>
+<li class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/uk/multilingual_links/">
+<dl>
+<dt class="txt__native">Українська</dt>
+<dd class="txt__ja" lang="ja">ウクライナ語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="ur" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/ur/multilingual_links/">
+<dl>
+<dt class="txt__native">اردو</dt>
+<dd class="txt__ja" lang="ja">ウルドゥー語</dd>
+</dl>
+</a>
+</div>
+</li>
+<li lang="vi" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/vi/multilingual_links/">
+<dl>
+<dt class="txt__native">Tiếng Việt</dt>
+<dd class="txt__ja" lang="ja">ベトナム語</dd></dl>
+</a>
+</div>
+</li>
+<li lang="ja" class="pageList__item">
+<div class="pageList__card">
+<a href="/nhkworld/ja/multilingual_links/">
+<dl>
+<dt class="txt__native">やさしいにほんご</dt>
+<dd class="txt__ja" lang="ja">やさしい日本語</dd></dl>
+</a>
+</div>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<section class="pageBlock -articles -video"></section>
+</div>
+</div><aside class="pageBlock -news-web-easy">
+<div class="pageBlock__inner">
+<div class="pageList__item">
+<div class="pageList__item-col">
+<h4>Simplified Japanese news<br>
+<span class="txt__ja">やさしいことばでニュースを<ruby>伝<rt>つた</rt></ruby>えます</span>
+</h4>
+<div class="text">
+Articles feature a text-to-speech option to aid listening and reading comprehension.<br>
+<span class="txt__ja">ニュースを<ruby>音声<rt>おんせい</rt></ruby>で<ruby>聞<rt>き</rt></ruby>くことができます</span>
+</div>
+<div class="btn__items">
+<div class="btn__item">
+<a href="https://www3.nhk.or.jp/news/easy/">詳しくはこちら</a>
+</div>
+</div>
+</div>
+<div class="pageList__item-col">
+<a href="https://www3.nhk.or.jp/news/easy/">
+<picture>
+<img src="/nhkworld/en/multilingual_links/assets/img/bnr_newsewbeasy.jpg">
+</picture>
+</a>
+</div></div>
+</div>
+</aside><aside class="pageBlock -bigbanner">
+<div class="pageBlock__inner">
+<div class="pageList__item">
+<div class="pageList__item-col">
+<div class="tag__items">
+<span class="tag__item">日本語のみ</span>
+</div>
+<div class="title">NHKワールド JAPAN・おすすめ<ruby>多言語<rt>たげんご</rt></ruby>コンテンツ</div>
+<div class="summary">
+<div>
+おすすめの<ruby>番組<rt>ばんぐみ</rt></ruby>やウェブサイトなどを<ruby>紹介<rt>しょうかい</rt></ruby>します
+</div>
+</div>
+<div class="btn__items">
+<div class="btn__item">
+<a href="/nhkworld/en/multilingual_links/assets/2025/02/1740112593105.pdf">最新PDFはこちら</a>
+</div>
+<div>
+<a href="/nhkworld/en/multilingual_links/recommend/">バックナンバーを見る</a>
+</div>
+</div>
+</div>
+<div class="pageList__item-col">
+<picture>
+<img src="/nhkworld/en/multilingual_links/assets/img/img_pdf.png">
+</picture>
+</div>
+</div>
+</div>
+</aside>
+<aside class="pageBlock -yobikake">
+<div class="pageBlock__inner">
+<div class="pageList__item">
+<h4>『<ruby>多言語<rt>たげんご</rt></ruby>による<ruby>災害時<rt>さいがいじ</rt></ruby>の<ruby>呼<rt>よ</rt></ruby>びかけ』<br class="-sp">
+<ruby>音声<rt>おんせい</rt></ruby>データ</h4>
+<div class="yobikake_text">
+<ruby>地震<rt>じしん</rt></ruby>、<ruby>火災<rt>かさい</rt></ruby>、<ruby>津波<rt>つなみ</rt></ruby>、<ruby>大雨<rt>おおあめ</rt></ruby>などの<ruby>災害時<rt>さいがいじ</rt></ruby>、<ruby>周<rt>まわ</rt></ruby>りの<ruby>外国<rt>がいこく</rt></ruby>の<ruby>方<rt>かた</rt></ruby>に<ruby>呼<rt>よ</rt></ruby>びかけるフレーズを<ruby>用意<rt>ようい</rt></ruby>しました。<br class="-sp">
+たとえば<ruby>宿泊施設<rt>しゅくはくしせつ</rt></ruby>や<ruby>商業施設<rt>しょうぎょうしせつ</rt></ruby>の<ruby>館内放送<rt>かんないほうそう</rt></ruby>などにご<ruby>利用<rt>りよう</rt></ruby>いただけます。<br class="-sp">
+（<ruby>日本語<rt>にほんご</rt></ruby>・<ruby>英語<rt>えいご</rt></ruby>・<ruby>中国語<rt>ちゅうごくご</rt></ruby>・ハングル・タイ<ruby>語<rt>ご</rt></ruby>・ベトナム<ruby>語<rt>ご</rt></ruby>・ポルトガル<ruby>語<rt>ご</rt></ruby>）</div>
+<div class="btn__items">
+<div class="btn__item">
+<a href="/nhkworld/en/multilingual_links/yobikake/">詳しくはこちら</a>
+</div>
+</div></div>
+</div>
+</aside>
+<section class="pageBlock -articles -flyers">
+<div class="pageBlock__inner">
+<h2>
+<em>Flyers</em> <span class="txt__ja" lang="ja"><p>チラシ</p>
+</span>
+</h2>
+<div class="pageList__items">
+<div class="pageList__item"><a href="/nhkworld/en/multilingual_links/assets/2025/02/1739328465905.pdf"><figure>
+<picture style="background-image: url(/nhkworld/en/multilingual_links/assets/2024/03/1739328551851.jpg);">
+<img src="/nhkworld/en/multilingual_links/assets/2024/03/1739328551851.jpg">
+</picture>
+<figcaption></figcaption>
+</figure></a></div>
+<div class="pageList__item"><a href="/nhkworld/en/multilingual_links/assets/2024/03/1717469808340.pdf"><figure>
+<picture style="background-image: url(/nhkworld/en/multilingual_links/assets/2024/03/1717548068387.jpg);">
+<img src="/nhkworld/en/multilingual_links/assets/2024/03/1717548068387.jpg">
+</picture>
+<figcaption></figcaption>
+</figure></a></div>
+<div class="pageList__item"><a href="/nhkworld/en/multilingual_links/assets/2024/03/1717548128343.pdf"><figure>
+<picture style="background-image: url(/nhkworld/en/multilingual_links/assets/2024/03/1717548146000.jpg);">
+<img src="/nhkworld/en/multilingual_links/assets/2024/03/1717548146000.jpg">
+</picture>
+<figcaption></figcaption>
+</figure></a></div>
+<div class="pageList__item"><a href="/nhkworld/en/multilingual_links/assets/2024/03/1739335830108.pdf"><figure>
+<picture style="background-image: url(/nhkworld/en/multilingual_links/assets/2024/03/1739335854132.jpg);">
+<img src="/nhkworld/en/multilingual_links/assets/2024/03/1739335854132.jpg">
+</picture>
+<figcaption></figcaption>
+</figure></a></div>
+<div class="pageList__item"><a href="/nhkworld/en/multilingual_links/assets/2024/02/1730879569603.pdf"><figure>
+<picture style="background-image: url(/nhkworld/en/multilingual_links/assets/2024/11/1730791973209.jpg);">
+<img src="/nhkworld/en/multilingual_links/assets/2024/11/1730791973209.jpg">
+</picture>
+<figcaption></figcaption>
+</figure></a></div>
+</div>
+</div></section><aside class="pageBlock -banner">
+<div class="pageBlock__inner">
+<div class="pageList__items">
+<div class="pageList__item"><a href="https://www3.nhk.or.jp/news/easy/"><img src="/nhkworld/en/multilingual_links/assets/2024/11/1730792903255.jpg" alt="NHKやさしいことばニュース NEWS WEB EASY"></a></div>
+</div>
+</div>
+</aside>
+</main>
+</div>
+</div><div id="sns__block"><div id="share"></div></div>
+<div id="nw-global-footer"></div>
+<div id="cover"></div>
+<script>NWTool('NWHeader', { "lang": "en", "fullresponsive": true });
+NWTool('NWFooter', { "lang": "en", "fullresponsive": true });
+var sns = nw_showSNS.en({
+url: 'https://www3.nhk.or.jp/nhkworld/en/multilingual_links/',
+title: 'Multilingual Portal: Japan LIFE & BOSAI　がいこくごの 生活と防災の情報 | NHK WORLD-JAPAN'
+})
+document.getElementById("share").appendChild(sns);</script>
 </body>
 </html>
