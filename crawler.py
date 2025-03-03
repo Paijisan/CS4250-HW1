@@ -78,13 +78,13 @@ class WebCrawler:
 
 if __name__ == "__main__":
     seed_urls = [
-        "https://www.philstar.com/pilipino-star-ngayon",  # Tagalog news
-        "https://www.bjnews.com.cn/",  # Chinese news
-        "https://www3.nhk.or.jp/nhkworld/en/learnjapanese/audionews/",  # Japanese news
-        "https://www.yna.co.kr/" # Korean News
+        "https://news.postimees.ee/",  # Estonian news
+        "https://www.lemonde.fr/?preferred_lang=fr",  # French news
+        "https://www.moscowtimes.ru/",  # Russian news
+        "https://cesky.radio.cz/" # Czech News
     ]
 
-    domain_restrictions = ["philstar.com", "bjnews.com.cn", "nhk.or.jp", "yna.co.kr"]
+    domain_restrictions = ["news.postimees.ee", "lemonde.fr", "moscowtimes.ru", "cesky.radio.cz"]
 
     # Create a report file with headers
     with open("report.csv", "w", newline="", encoding="utf-8") as file:
