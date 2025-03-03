@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <script src="https://cdn.auth0.com/js/lock/10.18/lock.min.js"></script>
+    <script src="https://cdn.auth0.com/js/auth0/8.10/auth0.min.js"></script>
+    <script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
+    <script type="text/javascript">
+        const queryParams = new URLSearchParams(window.location.search);
+        const lang = 'nl' || queryParams.get('ui_locales') || 'nl';
+        let brandGroupData;
+        const brandId = 'tel' || queryParams.get('brand') || '';
+        const brandGroupId = 'MNL' || queryParams.get('brandGroup') || '';
+        window.dataLayer = window.dataLayer || [];
+            const promptName = 'login';
+            const promptCategoryName = 'login';
+            const hasProgressiveProfiling = '' === 'true';
+
+            const SessionStorageKeys = {
+                EventCategory: "eventcategory"
+            }
+
+            const Auth0Event = {
+                Login: "login",
+                Registration: "signup",
+                ResetPasswordRequest: "reset-password-request",
+                ResetPasswordMailSent: "reset-password-email",
+                EmailConfirmed: "email-verification-result",
+                EmailVerification: "email-verification",
+                ResetPassword: "reset-password",
+                ResetPasswordSuccessful: "reset-password-success",
+                ResetPasswordError: "reset-password-error"
+            }
+
+            const TrackingEventCategoryValues = {
+                Login: "login",
+                Registration: "registration",
+                Fallback: "Event category not defined"
+            }
+            const EventActionValues = {
+                Click: "click",
+                Show: "show"
+            }
+
+            function createEventMapping(showScreen, goBack, moreInfo, eventCategory) {
+                return {showScreen, goBack, moreInfo, eventCategory}
+            }
+
+        function isElementPresent(textKey) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    return document.body.innerText.includes(textKey);
+                });
+            } else {
+                // The DOM is already fully loaded
+                return document.body.innerText.includes(textKey);
+            }
+        }
+
+        // Need to derive which error screen for tracking but since auth0 provides nothing to derive on which error screen we're on:
+            // - Key-value pairs on text fields configured for each auth0 page available in prompt.screen.texts
+            // - Derive on which screen based on which of these key value pairs are included in document body
+            // Note: templating engine cannot handle dynamic strings, therefore we need to statically define each text we want to retrieve.
+            function determineMailConfirmationScreenType() {
+                const verifiedTitle = "";
+                const alreadyVerifiedDescription = "";
+                const invalidAccountOrCodeDescription = "";
+                const unknownErrorDescription = "";
+
+                if (isElementPresent(verifiedTitle)) {
+                    return 'verified';
+                } else if (isElementPresent(alreadyVerifiedDescription)) {
+                    return 'alreadyVerifiedDescription';
+                } else if (isElementPresent(invalidAccountOrCodeDescription)) {
+                    return 'invalidAccountOrCodeDescription';
+                } else if (isElementPresent(unknownErrorDescription)) {
+                    return 'unknownErrorDescription';
+                }
+                return 'unknown';
+            }
+
+            // Same comments one error tracking screens in auth0 apply here.
+            function determineResetPasswordErrorScreenType() {
+                const eventTitleUsed = "";
+                const eventTitleExpired = "";
+                const eventTitleGeneric = "";
+
+                if (isElementPresent(eventTitleUsed)) {
+                    return 'used';
+                } else if (isElementPresent(eventTitleExpired)) {
+                    return 'expired';
+                } else if (isElementPresent(eventTitleGeneric)) {
+                    return 'generic';
+                }
+                return 'unknown';
+            }
+
+        function getTrackingEventMappings() {
+            return {
+                [Auth0Event.Login]: createEventMapping(
+                    "provide-credentials",
+                    "provide-credentials-cancel",
+                    "provide-credentials-read-more",
+                    TrackingEventCategoryValues.Login),
+                [Auth0Event.Registration]: createEventMapping(
+                    hasProgressiveProfiling ? "subscription-provide-credentials" : "provide-credentials",
+                    hasProgressiveProfiling ? "subscription-provide-credentials-cancel" : "provide-credentials-cancel",
+                    hasProgressiveProfiling ? "subscription-provide-credentials-read-more" : "provide-credentials-read-more",
+                    TrackingEventCategoryValues.Registration),
+                [Auth0Event.ResetPasswordRequest]: createEventMapping(
+                    "password-reset-email",
+                    "password-reset-email-cancel",
+                    "password-reset-email-read-more",
+                    TrackingEventCategoryValues.Fallback),
+                [Auth0Event.ResetPasswordMailSent]: createEventMapping(
+                    "password-reset-email-sent",
+                    "password-reset-email-sent-cancel",
+                    "password-reset-email-sent-read-more",
+                    TrackingEventCategoryValues.Fallback),
+                [Auth0Event.EmailConfirmed]: function () {
+                    const screenType = determineMailConfirmationScreenType();
+                    if (screenType === 'verified') {
+                        return createEventMapping(
+                            "confirmed-email",
+                            "Event category not defined",
+                            "confirm-email-read-more",
+                            TrackingEventCategoryValues.Fallback
+                        );
+                    } else if (screenType === 'alreadyVerifiedDescription') {
+                        return createEventMapping(
+                            "This-account-is-already-verified",
+                            "This-account-is-already-verified",
+                            "This-account-is-already-verified",
+                            TrackingEventCategoryValues.Fallback
+                        );
+                    } else if (screenType === 'invalidAccountOrCodeDescription') {
+                        return createEventMapping(
+                            "User-account-does-not-exist-or-the-verification-code-is-invalid",
+                            "User-account-does-not-exist-or-the-verification-code-is-invalid",
+                            "User-account-does-not-exist-or-the-verification-code-is-invalid",
+                            TrackingEventCategoryValues.Fallback
+                        );
+                    } else if (screenType === 'unknownErrorDescription') {
+                        return createEventMapping(
+                            "email-not-verified",
+                            "email-not-verified",
+                            "email-not-verified",
+                            TrackingEventCategoryValues.Fallback
+                        );
+                    }
+                    return createEventMapping(
+                        "confirmed-email",
+                        "Event category not defined",
+                        "confirm-email-read-more",
+                        TrackingEventCategoryValues.Fallback
+                    );
+                }(),
+                [Auth0Event.ResetPassword]: createEventMapping(
+                    "password-reset-choose-new-password",
+                    "password-reset-choose-new-password-cancel",
+                    "password-reset-choose-new-password-read-more",
+                    TrackingEventCategoryValues.Login),
+                [Auth0Event.ResetPasswordSuccessful]: createEventMapping(
+                    "password-reset-new-password-confirmed",
+                    "password-reset-new-password-confirmed-cancel",
+                    "password-reset-new-password-confirmed-read-more",
+                    TrackingEventCategoryValues.Fallback
+                ),
+                [Auth0Event.ResetPasswordError]: function () {
+                    const screenType = determineResetPasswordErrorScreenType();
+                    if (screenType === 'used') {
+                        return createEventMapping(
+                            "password-reset-link-already-used",
+                            "Event category not defined",
+                            "Event category not defined",
+                            TrackingEventCategoryValues.Fallback
+                        );
+                    } else if (screenType === 'expired') {
+                        return createEventMapping(
+                            "password-reset-link-expired",
+                            "Event category not defined",
+                            "Event category not defined",
+                            TrackingEventCategoryValues.Fallback
+                        );
+                    } else if (screenType === 'generic') {
+                        return createEventMapping(
+                            "password-reset-link-generic",
+                            "Event category not defined",
+                            "Event category not defined",
+                            TrackingEventCategoryValues.Fallback
+                        );
+                    }
+                }(),
+                [Auth0Event.EmailVerification]: createEventMapping(
+                    "Event category not defined",
+                    "Event category not defined",
+                    "Event category not defined",
+                    TrackingEventCategoryValues.Registration
+                )
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', getTrackingEventMappings());
+        } else {
+            // The DOM is already fully loaded
+            getTrackingEventMappings();
+        }
+
+            function getTrackingEventValue(promptName, type) {
+                const mapping = getTrackingEventMappings()[promptName];
+                return mapping ? mapping[type] : null
+            }
+
+            function isEventCategoryStoredOrIsNewValidCategory(eventCategory) {
+                return sessionStorage.getItem(SessionStorageKeys.EventCategory) === null || eventCategory !== TrackingEventCategoryValues.Fallback
+            }
+
+            function getEventCategory() {
+                let eventCategory = getTrackingEventValue(promptCategoryName, "eventCategory");
+                if (isEventCategoryStoredOrIsNewValidCategory(eventCategory)) {
+                    sessionStorage.setItem(SessionStorageKeys.EventCategory, eventCategory)
+                    return eventCategory
+                } else {
+                    return sessionStorage.getItem(SessionStorageKeys.EventCategory);
+                }
+            }
+
+            function getTrackingQueryParams() {
+                // https://auth0.com/docs/customize/universal-login-pages/universal-login-page-templates#custom-query-parameters
+                const articleId = '';
+                const utmInternal = '';
+                const sessionId = '';
+                const cookieId = '';
+                return {
+                    'articleid': articleId || null,
+                    'utminternal': utmInternal || null,
+                    'cookieid': cookieId || null,
+                    'sessionid': sessionId || null,
+                }
+            }
+
+            function getDefaultEventData() {
+                const generalPropertyData = {
+                    'brandcode': brandId,
+                    'application': 'www',
+                    'disableShortnames': true,
+                    'environment': "PRD" || null,
+                    'eventid': null,
+                    'identyaccountid': '' || null,
+                    'identityaccounttype': null,
+                    'isnewdataformat': true,
+                    'sharedsdkversion': null,
+                    'subscriptionid': null,
+                    'testmode': false,
+                    'viewid': null,
+                    'brandgroup': brandGroupId || null,
+                    'prompt': 'login' || null,
+                    'screen': 'login' || null,
+                    'event': 'user_action'
+                }
+
+                const consentData = {
+                    'consentcookies': false,
+                    'consentcreateadsprofile': false,
+                    'consentcreatecontentprofile': false,
+                    'consentimproveproducts': false,
+                    'consentmarketresearch': false,
+                    'consentmeasureadperformance': false,
+                    'consentmeasurecontentperformance': false,
+                    'consentselectbasicads': false,
+                    'consentselectpersonalizedads': false,
+                    'consentselectpersonalizedcontent': false,
+                    'consentsocialmedia': false,
+                }
+
+                const wallPropertyData = {
+                    'wallid': null
+                }
+
+                const trackingData = getTrackingQueryParams();
+
+                return {
+                    ...generalPropertyData,
+                    ...consentData,
+                    ...wallPropertyData,
+                    ...trackingData
+                }
+            }
+            
+            function removeSocialButtons(){
+                const buttonGoogle = document.querySelector('button[data-provider="google"]');
+                const buttonNRC = document.querySelector('button[data-provider="oauth2"]');
+                const alternateAction = document.querySelector('.ulp-alternate-action');
+                const orDiv = alternateAction.nextElementSibling;
+
+                if (buttonGoogle) {
+                    buttonGoogle.style.display = 'none';
+                    if (!buttonNRC && orDiv) {
+                        orDiv.remove();
+                    }
+                }
+            }
+
+            async function sendToDataLayer(mergedData) {
+                const userTrackingOptions = brandGroupData?.userTracking || null;
+                const gtmContainerId = userTrackingOptions?.containerId || null;
+
+                dataLayer.push(mergedData);
+                (function (w, d, s, l, i) {
+                    w[l] = w[l] || [];
+                    w[l].push({
+                        'gtm.start':
+                            new Date().getTime(), event: 'gtm.js'
+                    });
+                    const f = d.getElementsByTagName(s)[0],
+                        j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+                    j.async = true;
+                    j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                    f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', gtmContainerId || "GTM-KFHTVC5S");
+            }
+
+            async function screenIsShown() {
+                const defaultEventData = getDefaultEventData();
+                const screenIsShownData = {
+                    'eventaction': EventActionValues.Show,
+                    'eventcategory': getEventCategory() || null,
+                    'eventlabel': getTrackingEventValue(promptName, 'showScreen'),
+                }
+                const mergedData = {
+                    ...defaultEventData,
+                    ...screenIsShownData
+                }
+                await sendToDataLayer(mergedData);
+            }
+
+            async function trackGoBackLinkClicked() {
+                const defaultEventData = getDefaultEventData();
+                const linkClickedData = {
+                    'eventaction': EventActionValues.Click,
+                    'eventcategory': getEventCategory() || null,
+                    'eventlabel': getTrackingEventValue(promptName, 'goBack'),
+                }
+                const mergedData = {
+                    ...defaultEventData,
+                    ...linkClickedData
+                }
+                await sendToDataLayer(mergedData);
+            }
+
+            async function trackMoreInfoClick() {
+                const defaultEventData = getDefaultEventData();
+                const moreInfoClickData = {
+                    'eventaction': EventActionValues.Click,
+                    'eventcategory': getEventCategory() || null,
+                    'eventlabel': getTrackingEventValue(promptName, 'moreInfo'),
+                }
+                const mergedData = {
+                    ...defaultEventData,
+                    ...moreInfoClickData
+                }
+                await sendToDataLayer(mergedData);
+            }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next/i18next.min.js" type="text/javascript"></script>
+    <script src="https://register.mediahuis.com/roboto-regular.woff2" type="font" crossorigin="anonymous"></script>
+    <title>De Telegraaf - Selfservice</title>    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <meta name="ulp-version" content="1.29.1">
+    
+    
+    
+    <meta name="robots" content="noindex, nofollow">
+    
+    
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.106.1/css/main.cdn.min.css">
+    <style id="custom-styles-container">
+      
+        
+
+
+
+
+        
+          :root, .af-custom-form-container .af-form {
+    --primary-color: #000000;
+  }
+        
+      
+
+        
+          :root, .af-custom-form-container .af-form {
+    --button-font-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-border-color: #BBC1CD;
+    --social-button-border-color: #BBC1CD;
+    --radio-button-border-color: #BBC1CD;
+  }
+        
+      
+
+        
+          :root {
+    --secondary-button-text-color: #1e212a;
+  }
+        
+      
+
+        
+          :root {
+    --link-color: #3A3E3F;
+  }
+        
+      
+
+        
+          :root {
+    --title-font-color: #3A3E3F;
+  }
+        
+      
+
+        
+          :root {
+    --font-default-color: #768092;
+  }
+        
+      
+
+        
+          :root {
+    --widget-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --font-light-color: #9BA1AC;
+  }
+        
+      
+
+        
+          :root {
+    --input-text-color: #3A3E3F;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-color: #BBC1CD;
+    --border-default-color: #BBC1CD;
+  }
+        
+      
+
+        
+          :root {
+    --input-background-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --icon-default-color: #3A4256;
+  }
+        
+      
+
+        
+          :root {
+    --error-color: #E92326;
+    --error-text-color: #ffffff;
+  }
+        
+      
+
+        
+          :root {
+    --success-color: #1AB11D;
+  }
+        
+      
+
+        
+          :root {
+    --base-focus-color: #000000;
+    --transparency-focus-color: rgba(0,0,0, 0.15);
+  }
+        
+      
+
+        
+          :root {
+    --base-hover-color: #000000;
+    --transparency-hover-color: rgba(0,0,0, var(--hover-transparency-value));
+  }
+        
+      
+
+        
+      
+
+
+
+
+        
+          @font-face {
+    font-family: 'ULP Custom';
+    font-style: normal;
+    font-weight: var(--font-default-weight);
+    src: local('ULP Custom'), url('https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.woff2') format('woff');
+  }
+
+  body {
+    --font-family: 'ULP Custom', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+  }
+        
+      
+
+        
+          html, :root, .af-custom-form-container .af-form {
+    font-size: 14px;
+    --default-font-size: 14px;
+  }
+        
+      
+
+        
+          body {
+    --title-font-size: 1.43rem;
+    --title-font-weight: var(--font-bold-weight);
+  }
+        
+      
+
+        
+          .cb1378234 {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .c6215c8ff {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+  .ulp-passkey-benefit-heading {
+    font-size: 1.15rem;
+  }
+        
+      
+
+        
+          .cca57afd8, .c65b1399d {
+    font-size: 1.15rem;
+    font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          body {
+    --ulp-label-font-size: 1rem;
+    --ulp-label-font-weight: var(--font-default-weight);
+  }
+        
+      
+
+        
+          .ccd9b9eb0, .cdf6f7df0, [id^='ulp-container-'] a {
+    font-size: 1rem;
+    font-weight: var(--font-bold-weight) !important;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          :root {
+    --button-border-width: 1px;
+    --social-button-border-width: 1px;
+    --radio-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --button-border-radius: 4px;
+    --radio-border-radius: 4px;
+  }
+        
+      
+
+        
+          :root {
+    --input-border-width: 1px;
+  }
+        
+      
+
+        
+          body {
+    --input-border-radius: 4px;
+  }
+
+  .af-custom-form-container .af-form {
+    --border-radius: 4px;
+  }
+        
+      
+
+        
+          :root {
+    --border-radius-outer: 10px;
+  }
+        
+      
+
+        
+          :root {
+    --box-border-width: 0px;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          
+    body {
+      --logo-alignment: 0 auto;
+    }
+  
+        
+      
+
+        
+          
+    .c67411d03 {
+      content: url('https://pmhweu-app-registrationinvitation.azurewebsites.net/mediahuis.svg');
+    }
+  
+        
+      
+
+        
+          body {
+    --logo-height: 48px;
+  }
+  .c67411d03 {
+    height: var(--logo-height);
+  }
+  
+        
+      
+
+        
+          
+    body {
+      --header-alignment: center;
+    }
+  
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+        
+          .c1feb18c7 {
+    --page-background-alignment: center;
+  }
+        
+      
+
+        
+          body {
+    --page-background-color: #FAFAFA;
+  }
+        
+      
+
+        
+          
+        
+      
+
+
+
+
+      
+    </style>
+    <style>
+    /* By default, hide features for javascript-disabled browsing */
+    /* We use !important to override any css with higher specificity */
+    /* It is also overriden by the styles in <noscript> in the header file */
+    .no-js {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+  </style>
+  <noscript>
+    <style>
+      /* We use !important to override the default for js enabled */
+      /* If the display should be other than block, it should be defined specifically here */
+      .js-required { display: none !important; }
+      .no-js {
+        clip: auto;
+        clip-path: none;
+        height: auto;
+        overflow: auto;
+        position: static;
+        white-space: normal;
+        width: var(--prompt-width);
+      }
+    </style>
+  </noscript>
+    
+<link rel="icon" href="https://register.mediahuis.com/favicon.ico">
+    <style>
+        button[data-provider="google"]{
+            display: none;
+        }
+        
+        body {
+            background-color: '#FAFAFA' !important;
+        }
+
+        #custom-prompt-logo {
+            background-image: url('https://focus.mediahuisgroup.com/raw/prod-mh-design-system/5.5.0/tel/logos/brand-main.svg');
+            max-height: 48px !important;
+        }
+
+        a:hover {
+            color: #0080C5 !important;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .container--centered {
+            margin: 0 auto;
+        }
+
+        .container--centered:has(:only-child) {
+            justify-content: center;
+        }
+
+        .container__header {
+            width: 400px;
+            display: flex;
+            padding: 0 2px;
+            margin: 5px auto;
+            flex-direction: row;
+        }
+
+        .container__header__web {
+            justify-content: space-between;
+        }
+
+        .container__header__native {
+            justify-content: center;
+        }
+
+        .container__link {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+
+            font-size: 14px;
+            color: #768092;
+        }
+
+        .container__link__svg {
+            min-width: 24px;
+            min-height: 24px;
+        }
+
+        .container__widget {
+            margin-bottom: 30px;
+        }
+
+        .container__widget__link {
+            color: inherit;
+            font-size: inherit;
+            text-decoration: underline;
+        }
+
+        .container__widget > main > section > div + a {
+            visibility: hidden;
+        }
+
+        .container__footer {
+            min-width: 300px;
+            max-width: 300px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer__text {
+            text-align: center;
+            font-size: 16px;
+            color: #768092;
+        }
+
+        .footer__text--underlined {
+            text-decoration: underline;
+        }
+
+        #container__logo-array {
+            display: flex;
+            padding: 15px 0;
+            justify-content: center;
+        }
+
+        .container__logo-array__item {
+            max-height: 24px;
+            margin: 5px;
+        }
+
+        #lng__return-link {
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .container__header {
+                max-width: 100%;
+                max-height: 21px;
+                padding: 0 10px;
+            }
+
+            #container__logo-array {
+                flex-wrap: wrap;
+            }
+
+            .container__footer {
+                max-width: 80vw;
+            }
+
+            ._prompt-box-outer {
+                width: 100% !important;
+            }
+
+            ._prompt-box-outer > div {
+                border-radius: 0 !important;
+            }
+        }
+
+        @media only screen and (min-width: 401px) {
+            .container {
+                margin-top: 80px;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="_use-custom-prompt-logo">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-M2SZH4K"
+            style="display:none;visibility:hidden"
+            width="0"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="container">
+    
+    <div class="container__header container__header__web">
+        <a class="container__link"
+           href="https://mijn.telegraaf.nl/"
+           id="container__header__return-link"
+           onclick="trackGoBackLinkClicked(); return true;"
+        >
+            <!-- Chameleon Icon ArrowBack  -->
+            <svg class="container__link__svg" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path clip-rule="evenodd"
+                      d="M10.68 6.99828C10.9571 7.30617 10.9279 7.78038 10.62 8.05748L7.07 11.25L19.25 11.25C19.6642 11.25 20 11.5858 20 12C20 12.4142 19.6642 12.75 19.25 12.75L7.07 12.75L10.62 15.9425C10.9279 16.2196 10.9571 16.6938 10.68 17.0017C10.4029 17.3096 9.92788 17.3346 9.62 17.0575L4 12L9.62 6.94254C9.92788 6.66544 10.4029 6.6904 10.68 6.99828Z"
+                      fill="#768092"
+                      fill-rule="evenodd"/>
+            </svg>
+            <span id="lng__return-link"></span>
+            <span>&nbsp;De Telegraaf - Selfservice</span>
+        </a>
+        <img alt=" logo" id="container__header-logo" src="https://register.mediahuis.com/mediahuis.svg" width="100px">
+    </div>
+    
+    <div class="container__widget container--centered"><main class="_widget login">
+  <section class="c643eb2e5 _prompt-box-outer cbdf597ee">
+    <div class="cbff8cb2b c75b61491">
+      
+    
+      <div class="c56c8776e">
+        <header class="c4a3b1ebb c3d7b0b67">
+          <div title="Mediahuis" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+        
+          <img class="c67411d03 ca40fe42f" id="prompt-logo-center" src="https://register.mediahuis.com/mediahuis.svg" alt="Mediahuis">
+        
+          
+            <h1 class="c34c4ffae ce89da225">Log in met je Mediahuis-account</h1>
+          
+        
+          <div class="cb1378234 c27481b92">
+            
+              <p class="c7cdcc8e5 c69350fc5"> </p>
+            
+          </div>
+        </header>
+      
+        <div class="c6215c8ff ccb0a77ba">
+          
+        
+          
+            
+              <form method="POST" class="ce764ad63 cf9475cff" data-form-primary="true">
+                <input type="hidden" name="state" value="hKFo2SA5b2c0U2FLQkllNllpVXJoYThmTU5KZEdqbG9ISlNPaKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1RX1ViaDlKVDE5WkFlV0lDelIyVU04QWItdkZkNElRo2NpZNkgOTRQaHkySlR1TlV0SzZxS2RCTldMOTZLeFZqNmYzNjA">
+              
+                
+              
+                
+              
+                <div class="ceb666f5e cb939f702">
+                  <div class="c7e6cc6e7">
+                    
+                  
+                    
+                      
+                        <div class="input-wrapper _input-wrapper">
+                          <div class="c32eba800 c41ee3e1b text ce64e66b7" data-action-text="" data-alternate-action-text="">
+                            <label class="c5bc2a72c no-js cd42da99c c714e3eb5" for="username">
+                              E-mailadres
+                            </label>
+                          
+                            <input class="input cec61d1fe c54babdaf" inputMode="email" name="username" id="username" type="text" value="" required autoComplete="email" autoCapitalize="none" spellCheck="false" autoFocus>
+                          
+                            <div class="c5bc2a72c js-required cd42da99c c714e3eb5" data-dynamic-label-for="username" aria-hidden="true">
+                              E-mailadres*
+                            </div>
+                          </div>
+                        
+                          
+                        </div>
+                      
+                    
+                  
+                    
+                      <div class="input-wrapper _input-wrapper">
+                        <div class="c32eba800 c41ee3e1b password c3957c205" data-action-text="" data-alternate-action-text="">
+                          <label class="c5bc2a72c no-js cd42da99c cb13df7c7" for="password">
+                            Wachtwoord
+                          </label>
+                        
+                          <input class="input cec61d1fe c888ba760" name="password" id="password" type="password" required autoComplete="current-password" autoCapitalize="none" spellCheck="false">
+                        
+                          <div class="c5bc2a72c js-required cd42da99c cb13df7c7" data-dynamic-label-for="password" aria-hidden="true">
+                            Wachtwoord*
+                          </div>
+                        
+                          
+                            <button type="button" class="cca57afd8 ulp-button-icon ce210c6b1 _button-icon" data-action="toggle">
+                              <span aria-hidden="true" class="password-icon-tooltip show-password-tooltip">Toon wachtwoord</span>
+                            
+                              <span aria-hidden="true" class="password-icon-tooltip hide-password-tooltip hide">Verberg wachtwoord</span>
+                            
+                              <span class="screen-reader-only password-toggle-label" data-label="show-password">Toon wachtwoord</span>
+                            
+                              <span class="screen-reader-only password-toggle-label hide" data-label="hide-password">Verberg wachtwoord</span>
+                            
+                              <span class="cd0cb9677 password js-required" aria-hidden="true"></span>
+                            </button>
+                          
+                        </div>
+                      
+                        
+                      </div>
+                    
+                  
+                    
+                  </div>
+                </div>
+              
+                
+                  
+                    <p class="c5b5b1100 cc82aec61">
+                      
+                        <a class="cdf6f7df0 c02944604 cd0a55bf0" href="/u/login/password-reset-start/mh-ciam?state=hKFo2SA5b2c0U2FLQkllNllpVXJoYThmTU5KZEdqbG9ISlNPaKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1RX1ViaDlKVDE5WkFlV0lDelIyVU04QWItdkZkNElRo2NpZNkgOTRQaHkySlR1TlV0SzZxS2RCTldMOTZLeFZqNmYzNjA&amp;ui_locales=nl">Wachtwoord vergeten?</a>
+                      
+                    </p>
+                  
+                
+              
+                
+              
+                <div class="c574b8c0d">
+                  
+                    <button type="submit" name="action" value="default" class="cca57afd8 cd3e7712e ce210c6b1 c90872909 c048fff09" data-action-button-primary="true">Inloggen</button>
+                  
+                </div>
+              </form>
+            
+          
+        
+          
+        
+          
+            <div class="ulp-alternate-action  _alternate-action __s16nu9">
+              <p class="c7cdcc8e5 c69350fc5 c11ebb09b">Nog geen account?
+                <a class="cdf6f7df0 cd0a55bf0" href="/u/signup?state=hKFo2SA5b2c0U2FLQkllNllpVXJoYThmTU5KZEdqbG9ISlNPaKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1RX1ViaDlKVDE5WkFlV0lDelIyVU04QWItdkZkNElRo2NpZNkgOTRQaHkySlR1TlV0SzZxS2RCTldMOTZLeFZqNmYzNjA&amp;ui_locales=nl">Maak een account aan</a>
+              </p>
+            </div>
+          
+        
+          
+        
+          
+            <div class="c4f65f65d c8bb0689e">
+              <span>Of</span>
+            </div>
+          
+        
+          
+            <div class="c7e54c07c cb9a10a02">
+              
+            
+              
+                <form method="post" data-provider="google" class="c65b1399d c9d4b22ab cdb571138" data-form-secondary="true">
+                  <input type="hidden" name="state" value="hKFo2SA5b2c0U2FLQkllNllpVXJoYThmTU5KZEdqbG9ISlNPaKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIG1RX1ViaDlKVDE5WkFlV0lDelIyVU04QWItdkZkNElRo2NpZNkgOTRQaHkySlR1TlV0SzZxS2RCTldMOTZLeFZqNmYzNjA">
+                
+                  <input type="hidden" name="connection" value="mh-google-social">
+                
+                  <button type="submit" class="c6d59f8c7 c243f3769 cbcf7af52" data-provider="google" data-action-button-secondary="true">
+                    
+                      <span class="c7c97f41e cf3a9a87a" data-provider="google"></span>
+                    
+                  
+                    <span class="c0381695e">Ga verder met Google</span>
+                  </button>
+                </form>
+              
+            
+              
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+    
+  </section>
+</main>
+<script id="client-scripts">
+window.ulpFlags = {"enable_ulp_wcag_compliance":false};!function(){var t,e,n,r,y,S,C,F,A,T,a,i,o={exports:function(t,e){return"object"==typeof t.ulpFlags&&null!==t.ulpFlags?t.ulpFlags:{}}}.exports(window,document),u=((t={}).exports=function(n,a){var r={},i={};function u(t,e){if(t.classList)return t.classList.add(e);var n=t.className.split(" ");-1===n.indexOf(e)&&(n.push(e),t.className=n.join(" "))}function o(t,e,n,r){return t.addEventListener(e,n,r)}function c(t){return"string"==typeof t}function l(t,e){return c(t)?a.querySelector(t):t.querySelector(e)}function s(t,e){if(t.classList)return t.classList.remove(e);var n=t.className.split(" "),r=n.indexOf(e);-1!==r&&(n.splice(r,1),t.className=n.join(" "))}function f(t,e){return t.getAttribute(e)}function d(t,e,n){return t.setAttribute(e,n)}var t=["text","number","email","password","tel","url"],e="select,textarea,"+t.map(function(t){return'input[type="'+t+'"]'}).join(",");return{addClass:u,toggleClass:function(t,e,n){if(!0===n||!1===n)return r=t,a=e,!0!==n?s(r,a):u(r,a);var r,a;if(t.classList)return t.classList.toggle(e);var i=t.className.split(" "),o=i.indexOf(e);-1!==o?i.splice(o,1):i.push(e),t.className=i.join(" ")},hasClass:function(t,e){return t.classList?t.classList.contains(e):-1!==t.className.split(" ").indexOf(e)},addClickListener:function(t,e){return o(t,"click",e)},addEventListener:o,getAttribute:f,hasAttribute:function(t,e){return t.hasAttribute(e)},getElementById:function(t){return a.getElementById(t)},getParent:function(t){return t.parentNode},isString:c,loadScript:function(t,e){var n=a.createElement("script");for(var r in e)r.startsWith("data-")?n.dataset[r.replace("data-","")]=e[r]:n[r]=e[r];n.src=t,a.body.appendChild(n)},removeScript:function(t){a.querySelectorAll('script[src="'+t+'"]').forEach(function(t){t.remove()})},poll:function(t){var i=t.interval||2e3,e=t.url||n.location.href,o=t.condition||function(){return!0},u=t.onSuccess||function(){},c=t.onError||function(){};return setTimeout(function r(){var a=new XMLHttpRequest;return a.open("GET",e),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var t="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return o(t)?u():setTimeout(r,i)}if(429!==a.status)return c({status:a.status,responseText:a.responseText});var e=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),n=e-(new Date).getTime();return setTimeout(r,i<n?n:i)},a.send()},i)},querySelector:l,querySelectorAll:function(t,e){var n=c(t)?a.querySelectorAll(t):t.querySelectorAll(e);return Array.prototype.slice.call(n)},removeClass:s,removeElement:function(t){return t.remove()},setAttribute:d,removeAttribute:function(t,e){return t.removeAttribute(e)},swapAttributes:function(t,e,n){var r=f(t,e),a=f(t,n);d(t,n,r),d(t,e,a)},setGlobalFlag:function(t,e){r[t]=!!e},getGlobalFlag:function(t){return!!r[t]},setSubmittedForm:function(t,e){i[t]=e},getSubmittedForm:function(t){return i[t]},preventFormSubmit:function(t){t.stopPropagation(),t.preventDefault()},matchMedia:function(t){return"function"!=typeof n.matchMedia&&n.matchMedia(t).matches},dispatchEvent:function(t,e,n){var r;"function"!=typeof Event?(r=a.createEvent("Event")).initCustomEvent(e,n,!1):r=new Event(e,{bubbles:n}),t.dispatchEvent(r)},timeoutPromise:function(t,a){return new Promise(function(e,n){var r=setTimeout(function(){n(new Error("timeoutPromise: promise timed out"))},t);a.then(function(t){clearTimeout(r),e(t)},function(t){clearTimeout(r),n(t)})})},createMutationObserver:function(t){return"undefined"==typeof MutationObserver?null:new MutationObserver(t)},consoleWarn:function(){(console.warn||console.log).apply(console,arguments)},getConfigJson:function(t){try{var e=l(t);if(!e)return null;var n=e.value;return n?JSON.parse(n):null}catch(t){return null}},getCSSVariable:function(t){return getComputedStyle(a.documentElement).getPropertyValue(t)},removeAndTrimString:function(t,e){var n=new RegExp(e,"g"),r=t.replace(n,"");return r=r.replace(/\s+/g,"  ").trim()},setTimeout:setTimeout,globalWindow:n,SUPPORTED_INPUT_TYPES:t,ELEMENT_TYPE_SELECTOR:e,RUN_INIT:!0}},t.exports)(window,document),c=function(){var t={};function v(t){if(!("string"==typeof t||t instanceof String)){var e=typeof t;throw null===t?e="null":"object"===e&&(e=t.constructor.name),new TypeError("Expected a string but received a "+e)}}function m(t,e){var n,r;v(t),r="object"==typeof e?(n=e.min||0,e.max):(n=e,arguments[2]);var a=encodeURI(t).split(/%..|./).length-1;return n<=a&&(void 0===r||a<=r)}function h(t,e){for(var n in void 0===t&&(t={}),e)void 0===t[n]&&(t[n]=e[n]);return t}var g={require_tld:!0,allow_underscores:!1,allow_trailing_dot:!1,allow_numeric_tld:!1,allow_wildcard:!1,ignore_max_length:!1},e="(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])",n="("+e+"[.]){3}"+e,r=new RegExp("^"+n+"$"),a="(?:[0-9a-fA-F]{1,4})",i=new RegExp("^((?:"+a+":){7}(?:"+a+"|:)|(?:"+a+":){6}(?:"+n+"|:"+a+"|:)|(?:"+a+":){5}(?::"+n+"|(:"+a+"){1,2}|:)|(?:"+a+":){4}(?:(:"+a+"){0,1}:"+n+"|(:"+a+"){1,3}|:)|(?:"+a+":){3}(?:(:"+a+"){0,2}:"+n+"|(:"+a+"){1,4}|:)|(?:"+a+":){2}(?:(:"+a+"){0,3}:"+n+"|(:"+a+"){1,5}|:)|(?:"+a+":){1}(?:(:"+a+"){0,4}:"+n+"|(:"+a+"){1,6}|:)|(?::((?::"+a+"){0,5}:"+n+"|(?::"+a+"){1,7}|:)))(%[0-9a-zA-Z-.:]{1,})?$");function b(t,e){return void 0===e&&(e=""),v(t),(e=String(e))?"4"===e?r.test(t):"6"===e&&i.test(t):b(t,4)||b(t,6)}var _={allow_display_name:!1,allow_underscores:!1,require_display_name:!1,allow_utf8_local_part:!0,require_tld:!0,blacklisted_chars:"",ignore_max_length:!1,host_blacklist:[],host_whitelist:[]},w=/^([^\x00-\x1F\x7F-\x9F\cX]+)</i,x=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~]+$/i,E=/^[a-z\d]+$/,y=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f]))*$/i,S=/^[a-z\d!#\$%&'\*\+\-\/=\?\^_`{\|}~\u00A1-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+$/i,C=/^([\s\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|(\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*$/i,F=254;function o(t,e){if(v(t),(e=h(e,_)).require_display_name||e.allow_display_name){var n=t.match(w);if(n){var r=n[1];if(t=t.replace(r,"").replace(/(^<|>$)/g,""),r.endsWith(" ")&&(r=r.slice(0,-1)),!function(t){var e=t.replace(/^"(.+)"$/,"$1");if(!e.trim())return!1;if(/[\.";<>]/.test(e)){if(e===t)return!1;if(e.split('"').length!==e.split('\\"').length)return!1}return!0}(r))return!1}else if(e.require_display_name)return!1}if(!e.ignore_max_length&&t.length>F)return!1;var a=t.split("@"),i=a.pop(),o=i.toLowerCase();if(e.host_blacklist.includes(o))return!1;if(0<e.host_whitelist.length&&!e.host_whitelist.includes(o))return!1;var u=a.join("@");if(e.domain_specific_validation&&("gmail.com"===o||"googlemail.com"===o)){var c=(u=u.toLowerCase()).split("+")[0];if(!m(c.replace(/\./g,""),{min:6,max:30}))return!1;for(var l=c.split("."),s=0;s<l.length;s++)if(!E.test(l[s]))return!1}if(!(!1!==e.ignore_max_length||m(u,{max:64})&&m(i,{max:254})))return!1;if(!function(t,e){v(t),(e=h(e,g)).allow_trailing_dot&&"."===t[t.length-1]&&(t=t.substring(0,t.length-1)),!0===e.allow_wildcard&&0===t.indexOf("*.")&&(t=t.substring(2));var n=t.split("."),r=n[n.length-1];if(e.require_tld){if(n.length<2)return!1;if(!e.allow_numeric_tld&&!/^([a-z\u00A1-\u00A8\u00AA-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]{2,}|xn[a-z0-9-]{2,})$/i.test(r))return!1;if(/\s/.test(r))return!1}return!(!e.allow_numeric_tld&&/^\d+$/.test(r))&&n.every(function(t){return!(63<t.length&&!e.ignore_max_length||!/^[a-z_\u00a1-\uffff0-9-]+$/i.test(t)||/[\uff01-\uff5e]/.test(t)||/^-|-$/.test(t)||!e.allow_underscores&&/_/.test(t))})}(i,{require_tld:e.require_tld,ignore_max_length:e.ignore_max_length,allow_underscores:e.allow_underscores})){if(!e.allow_ip_domain)return!1;if(!b(i)){if(!i.startsWith("[")||!i.endsWith("]"))return!1;var f=i.slice(1,-1);if(0===f.length||!b(f))return!1}}if('"'===u[0])return u=u.slice(1,u.length-1),e.allow_utf8_local_part?C.test(u):y.test(u);for(var d=e.allow_utf8_local_part?S:x,p=(l=u.split("."),0);p<l.length;p++)if(!d.test(l[p]))return!1;return!e.blacklisted_chars||-1===u.search(new RegExp("["+e.blacklisted_chars+"]+","g"))}return t.exports=function(t,e){return{ulpRequiredFunction:function(t,e){return!e||!!t.value},ulpEmailValidationFunction:function(t,e){return!e||!t.value||!!o(t.value)},ulpPatternCheckFunction:function(t,e){return!e||!t.value||function(t){if("password"===t.name)return!0;var e=t.getAttribute("pattern");return!e||null!==t.value.match(e)}(t)}}},t.exports}()(window,document);((e={}).exports=function(r,t,o,u,c,l,s,f,e){function d(t){"Escape"==t.code&&document.activeElement.blur()}e.enable_ulp_wcag_compliance&&t("div.c32eba800.password").forEach(function(t){var a,i,e=r(t,"input"),n=r(t,'[data-action="toggle"]');o(t,(a=e,i=n,function(t){if(t.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){i.ariaChecked="false"===i.ariaChecked?"true":"false";var e=i.querySelector(".show-password-tooltip"),n=i.querySelector(".hide-password-tooltip");e&&s(e,"hide"),n&&s(n,"hide")}var r=f(a);"text"===a.type?c(r,"show"):l(r,"show")}})),u(n,"keyup",d)})},e.exports)(u.querySelector,u.querySelectorAll,u.addClickListener,u.addEventListener,u.addClass,u.removeClass,u.toggleClass,u.getParent,o),((n={}).exports=function(r,t,o,u,c,l,s,e){e.enable_ulp_wcag_compliance||t("div.c32eba800.password").forEach(function(t){var a,i,e=r(t,"input"),n=r(t,'[data-action="toggle"]');o(t,(a=e,i=n,function(t){if(t.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){var e=i.querySelector(".show-password-tooltip"),n=i.querySelector(".hide-password-tooltip");e&&l(e,"hide"),n&&l(n,"hide")}var r=s(a);"text"===a.type?u(r,"show"):c(r,"show")}}))})},n.exports)(u.querySelector,u.querySelectorAll,u.addClickListener,u.addClass,u.removeClass,u.toggleClass,u.getParent,o),{exports:function(t,r,a,e){var n=t(".ce5e87644"),i=t("#alert-trigger"),o=t(".cd95f969a"),u=t(".cb319d001"),c=!1;i&&u&&n&&e(n,function(t){var e=t.target===i,n=u.contains(t.target);return e&&!c?(r(o,"show"),void(c=!0)):e&&c||c&&!n?(a(o,"show"),void(c=!1)):void 0})}}.exports(u.querySelector,u.addClass,u.removeClass,u.addClickListener),(y="recaptcha_v2",S="recaptcha_enterprise",C="hcaptcha",F="friendly_captcha",A="arkose",T="auth0_v2",(r={}).exports=function(i,o,a,u,c,l,s){var f=500,d=3,p=0,v=a("div[data-captcha-sitekey]"),e=a("div[data-captcha-sitekey] input");function m(){switch(b()){case y:return window.grecaptcha;case S:return window.grecaptcha.enterprise;case C:return window.hcaptcha;case F:return window.friendlyChallenge;case A:return window.arkose;case T:return window.turnstile}}function h(){return a(function(){switch(b()){case y:case S:return"#ulp-recaptcha";case C:return"#ulp-hcaptcha";case F:return"#ulp-friendly-captcha";case A:return"#ulp-arkose";case T:return"#ulp-auth0-v2-captcha"}}())}function g(){return v.getAttribute("data-captcha-lang")}function b(){return v.getAttribute("data-captcha-provider")}function _(){return v.getAttribute("data-captcha-sitekey")}function w(){return a('form[data-form-primary="true"]')}function x(t){return e.value=t}function E(){var t=m(),e=l("--ulp-captcha-widget-theme")||"light";if(b()===F){"dark"===e&&u(a(".frc-captcha"),"dark");var n=new t.WidgetInstance(h(),{sitekey:_(),language:g(),doneCallback:function(t){x(t)}})}else{var r={sitekey:_(),theme:e,"expired-callback":function(){x(""),u(v,"c4708f481"),t.reset(n)},callback:function(t){x(t),c(v,"c4708f481")}};b()===T&&(r.language=g(),r.retry="never",r["response-field"]=!1,r["error-callback"]=function(t){return fetch("https://www.cloudflarestatus.com/api/v2/summary.json").then(function(t){return t.json()}).then(function(t){for(var e=0;e<t.components.length;e++){var n=t.components[e];if("Turnstile"===n.name)return"operational"===n.status}return!1}).catch(function(t){return!1}).then(function(t){t&&p<d?(x(""),u(v,"c4708f481"),m().reset(n),p++):(x("BYPASS_CAPTCHA"),c(v,"c4708f481"))}),!0}),n=t.render(h(),r)}}v&&function(){var t="captchaCallback_"+Math.floor(1000001*Math.random()),e=b(),n={async:!0,defer:!0},r=function(t,e,n,r){switch(b()){case y:return"https://www.recaptcha.net/recaptcha/api.js?render=explicit&hl="+t+"&onload="+e;case S:return"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl="+t+"&onload="+e;case C:return"https://js.hcaptcha.com/1/api.js?render=explicit&hl="+t+"&onload="+e;case F:return"https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.14/widget.min.js";case A:return"https://"+n+".arkoselabs.com/v2/"+r+"/api.js";case T:return"https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload="+e}}(g(),t,v.getAttribute("data-captcha-client-subdomain"),_());if(e===A||e===T){n["data-callback"]=t,n.onerror=function(){if(p<d)return o(r),i(r,n),void p++;o(r),x("BYPASS_CAPTCHA")};var a=function(t){var e,n;e=t,n=function(t){setTimeout(function(){e.run()},f),t.preventDefault()},w().addEventListener("submit",n),e.setConfig({onCompleted:function(t){x(t.token),w().submit()},onError:function(t){return fetch("https://status.arkoselabs.com/api/v2/status.json").then(function(t){return t.json()}).then(function(t){var e=t.status.indicator;return"none"===e}).catch(function(t){return!1}).then(function(t){if(t&&p<d)return e.reset(),new Promise(function(t){setTimeout(function(){t(e.run())},f),p++});x("BYPASS_CAPTCHA"),w().removeEventListener("submit",n)})}})};e===T&&(a=function(){E()}),window[t]=a}else window[t]=function(){delete window[t],E()},e===F&&(u(h(),"frc-captcha"),s(h(),"data-sitekey",_()),n.onload=window[t]);i(r,n)}()},r.exports)(u.loadScript,u.removeScript,u.querySelector,u.addClass,u.removeClass,u.getCSSVariable,u.setAttribute),((a={}).exports=function(r,t,a,i,o,u,c,l,n,s,e){if(!e.enable_ulp_wcag_compliance){if(r("body._simple-labels"))return t(".c5bc2a72c.no-js").forEach(function(t){o(t,"no-js")}),void t(".c5bc2a72c.js-required").forEach(function(t){i(t,"hide")});t(".c32eba800:not(.ce2efb040):not(disabled)").forEach(function(t){i(t,"cf2740c04");var e,n=r(t,".input");n.value&&i(t,"c819cc4a7"),a(t,"change",f),a(n,"blur",f),a(n,"animationstart",d),e=n,c(function(){e.value&&l(e,"change",!0)},100)})}function f(t){var e=t.target,n=u(e);e.value||s(e,"data-autofilled")?i(n,"c819cc4a7"):o(n,"c819cc4a7")}function d(t){var e=t.target;"onAutoFillStart"===t.animationName&&(n(e,"data-autofilled",!0),l(t.target,"change",!0),a(e,"keyup",p,{once:!0}))}function p(t){var e=t.target;n(e,"data-autofilled","")}},a.exports)(u.querySelector,u.querySelectorAll,u.addEventListener,u.addClass,u.removeClass,u.getParent,u.setTimeout,u.dispatchEvent,u.setAttribute,u.getAttribute,o),{exports:function(t,e,r,a,i,o,u,c){function n(t){var e=r("submitted"),n=i("submittedForm");a("submitted",!0),o("submittedForm",t.currentTarget),e&&n&&n===t.currentTarget?u(t):"apple"===c(t.target,"data-provider")&&setTimeout(function(){a("submitted",!1)},2e3)}var l=t("form");l&&l.forEach(function(t){e(t,"submit",n)})}}.exports(u.querySelectorAll,u.addEventListener,u.getGlobalFlag,u.setGlobalFlag,u.getSubmittedForm,u.setSubmittedForm,u.preventFormSubmit,u.getAttribute),{exports:function(n,t,r,a,i,o,u,c,l,e,s,f){if(f.enable_ulp_wcag_compliance){var d=t("[id^='ulp-container-']");if(d&&d.length){var p=e(x);if(p)for(var v=0;v<d.length;v++)p.observe(d[v],{childList:!0,subtree:!0})}x()}function m(t){var e=t.target,n=o(e);e.value||c(e,"data-autofilled")?a(n,"c819cc4a7"):i(n,"c819cc4a7")}function h(t){var e=t.target,n=o(e);a(n,"focus"),w(e,n)}function g(t){var e=t.target,n=o(e);i(n,"focus"),m(t),w(e,n)}function b(t){var e=t.target;l(e,"data-autofilled","")}function _(t){var e=t.target;"onAutoFillStart"===t.animationName&&(l(e,"data-autofilled",!0),dispatchEvent(t.target,"change",!0),r(e,"keyup",b,{once:!0}))}function w(t,e){t.value?a(e,"c819cc4a7"):i(e,"c819cc4a7")}function x(){t(".ulp-field").forEach(function(t){if(!u(t,"cf2740c04")){var e=n(t,s);e&&(a(t,"cf2740c04"),w(e,t),setTimeout(function(){w(e,t)},50),e===document.activeElement&&a(t,"focus"),r(e,"change",m),r(e,"focus",h),r(e,"blur",g),r(e,"animationstart",_))}})}}}.exports(u.querySelector,u.querySelectorAll,u.addEventListener,u.addClass,u.removeClass,u.getParent,u.hasClass,u.getAttribute,u.setAttribute,u.createMutationObserver,u.ELEMENT_TYPE_SELECTOR,o),{exports:function(n,t,r,a,i,o,u,e,c,l){if(!l.enable_ulp_wcag_compliance){var s=t("[id^='ulp-container-']");if(s&&s.length){var f=e(g);if(f)for(var d=0;d<s.length;d++)f.observe(s[d],{childList:!0,subtree:!0});g()}}function p(t){var e=t.target,n=o(e);e.value?a(n,"c819cc4a7"):i(n,"c819cc4a7")}function v(t){var e=t.target,n=o(e);a(n,"focus"),h(e,n)}function m(t){var e=t.target,n=o(e);i(n,"focus"),h(e,n)}function h(t,e){t.value?a(e,"c819cc4a7"):i(e,"c819cc4a7")}function g(){t("[id^='ulp-container-'] .ulp-field").forEach(function(t){if(!u(t,"cf2740c04")){var e=n(t,c);e&&(a(t,"cf2740c04"),h(e,t),setTimeout(function(){h(e,t)},50),e===document.activeElement&&a(t,"focus"),r(e,"change",p),r(e,"focus",v),r(e,"blur",m))}})}}}.exports(u.querySelector,u.querySelectorAll,u.addEventListener,u.addClass,u.removeClass,u.getParent,u.hasClass,u.createMutationObserver,u.ELEMENT_TYPE_SELECTOR,o),{exports:function(r,o,a,i,u,c,l,s,f,d,p,v,e,m,h,t,n,g){if(g.enable_ulp_wcag_compliance){var b=!1,_=t+',input[type="checkbox"]';return A(),[_,w,x,E,y,S,C,F,A]}function w(t){var e=u(t,"data-ulp-validation-function"),n=i(t);return{functionName:e,element:r(n,_),parent:n}}function x(t){var a=[],i=[];return o(t,"[data-ulp-validation-function]").forEach(function(t){var e=w(t),n=[];if(e.element){if("input"===e.element.tagName.toLowerCase()){var r=u(e.element,"type");"checkbox"!==r&&-1===h.indexOf(r)&&n.push("Unsupported input type: "+r)}}else n.push("Could not find element");v[e.functionName]||n.push("Could not find function with name: "+e.functionName),n.length?i=i.concat(n):a.push(t)}),i.length&&e(i.join("\r\n")),a}function E(t,e,n){var r=w(t),a=(0,v[r.functionName])(r.element,e,n);a?s(t,"ulp-validator-error")&&(d(t,"ulp-validator-error"),l(t,"data-is-error")):s(t,"ulp-validator-error")||(f(t,"ulp-validator-error"),c(t,"data-is-error",!0));var i=o(r.parent,".ulp-validator-error");return p(r.parent,"ulp-error",!!i.length),a}function y(e){var n=w(e),t=(u(e,"data-ulp-validation-event-listeners")||"").replace(/\s/g,"").split(",").filter(function(t){return!!t});t.length&&t.forEach(function(t){a(n.element,t,function(){E(e,b,t)})})}function S(t,e,n){b=!0;var r=n.filter(function(t){return!E(t,b,"submit")});if(!r.length)return e.submitter&&"default"==u(e.submitter,"value")&&c(e.submitter,"disabled",!0),void t.submit();m(e);var a=w(r[0]);a.element.focus({preventScroll:!0}),a.parent.scrollIntoView({behavior:"smooth"})}function C(){var e=r('form[data-form-primary="true"]'),n=x(e);0!==n.length&&(n.forEach(function(t){y(t)}),a(e,"submit",function(t){S(e,t,n)}))}function F(){if(n)for(var t in n)n.hasOwnProperty(t)&&(v[t]=n[t])}function A(){var t=r("form[data-disable-html-validations]");t&&(F(),c(t,"novalidate",""),C())}}}.exports(u.querySelector,u.querySelectorAll,u.addEventListener,u.getParent,u.getAttribute,u.setAttribute,u.removeAttribute,u.hasClass,u.addClass,u.removeClass,u.toggleClass,u.globalWindow,u.consoleWarn,u.preventFormSubmit,u.SUPPORTED_INPUT_TYPES,u.ELEMENT_TYPE_SELECTOR,c,o),{exports:function(r,o,a,i,u,c,l,e,s,f,t,n){if(!n.enable_ulp_wcag_compliance){var d=!1,p=t+',input[type="checkbox"]';return w(),[p,v,m,h,g,b,_,w]}function v(t){var e=u(t,"data-ulp-validation-function"),n=i(t);return{functionName:e,element:r(n,p),parent:n}}function m(t){var a=[],i=[];return o(t,"[data-ulp-validation-function]").forEach(function(t){var e=v(t),n=[];if(e.element){if("input"===e.element.tagName.toLowerCase()){var r=u(e.element,"type");"checkbox"!==r&&-1===f.indexOf(r)&&n.push("Unsupported input type: "+r)}}else n.push("Could not find element");l[e.functionName]||n.push("Could not find function with name: "+e.functionName),n.length?i=i.concat(n):a.push(t)}),i.length&&e(i.join("\r\n")),a}function h(t,e,n){var r=v(t),a=(0,l[r.functionName])(r.element,e,n);c(t,"ulp-validator-error",!a);var i=o(r.parent,".ulp-validator-error");return c(r.parent,"ulp-error",!!i.length),a}function g(e){var n=v(e),t=(u(e,"data-ulp-validation-event-listeners")||"").replace(/\s/g,"").split(",").filter(function(t){return!!t});t.length&&t.forEach(function(t){a(n.element,t,function(){h(e,d,t)})})}function b(t,e,n){d=!0;var r=n.filter(function(t){return!h(t,d,"submit")});if(r.length){s(e);var a=v(r[0]);a.element.focus({preventScroll:!0}),a.parent.scrollIntoView({behavior:"smooth"})}else t.submit()}function _(){var e=r('form[data-form-primary="true"]'),n=m(e);0!==n.length&&(n.forEach(function(t){g(t)}),a(e,"submit",function(t){b(e,t,n)}))}function w(){var t=o("[id^='ulp-container-']");t&&t.length&&_()}}}.exports(u.querySelector,u.querySelectorAll,u.addEventListener,u.getParent,u.getAttribute,u.toggleClass,u.globalWindow,u.consoleWarn,u.preventFormSubmit,u.SUPPORTED_INPUT_TYPES,u.ELEMENT_TYPE_SELECTOR,o),{exports:function(t,e,n){function r(n){e(n,"click",function(t){t.preventDefault();var e=document.createElement("input");e.name="action",e.type="hidden",e.value=n.value,n.form.appendChild(e),n.form.submit(),n.form.removeChild(e)})}function a(){t('form button[type="submit"][formnovalidate]').forEach(function(t){r(t)})}return n&&a(),[a,r]}}.exports(u.querySelectorAll,u.addEventListener,u.RUN_INIT),((i={}).exports=function(o,t,u,c,l,s,e,f,n){if(n.enable_ulp_wcag_compliance){var r=t('[class*="aria-error-check"]');if(r&&r.length){var a=e(function(t){t&&t.length&&t.map(function(t){if(t.target&&u(t.target,"aria-error-check")){var e=o('[id="'+c(t.target,"data-ulp-validation-target")+'"');if(e){var n=c(e,"aria-describedby");c(t.target,"data-is-error")?(r=e,a=n,i=t.target.id,a&&-1!==a.search(i)||l(r,"aria-describedby",a?a+" "+i:i),l(r,"aria-invalid",!0)):function(t,e,n){if(e){var r=f(e,n);r.length?l(t,"aria-describedby",r):(s(t,"aria-invalid"),s(t,"aria-describedby"))}else s(t,"aria-invalid"),s(t,"aria-describedby")}(e,n,t.target.id)}}var r,a,i})});a&&r.map(function(t){a.observe(t,{attributes:!0,attributeFilter:["class","data-is-error"]})})}}},i.exports)(u.querySelector,u.querySelectorAll,u.hasClass,u.getAttribute,u.setAttribute,u.removeAttribute,u.createMutationObserver,u.removeAndTrimString,o)}();
+</script>
+</div>
+    
+    <div class="container__footer container--centered">
+        <div id="lng__footer-logo-text" class="footer__text"></div>
+        <div id="container__logo-array"></div>
+        <div id="readmore__footer-text"></div>
+    </div>
+    
+</div>
+
+<script type="module">
+    // Default fallback for privacy statement & terms and conditions
+    let privacyStatement = "https://www.mediahuis.nl/privacy-statement/";
+    let termsAndConditions = "https://www.mediahuis.nl/algemene-voorwaarden/gebruikersvoorwaarden-uitgaven/";
+
+    async function main() {
+        
+        // Variables are injected by terraform
+        const translationNL = {
+  "information": {
+    "backTo": "Terug naar",
+    "loginAt": "Met je <strong>Mediahuis-account</strong> kan je inloggen op de sites en apps van",
+    "readMore": "Lees meer over je Mediahuis-account"
+  },
+  "accountConsent": {
+    "terms": "Op je Mediahuis-account zijn deze <privacyStatementLink>privacyverklaring</privacyStatementLink> en <termsAndConditionsLink>gebruiksvoorwaarden</termsAndConditionsLink> van toepassing."
+  },
+  "login": {
+    "pageTitle": "Welkom bij ${clientName}",
+    "title": "Log in met je Mediahuis-account",
+    "description": " ",
+    "footerText": "Nog geen account?",
+    "signupActionLinkText": "Maak een account aan",
+    "buttonText": "Inloggen",
+    "showPasswordText": "Toon wachtwoord",
+    "hidePasswordText":"Verberg wachtwoord",
+    "user-blocked": "Je Mediahuis-account is tijdelijk geblokkeerd uit veiligheid. Ga naar je mailbox om je account te deblokkeren. ",
+    "wrong-email-credentials": "Controleer je e-mailadres en/of wachtwoord."
+  },
+  "signup": {
+    "title": "Maak je Mediahuis-account",
+    "description": "TERMS_AND_CONDITIONS_PRIVACY_POLICY",
+    "loginActionText": "Al een account?",
+    "loginActionLinkText": "Inloggen",
+    "passwordSecurityText": "Je wachtwoord moet het volgende bevatten:",
+    "buttonText": "Verder gaan",
+    "showPasswordText": "Toon wachtwoord",
+    "hidePasswordText":"Verberg wachtwoord",
+    "password-breached": "De combinatie van jouw e-mailadres en wachtwoord is terug te vinden op publieke lijsten van gehackte accounts. Kies een ander wachtwoord om je Mediahuis-account te creëren. ",
+    "username-taken": "Er bestaat al een account met dit e-mailadres.",
+    "email-in-use": "Er bestaat al een account met dit e-mailadres.",
+    "invalid-email-format": "E-mailadres niet geldig."
+  },
+  "reset-password":{
+    "reset-password-request": {
+      "title": "Wachtwoord vergeten?",
+      "descriptionEmail": "Vul je e-mailadres in. We sturen een link om je wachtwoord opnieuw in te stellen voor je Mediahuis-account.",
+      "buttonText": "Ga verder",
+      "backToLoginLinkText": "Terug naar inloggen"
+    },
+    "reset-password": {
+      "title" : "Je wachtwoord instellen",
+      "description": "Kies een nieuw wachtwoord voor je Mediahuis-account.",
+      "passwordSecurityText": "Je wachtwoord moet het volgende bevatten:",
+      "buttonText": "Bevestig nieuw wachtwoord"
+    },
+    "reset-password-success": {
+      "eventTitle": "Wachtwoord gewijzigd!",
+      "description": "Het wachtwoord voor je Mediahuis-account is gewijzigd."
+    },
+    "reset-password-error": {
+      "eventTitleGeneric": "Ongeldige link",
+      "eventTitleExpired": "Link niet meer geldig",
+      "eventTitleUsed": "Link al gebruikt",
+      "descriptionExpired": "Klik op 'Wachtwoord vergeten?' op het inlogscherm om een nieuwe link te ontvangen.",
+      "descriptionGeneric": "Klik op 'Wachtwoord vergeten?' op het inlogscherm om een nieuwe link te ontvangen.",
+      "descriptionUsed": "Klik op 'Wachtwoord vergeten?' op het inlogscherm om een nieuwe link te ontvangen."
+    },
+    "reset-password-email": {
+      "pageTitle": "Open je mailbox ${clientName}",
+      "title": "Open je mailbox",
+      "emailDescription": "We hebben een e-mail gestuurd naar ${email}. Klik op de link in de e-mail om je wachtwoord opnieuw in te stellen. Je ontvangt deze e-mail alleen als je een Mediahuis-account hebt. Controleer je spam."
+    }
+  },
+  "email-verification-result": {
+    "pageTitle": "Email verificatie status ${clientName}",
+    "verifiedTitle": "Je e-mailadres is bevestigd!",
+    "verifiedDescription": "Je kan nu genieten van alle voordelen.",
+    "errorTitle": "Niet gelukt",
+    "invalidAccountOrCodeDescription" : "Dit account bestaat niet, of de verificatie code is onjuist.",
+    "unknownErrorDescription" : "Je e-mailadres kan niet worden geverifieerd.",
+    "auth0-users-expired-ticket" : "De link is niet meer geldig.",
+    "custom-script-error-code" : "Er ging iets fout, probeer aub opnieuw.",
+    "auth0-users-used-ticket" : "Deze link is al gebruikt. Probeer opnieuw met een nieuwe link.",
+    "auth0-users-validation" : "Er ging iets fout, probeer aub opnieuw."
+  }
+};
+        const translationEN = {
+  "information": {
+    "backTo": "Back to",
+    "loginAt": "Your <strong>Mediahouse account</strong> allows you to log in to the sites and apps of",
+    "readMore": "Find out more about your Mediahouse account"
+  },
+  "accountConsent": {
+    "terms": "Your Mediahuis account is subject to this <privacyStatementLink>privacy statement</privacyStatementLink> and <termsAndConditionsLink>terms of use</termsAndConditionsLink>. "
+  },
+  "login": {
+    "pageTitle": "Welcome to ${clientName}",
+    "title": "Log in with your Mediahuis account",
+    "description": " ",
+    "footerText": "No account yet?",
+    "signupActionLinkText": "Create an account",
+    "buttonText": "Log in",
+    "showPasswordText": "Show password",
+    "hidePasswordText": "Hide password",
+    "user-blocked": "Your Mediahuis account has been temporarily blocked for security reasons. Go to your mailbox to unblock your account. ",
+    "wrong-email-credentials": "Please check your e-mail address and/or password."
+  },
+  "signup": {
+    "title": "Create your Mediahuis account",
+    "description": "TERMS_AND_CONDITIONS_PRIVACY_POLICY",
+    "loginActionText": "Already have an account?",
+    "loginActionLinkText": "Log in",
+    "passwordSecurityText": "Your password must contain the following:",
+    "buttonText": "Continue",
+    "showPasswordText": "Show password",
+    "hidePasswordText": "Hide password",
+    "password-breached": "The combination of your e-mail address and password can be found on public lists of hacked accounts. Choose a different password to create your Mediahuis account. ",
+    "username-taken": "An account already exists with this e-mail address.",
+    "email-in-use": "An account already exists with this e-mail address.",
+    "invalid-email-format": "Email address not valid."
+  },
+  "reset-password":{
+    "reset-password-request": {
+      "backToLoginLinkText": "Return to login",
+      "buttonText": "Continue",
+      "descriptionEmail": "Enter your e-mail address. We will send you a link to reset your password for your Mediahuis account.",
+      "title": "Forgot password?"
+    },
+    "reset-password": {
+      "buttonText": "Confirm new password",
+      "description": "Choose a new password for your Mediahuis account.",
+      "passwordSecurityText": "Your password must contain the following:",
+      "title": "Set your password"
+    },
+    "reset-password-success": {
+      "description": "The password for your Mediahuis account has been changed.",
+      "eventTitle": "Password changed!"
+    },
+    "reset-password-error": {
+      "descriptionExpired": "Click 'Forgot password?' on the login screen to receive a new link.",
+      "descriptionGeneric": "Click 'Forgot password?' on the login screen to receive a new link.",
+      "descriptionUsed": "Click 'Forgot password?' on the login screen to receive a new link.",
+      "eventTitleExpired": "Link no longer valid",
+      "eventTitleGeneric": "Invalid link",
+      "eventTitleUsed": "Link already in use"
+    },
+    "reset-password-email": {
+      "emailDescription": "We have sent an e-mail to ${email}. Please click on the link in the email to reset your password. You only receive this e-mail if you have a Mediahuis account. Please check your spam.",
+      "pageTitle": "Open your mailbox ${clientName}",
+      "title": "Open your mailbox"
+    }
+  },
+  "email-verification-result": {
+    "auth0-users-expired-ticket": "The link is no longer valid.",
+    "auth0-users-used-ticket": "This link has already been used. Please try again with a new link.",
+    "auth0-users-validation": "Something went wrong, please try again.",
+    "custom-script-error-code": "Something went wrong, please try again.",
+    "errorTitle": "Failed",
+    "invalidAccountOrCodeDescription": "This account does not exist, or the verification code is incorrect.",
+    "pageTitle": "Email verification status ${clientName}",
+    "unknownErrorDescription": "Your email address cannot be verified.",
+    "verifiedDescription": "You can now enjoy all the benefits.",
+    "verifiedTitle": "Your e-mail address has been confirmed!"
+  }
+};
+        const translationDE = {
+  "information": {
+    "backTo": "Zurück zu",
+    "loginAt": "Mit Ihrem <strong>Mediahuis-Aachen-Konto</strong> können Sie sich bei Websites und Apps der folgenden Anbieter anmelden",
+    "readMore": "Erfahren Sie mehr über Ihr Mediahuis-Aachen-Konto"
+  },
+  "accountConsent": {
+    "terms": "Ihr Mediahuis-Aachen-Konto unterliegt dieser <privacyStatementLink>Datenschutzerklärung</privacyStatementLink> und <termsAndConditionsLink>Nutzungsbedingungen</termsAndConditionsLink>. "
+  },
+  "login": {
+    "pageTitle": "Willkommen bei ${clientName}",
+    "title": "Melden Sie sich mit Ihrem Mediahuis-Aachen-Konto an",
+    "description": " ",
+    "footerText": "Noch keinen Zugang?",
+    "signupActionLinkText": "Ein Konto erstellen",
+    "buttonText": "Einloggen",
+    "showPasswordText": "Passwort anzeigen",
+    "hidePasswordText": "Passwort ausblenden",
+    "user-blocked": "Ihr Mediahuis-Aachen-Konto ist aus Sicherheitsgründen vorübergehend gesperrt worden. Schauen Sie in Ihr E-Mail-Postfach, um Ihr Konto freizugeben. ",
+    "wrong-email-credentials": "Bitte überprüfen Sie Ihre E-Mail-Adresse und/oder Ihr Passwort."
+  },
+  "signup": {
+    "title": "Erstellen Sie Ihr Mediahuis-Aachen-Konto",
+    "description": "TERMS_AND_CONDITIONS_PRIVACY_POLICY",
+    "loginActionText": "Haben Sie bereits ein Konto?",
+    "loginActionLinkText": "Einloggen",
+    "passwordSecurityText": "Ihr Passwort muss folgende Angaben enthalten:",
+    "buttonText": "Weiter",
+    "showPasswordText": "Passwort anzeigen",
+    "hidePasswordText": "Passwort ausblenden",
+    "password-breached": "Die Kombination aus Ihrer E-Mail-Adresse und Ihrem Passwort taucht in öffentlichen Listen gehackter Konten auf. Bitte wählen Sie ein anderes Passwort, um Ihr Mediahuis-Konto zu erstellen. ",
+    "username-taken": "Es existiert bereits ein Konto mit dieser E-Mail-Adresse.",
+    "email-in-use": "Es existiert bereits ein Konto mit dieser E-Mail-Adresse.",
+    "invalid-email-format": "E-Mail-Adresse nicht gültig."
+  },
+  "reset-password": {
+    "reset-password-request": {
+      "backToLoginLinkText": "Zurück zur Anmeldung",
+      "buttonText": "Weiter",
+      "descriptionEmail": "Geben Sie Ihre E-Mail-Adresse ein. Wir senden Ihnen dann einen Link, mit dem Sie Ihr Passwort für Ihr Mediahuis-Aachen-Konto zurücksetzen können.",
+      "title": "Passwort vergessen?"
+    },
+    "reset-password": {
+      "buttonText": "Neues Passwort bestätigen",
+      "description": "Wählen Sie ein neues Passwort für Ihr Mediahuis-Aachen-Konto.",
+      "passwordSecurityText": "Ihr Passwort muss folgende Angaben enthalten:",
+      "title": "Ihr Passwort festlegen"
+    },
+    "reset-password-success": {
+      "description": "Das Passwort für Ihr Mediahuis-Aachen-Konto wurde geändert.",
+      "eventTitle": "Passwort geändert!"
+    },
+    "reset-password-error": {
+      "descriptionExpired": "Klicken Sie auf dem Anmeldebildschirm auf \"Passwort vergessen?\", um einen neuen Link zu erhalten.",
+      "descriptionGeneric": "Klicken Sie auf dem Anmeldebildschirm auf \"Passwort vergessen?\", um einen neuen Link zu erhalten.",
+      "descriptionUsed": "Klicken Sie auf dem Anmeldebildschirm auf \"Passwort vergessen?\", um einen neuen Link zu erhalten.",
+      "eventTitleExpired": "Der Link ist nicht mehr gültig",
+      "eventTitleGeneric": "Ungültiger Link",
+      "eventTitleUsed": "Der Link wird bereits verwendet"
+    },
+    "reset-password-email": {
+      "emailDescription": "Wir haben eine E-Mail an ${email} gesendet. Bitte klicken Sie auf den Link in der E-Mail, um Ihr Passwort zurückzusetzen. Sie erhalten diese E-Mail nur, wenn Sie ein Mediahuis-Aachen-Konto haben. Bitte überprüfen Sie Ihren Spam-Ordner.",
+      "pageTitle": "Öffnen Sie Ihr E-Mail-Postfach ${clientName}",
+      "title": "Öffnen Sie Ihr E-Mail-Postfach"
+    }
+  },
+  "email-verification-result": {
+    "auth0-users-expired-ticket": "Der Link ist nicht mehr gültig.",
+    "auth0-users-used-ticket": "Dieser Link wurde bereits verwendet. Bitte versuchen Sie es erneut mit einem neuen Link.",
+    "auth0-users-validation": "Es ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.",
+    "custom-script-error-code": "Es ist ein Fehler aufgetreten, bitte versuchen Sie es erneut.",
+    "errorTitle": "Fehlgeschlagen",
+    "invalidAccountOrCodeDescription": "Dieses Konto existiert nicht, oder der Verifizierungscode ist falsch.",
+    "pageTitle": "Status der E-Mail-Überprüfung ${clientName}",
+    "unknownErrorDescription": "Ihre E-Mail-Adresse kann nicht verifiziert werden.",
+    "verifiedDescription": "Sie können jetzt alle Vorteile genießen.",
+    "verifiedTitle": "Ihre E-Mail-Adresse wurde bestätigt!"
+  }
+};
+        
+        await i18next.init({
+            lng: lang, // if you're using a language detector, do not define the lng option
+            resources: {
+                nl: {translation: translationNL},
+                en: {translation: translationEN},
+                de: {translation: translationDE}
+            }
+        });
+
+        await getBrandGroupsConfig();
+        await insertPolicyUrls();
+        await screenIsShown();
+        await insertReadMoreUrl();
+        
+        await buildHtml();
+        await removeSocialButtons();
+    }
+
+    // Supports top level await for older iOS versions
+    main();
+
+    async function getBrandGroupsConfig() {
+        await fetch("https://identitymanagement.mediahuis.com/brand-groups").then(async (response) => {
+            brandGroupData = await response.json().then((response) => response.find(bg => bg.id === brandGroupId));
+        }).catch(() => {
+            new Error("Failed to fetch JSON");
+            brandGroupData = null;
+        });
+    }
+
+
+    async function insertPolicyUrls() {
+        // TERMS_AND_CONDITIONS_PRIVACY_POLICY is set by the custom prompt description for register
+        const policiesNode = document.evaluate(`//*[text()='TERMS_AND_CONDITIONS_PRIVACY_POLICY']`, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue || null;
+
+        if (policiesNode) {
+            privacyStatement = "https://identitymanagement.mediahuis.com/brand-redirect/brand-group/" + brandGroupId + "/brand/" + brandId + "/privacy/language/" + lang;
+            termsAndConditions = "https://identitymanagement.mediahuis.com/brand-redirect/brand-group/" + brandGroupId + "/brand/" + brandId + "/terms-and-conditions/language/" + lang;
+            
+            let translation = i18next.t("accountConsent.terms");
+            translation = replaceTranslationLink(translation, "privacyStatementLink", privacyStatement);
+            translation = replaceTranslationLink(translation, "termsAndConditionsLink", termsAndConditions);
+
+            policiesNode.innerHTML = translation;
+        }
+    }
+    
+    function replaceTranslationLink(text, tag, href){
+        const regex = new RegExp("<" + tag + ">(.*?)</" + tag + ">", "g");
+        return text.replace(regex, "<a target='_blank' class='container__widget__link' href='" + href + "'>$1</a>");
+    }
+
+    function getBrandLogoUrl(brand, loginLogoVersion) {
+        if (brand.designSystem.themeKey) {
+            const designSystemVersion = brand.designSystem.version ?? "5.5.0";
+            const designSystemLogoType = brand.designSystem.footerLogoType ?? "main";
+            return "https://focus.mediahuisgroup.com/raw/prod-mh-design-system" + "/" + designSystemVersion + "/" + brand.designSystem.themeKey + "/logos/brand-" + designSystemLogoType + ".svg";
+        } else if (brand.designSystem.overrides.brandSquareMain) {
+            return brand.designSystem.overrides.brandSquareMain;
+        }
+        return "";
+    }
+
+    async function getBrandLogoUrls() {
+        let brands = brandGroupData?.brands.filter(b => b.designSystem.footerLogoType !== "none") || [];
+        let urls = brands?.map((brand) => getBrandLogoUrl(brand)).filter(url => url) || [];
+        if (urls && brandGroupData?.additionalFooterLogos) urls = urls.concat(brandGroupData?.additionalFooterLogos);
+        return urls;
+    }
+
+    function insertReadMoreUrl() {
+        const readMoreNode = document.getElementById('readmore__footer-text');
+        if (readMoreNode) {
+            const readMoreUrl = "https://identitymanagement.mediahuis.com/brand-redirect/brand-group/" + brandGroupId + "/brand/" + brandId + "/read-more/language/" + lang;
+            readMoreNode.innerHTML = "<a target='_blank' id='readmore__footer-text__link' class='footer__text footer__text--underlined' onclick='trackMoreInfoClick(); return true;' href=" + readMoreUrl + ">" + i18next.t('information.readMore') + "</a>"
+        }
+    }
+
+    async function buildHtml() {
+        if (document.getElementById('lng__return-link') != null) {
+            document.getElementById('lng__return-link').innerHTML = i18next.t('information.backTo');
+        }
+        
+        const urls = await getBrandLogoUrls();
+        
+        if (urls.length === 0) {
+            document.getElementById('container__logo-array').remove();
+            document.getElementById('lng__footer-logo-text').remove();
+            return;
+        }
+        
+        document.getElementById('lng__footer-logo-text').innerHTML = i18next.t('information.loginAt');
+        
+        urls.forEach((url) => {
+            const image = document.createElement('img');
+            image.setAttribute('src', url);
+            image.setAttribute('class', 'container__logo-array__item');
+            image.setAttribute('alt', 'brand-main');
+            
+            document.getElementById('container__logo-array').appendChild(image);
+        });
+        
+    }
+</script>
+</body>
+</html>

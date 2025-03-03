@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<!-- Required meta tags -->
+<meta charset='utf-8'>
+<meta content='ynyKbqYNjkjc1fcZZGqO-Id89qmTFZsruOWhYkpvb54' name='google-site-verification'>
+<meta content='text/html;charset=ISO-8859-1' http-equiv='content-type'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","errorBeacon":"bam.eu01.nr-data.net","licenseKey":"NRJS-9e860d2a43943a1ac27","applicationID":"247444869","transactionName":"JhpeRQoXXlkHRUkSUAAZRlQLV1paD1IWAF8A","queueTime":0,"applicationTime":88,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.eu01.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"322549540",accountID:"3285586",trustKey:"3285586",xpid:"VwQPVFNbDhACUFZWAwUPUF0=",licenseKey:"NRJS-9e860d2a43943a1ac27",applicationID:"247444869"};;/*! For license information please see nr-loader-spa-1.283.2.min.js.LICENSE.txt */
+(()=>{var e,t,r={8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),o=0===Object.keys(r).length?e:r;for(let a in o)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):"object"==typeof e[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555:(e,t,r)=>{"use strict";r.d(t,{Vp:()=>c,fn:()=>s,x1:()=>u});var n=r(384),i=r(8122);const o={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0},a={};function s(e){try{const t=c(e);return!!t.licenseKey&&!!t.errorBeacon&&!!t.applicationID}catch(e){return!1}}function c(e){if(!e)throw new Error("All info objects require an agent identifier!");if(!a[e])throw new Error("Info for ".concat(e," was never set"));return a[e]}function u(e,t){if(!e)throw new Error("All info objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.info=a[e])}},9417:(e,t,r)=>{"use strict";r.d(t,{D0:()=>h,gD:()=>g,xN:()=>p});var n=r(3333);const i=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var o=r(2614),a=r(944),s=r(384),c=r(8122);const u="[data-nr-mask]",d=()=>{const e={feature_flags:[],experimental:{marks:!1,measures:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{get capture_marks(){return e.feature_flags.includes(n.$v.MARKS)||e.experimental.marks},set capture_marks(t){e.experimental.marks=t},get capture_measures(){return e.feature_flags.includes(n.$v.MEASURES)||e.experimental.measures},set capture_measures(t){e.experimental.measures=t},capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(n.$v.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:o.wk,inactiveMs:o.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){i(t)?e.mask_selector="".concat(t,",").concat(u):""===t||null===t?e.mask_selector=u:(0,a.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){i(t)?e.block_selector+=",".concat(t):""!==t&&(0,a.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,a.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}},l={},f="All configuration objects require an agent identifier!";function h(e){if(!e)throw new Error(f);if(!l[e])throw new Error("Configuration for ".concat(e," was never set"));return l[e]}function p(e,t){if(!e)throw new Error(f);l[e]=(0,c.a)(t,d());const r=(0,s.nY)(e);r&&(r.init=l[e])}function g(e,t){if(!e)throw new Error(f);var r=h(e);if(r){for(var n=t.split("."),i=0;i<n.length-1;i++)if("object"!=typeof(r=r[n[i]]))return;r=r[n[n.length-1]]}return r}},5603:(e,t,r)=>{"use strict";r.d(t,{a:()=>c,o:()=>s});var n=r(384),i=r(8122);const o={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},a={};function s(e){if(!e)throw new Error("All loader-config objects require an agent identifier!");if(!a[e])throw new Error("LoaderConfig for ".concat(e," was never set"));return a[e]}function c(e,t){if(!e)throw new Error("All loader-config objects require an agent identifier!");a[e]=(0,i.a)(t,o);const r=(0,n.nY)(e);r&&(r.loader_config=a[e])}},3371:(e,t,r)=>{"use strict";r.d(t,{V:()=>f,f:()=>l});var n=r(8122),i=r(384),o=r(6154),a=r(9324);let s=0;const c={buildEnv:a.F3,distMethod:a.Xs,version:a.xv,originTime:o.WN},u={customTransaction:void 0,disabled:!1,isolatedBacklog:!1,loaderType:void 0,maxBytes:3e4,onerror:void 0,ptid:void 0,releaseIds:{},appMetadata:{},session:void 0,denyList:void 0,timeKeeper:void 0,obfuscator:void 0,harvester:void 0},d={};function l(e){if(!e)throw new Error("All runtime objects require an agent identifier!");if(!d[e])throw new Error("Runtime for ".concat(e," was never set"));return d[e]}function f(e,t){if(!e)throw new Error("All runtime objects require an agent identifier!");d[e]={...(0,n.a)(t,u),...c},Object.hasOwnProperty.call(d[e],"harvestCount")||Object.defineProperty(d[e],"harvestCount",{get:()=>++s});const r=(0,i.nY)(e);r&&(r.runtime=d[e])}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>o,Yq:()=>a,xv:()=>n});const n="1.283.2",i="PROD",o="CDN",a="^2.0.0-alpha.17"},6154:(e,t,r)=>{"use strict";r.d(t,{A4:()=>s,OF:()=>d,RI:()=>i,WN:()=>h,bv:()=>o,gm:()=>a,lR:()=>f,m:()=>u,mw:()=>c,sb:()=>l});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,o="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),s="complete"===a?.document?.readyState,c=Boolean("hidden"===a?.document?.visibilityState),u=""+a?.location,d=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),l=d&&"undefined"==typeof SharedWorker,f=(()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);return Array.isArray(e)&&e.length>=2?+e[1]:0})(),h=Date.now()-(0,n.t)()},7295:(e,t,r)=>{"use strict";r.d(t,{Xv:()=>a,gX:()=>i,iW:()=>o});var n=[];function i(e){if(!e||o(e))return!1;if(0===n.length)return!0;for(var t=0;t<n.length;t++){var r=n[t];if("*"===r.hostname)return!1;if(s(r.hostname,e.hostname)&&c(r.pathname,e.pathname))return!1}return!0}function o(e){return void 0===e.hostname}function a(e){if(n=[],e&&e.length)for(var t=0;t<e.length;t++){let r=e[t];if(!r)continue;0===r.indexOf("http://")?r=r.substring(7):0===r.indexOf("https://")&&(r=r.substring(8));const i=r.indexOf("/");let o,a;i>0?(o=r.substring(0,i),a=r.substring(i)):(o=r,a="");let[s]=o.split(":");n.push({hostname:s,pathname:a})}}function s(e,t){return!(e.length>t.length)&&t.indexOf(e)===t.length-e.length}function c(e,t){return 0===e.indexOf("/")&&(e=e.substring(1)),0===t.indexOf("/")&&(t=t.substring(1)),""===e||e===t}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>c,Ze:()=>l,x3:()=>u});var n=r(7836),i=r(3606),o=r(860),a=r(2646);const s={};function c(e,t){const r={staged:!1,priority:o.P3[t]||0};d(e),s[e].get(t)||s[e].set(t,r)}function u(e,t){e&&s[e]&&(s[e].get(t)&&s[e].delete(t),h(e,t,!1),s[e].size&&f(e))}function d(e){if(!e)throw new Error("agentIdentifier required");s[e]||(s[e]=new Map)}function l(e="",t="feature",r=!1){if(d(e),!e||!s[e].get(t)||r)return h(e,t);s[e].get(t).staged=!0,f(e)}function f(e){const t=Array.from(s[e]);t.every((([e,t])=>t.staged))&&(t.sort(((e,t)=>e[1].priority-t[1].priority)),t.forEach((([t])=>{s[e].delete(t),h(e,t)})))}function h(e,t,r=!0){const o=e?n.ee.get(e):n.ee,s=i.i.handlers;if(!o.aborted&&o.backlog&&s){if(r){const e=o.backlog[t],r=s[t];if(r){for(let t=0;e&&t<e.length;++t)p(e[t],r);Object.entries(r).forEach((([e,t])=>{Object.values(t||{}).forEach((t=>{t[0]?.on&&t[0]?.context()instanceof a.y&&t[0].on(e,t[1])}))}))}}o.isolatedBacklog||delete s[t],o.backlog[t]=null,o.emit("drain-"+t,[])}}function p(e,t){var r=e[1];Object.values(t[r]||{}).forEach((t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],o=e[2];n.apply(i,o)}}))}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>c,ee:()=>u});var n=r(384),i=r(8990),o=r(3371),a=r(2646),s=r(5607);const c="nr@context:".concat(s.W),u=function e(t,r){var n={},s={},d={},l=!1;try{l=16===r.length&&(0,o.f)(r).isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,o){!1!==o&&(o=!0);if(u.aborted&&!i)return;t&&o&&t.emit(e,r,n);for(var a=h(n),c=g(e),d=c.length,l=0;l<d;l++)c[l].apply(a,r);var p=v()[s[e]];p&&p.push([f,e,r,a]);return a},get:m,listeners:g,context:h,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach((([e,n])=>{s[n]=t,t in r||(r[t]=[])}))},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach((e=>{delete f.backlog[e]}))},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function h(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,c,(()=>new a.y(c))):new a.y(c)}function p(e,t){n[e]=g(e).concat(t)}function g(e){return n[e]||[]}function m(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=u)},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,o){o?(o.buffer([e],i),o.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>o});var n=r(9908);o.on=a;var i=o.handlers={};function o(e,t,r,o){a(o||n.d,i,e,t,r)}function a(e,t,r,i,o){o||(o="feature"),e||(e=n.d);var a=t[o]=t[o]||{};(a[r]=a[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function o(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>o,jT:()=>n,sp:()=>i})},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>s,ZF:()=>c,bz:()=>a,el:()=>u});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function o(e,t){return e?15&e[t]:16*Math.random()|0}function a(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map((e=>"x"===e?o(t,r++).toString(16):"y"===e?(3&o()|8).toString(16):e)).join("")}function s(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var s=0;s<e;s++)a.push(o(r,i++).toString(16));return a.join("")}function c(){return s(16)}function u(){return s(32)}},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>a,H3:()=>n,g:()=>u,iL:()=>c,tS:()=>s,uh:()=>i,wk:()=>o});const n="NRBA",i="SESSION",o=144e5,a=18e5,s={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},u={OFF:0,FULL:1,ERROR:2}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},7485:(e,t,r)=>{"use strict";r.d(t,{D:()=>i});var n=r(6154);function i(e){if(0===(e||"").indexOf("data:"))return{protocol:"data"};try{const t=new URL(e,location.href),r={port:t.port,hostname:t.hostname,pathname:t.pathname,search:t.search,protocol:t.protocol.slice(0,t.protocol.indexOf(":")),sameOrigin:t.protocol===n.gm?.location?.protocol&&t.host===n.gm?.location?.host};return r.port&&""!==r.port||("http:"===t.protocol&&(r.port="80"),"https:"===t.protocol&&(r.port="443")),r.pathname&&""!==r.pathname?r.pathname.startsWith("/")||(r.pathname="/".concat(r.pathname)):r.pathname="/",r}catch(e){return{}}}},944:(e,t,r)=>{"use strict";function n(e,t){"function"==typeof console.debug&&console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t)}r.d(t,{R:()=>n})},5284:(e,t,r)=>{"use strict";r.d(t,{t:()=>c,B:()=>s});var n=r(7836),i=r(6154);const o="newrelic";const a=new Set,s={};function c(e,t){const r=n.ee.get(t);s[t]??={},e&&"object"==typeof e&&(a.has(t)||(r.emit("rumresp",[e]),s[t]=e,a.add(t),function(e={}){try{i.gm.dispatchEvent(new CustomEvent(o,{detail:e}))}catch(e){}}({loaded:!0})))}},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout((()=>{i=clearTimeout(i)}),t)),n||(clearTimeout(i),i=setTimeout((()=>{e.apply(this,r)}),t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},3304:(e,t,r)=>{"use strict";r.d(t,{A:()=>o});var n=r(7836);const i=()=>{const e=new WeakSet;return(t,r)=>{if("object"==typeof r&&null!==r){if(e.has(r))return;e.add(r)}return r}};function o(e){try{return JSON.stringify(e,i())??""}catch(e){try{n.ee.emit("internal-error",[e])}catch(e){}return""}}},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>o,sB:()=>a});var n=r(3878);function i(){return"undefined"==typeof document||"complete"===document.readyState}function o(e,t){if(i())return e();(0,n.sp)("load",e,t)}function a(e){if(i())return e();(0,n.DD)("DOMContentLoaded",e)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>o,US:()=>d,Zm:()=>a,bQ:()=>c,dV:()=>s,nY:()=>u,pV:()=>l});var n=r(6154),i=r(1863);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function a(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function s(){let e=a();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket}),e}function c(e,t){let r=a();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e){let t=a();return t.initializedAgents?.[e]}function d(e,t){a()[e]=t}function l(){return function(){let e=a();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=a();const t=e.init||{};e.init={...t}}(),s(),function(){let e=a();const t=e.loader_config||{};e.loader_config={...t}}(),a()}},2843:(e,t,r)=>{"use strict";r.d(t,{u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",(function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)}),r,i)}},8139:(e,t,r)=>{"use strict";r.d(t,{u:()=>f});var n=r(7836),i=r(3434),o=r(8990),a=r(6154);const s={},c=a.gm.XMLHttpRequest,u="addEventListener",d="removeEventListener",l="nr@wrapped:".concat(n.P);function f(e){var t=function(e){return(e||n.ee).get("events")}(e);if(s[t.debugId]++)return t;s[t.debugId]=1;var r=(0,i.YM)(t,!0);function f(e){r.inPlace(e,[u,d],"-",p)}function p(e,t){return e[1]}return"getPrototypeOf"in Object&&(a.RI&&h(document,f),c&&h(c.prototype,f),h(a.gm,f)),t.on(u+"-start",(function(e,t){var n=e[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var i=(0,o.I)(n,l,(function(){var e={object:function(){if("function"!=typeof n.handleEvent)return;return n.handleEvent.apply(n,arguments)},function:n}[typeof n];return e?r(e,"fn-",null,e.name||"anonymous"):n}));this.wrapped=e[1]=i}})),t.on(d+"-start",(function(e){e[1]=this.wrapped||e[1]})),t}function h(e,t,...r){let n=e;for(;"object"==typeof n&&!Object.prototype.hasOwnProperty.call(n,u);)n=Object.getPrototypeOf(n);n&&t(n,...r)}},3434:(e,t,r)=>{"use strict";r.d(t,{Jt:()=>o,YM:()=>c});var n=r(7836),i=r(5607);const o="nr@original:".concat(i.W);var a=Object.prototype.hasOwnProperty,s=!1;function c(e,t){return e||(e=n.ee),r.inPlace=function(e,t,n,i,o){n||(n="");const a="-"===n.charAt(0);for(let s=0;s<t.length;s++){const c=t[s],u=e[c];d(u)||(e[c]=r(u,a?c+n:n,i,c,o))}},r.flag=o,r;function r(t,r,n,s,c){return d(t)?t:(r||(r=""),nrWrapper[o]=t,function(e,t,r){if(Object.defineProperty&&Object.keys)try{return Object.keys(e).forEach((function(r){Object.defineProperty(t,r,{get:function(){return e[r]},set:function(t){return e[r]=t,t}})})),t}catch(e){u([e],r)}for(var n in e)a.call(e,n)&&(t[n]=e[n])}(t,nrWrapper,e),nrWrapper);function nrWrapper(){var o,a,d,l;try{a=this,o=[...arguments],d="function"==typeof n?n(o,a):n||{}}catch(t){u([t,"",[o,a,s],d],e)}i(r+"start",[o,a,s],d,c);try{return l=t.apply(a,o)}catch(e){throw i(r+"err",[o,a,e],d,c),e}finally{i(r+"end",[o,a,l],d,c)}}}function i(r,n,i,o){if(!s||t){var a=s;s=!0;try{e.emit(r,n,i,t,o)}catch(t){u([t,r,n,i],e)}s=a}}}function u(e,t){t||(t=n.ee);try{t.emit("internal-error",e)}catch(e){}}function d(e){return!(e&&"function"==typeof e&&e.apply&&!e[o])}},9414:(e,t,r)=>{"use strict";r.d(t,{J:()=>c});var n=r(7836),i=r(2646),o=r(944),a=r(3434);const s=new Map;function c(e,t,r,c){if("object"!=typeof t||!t||"string"!=typeof r||!r||"function"!=typeof t[r])return(0,o.R)(29);const u=function(e){return(e||n.ee).get("logger")}(e),d=(0,a.YM)(u),l=new i.y(n.P);l.level=c.level,l.customAttributes=c.customAttributes;const f=t[r]?.[a.Jt]||t[r];return s.set(f,l),d.inPlace(t,[r],"wrap-logger-",(()=>s.get(f))),u}},9300:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.ajax},3333:(e,t,r)=>{"use strict";r.d(t,{$v:()=>u,TZ:()=>n,Zp:()=>i,kd:()=>c,mq:()=>s,nf:()=>a,qN:()=>o});const n=r(860).K7.genericEvents,i=["auxclick","click","copy","keydown","paste","scrollend"],o=["focus","blur"],a=4,s=1e3,c=["PageAction","UserAction","BrowserPerformance"],u={MARKS:"experimental.marks",MEASURES:"experimental.measures",RESOURCES:"experimental.resources"}},6774:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.jserrors},993:(e,t,r)=>{"use strict";r.d(t,{A$:()=>o,ET:()=>a,TZ:()=>s,p_:()=>i});var n=r(860);const i={ERROR:"ERROR",WARN:"WARN",INFO:"INFO",DEBUG:"DEBUG",TRACE:"TRACE"},o={OFF:0,ERROR:1,WARN:2,INFO:3,DEBUG:4,TRACE:5},a="log",s=n.K7.logging},3785:(e,t,r)=>{"use strict";r.d(t,{R:()=>c,b:()=>u});var n=r(9908),i=r(1863),o=r(860),a=r(8154),s=r(993);function c(e,t,r={},c=s.p_.INFO){(0,n.p)(a.xV,["API/logging/".concat(c.toLowerCase(),"/called")],void 0,o.K7.metrics,e),(0,n.p)(s.ET,[(0,i.t)(),t,r,c],void 0,o.K7.logging,e)}function u(e){return"string"==typeof e&&Object.values(s.p_).some((t=>t===e.toUpperCase().trim()))}},8154:(e,t,r)=>{"use strict";r.d(t,{z_:()=>o,XG:()=>s,TZ:()=>n,rs:()=>i,xV:()=>a});r(6154),r(9566),r(384);const n=r(860).K7.metrics,i="sm",o="cm",a="storeSupportabilityMetrics",s="storeEventMetrics"},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},6344:(e,t,r)=>{"use strict";r.d(t,{BB:()=>d,G4:()=>o,Qb:()=>l,TZ:()=>i,Ug:()=>a,_s:()=>s,bc:()=>u,yP:()=>c});var n=r(2614);const i=r(860).K7.sessionReplay,o={RECORD:"recordReplay",PAUSE:"pauseReplay",REPLAY_RUNNING:"replayRunning",ERROR_DURING_REPLAY:"errorDuringReplay"},a=.12,s={DomContentLoaded:0,Load:1,FullSnapshot:2,IncrementalSnapshot:3,Meta:4,Custom:5},c={[n.g.ERROR]:15e3,[n.g.FULL]:3e5,[n.g.OFF]:0},u={RESET:{message:"Session was reset",sm:"Reset"},IMPORT:{message:"Recorder failed to import",sm:"Import"},TOO_MANY:{message:"429: Too Many Requests",sm:"Too-Many"},TOO_BIG:{message:"Payload was too large",sm:"Too-Big"},CROSS_TAB:{message:"Session Entity was set to OFF on another tab",sm:"Cross-Tab"},ENTITLEMENTS:{message:"Session Replay is not allowed and will not be started",sm:"Entitlement"}},d=5e3,l={API:"api"}},5270:(e,t,r)=>{"use strict";r.d(t,{Aw:()=>c,CT:()=>u,SR:()=>s});var n=r(384),i=r(9417),o=r(7767),a=r(6154);function s(e){return!!(0,n.dV)().o.MO&&(0,o.V)(e)&&!0===(0,i.gD)(e,"session_trace.enabled")}function c(e){return!0===(0,i.gD)(e,"session_replay.preload")&&s(e)}function u(e,t){const r=t.correctAbsoluteTimestamp(e);return{originalTimestamp:e,correctedTimestamp:r,timestampDiff:e-r,originTime:a.WN,correctedOriginTime:t.correctedOriginTime,originTimeDiff:Math.floor(a.WN-t.correctedOriginTime)}}},3738:(e,t,r)=>{"use strict";r.d(t,{He:()=>i,Kp:()=>s,Lc:()=>u,Rz:()=>d,TZ:()=>n,bD:()=>o,d3:()=>a,jx:()=>l,uP:()=>c});const n=r(860).K7.sessionTrace,i="bstResource",o="resource",a="-start",s="-end",c="fn"+a,u="fn"+s,d="pushState",l=1e3},3962:(e,t,r)=>{"use strict";r.d(t,{AM:()=>o,O2:()=>c,Qu:()=>u,TZ:()=>s,ih:()=>d,pP:()=>a,tC:()=>i});var n=r(860);const i=["click","keydown","submit","popstate"],o="api",a="initialPageLoad",s=n.K7.softNav,c={INITIAL_PAGE_LOAD:"",ROUTE_CHANGE:1,UNSPECIFIED:2},u={INTERACTION:1,AJAX:2,CUSTOM_END:3,CUSTOM_TRACER:4},d={IP:"in progress",FIN:"finished",CAN:"cancelled"}},7378:(e,t,r)=>{"use strict";r.d(t,{$p:()=>x,BR:()=>b,Kp:()=>R,L3:()=>y,Lc:()=>c,NC:()=>o,SG:()=>d,TZ:()=>i,U6:()=>p,UT:()=>m,d3:()=>w,dT:()=>f,e5:()=>A,gx:()=>v,l9:()=>l,oW:()=>h,op:()=>g,rw:()=>u,tH:()=>T,uP:()=>s,wW:()=>E,xq:()=>a});var n=r(384);const i=r(860).K7.spa,o=["click","submit","keypress","keydown","keyup","change"],a=999,s="fn-start",c="fn-end",u="cb-start",d="api-ixn-",l="remaining",f="interaction",h="spaNode",p="jsonpNode",g="fetch-start",m="fetch-done",v="fetch-body-",b="jsonp-end",y=(0,n.dV)().o.ST,w="-start",R="-end",x="-body",E="cb"+R,A="jsTime",T="fetch"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>o});var n=r(7836),i=r(1687);class o{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},7767:(e,t,r)=>{"use strict";r.d(t,{V:()=>o});var n=r(9417),i=r(6154);const o=e=>i.RI&&!0===(0,n.gD)(e,"privacy.cookies_enabled")},8969:(e,t,r)=>{"use strict";r.d(t,{j:()=>O});var n=r(860),i=r(2555),o=r(3371),a=r(9908),s=r(7836),c=r(1687),u=r(5289),d=r(6154),l=r(944),f=r(8154),h=r(384),p=r(6344);const g=["setErrorHandler","finished","addToTrace","addRelease","recordCustomEvent","addPageAction","setCurrentRouteName","setPageViewName","setCustomAttribute","interaction","noticeError","setUserId","setApplicationVersion","start",p.G4.RECORD,p.G4.PAUSE,"log","wrapLogger"],m=["setErrorHandler","finished","addToTrace","addRelease"];var v=r(1863),b=r(2614),y=r(993),w=r(3785),R=r(9414);function x(){const e=(0,h.pV)();g.forEach((t=>{e[t]=(...r)=>function(t,...r){let n=[];return Object.values(e.initializedAgents).forEach((e=>{e&&e.api?e.exposed&&e.api[t]&&n.push(e.api[t](...r)):(0,l.R)(38,t)})),n.length>1?n:n[0]}(t,...r)}))}const E={};var A=r(9417),T=r(5603),N=r(5284);const S=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};let _=!1;function O(e,t={},g,O){let{init:I,info:P,loader_config:j,runtime:C={},exposed:k=!0}=t;C.loaderType=g;const L=(0,h.pV)();P||(I=L.init,P=L.info,j=L.loader_config),(0,A.xN)(e.agentIdentifier,I||{}),(0,T.a)(e.agentIdentifier,j||{}),P.jsAttributes??={},d.bv&&(P.jsAttributes.isWorker=!0),(0,i.x1)(e.agentIdentifier,P);const H=(0,A.D0)(e.agentIdentifier),M=[P.beacon,P.errorBeacon];_||(H.proxy.assets&&(S(H.proxy.assets),M.push(H.proxy.assets)),H.proxy.beacon&&M.push(H.proxy.beacon),x(),(0,h.US)("activatedFeatures",N.B),e.runSoftNavOverSpa&&=!0===H.soft_navigations.enabled&&H.feature_flags.includes("soft_nav")),C.denyList=[...H.ajax.deny_list||[],...H.ajax.block_internal?M:[]],C.ptid=e.agentIdentifier,(0,o.V)(e.agentIdentifier,C),e.ee=s.ee.get(e.agentIdentifier),void 0===e.api&&(e.api=function(e,t,h=!1){t||(0,c.Ak)(e,"api");const g={};var x=s.ee.get(e),A=x.get("tracer");E[e]=b.g.OFF,x.on(p.G4.REPLAY_RUNNING,(t=>{E[e]=t}));var T="api-",N=T+"ixn-";function S(t,r,n,o){const a=(0,i.Vp)(e);return null===r?delete a.jsAttributes[t]:(0,i.x1)(e,{...a,jsAttributes:{...a.jsAttributes,[t]:r}}),I(T,n,!0,o||null===r?"session":void 0)(t,r)}function _(){}g.log=function(e,{customAttributes:t={},level:r=y.p_.INFO}={}){(0,a.p)(f.xV,["API/log/called"],void 0,n.K7.metrics,x),(0,w.R)(x,e,t,r)},g.wrapLogger=(e,t,{customAttributes:r={},level:i=y.p_.INFO}={})=>{(0,a.p)(f.xV,["API/wrapLogger/called"],void 0,n.K7.metrics,x),(0,R.J)(x,e,t,{customAttributes:r,level:i})},m.forEach((e=>{g[e]=I(T,e,!0,"api")})),g.addPageAction=I(T,"addPageAction",!0,n.K7.genericEvents),g.recordCustomEvent=I(T,"recordCustomEvent",!0,n.K7.genericEvents),g.setPageViewName=function(t,r){if("string"==typeof t)return"/"!==t.charAt(0)&&(t="/"+t),(0,o.f)(e).customTransaction=(r||"http://custom.transaction")+t,I(T,"setPageViewName",!0)()},g.setCustomAttribute=function(e,t,r=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof t)||null===t)return S(e,t,"setCustomAttribute",r);(0,l.R)(40,typeof t)}else(0,l.R)(39,typeof e)},g.setUserId=function(e){if("string"==typeof e||null===e)return S("enduser.id",e,"setUserId",!0);(0,l.R)(41,typeof e)},g.setApplicationVersion=function(e){if("string"==typeof e||null===e)return S("application.version",e,"setApplicationVersion",!1);(0,l.R)(42,typeof e)},g.start=()=>{try{(0,a.p)(f.xV,["API/start/called"],void 0,n.K7.metrics,x),x.emit("manual-start-all")}catch(e){(0,l.R)(23,e)}},g[p.G4.RECORD]=function(){(0,a.p)(f.xV,["API/recordReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(p.G4.RECORD,[],void 0,n.K7.sessionReplay,x)},g[p.G4.PAUSE]=function(){(0,a.p)(f.xV,["API/pauseReplay/called"],void 0,n.K7.metrics,x),(0,a.p)(p.G4.PAUSE,[],void 0,n.K7.sessionReplay,x)},g.interaction=function(e){return(new _).get("object"==typeof e?e:{})};const O=_.prototype={createTracer:function(e,t){var r={},i=this,o="function"==typeof t;return(0,a.p)(f.xV,["API/createTracer/called"],void 0,n.K7.metrics,x),h||(0,a.p)(N+"tracer",[(0,v.t)(),e,r],i,n.K7.spa,x),function(){if(A.emit((o?"":"no-")+"fn-start",[(0,v.t)(),i,o],r),o)try{return t.apply(this,arguments)}catch(e){const t="string"==typeof e?new Error(e):e;throw A.emit("fn-err",[arguments,this,t],r),t}finally{A.emit("fn-end",[(0,v.t)()],r)}}}};function I(e,t,r,i){return function(){return(0,a.p)(f.xV,["API/"+t+"/called"],void 0,n.K7.metrics,x),i&&(0,a.p)(e+t,[r?(0,v.t)():performance.now(),...arguments],r?null:this,i,x),r?void 0:this}}function P(){r.e(478).then(r.bind(r,8778)).then((({setAPI:t})=>{t(e),(0,c.Ze)(e,"api")})).catch((e=>{(0,l.R)(27,e),x.abort()}))}return["actionText","setName","setAttribute","save","ignore","onEnd","getContext","end","get"].forEach((e=>{O[e]=I(N,e,void 0,h?n.K7.softNav:n.K7.spa)})),g.setCurrentRouteName=h?I(N,"routeName",void 0,n.K7.softNav):I(T,"routeName",!0,n.K7.spa),g.noticeError=function(t,r){"string"==typeof t&&(t=new Error(t)),(0,a.p)(f.xV,["API/noticeError/called"],void 0,n.K7.metrics,x),(0,a.p)("err",[t,(0,v.t)(),!1,r,!!E[e]],void 0,n.K7.jserrors,x)},d.RI?(0,u.GG)((()=>P()),!0):P(),g}(e.agentIdentifier,O,e.runSoftNavOverSpa)),void 0===e.exposed&&(e.exposed=k),_=!0}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>s,P3:()=>c,XX:()=>i,qY:()=>n,v4:()=>a});const n="events",i="jserrors",o="browser/blobs",a="rum",s={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},c={[s.pageViewEvent]:1,[s.pageViewTiming]:2,[s.metrics]:3,[s.jserrors]:4,[s.spa]:5,[s.ajax]:6,[s.sessionTrace]:7,[s.softNav]:8,[s.sessionReplay]:9,[s.logging]:10,[s.genericEvents]:11},u={[s.pageViewEvent]:a,[s.pageViewTiming]:n,[s.ajax]:n,[s.spa]:n,[s.softNav]:n,[s.metrics]:i,[s.jserrors]:i,[s.sessionTrace]:o,[s.sessionReplay]:o,[s.logging]:"browser/logs",[s.genericEvents]:"ins"}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var o=n[e]={exports:{}};return r[e](o,o.exports,i),o.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce(((t,r)=>(i.f[r](e,t),t)),[])),i.u=e=>({212:"nr-spa-compressor",249:"nr-spa-recorder",478:"nr-spa"}[e]+"-1.283.2.min.js"),i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.283.2.PROD:",i.l=(r,n,o,a)=>{if(e[r])e[r].push(n);else{var s,c;if(void 0!==o)for(var u=document.getElementsByTagName("script"),d=0;d<u.length;d++){var l=u[d];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+o){s=l;break}}if(!s){c=!0;var f={478:"sha512-2oN05BjxuObKuOX8E0vq/zS51M+2HokmNPBRUrIC1fw3hpJqoI18/nckSFiqV11KxT7ag3C+FunKrR8n0PD9Ig==",249:"sha512-Zs5nIHr/khH6G8IhAEdnngg+P7y/IfmjU0PQmXABpCEtSTeKV22OYdaa9lENrW9uxI0lZ6O5e5dCnEMsTS0onA==",212:"sha512-LPKde7A1ZxIHzoSqWKxn5uWVhM9u76Vtmp9DMBf+Ry3mnn2jpsfyfigMYD5Yka2RG3NeIBqOwNYuPrWL39qn6w=="};(s=document.createElement("script")).charset="utf-8",s.timeout=120,i.nc&&s.setAttribute("nonce",i.nc),s.setAttribute("data-webpack",t+o),s.src=r,0!==s.src.indexOf(window.location.origin+"/")&&(s.crossOrigin="anonymous"),f[a]&&(s.integrity=f[a])}e[r]=[n];var h=(t,n)=>{s.onerror=s.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],s.parentNode&&s.parentNode.removeChild(s),i&&i.forEach((e=>e(n))),t)return t(n)},p=setTimeout(h.bind(null,void 0,{type:"timeout",target:s}),12e4);s.onerror=h.bind(null,s.onerror),s.onload=h.bind(null,s.onload),c&&document.head.appendChild(s)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={38:0,788:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var o=new Promise(((r,i)=>n=e[t]=[r,i]));r.push(n[2]=o);var a=i.p+i.u(t),s=new Error;i.l(a,(r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var o=r&&("load"===r.type?"missing":r.type),a=r&&r.target&&r.target.src;s.message="Loading chunk "+t+" failed.\n("+o+": "+a+")",s.name="ChunkLoadError",s.type=o,s.request=a,n[1](s)}}),"chunk-"+t,t)}};var t=(t,r)=>{var n,o,[a,s,c]=r,u=0;if(a.some((t=>0!==e[t]))){for(n in s)i.o(s,n)&&(i.m[n]=s[n]);if(c)c(i)}for(t&&t(r);u<a.length;u++)o=a[u],i.o(e,o)&&e[o]&&e[o][0](),e[o]=0},r=self["webpackChunk:NRBA-1.283.2.PROD"]=self["webpackChunk:NRBA-1.283.2.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(944),t=i(6344),r=i(9566);class n{agentIdentifier;constructor(){this.agentIdentifier=(0,r.LA)(16)}#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}addPageAction(e,t){return this.#e("addPageAction",e,t)}recordCustomEvent(e,t){return this.#e("recordCustomEvent",e,t)}setPageViewName(e,t){return this.#e("setPageViewName",e,t)}setCustomAttribute(e,t,r){return this.#e("setCustomAttribute",e,t,r)}noticeError(e,t){return this.#e("noticeError",e,t)}setUserId(e){return this.#e("setUserId",e)}setApplicationVersion(e){return this.#e("setApplicationVersion",e)}setErrorHandler(e){return this.#e("setErrorHandler",e)}addRelease(e,t){return this.#e("addRelease",e,t)}log(e,t){return this.#e("log",e,t)}}class o extends n{#e(t,...r){if("function"==typeof this.api?.[t])return this.api[t](...r);(0,e.R)(35,t)}start(){return this.#e("start")}finished(e){return this.#e("finished",e)}recordReplay(){return this.#e(t.G4.RECORD)}pauseReplay(){return this.#e(t.G4.PAUSE)}addToTrace(e){return this.#e("addToTrace",e)}setCurrentRouteName(e){return this.#e("setCurrentRouteName",e)}interaction(){return this.#e("interaction")}wrapLogger(e,t,r){return this.#e("wrapLogger",e,t,r)}}var a=i(860),s=i(9417);const c=Object.values(a.K7);function u(e){const t={};return c.forEach((r=>{t[r]=function(e,t){return!0===(0,s.gD)(t,"".concat(e,".enabled"))}(r,e)})),t}var d=i(8969);var l=i(1687),f=i(4234),h=i(5289),p=i(6154),g=i(5270),m=i(7767),v=i(6389);class b extends f.W{constructor(e,t,r=!0){super(e.agentIdentifier,t),this.auto=r,this.abortHandler=void 0,this.featAggregate=void 0,this.onAggregateImported=void 0,!1===e.init[this.featureName].autoStart&&(this.auto=!1),this.auto?(0,l.Ak)(e.agentIdentifier,t):this.ee.on("manual-start-all",(0,v.J)((()=>{(0,l.Ak)(e.agentIdentifier,this.featureName),this.auto=!0,this.importAggregator(e)})))}importAggregator(t,r={}){if(this.featAggregate||!this.auto)return;let n;this.onAggregateImported=new Promise((e=>{n=e}));const o=async()=>{let o;try{if((0,m.V)(this.agentIdentifier)){const{setupAgentSession:e}=await i.e(478).then(i.bind(i,6526));o=e(t)}}catch(t){(0,e.R)(20,t),this.ee.emit("internal-error",[t]),this.featureName===a.K7.sessionReplay&&this.abortHandler?.()}try{if(!this.#t(this.featureName,o))return(0,l.Ze)(this.agentIdentifier,this.featureName),void n(!1);const{lazyFeatureLoader:e}=await i.e(478).then(i.bind(i,6103)),{Aggregate:a}=await e(this.featureName,"aggregate");this.featAggregate=new a(t,r),t.runtime.harvester.initializedAggregates.push(this.featAggregate),n(!0)}catch(t){(0,e.R)(34,t),this.abortHandler?.(),(0,l.Ze)(this.agentIdentifier,this.featureName,!0),n(!1),this.ee&&this.ee.abort()}};p.RI?(0,h.GG)((()=>o()),!0):o()}#t(e,t){switch(e){case a.K7.sessionReplay:return(0,g.SR)(this.agentIdentifier)&&!!t;case a.K7.sessionTrace:return!!t;default:return!0}}}var y=i(6630);class w extends b{static featureName=y.T;constructor(e,t=!0){super(e,y.T,t),this.importAggregator(e)}}var R=i(384);var x=i(9908),E=i(2843),A=i(3878),T=i(782),N=i(1863);class S extends b{static featureName=T.T;constructor(e,t=!0){super(e,T.T,t),p.RI&&((0,E.u)((()=>(0,x.p)("docHidden",[(0,N.t)()],void 0,T.T,this.ee)),!0),(0,A.sp)("pagehide",(()=>(0,x.p)("winPagehide",[(0,N.t)()],void 0,T.T,this.ee))),this.importAggregator(e))}}var _=i(8154);class O extends b{static featureName=_.TZ;constructor(e,t=!0){super(e,_.TZ,t),this.importAggregator(e)}}var I=i(6774),P=i(3304);class j{constructor(e,t,r,n,i){this.name="UncaughtError",this.message="string"==typeof e?e:(0,P.A)(e),this.sourceURL=t,this.line=r,this.column=n,this.__newrelic=i}}function C(e){return H(e)?e:new j(void 0!==e?.message?e.message:e,e?.filename||e?.sourceURL,e?.lineno||e?.line,e?.colno||e?.col,e?.__newrelic)}function k(e){const t="Unhandled Promise Rejection";if(!e?.reason)return;if(H(e.reason))try{return e.reason.message=t+": "+e.reason.message,C(e.reason)}catch(t){return C(e.reason)}const r=C(e.reason);return r.message=t+": "+r?.message,r}function L(e){if(e.error instanceof SyntaxError&&!/:\d+$/.test(e.error.stack?.trim())){const t=new j(e.message,e.filename,e.lineno,e.colno,e.error.__newrelic);return t.name=SyntaxError.name,t}return H(e.error)?e.error:C(e)}function H(e){return e instanceof Error&&!!e.stack}class M extends b{static featureName=I.T;#r=!1;constructor(e,r=!0){super(e,I.T,r);try{this.removeOnAbort=new AbortController}catch(e){}this.ee.on("internal-error",((e,t)=>{this.abortHandler&&(0,x.p)("ierr",[C(e),(0,N.t)(),!0,{},this.#r,t],void 0,this.featureName,this.ee)})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.#r=e})),p.gm.addEventListener("unhandledrejection",(e=>{this.abortHandler&&(0,x.p)("err",[k(e),(0,N.t)(),!1,{unhandledPromiseRejection:1},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),p.gm.addEventListener("error",(e=>{this.abortHandler&&(0,x.p)("err",[L(e),(0,N.t)(),!1,{},this.#r],void 0,this.featureName,this.ee)}),(0,A.jT)(!1,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var D=i(8990);let K=1;const U="nr@id";function V(e){const t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===p.gm?0:(0,D.I)(e,U,(function(){return K++}))}function G(e){if("string"==typeof e&&e.length)return e.length;if("object"==typeof e){if("undefined"!=typeof ArrayBuffer&&e instanceof ArrayBuffer&&e.byteLength)return e.byteLength;if("undefined"!=typeof Blob&&e instanceof Blob&&e.size)return e.size;if(!("undefined"!=typeof FormData&&e instanceof FormData))try{return(0,P.A)(e).length}catch(e){return}}}var F=i(8139),B=i(7836),W=i(3434);const z={},q=["open","send"];function Z(t){var r=t||B.ee;const n=function(e){return(e||B.ee).get("xhr")}(r);if(void 0===p.gm.XMLHttpRequest)return n;if(z[n.debugId]++)return n;z[n.debugId]=1,(0,F.u)(r);var i=(0,W.YM)(n),o=p.gm.XMLHttpRequest,a=p.gm.MutationObserver,s=p.gm.Promise,c=p.gm.setInterval,u="readystatechange",d=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],l=[],f=p.gm.XMLHttpRequest=function(t){const r=new o(t),a=n.context(r);try{n.emit("new-xhr",[r],a),r.addEventListener(u,(s=a,function(){var e=this;e.readyState>3&&!s.resolved&&(s.resolved=!0,n.emit("xhr-resolved",[],e)),i.inPlace(e,d,"fn-",y)}),(0,A.jT)(!1))}catch(t){(0,e.R)(15,t);try{n.emit("internal-error",[t])}catch(e){}}var s;return r};function h(e,t){i.inPlace(t,["onreadystatechange"],"fn-",y)}if(function(e,t){for(var r in e)t[r]=e[r]}(o,f),f.prototype=o.prototype,i.inPlace(f.prototype,q,"-xhr-",y),n.on("send-xhr-start",(function(e,t){h(e,t),function(e){l.push(e),a&&(g?g.then(b):c?c(b):(m=-m,v.data=m))}(t)})),n.on("open-xhr-start",h),a){var g=s&&s.resolve();if(!c&&!s){var m=1,v=document.createTextNode(m);new a(b).observe(v,{characterData:!0})}}else r.on("fn-end",(function(e){e[0]&&e[0].type===u||b()}));function b(){for(var e=0;e<l.length;e++)h(0,l[e]);l.length&&(l=[])}function y(e,t){return t}return n}var Y="fetch-",J=Y+"body-",X=["arrayBuffer","blob","json","text","formData"],Q=p.gm.Request,ee=p.gm.Response,te="prototype";const re={};function ne(e){const t=function(e){return(e||B.ee).get("fetch")}(e);if(!(Q&&ee&&p.gm.fetch))return t;if(re[t.debugId]++)return t;function r(e,r,n){var i=e[r];"function"==typeof i&&(e[r]=function(){var e,r=[...arguments],o={};t.emit(n+"before-start",[r],o),o[B.P]&&o[B.P].dt&&(e=o[B.P].dt);var a=i.apply(this,r);return t.emit(n+"start",[r,e],a),a.then((function(e){return t.emit(n+"end",[null,e],a),e}),(function(e){throw t.emit(n+"end",[e],a),e}))})}return re[t.debugId]=1,X.forEach((e=>{r(Q[te],e,J),r(ee[te],e,J)})),r(p.gm,"fetch",Y),t.on(Y+"end",(function(e,r){var n=this;if(r){var i=r.headers.get("content-length");null!==i&&(n.rxSize=i),t.emit(Y+"done",[null,r],n)}else t.emit(Y+"done",[e],n)})),t}var ie=i(7485),oe=i(5603);class ae{constructor(e){this.agentIdentifier=e}generateTracePayload(e){if(!this.shouldGenerateTrace(e))return null;var t=(0,oe.o)(this.agentIdentifier);if(!t)return null;var n=(t.accountID||"").toString()||null,i=(t.agentID||"").toString()||null,o=(t.trustKey||"").toString()||null;if(!n||!i)return null;var a=(0,r.ZF)(),s=(0,r.el)(),c=Date.now(),u={spanId:a,traceId:s,timestamp:c};return(e.sameOrigin||this.isAllowedOrigin(e)&&this.useTraceContextHeadersForCors())&&(u.traceContextParentHeader=this.generateTraceContextParentHeader(a,s),u.traceContextStateHeader=this.generateTraceContextStateHeader(a,c,n,i,o)),(e.sameOrigin&&!this.excludeNewrelicHeader()||!e.sameOrigin&&this.isAllowedOrigin(e)&&this.useNewrelicHeaderForCors())&&(u.newrelicHeader=this.generateTraceHeader(a,s,c,n,i,o)),u}generateTraceContextParentHeader(e,t){return"00-"+t+"-"+e+"-01"}generateTraceContextStateHeader(e,t,r,n,i){return i+"@nr=0-1-"+r+"-"+n+"-"+e+"----"+t}generateTraceHeader(e,t,r,n,i,o){if(!("function"==typeof p.gm?.btoa))return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:i,id:e,tr:t,ti:r}};return o&&n!==o&&(a.d.tk=o),btoa((0,P.A)(a))}shouldGenerateTrace(e){return this.isDtEnabled()&&this.isAllowedOrigin(e)}isAllowedOrigin(e){var t=!1,r={};if((0,s.gD)(this.agentIdentifier,"distributed_tracing")&&(r=(0,s.D0)(this.agentIdentifier).distributed_tracing),e.sameOrigin)t=!0;else if(r.allowed_origins instanceof Array)for(var n=0;n<r.allowed_origins.length;n++){var i=(0,ie.D)(r.allowed_origins[n]);if(e.hostname===i.hostname&&e.protocol===i.protocol&&e.port===i.port){t=!0;break}}return t}isDtEnabled(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.enabled}excludeNewrelicHeader(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.exclude_newrelic_header}useNewrelicHeaderForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!1!==e.cors_use_newrelic_header}useTraceContextHeadersForCors(){var e=(0,s.gD)(this.agentIdentifier,"distributed_tracing");return!!e&&!!e.cors_use_tracecontext_headers}}var se=i(9300),ce=i(7295),ue=["load","error","abort","timeout"],de=ue.length,le=(0,R.dV)().o.REQ,fe=(0,R.dV)().o.XHR;class he extends b{static featureName=se.T;constructor(e,t=!0){super(e,se.T,t),this.dt=new ae(e.agentIdentifier),this.handler=(e,t,r,n)=>(0,x.p)(e,t,r,n,this.ee);try{const e={xmlhttprequest:"xhr",fetch:"fetch",beacon:"beacon"};p.gm?.performance?.getEntriesByType("resource").forEach((t=>{if(t.initiatorType in e&&0!==t.responseStatus){const r={status:t.responseStatus},n={rxSize:t.transferSize,duration:Math.floor(t.duration),cbTime:0};pe(r,t.name),this.handler("xhr",[r,n,t.startTime,t.responseEnd,e[t.initiatorType]],void 0,a.K7.ajax)}}))}catch(e){}ne(this.ee),Z(this.ee),function(e,t,r,n){function i(e){var t=this;t.totalCbs=0,t.called=0,t.cbTime=0,t.end=R,t.ended=!1,t.xhrGuids={},t.lastSize=null,t.loadCaptureCalled=!1,t.params=this.params||{},t.metrics=this.metrics||{},e.addEventListener("load",(function(r){E(t,e)}),(0,A.jT)(!1)),p.lR||e.addEventListener("progress",(function(e){t.lastSize=e.loaded}),(0,A.jT)(!1))}function o(e){this.params={method:e[0]},pe(this,e[1]),this.metrics={}}function s(t,r){e.loader_config.xpid&&this.sameOrigin&&r.setRequestHeader("X-NewRelic-ID",e.loader_config.xpid);var i=n.generateTracePayload(this.parsedOrigin);if(i){var o=!1;i.newrelicHeader&&(r.setRequestHeader("newrelic",i.newrelicHeader),o=!0),i.traceContextParentHeader&&(r.setRequestHeader("traceparent",i.traceContextParentHeader),i.traceContextStateHeader&&r.setRequestHeader("tracestate",i.traceContextStateHeader),o=!0),o&&(this.dt=i)}}function c(e,r){var n=this.metrics,i=e[0],o=this;if(n&&i){var a=G(i);a&&(n.txSize=a)}this.startTime=(0,N.t)(),this.body=i,this.listener=function(e){try{"abort"!==e.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==e.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof r.onload)&&"function"==typeof o.end)&&o.end(r)}catch(e){try{t.emit("internal-error",[e])}catch(e){}}};for(var s=0;s<de;s++)r.addEventListener(ue[s],this.listener,(0,A.jT)(!1))}function u(e,t,r){this.cbTime+=e,t?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof r.onload||"function"!=typeof this.end||this.end(r)}function d(e,t){var r=""+V(e)+!!t;this.xhrGuids&&!this.xhrGuids[r]&&(this.xhrGuids[r]=!0,this.totalCbs+=1)}function l(e,t){var r=""+V(e)+!!t;this.xhrGuids&&this.xhrGuids[r]&&(delete this.xhrGuids[r],this.totalCbs-=1)}function f(){this.endTime=(0,N.t)()}function h(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-added",[e[1],e[2]],r)}function g(e,r){r instanceof fe&&"load"===e[0]&&t.emit("xhr-load-removed",[e[1],e[2]],r)}function m(e,t,r){t instanceof fe&&("onload"===r&&(this.onload=!0),("load"===(e[0]&&e[0].type)||this.onload)&&(this.xhrCbStart=(0,N.t)()))}function v(e,r){this.xhrCbStart&&t.emit("xhr-cb-time",[(0,N.t)()-this.xhrCbStart,this.onload,r],r)}function b(e){var t,r=e[1]||{};if("string"==typeof e[0]?0===(t=e[0]).length&&p.RI&&(t=""+p.gm.location.href):e[0]&&e[0].url?t=e[0].url:p.gm?.URL&&e[0]&&e[0]instanceof URL?t=e[0].href:"function"==typeof e[0].toString&&(t=e[0].toString()),"string"==typeof t&&0!==t.length){t&&(this.parsedOrigin=(0,ie.D)(t),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=n.generateTracePayload(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if(e[0]&&e[0].headers)s(e[0].headers,i)&&(this.dt=i);else{var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),s(o.headers,i)&&(this.dt=i),e.length>1?e[1]=o:e.push(o)}}function s(e,t){var r=!1;return t.newrelicHeader&&(e.set("newrelic",t.newrelicHeader),r=!0),t.traceContextParentHeader&&(e.set("traceparent",t.traceContextParentHeader),t.traceContextStateHeader&&e.set("tracestate",t.traceContextStateHeader),r=!0),r}}function y(e,t){this.params={},this.metrics={},this.startTime=(0,N.t)(),this.dt=t,e.length>=1&&(this.target=e[0]),e.length>=2&&(this.opts=e[1]);var r,n=this.opts||{},i=this.target;"string"==typeof i?r=i:"object"==typeof i&&i instanceof le?r=i.url:p.gm?.URL&&"object"==typeof i&&i instanceof URL&&(r=i.href),pe(this,r);var o=(""+(i&&i instanceof le&&i.method||n.method||"GET")).toUpperCase();this.params.method=o,this.body=n.body,this.txSize=G(n.body)||0}function w(e,t){if(this.endTime=(0,N.t)(),this.params||(this.params={}),(0,ce.iW)(this.params))return;let n;this.params.status=t?t.status:0,"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);const i={txSize:this.txSize,rxSize:n,duration:(0,N.t)()-this.startTime};r("xhr",[this.params,i,this.startTime,this.endTime,"fetch"],this,a.K7.ajax)}function R(e){const t=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(let t=0;t<de;t++)e.removeEventListener(ue[t],this.listener,!1);t.aborted||(0,ce.iW)(t)||(n.duration=(0,N.t)()-this.startTime,this.loadCaptureCalled||4!==e.readyState?null==t.status&&(t.status=0):E(this,e),n.cbTime=this.cbTime,r("xhr",[t,n,this.startTime,this.endTime,"xhr"],this,a.K7.ajax))}}function E(e,r){e.params.status=r.status;var n=function(e,t){var r=e.responseType;return"json"===r&&null!==t?t:"arraybuffer"===r||"blob"===r||"json"===r?G(e.response):"text"===r||""===r||void 0===r?G(e.responseText):void 0}(r,e.lastSize);if(n&&(e.metrics.rxSize=n),e.sameOrigin){var i=r.getResponseHeader("X-NewRelic-App-Data");i&&((0,x.p)(_.rs,["Ajax/CrossApplicationTracing/Header/Seen"],void 0,a.K7.metrics,t),e.params.cat=i.split(", ").pop())}e.loadCaptureCalled=!0}t.on("new-xhr",i),t.on("open-xhr-start",o),t.on("open-xhr-end",s),t.on("send-xhr-start",c),t.on("xhr-cb-time",u),t.on("xhr-load-added",d),t.on("xhr-load-removed",l),t.on("xhr-resolved",f),t.on("addEventListener-end",h),t.on("removeEventListener-end",g),t.on("fn-end",v),t.on("fetch-before-start",b),t.on("fetch-start",y),t.on("fn-start",m),t.on("fetch-done",w)}(e,this.ee,this.handler,this.dt),this.importAggregator(e)}}function pe(e,t){var r=(0,ie.D)(t),n=e.params||e;n.hostname=r.hostname,n.port=r.port,n.protocol=r.protocol,n.host=r.hostname+":"+r.port,n.pathname=r.pathname,e.parsedOrigin=r,e.sameOrigin=r.sameOrigin}const ge={},me=["pushState","replaceState"];function ve(e){const t=function(e){return(e||B.ee).get("history")}(e);return!p.RI||ge[t.debugId]++||(ge[t.debugId]=1,(0,W.YM)(t).inPlace(window.history,me,"-")),t}var be=i(3738);const{He:ye,bD:we,d3:Re,Kp:xe,TZ:Ee,Lc:Ae,uP:Te,Rz:Ne}=be;class Se extends b{static featureName=Ee;constructor(e,t=!0){super(e,Ee,t);if(!(0,m.V)(this.agentIdentifier))return void this.deregisterDrain();const r=this.ee;let n;ve(r),this.eventsEE=(0,F.u)(r),this.eventsEE.on(Te,(function(e,t){this.bstStart=(0,N.t)()})),this.eventsEE.on(Ae,(function(e,t){(0,x.p)("bst",[e[0],t,this.bstStart,(0,N.t)()],void 0,a.K7.sessionTrace,r)})),r.on(Ne+Re,(function(e){this.time=(0,N.t)(),this.startPath=location.pathname+location.hash})),r.on(Ne+xe,(function(e){(0,x.p)("bstHist",[location.pathname+location.hash,this.startPath,this.time],void 0,a.K7.sessionTrace,r)}));try{n=new PerformanceObserver((e=>{const t=e.getEntries();(0,x.p)(ye,[t],void 0,a.K7.sessionTrace,r)})),n.observe({type:we,buffered:!0})}catch(e){}this.importAggregator(e,{resourceObserver:n})}}var _e=i(2614);class Oe extends b{static featureName=t.TZ;#i;#o;constructor(e,r=!0){let n;super(e,t.TZ,r),this.replayRunning=!1,this.#o=e;try{n=JSON.parse(localStorage.getItem("".concat(_e.H3,"_").concat(_e.uh)))}catch(e){}(0,g.SR)(e.agentIdentifier)&&this.ee.on(t.G4.RECORD,(()=>this.#a())),this.#s(n)?(this.#i=n?.sessionReplayMode,this.#c()):this.importAggregator(e),this.ee.on("err",(e=>{this.replayRunning&&(this.errorNoticed=!0,(0,x.p)(t.G4.ERROR_DURING_REPLAY,[e],void 0,this.featureName,this.ee))})),this.ee.on(t.G4.REPLAY_RUNNING,(e=>{this.replayRunning=e}))}#s(e){return e&&(e.sessionReplayMode===_e.g.FULL||e.sessionReplayMode===_e.g.ERROR)||(0,g.Aw)(this.agentIdentifier)}#u=!1;async#c(e){if(!this.#u){this.#u=!0;try{const{Recorder:t}=await Promise.all([i.e(478),i.e(249)]).then(i.bind(i,8589));this.recorder??=new t({mode:this.#i,agentIdentifier:this.agentIdentifier,trigger:e,ee:this.ee,agentRef:this.#o}),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording}catch(e){}this.importAggregator(this.#o,{recorder:this.recorder,errorNoticed:this.errorNoticed})}}#a(){this.featAggregate?this.featAggregate.mode!==_e.g.FULL&&this.featAggregate.initializeRecording(_e.g.FULL,!0):(this.#i=_e.g.FULL,this.#c(t.Qb.API),this.recorder&&this.recorder.parent.mode!==_e.g.FULL&&(this.recorder.parent.mode=_e.g.FULL,this.recorder.stopRecording(),this.recorder.startRecording(),this.abortHandler=this.recorder.stopRecording))}}var Ie=i(3962);class Pe extends b{static featureName=Ie.TZ;constructor(e,t=!0){if(super(e,Ie.TZ,t),!p.RI||!(0,R.dV)().o.MO)return;const r=ve(this.ee);Ie.tC.forEach((e=>{(0,A.sp)(e,(e=>{a(e)}),!0)}));const n=()=>(0,x.p)("newURL",[(0,N.t)(),""+window.location],void 0,this.featureName,this.ee);r.on("pushState-end",n),r.on("replaceState-end",n);try{this.removeOnAbort=new AbortController}catch(e){}(0,A.sp)("popstate",(e=>(0,x.p)("newURL",[e.timeStamp,""+window.location],void 0,this.featureName,this.ee)),!0,this.removeOnAbort?.signal);let i=!1;const o=new((0,R.dV)().o.MO)(((e,t)=>{i||(i=!0,requestAnimationFrame((()=>{(0,x.p)("newDom",[(0,N.t)()],void 0,this.featureName,this.ee),i=!1})))})),a=(0,v.s)((e=>{(0,x.p)("newUIEvent",[e],void 0,this.featureName,this.ee),o.observe(document.body,{attributes:!0,childList:!0,subtree:!0,characterData:!0})}),100,{leading:!0});this.abortHandler=function(){this.removeOnAbort?.abort(),o.disconnect(),this.abortHandler=void 0},this.importAggregator(e,{domObserver:o})}}var je=i(7378);const Ce={},ke=["appendChild","insertBefore","replaceChild"];function Le(e){const t=function(e){return(e||B.ee).get("jsonp")}(e);if(!p.RI||Ce[t.debugId])return t;Ce[t.debugId]=!0;var r=(0,W.YM)(t),n=/[?&](?:callback|cb)=([^&#]+)/,i=/(.*)\.([^.]+)/,o=/^(\w+)(\.|$)(.*)$/;function a(e,t){if(!e)return t;const r=e.match(o),n=r[1];return a(r[3],t[n])}return r.inPlace(Node.prototype,ke,"dom-"),t.on("dom-start",(function(e){!function(e){if(!e||"string"!=typeof e.nodeName||"script"!==e.nodeName.toLowerCase())return;if("function"!=typeof e.addEventListener)return;var o=(s=e.src,c=s.match(n),c?c[1]:null);var s,c;if(!o)return;var u=function(e){var t=e.match(i);if(t&&t.length>=3)return{key:t[2],parent:a(t[1],window)};return{key:e,parent:window}}(o);if("function"!=typeof u.parent[u.key])return;var d={};function l(){t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,A.jT)(!1)),e.removeEventListener("error",f,(0,A.jT)(!1))}function f(){t.emit("jsonp-error",[],d),t.emit("jsonp-end",[],d),e.removeEventListener("load",l,(0,A.jT)(!1)),e.removeEventListener("error",f,(0,A.jT)(!1))}r.inPlace(u.parent,[u.key],"cb-",d),e.addEventListener("load",l,(0,A.jT)(!1)),e.addEventListener("error",f,(0,A.jT)(!1)),t.emit("new-jsonp",[e.src],d)}(e[0])})),t}const He={};function Me(e){const t=function(e){return(e||B.ee).get("promise")}(e);if(He[t.debugId])return t;He[t.debugId]=!0;var r=t.context,n=(0,W.YM)(t),i=p.gm.Promise;return i&&function(){function e(r){var o=t.context(),a=n(r,"executor-",o,null,!1);const s=Reflect.construct(i,[a],e);return t.context(s).getCtx=function(){return o},s}p.gm.Promise=e,Object.defineProperty(e,"name",{value:"Promise"}),e.toString=function(){return i.toString()},Object.setPrototypeOf(e,i),["all","race"].forEach((function(r){const n=i[r];e[r]=function(e){let i=!1;[...e||[]].forEach((e=>{this.resolve(e).then(a("all"===r),a(!1))}));const o=n.apply(this,arguments);return o;function a(e){return function(){t.emit("propagate",[null,!i],o,!1,!1),i=i||!e}}}})),["resolve","reject"].forEach((function(r){const n=i[r];e[r]=function(e){const r=n.apply(this,arguments);return e!==r&&t.emit("propagate",[e,!0],r,!1,!1),r}})),e.prototype=i.prototype;const o=i.prototype.then;i.prototype.then=function(...e){var i=this,a=r(i);a.promise=i,e[0]=n(e[0],"cb-",a,null,!1),e[1]=n(e[1],"cb-",a,null,!1);const s=o.apply(this,e);return a.nextPromise=s,t.emit("propagate",[i,!0],s,!1,!1),s},i.prototype.then[W.Jt]=o,t.on("executor-start",(function(e){e[0]=n(e[0],"resolve-",this,null,!1),e[1]=n(e[1],"resolve-",this,null,!1)})),t.on("executor-err",(function(e,t,r){e[1](r)})),t.on("cb-end",(function(e,r,n){t.emit("propagate",[n,!0],this.nextPromise,!1,!1)})),t.on("propagate",(function(e,r,n){this.getCtx&&!r||(this.getCtx=function(){if(e instanceof Promise)var r=t.context(e);return r&&r.getCtx?r.getCtx():this})}))}(),t}const De={},Ke="setTimeout",Ue="setInterval",Ve="clearTimeout",Ge="-start",Fe=[Ke,"setImmediate",Ue,Ve,"clearImmediate"];function Be(e){const t=function(e){return(e||B.ee).get("timer")}(e);if(De[t.debugId]++)return t;De[t.debugId]=1;var r=(0,W.YM)(t);return r.inPlace(p.gm,Fe.slice(0,2),Ke+"-"),r.inPlace(p.gm,Fe.slice(2,3),Ue+"-"),r.inPlace(p.gm,Fe.slice(3),Ve+"-"),t.on(Ue+Ge,(function(e,t,n){e[0]=r(e[0],"fn-",null,n)})),t.on(Ke+Ge,(function(e,t,n){this.method=n,this.timerDuration=isNaN(e[1])?0:+e[1],e[0]=r(e[0],"fn-",this,n)})),t}const We={};function ze(e){const t=function(e){return(e||B.ee).get("mutation")}(e);if(!p.RI||We[t.debugId])return t;We[t.debugId]=!0;var r=(0,W.YM)(t),n=p.gm.MutationObserver;return n&&(window.MutationObserver=function(e){return this instanceof n?new n(r(e,"fn-")):n.apply(this,arguments)},MutationObserver.prototype=n.prototype),t}const{TZ:qe,d3:Ze,Kp:Ye,$p:Je,wW:Xe,e5:$e,tH:Qe,uP:et,rw:tt,Lc:rt}=je;class nt extends b{static featureName=qe;constructor(e,t=!0){if(super(e,qe,t),!p.RI)return;try{this.removeOnAbort=new AbortController}catch(e){}let r,n=0;const i=this.ee.get("tracer"),o=Le(this.ee),a=Me(this.ee),s=Be(this.ee),c=Z(this.ee),u=this.ee.get("events"),d=ne(this.ee),l=ve(this.ee),f=ze(this.ee);function h(e,t){l.emit("newURL",[""+window.location,t])}function g(){n++,r=window.location.hash,this[et]=(0,N.t)()}function m(){n--,window.location.hash!==r&&h(0,!0);var e=(0,N.t)();this[$e]=~~this[$e]+e-this[et],this[rt]=e}function v(e,t){e.on(t,(function(){this[t]=(0,N.t)()}))}this.ee.on(et,g),a.on(tt,g),o.on(tt,g),this.ee.on(rt,m),a.on(Xe,m),o.on(Xe,m),this.ee.on("fn-err",((...t)=>{t[2]?.__newrelic?.[e.agentIdentifier]||(0,x.p)("function-err",[...t],void 0,this.featureName,this.ee)})),this.ee.buffer([et,rt,"xhr-resolved"],this.featureName),u.buffer([et],this.featureName),s.buffer(["setTimeout"+Ye,"clearTimeout"+Ze,et],this.featureName),c.buffer([et,"new-xhr","send-xhr"+Ze],this.featureName),d.buffer([Qe+Ze,Qe+"-done",Qe+Je+Ze,Qe+Je+Ye],this.featureName),l.buffer(["newURL"],this.featureName),f.buffer([et],this.featureName),a.buffer(["propagate",tt,Xe,"executor-err","resolve"+Ze],this.featureName),i.buffer([et,"no-"+et],this.featureName),o.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"],this.featureName),v(d,Qe+Ze),v(d,Qe+"-done"),v(o,"new-jsonp"),v(o,"jsonp-end"),v(o,"cb-start"),l.on("pushState-end",h),l.on("replaceState-end",h),window.addEventListener("hashchange",h,(0,A.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("load",h,(0,A.jT)(!0,this.removeOnAbort?.signal)),window.addEventListener("popstate",(function(){h(0,n>1)}),(0,A.jT)(!0,this.removeOnAbort?.signal)),this.abortHandler=this.#n,this.importAggregator(e)}#n(){this.removeOnAbort?.abort(),this.abortHandler=void 0}}var it=i(3333);class ot extends b{static featureName=it.TZ;constructor(e,t=!0){super(e,it.TZ,t);const r=[e.init.page_action.enabled,e.init.performance.capture_marks,e.init.performance.capture_measures,e.init.user_actions.enabled,e.init.performance.resources.enabled];if(p.RI&&(e.init.user_actions.enabled&&(it.Zp.forEach((e=>(0,A.sp)(e,(e=>(0,x.p)("ua",[e],void 0,this.featureName,this.ee)),!0))),it.qN.forEach((e=>{const t=(0,v.s)((e=>{(0,x.p)("ua",[e],void 0,this.featureName,this.ee)}),500,{leading:!0});(0,A.sp)(e,t)}))),e.init.performance.resources.enabled&&p.gm.PerformanceObserver?.supportedEntryTypes.includes("resource"))){new PerformanceObserver((e=>{e.getEntries().forEach((e=>{(0,x.p)("browserPerformance.resource",[e],void 0,this.featureName,this.ee)}))})).observe({type:"resource",buffered:!0})}r.some((e=>e))?this.importAggregator(e):this.deregisterDrain()}}var at=i(993),st=i(3785),ct=i(9414);class ut extends b{static featureName=at.TZ;constructor(e,t=!0){super(e,at.TZ,t);const r=this.ee;(0,ct.J)(r,p.gm.console,"log",{level:"info"}),(0,ct.J)(r,p.gm.console,"error",{level:"error"}),(0,ct.J)(r,p.gm.console,"warn",{level:"warn"}),(0,ct.J)(r,p.gm.console,"info",{level:"info"}),(0,ct.J)(r,p.gm.console,"debug",{level:"debug"}),(0,ct.J)(r,p.gm.console,"trace",{level:"trace"}),this.ee.on("wrap-logger-end",(function([e]){const{level:t,customAttributes:n}=this;(0,st.R)(r,e,n,t)})),this.importAggregator(e)}}new class extends o{constructor(t){super(),p.gm?(this.features={},(0,R.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(t.features||[]),this.desiredFeatures.add(w),this.runSoftNavOverSpa=[...this.desiredFeatures].some((e=>e.featureName===a.K7.softNav)),(0,d.j)(this,t,t.loaderType||"agent"),this.run()):(0,e.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}run(){try{const t=u(this.agentIdentifier),r=[...this.desiredFeatures];r.sort(((e,t)=>a.P3[e.featureName]-a.P3[t.featureName])),r.forEach((r=>{if(!t[r.featureName]&&r.featureName!==a.K7.pageViewEvent)return;if(this.runSoftNavOverSpa&&r.featureName===a.K7.spa)return;if(!this.runSoftNavOverSpa&&r.featureName===a.K7.softNav)return;const n=function(e){switch(e){case a.K7.ajax:return[a.K7.jserrors];case a.K7.sessionTrace:return[a.K7.ajax,a.K7.pageViewEvent];case a.K7.sessionReplay:return[a.K7.sessionTrace];case a.K7.pageViewTiming:return[a.K7.pageViewEvent];default:return[]}}(r.featureName).filter((e=>!(e in this.features)));n.length>0&&(0,e.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)}))}catch(t){(0,e.R)(22,t);for(const e in this.features)this.features[e].abortHandler?.();const r=(0,R.Zm)();delete r.initializedAgents[this.agentIdentifier]?.api,delete r.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return r.ee.get(this.agentIdentifier).abort(),!1}}}({features:[he,w,S,Se,Oe,O,M,ot,ut,Pe,nt],loaderType:"spa"})})()})();</script>
+<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+
+<meta content='Le Figaro Store - La boutique officielle du Groupe Figaro' name='description'>
+<meta content='mes privilèges,arts, particulier, histoire, art de vivre, cinéma, immobilier, patrimoine, littérature, fiscalité, pratique, hors-série, figaro, collections, musique' name='keywords'>
+<meta content='max-snippet:-1, max-image-preview:large, max-video-preview:-1' name='robots'>
+<meta content='telephone=no' name='format-detection'>
+
+
+
+
+<title>Le Figaro Store - La boutique officielle du Groupe Figaro</title>
+<link rel="icon" type="image/x-icon" href="https://boutique.lefigaro.fr/assets/horizon/favicon_store-aa8938a5b2ce2cac12c9532ac78b414836bbb5c5dd053edd27ee3bbad12d56c3.jpg" />
+<link rel="stylesheet" href="https://boutique.lefigaro.fr/assets/horizon/home-404be60aa7fae166453e27a486f5e3e1f2134b2200aff7df2a14d826da2c3a0a.css" media="all" />
+
+
+<link href='https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;family=Source+Sans+Pro:wght@400;600&amp;display=swap' rel='stylesheet'>
+<link href='https://use.fontawesome.com/releases/v5.13.1/css/all.css' rel='stylesheet'>
+<script type="text/javascript">
+!function(){var e=function(){var e,t="__tcfapiLocator",a=[],n=window;for(;n;){try{if(n.frames[t]){e=n;break}}catch(e){}if(n===window.top)break;n=n.parent}e||(!function e(){var a=n.document,r=!!n.frames[t];if(!r)if(a.body){var s=a.createElement("iframe");s.style.cssText="display:none",s.name=t,a.body.appendChild(s)}else setTimeout(e,5);return!r}(),n.__tcfapi=function(){for(var e,t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];if(!n.length)return a;if("setGdprApplies"===n[0])n.length>3&&2===parseInt(n[1],10)&&"boolean"==typeof n[3]&&(e=n[3],"function"==typeof n[2]&&n[2]("set",!0));else if("ping"===n[0]){var s={gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"};"function"==typeof n[2]&&n[2](s)}else a.push(n)},n.addEventListener("message",(function(e){var t="string"==typeof e.data,a={};try{a=t?JSON.parse(e.data):e.data}catch(e){}var n=a.__tcfapiCall;n&&window.__tcfapi(n.command,n.version,(function(a,r){var s={__tcfapiReturn:{returnValue:a,success:r,callId:n.callId}};t&&(s=JSON.stringify(s)),e&&e.source&&e.source.postMessage&&e.source.postMessage(s,"*")}),n.parameter)}),!1))};"undefined"!=typeof module?module.exports=e:e()}();
+</script>
+<script async src="https://static.lefigaro.fr/figconsent/figconsent-v2-short-ttl.js"></script>
+
+<script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  (window.adsbygoogle = window.adsbygoogle || []).pauseAdRequests = 1;
+  gtag("consent", "default", {
+    analytics_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    functionality_storage: "granted",
+    security_storage: "granted",
+    personalization_storage: "denied",
+    ad_storage: "denied",
+    wait_for_update: 500,
+  });
+</script>
+
+<script src="https://boutique.lefigaro.fr/assets/horizon/script-80494eca9dad0b3f8ddbcf4451b06dcc7934ecfdea9169573f06c2f9ba82a6cd.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
+<script type="text/javascript">
+    sessionStorage.setItem('retention', '');
+    sessionStorage.setItem('cartReminder', 'false');
+
+  sessionStorage.removeItem('shoppingCart');
+
+</script>
+
+
+
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="9aBYHds7zBIBpKPizP2UGfz2ZCuF5MHWavURVbgvGp7sMjBDxkp8AgrqfbO5Cz-HRJ4IJYthSa5g1T6213QfKg" />
+</head>
+<body>
+  <script>
+    window.dataLayerInit = {
+      "BU_environnement":"production", 
+      "BU_siteName":"storefigaro",
+      "space":"ecommerce",
+      "subSpace":"store",
+      "BU_pageCategory":"homepage",
+      "BU_pageType":"classique",
+      "kameleoonPerso":"",
+      "BU_FigCCM1":localStorage.kxkuid,
+      "BU_FigCCM2":"",
+      "BU_subscription":"",
+      "abKey":"",
+      "BU_level1":"homepage",
+      "BU_level2":"",
+      "BU_level3":"",
+      "BU_userAgent":window.navigator.userAgent,
+      "BU_author":"",
+      "BU_theme":"",
+      "BU_idArticle":"",
+      "BU_tagName1":"",
+      "BU_tagName2":"",
+      "BU_tagName3":"",
+      "BU_subscriptionContentState":"ouvert",
+      "BU_subscriptionContentType":"gratuit",
+      "BU_userStatus":"",
+      "BU_orientation":window.innerHeight < window.innerWidth ? "paysage" : "portrait",
+      "BU_websiteVersion":osEnvar.getDeviceInfo().deviceType,
+      "ecommerce": {
+        "currencyCode": "EUR",
+        "promoView": {
+          "promotions": [
+            {
+              "id": '139773',           
+              "name": "Tintin et le Lotus bleu",
+              "position": "slide_show_1"
+            },
+            {
+              "id": '139735',           
+              "name": "Ces petits riens qui ont fait l&#39;Histoire",
+              "position": "slide_show_2"
+            },
+            {
+              "id": '139552',           
+              "name": "La guerre du futur",
+              "position": "slide_show_3"
+            },
+            {
+              "id": '139656',           
+              "name": "Guide des 100 homonymes de la langue française",
+              "position": "slide_show_4"
+            },
+          {
+  "id": "week",
+  "name": "end oenologique en champagne",
+  "position": "footer"
+},
+
+          ]
+        },
+        "impressions": [
+        {
+          "id": "132109",
+          "name": "Modèle Lola Bleu Marine",
+          "price": 42.9,
+          "brand": "Le Figaro",
+          "category": "Accessoires &amp; Jeux/Sacs à main &amp; Maroquinerie",
+          "position": 1,
+          "customPosition":"p1 - row1",
+          "list": "selection"
+        },
+        {
+          "id": "139942",
+          "name": "Les Plus Beaux Villages de France",
+          "price": 18.9,
+          "brand": "Le Figaro",
+          "category": "Livres/Art de vivre / Loisirs / Sport",
+          "position": 2,
+          "customPosition":"p1 - row1",
+          "list": "selection"
+        },
+        {
+          "id": "139794",
+          "name": "École Ferrandi - Viandes",
+          "price": 35.0,
+          "brand": "Le Figaro",
+          "category": "Livres/Cuisine / Vins",
+          "position": 3,
+          "customPosition":"p1 - row1",
+          "list": "selection"
+        },
+        {
+          "id": "139906",
+          "name": "TV Mag Jeux - Les mots fléchés n°5",
+          "price": 6.9,
+          "brand": "Le Figaro",
+          "category": "Magazines/Magazines de Jeux",
+          "position": 4,
+          "customPosition":"p1 - row1",
+          "list": "selection"
+        },
+        {
+          "id": "139677",
+          "name": "Les Rencontres du Figaro - Kamel Daoud",
+          "price": 28.0,
+          "brand": "Le Figaro",
+          "category": "Événements &amp; Visites/Les Rencontres du Figaro",
+          "position": 5,
+          "customPosition":"p1 - row2",
+          "list": "selection"
+        },
+        ]
+      },
+    };
+
+    window.dataLayer = window.dataLayer || []
+    window.dataLayer.push(window.dataLayerInit)
+  </script>
+  <!-- Google Tag Manager -->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NXZXVZW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+  new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+  "//www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,"script","dataLayer","GTM-NXZXVZW");</script>
+  <!-- End Google Tag Manager -->
+  
+
+
+<header class='header'>
+<div class='container'>
+<div class='row'>
+<!-- FIRST ROW -->
+<div class='col header__first-row d-flex justify-content-between align-items-center align-items-md-start'>
+<!-- LEFT -->
+<div class='header__first-row--left'>
+<!-- NAVBAR TOGGLER -->
+<a data-toggle="collapse" data-target="#mainNavigation" class="navbar-toggler d-md-none" href="#"><span class='line'></span>
+<span class='line'></span>
+<span class='line'></span>
+</a><!-- SEARCH BAR -->
+<div class='search-bar d-none d-md-block'>
+<form action='/recherche' class='form-inline' id='search' method='get'>
+<div class='input-group'>
+<input aria-label='Rechercher' class='form-control' id='facets_keyword' name='facets[keyword]' placeholder='Rechercher' required type='text'>
+<div class='input-group-append'>
+<button class='btn btn-outline-dark' type='submit'>
+<i class='fas fa-search'></i>
+</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- CENTER -->
+<div class='align-self-md-center' id='logo_div'>
+<!-- LOGO -->
+<div class='header__first-row--center' id='logo'>
+<a href="/"><img class="logo" onerror="this.src=&#39;./img/figaro/logo-figaro.png&#39;" alt="Accéder à Le Figaro" src="https://boutique.lefigaro.fr/assets/horizon/logo-figaro-store-ed4eccedf5971a8f48c584c8d84b166f7d314362451c961f23c4695d376c8c6d.svg" />
+</a></div>
+
+</div>
+<!-- RIGHT -->
+<div class='header__first-row--right header__login d-flex justify-content-end align-items-center'>
+<div class='header__login'>
+<div class='dropdown'>
+<a class="login" href="/connexion?gtm_event_value=header&amp;redirect_url=https%3A%2F%2Fboutique.lefigaro.fr%2F&amp;tunnel=store&amp;type=main"><i class='icon fas fa-user'></i>
+<span class='d-none d-md-inline'>Connexion</span>
+</a></div>
+</div>
+<!-- CART -->
+<div class='shopping-cart d-flex justify-content-end align-items-center'>
+<!-- MOBILE -->
+<a class="shopping-cart--mobile d-lg-none" href="/panier"><i class='icon fas fa-shopping-cart'></i>
+</a><!-- DESKTOP -->
+<div class='shopping-cart--desktop dropdown show d-none d-lg-block'>
+<a id="cart-widget" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button" href=""><i class='icon fas fa-shopping-cart'></i>
+</a><div aria-labelledby='dropdownShoppingCart' class='dropdown-menu dropdown-menu-right'>
+<div class='dropdown-menu__main show-cart'></div>
+<div class='dropdown-menu__footer'>
+<div class='summary'>
+<span>Total :</span>
+<span class='total'>
+<span class='total-cart'> €</span>
+</span>
+</div>
+<a class="submit btn btn-primary" href="/panier">Je valide mon panier</a>
+</div>
+</div>
+</div>
+<span class='badge'></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='main-navigation navbar navbar-expand-md'>
+<div class='collapse navbar-collapse mw-100' id='mainNavigation'>
+<ul class='navbar-nav mx-auto px-2 px-md-0'>
+<li class='search-bar d-block d-md-none'>
+<form action='/recherche' class='form-inline' id='search' method='get'>
+<div class='input-group'>
+<input aria-label='Rechercher' class='form-control' id='facets_keyword' name='facets[keyword]' placeholder='Rechercher' required type='text'>
+<div class='input-group-append'>
+<button class='btn btn-outline-dark py-6' type='submit'>
+<i class='fas fa-search'></i>
+</button>
+</div>
+</div>
+</form>
+</li>
+<li class='nav-item nav-item-master'>
+<a class="nav-link" style="" href="/rayon/4-abonnements">Abonnements</a>
+</li>
+
+<li class='nav-item nav-item-master dropdown has-megamenu'>
+<a class="nav-link dropdown-toggle only-touch-screen" data-toggle="dropdown" style="" href="#">Livres
+<i class='icon fas fa-angle-down'></i>
+</a><a class="nav-link dropdown-toggle-2 not-touch-screen" style="" href="/rayon/271-livres">Livres
+<i class='icon fas fa-angle-down'></i>
+</a><div class='dropdown-menu megamenu' role='menu'>
+<div class='container p-0'>
+<div class='row w-100 no-gutters'>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/288-les-100">&quot; Les 100 &quot;</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/487-cuisine-vins">Cuisine / Vins</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/489-litterature">Littérature</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/289-famille-transmission">Famille / Transmission</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/490-art-culture">Art / Culture</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/440-immo-patrimoine-argent">Immo / Patrimoine / Argent</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/349-livres-de-la-redaction">Livres de la rédaction</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/441-sante">Santé</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/281-art-de-vivre-loisirs-sport">Art de vivre / Loisirs / Sport</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/285-histoire">Histoire</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/283-musique">Musique</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/488-spiritualite">Spiritualité</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/282-bd-jeunesse">BD / Jeunesse</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/286-langue-francaise">Langue française</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/287-philosophie-mythologie">Philosophie / Mythologie</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/271-livres">Tous les produits livres</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+
+<li class='nav-item nav-item-master dropdown has-megamenu'>
+<a class="nav-link dropdown-toggle only-touch-screen" data-toggle="dropdown" style="" href="#">Magazines
+<i class='icon fas fa-angle-down'></i>
+</a><a class="nav-link dropdown-toggle-2 not-touch-screen" style="" href="/rayon/290-magazines">Magazines
+<i class='icon fas fa-angle-down'></i>
+</a><div class='dropdown-menu megamenu' role='menu'>
+<div class='container p-0'>
+<div class='row w-100 no-gutters'>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/494-le-figaro-quotidien">Le Figaro Quotidien</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/442-le-figaro-hommage">Le Figaro Hommage</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/493-le-figaro-magazine">Le Figaro Magazine</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/448-autres-magazines">Autres Magazines</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/301-le-figaro-histoire">Le Figaro Histoire</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/302-le-figaro-sante">Le Figaro Santé</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/298-magazines-de-jeux">Magazines de Jeux</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/303-le-figaro-hors-serie">Le Figaro Hors-Série</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/495-le-figaro-sciences">Le Figaro Sciences</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/492-madame-figaro">Madame Figaro</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/299-le-particulier">Le Particulier</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/434-le-figaro-enquetes">Le Figaro Enquêtes</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/496-le-figaro-voyage">Le Figaro Voyage</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/420-madame-figaro-hors-serie">Madame Figaro Hors-série</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/290-magazines">Tous les produits magazines</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+
+<li class='nav-item nav-item-master dropdown has-megamenu'>
+<a class="nav-link dropdown-toggle only-touch-screen" data-toggle="dropdown" style="" href="#">Accessoires &amp; Jeux
+<i class='icon fas fa-angle-down'></i>
+</a><a class="nav-link dropdown-toggle-2 not-touch-screen" style="" href="/rayon/327-accessoires-jeux">Accessoires &amp; Jeux
+<i class='icon fas fa-angle-down'></i>
+</a><div class='dropdown-menu megamenu' role='menu'>
+<div class='container p-0'>
+<div class='row w-100 no-gutters'>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/451-accessoires-figaro">Accessoires Figaro</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/336-jeux-apprentissage">Jeux &amp; Apprentissage</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/543-maison-decoration">Maison &amp; Décoration</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/428-sacs-a-main-maroquinerie">Sacs à main &amp; Maroquinerie</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/534-mode-bijoux">Mode &amp; Bijoux</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/452-autres-accessoires">Autres accessoires</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/327-accessoires-jeux">Tous les produits accessoires &amp; jeux</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+
+<li class='nav-item nav-item-master dropdown has-megamenu'>
+<a class="nav-link dropdown-toggle only-touch-screen" data-toggle="dropdown" style="" href="#">Événements &amp; Visites
+<i class='icon fas fa-angle-down'></i>
+</a><a class="nav-link dropdown-toggle-2 not-touch-screen" style="" href="/rayon/310-evenements-visites">Événements &amp; Visites
+<i class='icon fas fa-angle-down'></i>
+</a><div class='dropdown-menu megamenu' role='menu'>
+<div class='container p-0'>
+<div class='row w-100 no-gutters'>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/319-les-rencontres-du-figaro">Les Rencontres du Figaro</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/321-les-visites-culturelles">Les Visites Culturelles</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/320-les-decouvertes-oenologiques"> Les découvertes œnologiques</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/391-les-ateliers-d-ecriture">Les Ateliers d&#39;écriture</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" target="blank" href="https://billetterie.lefigaro.fr/">Billetterie Figaro</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/511-evenements-madame-figaro">Evénements Madame Figaro</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/512-les-conferences-audio">Les Conférences audio</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/310-evenements-visites">Tous les produits événements &amp; visites</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+
+<li class='nav-item nav-item-master dropdown has-megamenu'>
+<a class="nav-link dropdown-toggle-2" data-toggle="dropdown" style="" href="#">Unes &amp; Photos
+<i class='icon fas fa-angle-down'></i>
+</a><div class='dropdown-menu megamenu' role='menu'>
+<div class='container p-0'>
+<div class='row w-100 no-gutters'>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/46-les-unes">Les Unes</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" target="blank" href="https://photos.lefigaro.fr/?utm_source=Partenariat&amp;utm_medium=contextuel&amp;utm_campaign=store_mkt_site-photos-figaro_2020_&amp;utm_content=store&amp;utm_term=SAN20280&amp;ga_source=SAN20280_mkt-contextuel-Partenariat">Photos &amp; Unes Collector</a>
+</li>
+</ul>
+<ul class='nav col-12 col-md-3'>
+<li class='nav-item'>
+<a class="nav-link" style="" href="/rayon/497-unes-photos">Tous les produits unes &amp; photos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+
+<li class='nav-item nav-item-master'>
+<a class="nav-link" target="blank" href="https://lesvoyagesf.fr?utm_source=Partenariat&amp;utm_medium=banner&amp;utm_campaign=store_mkt_les-voyages-f_2020_&amp;utm_content=store&amp;utm_term=SAN20049">Voyages et Croisières</a>
+</li>
+
+</ul>
+</div>
+</div>
+
+</header>
+
+
+
+
+
+<section class='home-carousel'>
+<div class='carousel-container p-0'>
+<div class='row no-gutters'>
+<div class='col-12'>
+<div class='carousel slide carousel-fade' data-interval='4000' data-ride='carousel' id='hero'>
+<ol class='carousel-indicators'>
+<li class='active' data-slide-to='0' data-target='#hero'></li>
+<li class='' data-slide-to='1' data-target='#hero'></li>
+<li class='' data-slide-to='2' data-target='#hero'></li>
+<li class='' data-slide-to='3' data-target='#hero'></li>
+</ol>
+<div class='carousel-inner'>
+<div class='carousel-item active' style='background-image: url(https://boutique.lefigaro.fr/media/products/livlotusb/268795_bg_home_carousel.png);'>
+<div class='caption'>
+<div class='preview'>
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/livlotusb/268795_home_carousel.webp" /><!--[if IE 9]></video><![endif]--><img alt="Tintin et le Lotus bleu" title="Tintin et le Lotus bleu" srcset="https://boutique.lefigaro.fr/media/products/livlotusb/268795_home_carousel.png" /></picture>
+</div>
+<div class='infos'>
+<h2 class='name'>Tintin et le Lotus bleu</h2>
+<h5 class='category'>
+Coédition Casterman - Moulinsart
+</h5>
+<a class="price btn btn-light stretched-link" role="button" href="/produit/139773-tintin-et-le-lotus-bleu?utm_campaign=store_mkt_carousel-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22007">23 €</a>
+</div>
+</div>
+</div>
+<div class='carousel-item' style='background-image: url(https://boutique.lefigaro.fr/media/products/livhistoir/268633_bg_home_carousel.png);'>
+<div class='caption'>
+<div class='preview'>
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/livhistoir/268633_home_carousel.webp" /><!--[if IE 9]></video><![endif]--><img alt="Ces petits riens qui ont fait l&#39;Histoire" title="Ces petits riens qui ont fait l&#39;Histoire" srcset="https://boutique.lefigaro.fr/media/products/livhistoir/268633_home_carousel.png" /></picture>
+</div>
+<div class='infos'>
+<h2 class='name'>Ces petits riens qui ont fait l&#39;Histoire</h2>
+<h5 class='category'>
+Édition Figaro
+</h5>
+<a class="price btn btn-light stretched-link" role="button" href="/produit/139735-ces-petits-riens-qui-ont-fait-l-histoire?utm_campaign=store_mkt_carousel-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22007">26 €</a>
+</div>
+</div>
+</div>
+<div class='carousel-item' style='background-image: url(https://boutique.lefigaro.fr/media/products/docarmes/267858_bg_home_carousel.png);'>
+<div class='caption'>
+<div class='preview'>
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/docarmes/267858_home_carousel.webp" /><!--[if IE 9]></video><![endif]--><img alt="La guerre du futur" title="La guerre du futur" srcset="https://boutique.lefigaro.fr/media/products/docarmes/267858_home_carousel.png" /></picture>
+</div>
+<div class='infos'>
+<h2 class='name'>La guerre du futur</h2>
+<h5 class='category'>
+Le Figaro Enquêtes
+</h5>
+<a class="price btn btn-light stretched-link" role="button" href="/produit/139552-la-guerre-du-futur?utm_campaign=store_mkt_carousel-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22007">12,90 €</a>
+</div>
+</div>
+</div>
+<div class='carousel-item' style='background-image: url(https://boutique.lefigaro.fr/media/products/gui100hom/268215_bg_home_carousel.png);'>
+<div class='caption'>
+<div class='preview'>
+<picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/gui100hom/268215_home_carousel.webp" /><!--[if IE 9]></video><![endif]--><img alt="Guide des 100 homonymes de la langue française" title="Guide des 100 homonymes de la langue française" srcset="https://boutique.lefigaro.fr/media/products/gui100hom/268215_home_carousel.png" /></picture>
+</div>
+<div class='infos'>
+<h2 class='name'>Guide des 100 homonymes de la langue française</h2>
+<h5 class='category'>
+Le Figaro Éditions
+</h5>
+<a class="price btn btn-light stretched-link" role="button" href="/produit/139656-guide-des-100-homonymes-de-la-langue-francaise?utm_campaign=store_mkt_carousel-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22007">9,90 €</a>
+</div>
+</div>
+</div>
+<a class="carousel-control-prev" role="button" data-slide="prev" href="#hero"><span class='sr-only'>Previous</span>
+<i class='icon fas fa-angle-left'></i>
+</a><a class="carousel-control-next" role="button" data-slide="next" href="#hero"><span class='sr-only'>Next</span>
+<i class='icon fas fa-angle-right'></i>
+</a></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class='categories'>
+<div class='container'>
+<div class='row'>
+<div class='col-12 col-md-6 col-lg-4'>
+<div class='card'>
+<img alt="..." class="card-img" src="https://boutique.lefigaro.fr/assets/horizon/Store-HP-Abo-7bf59cbe29e858c9d74ee9a6e658e770b380f541de56c3eaabc3bfd2b099732e.jpg" />
+<div class='card-img-overlay'>
+<h5 class='card-title'>
+<a class="stretched-link" href="/rayon/4-abonnements?utm_campaign=store_mkt_blocs-hp_2020_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN20260">Abonnements</a>
+</h5>
+<div class='card-title--underline'></div>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-6 col-lg-4'>
+<div class='card'>
+<img alt="..." class="card-img" src="https://boutique.lefigaro.fr/assets/horizon/homepage/Store-HP-Langue-08f6f2435aeb4282baba954b202b28d3f62b9ab969f636244d0b60dfe65aac5f.png" />
+<div class='card-img-overlay'>
+<h5 class='card-title'>
+<a class="stretched-link" href="/rayon/286-langue-francaise?utm_campaign=store_mkt_blocs-hp_2020_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN20260">Langue Française</a>
+</h5>
+<div class='card-title--underline'></div>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-6 col-lg-4'>
+<div class='card'>
+<img alt="..." class="card-img" src="https://boutique.lefigaro.fr/assets/horizon/homepage/Store-HP-Histoire-51a1e71b74b7248e72cfee9a57c4208da9e23e5752eda4a04fcf1812f2d43861.jpeg" />
+<div class='card-img-overlay'>
+<h5 class='card-title'>
+<a class="stretched-link" href="/rayon/301-le-figaro-histoire?utm_campaign=store_mkt_blocs-hp_2020_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN20260">Le Figaro Histoire</a>
+</h5>
+<div class='card-title--underline'></div>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-6 col-lg-4'>
+<div class='card'>
+<img alt="..." class="card-img" src="https://boutique.lefigaro.fr/assets/horizon/homepage/Store-HP-Voyage-1ddfc6f04602d1703dbf95affa5ce5619c13812002f02e8255bf7e3362da85ea.png" />
+<div class='card-img-overlay'>
+<h5 class='card-title'>
+<a class="stretched-link" href="https://lesvoyagesf.fr?utm_campaign=store_mkt_blocs-hp_2020_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN20260">Voyages et croisières</a>
+</h5>
+<div class='card-title--underline'></div>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-6 col-lg-4'>
+<div class='card'>
+<img alt="..." class="card-img" src="https://boutique.lefigaro.fr/assets/horizon/homepage/Store-HP-Jeux-c7eb31dd0ab5d19efacde7a01607fb95691410931cb6ba4cd50622b244908ef6.png" />
+<div class='card-img-overlay'>
+<h5 class='card-title'>
+<a class="stretched-link" href="/rayon/298-magazines-de-jeux?utm_campaign=store_mkt_blocs-hp_2020_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN20260">Magazines de jeux</a>
+</h5>
+<div class='card-title--underline'></div>
+</div>
+</div>
+</div>
+<div class='col-12 col-md-6 col-lg-4'>
+<div class='card'>
+<img alt="..." class="card-img" src="https://boutique.lefigaro.fr/assets/horizon/homepage/Store-HP-HS-646630e56fb45e2a51686bcadf0feb284883d328c46b88951a265e4a9418a8b9.png" />
+<div class='card-img-overlay'>
+<h5 class='card-title'>
+<a class="stretched-link" href="/rayon/303-le-figaro-hors-serie?utm_campaign=store_mkt_blocs-hp_2020_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN20260">Le Figaro Hors-série</a>
+</h5>
+<div class='card-title--underline'></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class='selections'>
+<div class='container'>
+<div class='row'>
+<h2 class='selections__title'>Notre sélection</h2>
+<div class='carousel slide w-100' data-ride='carousel' id='selections'>
+<div class='carousel-inner w-100' role='listbox'>
+<article class='carousel-item active'>
+<div class='col-12 col-sm-6 col-md-4 col-lg-3'>
+<div class='card'>
+<span class="new">Nouveauté</span>
+<div class='card-header'>
+<a class="stretched-link" href="/produit/132109-modele-lola-bleu-marine?utm_campaign=store_mkt_selection-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22008"><img alt="Modèle Lola Bleu Marine" title="Modèle Lola Bleu Marine" src="https://boutique.lefigaro.fr/media/products/saclolabm/main_novelites_best_sales.png" />
+</a></div>
+<div class='card-body'>
+<h5 class='card-title'>Modèle Lola Bleu Marine</h5>
+<p class='card-subtitle'>Sac à Main Anna Morellini </p>
+<p class='card-text'>42,90 €</p>
+</div>
+<button class='add-to-cart btn btn-primary' data-id='132109' type='button'>
+<i class='fas fa-cart-plus'></i>
+</button>
+</div>
+</div>
+</article>
+<article class='carousel-item'>
+<div class='col-12 col-sm-6 col-md-4 col-lg-3'>
+<div class='card'>
+<span class="new">Nouveauté</span>
+<div class='card-header'>
+<a class="stretched-link" href="/produit/139942-les-plus-beaux-villages-de-france?utm_campaign=store_mkt_selection-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22008"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/livillage3/main_novelites_best_sales.webp" /><!--[if IE 9]></video><![endif]--><img alt="Les Plus Beaux Villages de France" title="Les Plus Beaux Villages de France" srcset="https://boutique.lefigaro.fr/media/products/livillage3/main_novelites_best_sales.png" /></picture>
+</a></div>
+<div class='card-body'>
+<h5 class='card-title'>Les Plus Beaux Villages de France</h5>
+<p class='card-subtitle'>Édition Flammarion</p>
+<p class='card-text'>18,90 €</p>
+</div>
+<button class='add-to-cart btn btn-primary' data-id='139942' type='button'>
+<i class='fas fa-cart-plus'></i>
+</button>
+</div>
+</div>
+</article>
+<article class='carousel-item'>
+<div class='col-12 col-sm-6 col-md-4 col-lg-3'>
+<div class='card'>
+
+<div class='card-header'>
+<a class="stretched-link" href="/produit/139794-ecole-ferrandi-viandes?utm_campaign=store_mkt_selection-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22008"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/livferran5/main_novelites_best_sales.webp" /><!--[if IE 9]></video><![endif]--><img alt="École Ferrandi - Viandes" title="École Ferrandi - Viandes" srcset="https://boutique.lefigaro.fr/media/products/livferran5/main_novelites_best_sales.png" /></picture>
+</a></div>
+<div class='card-body'>
+<h5 class='card-title'>École Ferrandi - Viandes</h5>
+<p class='card-subtitle'>Édition Flammarion</p>
+<p class='card-text'>35 €</p>
+</div>
+<button class='add-to-cart btn btn-primary' data-id='139794' type='button'>
+<i class='fas fa-cart-plus'></i>
+</button>
+</div>
+</div>
+</article>
+<article class='carousel-item'>
+<div class='col-12 col-sm-6 col-md-4 col-lg-3'>
+<div class='card'>
+<span class="new">Nouveauté</span>
+<div class='card-header'>
+<a class="stretched-link" href="/produit/139906-tv-mag-jeux-les-mots-fleches-n-5?utm_campaign=store_mkt_selection-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22008"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/hsflectv5/main_novelites_best_sales.webp" /><!--[if IE 9]></video><![endif]--><img alt="TV Mag Jeux - Les mots fléchés n°5" title="TV Mag Jeux - Les mots fléchés n°5" srcset="https://boutique.lefigaro.fr/media/products/hsflectv5/main_novelites_best_sales.png" /></picture>
+</a></div>
+<div class='card-body'>
+<h5 class='card-title'>TV Mag Jeux - Les mots fléchés n°5</h5>
+<p class='card-subtitle'>Numéro spécial</p>
+<p class='card-text'>6,90 €</p>
+</div>
+<button class='add-to-cart btn btn-primary' data-id='139906' type='button'>
+<i class='fas fa-cart-plus'></i>
+</button>
+</div>
+</div>
+</article>
+<article class='carousel-item'>
+<div class='col-12 col-sm-6 col-md-4 col-lg-3'>
+<div class='card'>
+<span class="new">DERNIERS JOURS</span>
+<div class='card-header'>
+<a class="stretched-link" href="/produit/139677-les-rencontres-du-figaro-kamel-daoud?utm_campaign=store_mkt_selection-hp_2022_&amp;utm_content=boutique&amp;utm_medium=contextuel&amp;utm_source=Autre&amp;utm_term=SAN22008"><picture><!--[if IE 9]><video style='display: none;'><![endif]--><source srcset="https://boutique.lefigaro.fr/media/products/confdaou28/main_novelites_best_sales.webp" /><!--[if IE 9]></video><![endif]--><img alt="Les Rencontres du Figaro - Kamel Daoud" title="Les Rencontres du Figaro - Kamel Daoud" srcset="https://boutique.lefigaro.fr/media/products/confdaou28/main_novelites_best_sales.png" /></picture>
+</a></div>
+<div class='card-body'>
+<h5 class='card-title'>Les Rencontres du Figaro - Kamel Daoud</h5>
+<p class='card-subtitle'>Lundi 17 mars 2025</p>
+<p class='card-text'>28 €</p>
+</div>
+</div>
+</div>
+</article>
+<a class="carousel-control-prev" role="button" data-slide="prev" href="#selections"><span class='sr-only'>Previous</span>
+<i class='icon fas fa-angle-left'></i>
+</a><a class="carousel-control-next" role="button" data-slide="next" href="#selections"><span class='sr-only'>Next</span>
+<i class='icon fas fa-angle-right'></i>
+</a></div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class='inscription'>
+<div class='container'>
+<div class='row'>
+<div class='col-12'>
+<div class='inscription__container'>
+<div class='inscription__image'>
+<img alt="..." src="https://boutique.lefigaro.fr/assets/horizon/inscription-119fde79a4d07da58c8313d0423aeefbbfcebe485d0132fc9452caa1d67778e7.png" />
+</div>
+<div class='inscription__form'>
+<h5 class='title'>Newsletters</h5>
+<p class='text'>Inscrivez-vous aux newsletters pour découvrir les nouveautés du Figaro Store et profiter des offres spéciales !</p>
+<p class='result success'>
+Merci !
+<br>
+<span class='message'></span>
+</p>
+<p class='result fail'></p>
+<form class="form" action="/subscribe_newsletter" accept-charset="UTF-8" data-remote="true" method="post"><div class='form__email'>
+<label class="sr-only" for="email">Email</label>
+<input type="email" name="email" id="email" placeholder="Votre email" class="form-control" required="required" />
+</div>
+<button class='form__submit btn btn-primary' type='submit'>Je m'inscris</button>
+<input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="3eheSRPA8uAh-wAS1P3aFBB2UK6pNbvbFsbZzOJcAkdG-eU3SPEYzVQeWBXUsx6UTfpgqArcc6ZO9hGoKuKgjw" autocomplete="off" /></form></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class='navigations'>
+<div class='container'>
+<div class='row no-gutters'>
+<div class='navigations__nav col-12 col-md-20'>
+<h4 class='title'>
+Plan du site
+<a aria-controls='nav1' aria-expanded='false' class='toggler' data-toggle='collapse' href='#nav1'>
+<i class='fas fa-angle-down'></i>
+</a>
+</h4>
+<ul class='nav d-md-block collapse' id='nav1'>
+<li class='nav-item'><a class="nav-link" href="/rayon/4-abonnements">Abonnements</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/271-livres">Livres</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/290-magazines">Magazines</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/310-evenements-visites">Évènements Culturels</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://lesvoyagesf.fr?utm_source=Partenariat&amp;utm_medium=banner&amp;utm_campaign=store_mkt_les-voyages-f_2020_&amp;utm_content=store&amp;utm_term=SAN20049">Voyages et Croisières</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/327-accessoires-jeux">Accessoires</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/46-les-unes">Les Unes du Figaro</a></li>
+</ul>
+</div>
+<div class='navigations__nav col-12 col-md-20'>
+<h4 class='title'>
+Nos publications
+<a aria-controls='nav2' aria-expanded='false' class='toggler' data-toggle='collapse' href='#nav2'>
+<i class='fas fa-angle-down'></i>
+</a>
+</h4>
+<ul class='nav d-md-block collapse' id='nav2'>
+<li class='nav-item'><a class="nav-link" href="/rayon/303-le-figaro-hors-serie">Le Figaro Hors-série</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/301-le-figaro-histoire">Le Figaro Histoire</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/302-le-figaro-sante">Le Figaro Santé</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/495-le-figaro-sciences">Le Figaro Sciences</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/434-le-figaro-enquetes">Le Figaro Equêtes</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/420-madame-figaro-hors-serie">Les Hors-séries Madame Figaro</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/496-le-figaro-voyage">Le Figaro Voyages</a></li>
+<li class='nav-item'><a class="nav-link" href="/rayon/298-magazines-de-jeux">Le Fig Mag Jeux</a></li>
+</ul>
+</div>
+<div class='navigations__nav col-12 col-md-20'>
+<h4 class='title'>
+Nos évènements
+<a aria-controls='nav3' aria-expanded='false' class='toggler' data-toggle='collapse' href='#nav3'>
+<i class='fas fa-angle-down'></i>
+</a>
+</h4>
+<ul class='nav d-md-block collapse' id='nav3'>
+<li class='nav-item'><a class="nav-link" target="blank" href="/rayon/319-les-rencontres-du-figaro">Les Rencontres du Figaro</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://billetterie.lefigaro.fr/">La Billetterie Figaro</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="/rayon/320-les-decouvertes-oenologiques">Les Soirées Dégustation</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="/rayon/391-les-ateliers-d-ecriture">Les Ateliers d&#39;Écriture</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.lefigaro.fr/economie/dossier/le-bigbang-sante-du-figaro">Le Big Bang Santé</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://bigbang.lefigaro.fr/eco">Le Big Bang Eco</a></li>
+</ul>
+</div>
+<div class='navigations__nav col-12 col-md-20'>
+<h4 class='title'>
+Les marques du Groupe Figaro
+<a aria-controls='nav4' aria-expanded='false' class='toggler' data-toggle='collapse' href='#nav4'>
+<i class='fas fa-angle-down'></i>
+</a>
+</h4>
+<ul class='nav d-md-block collapse' id='nav4'>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.lefigaro.fr/">Le Figaro.fr</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="http://leparticulier.lefigaro.fr/">Le Particulier.fr</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.ticketac.com/">Ticketac.com</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.lachainemeteo.com/meteo-france/previsions-meteo-france-aujourdhui">La Chaîne Météo</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.marcovasco.fr/">Marco Vasco</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.maisonsduvoyage.com/">Les Maisons du Voyages</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://tvmag.lefigaro.fr/">Tv Magazine</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://classifieds.lefigaro.fr/">Figaro Classifieds</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://lesvoyagesf.fr?utm_source=Partenariat&amp;utm_medium=banner&amp;utm_campaign=store_mkt_les-voyages-f_2020_&amp;utm_content=store&amp;utm_term=SAN20049">Les Voyages F</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.gala.fr/">Gala</a></li>
+</ul>
+</div>
+<div class='navigations__nav col-12 col-md-20'>
+<h4 class='title'>
+Nos liens utiles
+<a aria-controls='nav5' aria-expanded='false' class='toggler' data-toggle='collapse' href='#nav5'>
+<i class='fas fa-angle-down'></i>
+</a>
+</h4>
+<ul class='nav d-md-block collapse' id='nav5'>
+<li class='nav-item'><a class="nav-link" target="blank" href="http://abonnement.lefigaro.fr/demande-resiliation/le-figaro/">Résilier votre abonnement</a></li>
+<li class='nav-item'><a class="nav-link ajax-popup-link" href="/nous-contacter?div_class=white-popup-block&amp;div_id=popup-contact&amp;layout=magnific-popup">Nous contacter</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://www.facebook.com/figaro.store/">Voir le compte Facebook</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+
+<footer class='footer bg-primary'>
+<div class='container-fluid'>
+<ul class='nav justify-content-center'>
+<li class='nav-item'>
+<a class="nav-link ajax-popup-link" href="/mentions-legales?div_class=white-popup-block&amp;div_id=popup-legals&amp;layout=magnific-popup">Mentions légales</a>
+</li>
+<li class='nav-item'>
+<a class="nav-link ajax-popup-link" href="/conditions-generales-de-vente?div_class=white-popup-block&amp;div_id=popup-cgv&amp;layout=magnific-popup">CGV</a>
+</li>
+<li class='nav-item'><a class="nav-link" target="blank" href="http://mentions-legales.lefigaro.fr/page/politique-de-confidentialite">Politique de confidentialité</a></li>
+<li class='nav-item'><a class="nav-link" target="blank" href="https://mentions-legales.lefigaro.fr/le-figaro/info-cookies-lefigaro">Politique de cookies</a></li>
+<li class='nav-item'><a class="nav-link ajax-popup-link" href="/frais-de-livraison?div_class=white-popup-block&amp;div_id=popup-shipping&amp;layout=magnific-popup">Frais de livraison</a></li>
+<li class='nav-item'>
+<a class="nav-link pe-none" style="cursor: default;" href=""><img alt="..." class="mr-1" style="width: 12px;" src="https://boutique.lefigaro.fr/assets/horizon/condition1-579c9a40a0e6f6abcadffc7ce5cbcb9b15f3456ceb9725b1938e52f995138c2b.png" />
+<span style='font-size: 12px; font-weight: 600; color: #ffffff;'>Paiement sécurisé</span>
+</a></li>
+</ul>
+</div>
+</footer>
+<div aria-hidden='true' class='modal hide' id='basic_modal' role='dialog' tabindex='-1'>
+<div class='modal-body'></div>
+</div>
+<div aria-hidden='true' class='modal hide' id='basic_modal_no_height' role='dialog' tabindex='-1'>
+<div class='modal-body'></div>
+</div>
+<div aria-hidden='true' class='modal hide no_height' id='basic_modal2' role='dialog' tabindex='-1'>
+<div class='modal-body no_height'></div>
+</div>
+<div class='static magnific-popup d-none' id='popin_nl_store'>
+<div class='container'>
+<div class='inscription__container'>
+<div class='inscription__image'>
+<img alt="..." src="https://boutique.lefigaro.fr/assets/horizon/inscription-119fde79a4d07da58c8313d0423aeefbbfcebe485d0132fc9452caa1d67778e7.png" />
+</div>
+<div class='inscription__form mt-2 mt-md-5 row'>
+<h5 class='title col-12'>Newsletters</h5>
+<p class='text mt-2 col-12'>Chaque semaine, découvrez les nouveautés et les offres spéciales</p>
+<p class='result success mt-2 col-12'>
+Merci !
+<span class='message'></span>
+</p>
+<form class="col-12 d-md-flex" action="/subscribe_newsletter" accept-charset="UTF-8" data-remote="true" method="post"><input type="hidden" name="popin_nl_store" id="popin_nl_store" value="true" autocomplete="off" />
+<input type="email" name="email" id="email" placeholder="Votre email" class="p-12 mb-2 mb-md-0 mr-md-2" required="required" />
+<button class='form__submit btn btn-primary' type='submit'>Je m'inscris</button>
+<input name="utf8" type="hidden" value="&#x2713;" autocomplete="off" /><input type="hidden" name="authenticity_token" value="ugvlMIkB5DTpat0ZDbD2sOLugKmDXIr_ezcV41vtZ8mjmY1ulHBUJOIkA0h4Rl0uWobsp43ZAodxFzoANLZifQ" autocomplete="off" /></form><p class='result fail col-12 mt-3 mb-0 text-danger'></p>
+<p class='mention mt-3 col-12'>En cliquant sur « Je m’inscris », j’accepte de recevoir les newsletters du Figaro Store</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  function pushOnDataLayerForAdd(p){
+      dataLayer.push({
+        "event": "addToCart",
+        "ecommerce": {
+          "currencyCode": "EUR",
+          "add": {
+            "products": [{
+              "id": p.product[0].id,
+              "name": p.product[0].name,
+              "price": p.product[0].price,
+              "brand": p.product[0].brand,
+              "category": p.product[0].category,
+              "quantity": p.product[0].quantity
+            }]
+          }
+        }
+      });
+  }
+
+  function pushPromoOnDataLayer(p){
+    dataLayer.push({
+      "event": "promotionClick",
+      "ecommerce": {
+        "promoClick": {
+          'promotions': [{
+            'id': p.product[0].id,
+            'name': p.product[0].name,
+            'position': p.product[0].position
+          }]
+        }
+      }
+    });
+  }
+
+  var cart_products_id = "";
+
+
+    var displayConsentPopup = false;
+
+    function checkConstentPopup() {
+      if($("#appconsent").length > 0) displayConsentPopup = true
+
+      if(displayConsentPopup && $("#appconsent").length == 0) {
+        $.magnificPopup.open({
+          items: {
+            src: '#popin_nl_store',
+            type: 'inline'
+          },
+          closeOnContentClick: false
+        });
+        $('#popin_nl_store').removeClass('d-none');
+          dataLayer.push({'customCategorie': 'engagement', 'customAction': 'popin_newsletter_store', 'customLabel': 'affichage', 'event': 'customEventSPE'});
+      } else {
+        setTimeout(checkConstentPopup, 500);
+      }
+    }
+
+    $(document).ready(function(){
+      setTimeout(checkConstentPopup, 500);
+    });
+
+</script>
+
+
+
+
+
+
+
+
+<script src="https://boutique.lefigaro.fr/assets/responsive/plugins-f137e33e5942e12640fe6e6faea166dc83d5fbfa99b7e170d10fd08d7e2f8fd4.js"></script>
+<script src="https://boutique.lefigaro.fr/assets/responsive/scripts-383e145b361db726b2fbf93048a4386d786890a5955e2597fc093e620df0d4be.js"></script>
+<script src="https://boutique.lefigaro.fr/assets/horizon/shared-868a7c888a623d18ae4bf2f00f5e5ff986155ccd5d03628733216cdedc065fb4.js"></script>
+<script src="https://boutique.lefigaro.fr/assets/horizon/home-e6cc7bdf1b1b6e4b42dbb5482a6d08a46e36a177e21dca7b3e138deca115a7cf.js"></script>
+
+<a id="retention_link" class="ajax-popup-link d-none" href="/retention?div_class=white-popup-block&amp;div_id=popup-retention&amp;layout=magnific-popup"></a>
+<a id="cart_reminder_link" class="ajax-popup-link d-none" href="/cart_reminder?div_class=white-popup-block&amp;div_id=popup-cart_reminder&amp;layout=magnific-popup"></a>
+</body>
+</html>
