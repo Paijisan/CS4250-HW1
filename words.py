@@ -16,7 +16,7 @@ SYMBOLS = {"|", "-", ",", ".", "+", ":", "?", "!", '"', "'", "(", ")", "[", "]",
 
 def tokenize_document(filename: str, lang: str) -> list[str]:
     # Read file and parse with BeautifulSoup
-    with open(filename, "r") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         contents = f.read()
         soup = BeautifulSoup(contents, "html.parser")
 
@@ -42,13 +42,13 @@ def nltk_download():
     try:
         nltk.data.find("tokenizers/punkt")
     except LookupError:
-        nltk.download("tokenizers/punkt")
+        nltk.download("punkt")
     
     print("Checking for corpora/stopwords data...")
     try:
         nltk.data.find("corpora/stopwords")
     except LookupError:
-        nltk.download("corpora/stopwords")
+        nltk.download("stopwords")
 
 
 if __name__ == "__main__":
