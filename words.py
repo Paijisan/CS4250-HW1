@@ -3,6 +3,7 @@ import csv
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
 
 LANGUAGE_MAPPING = {
     "en": "english",
@@ -13,6 +14,9 @@ LANGUAGE_MAPPING = {
 }
 
 SYMBOLS = {"|", "-", ",", ".", "+", ":", "?", "!", '"', "'", "(", ")", "[", "]", "...", "$"}
+
+# Initialize Stemmer
+stemmer = PorterStemmer()
 
 def tokenize_document(filename: str, lang: str) -> list[str]:
     # Read file and parse with BeautifulSoup
@@ -37,8 +41,7 @@ def tokenize_document(filename: str, lang: str) -> list[str]:
     
     
 def stem_tokens(tokens: list[str]) -> list[str]:
-    # stuff here
-    return tokens
+    return[stemmer.stem(word) for word in tokens]
 
 
 def nltk_download():
