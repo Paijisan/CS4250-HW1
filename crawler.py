@@ -26,7 +26,7 @@ class WebCrawler:
         to_crawl = [self.seed_url]
         
         while to_crawl and len(self.visited) < self.max_pages:
-            url = to_crawl.pop(0)
+            url = to_crawl.pop(0).split("#")[0]
             if url in self.visited or not self.valid_url(url):
                 continue
             
